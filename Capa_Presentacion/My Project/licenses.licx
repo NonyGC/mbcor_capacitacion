@@ -13,7 +13,6 @@ Telerik.WinControls.UI.RadDropDownButton, Telerik.WinControls.UI, Version=2016.1
 Telerik.WinControls.UI.RadLabel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
 Telerik.WinControls.UI.RadCheckedDropDownList, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
 Telerik.WinControls.UI.RadTitleBar, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
-DevExpress.XtraEditors.TextEdit, DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 Telerik.WinControls.UI.RadRadioButton, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
 Telerik.WinControls.UI.RadCollapsiblePanel, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e
 Telerik.WinControls.UI.RadMenu, Telerik.WinControls.UI, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e

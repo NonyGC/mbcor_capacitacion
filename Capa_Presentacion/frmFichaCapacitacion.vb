@@ -46,15 +46,35 @@ Public Class frmFichaCapacitacion
             Return x.Text.Length.CompareTo(y.Text.Length)
         End Function
     End Class
-
     Sub Limpiar()
         txtProfeCarrera.Clear() : txtNivelEst.Clear()
         txtNomInstitu.Clear() : txtRuc.Clear() : txtEmpresa.Clear() : txtCargo.Clear()
         txtTelFijoEmp.Clear() : cboOperadorempresa.SelectedIndex = -1
-        For Each element As Control In grbRubro.Controls
+        CheckBoxclear(grbRubro)
+        CheckBoxclear(grpCharla)
+        RadioButtonclear(grpRessin1) : RadioButtonclear(grpRessin2) : RadioButtonclear(grpRessin3)
+        RadioButtonclear(grpRessin4) : RadioButtonclear(grpRessin5) : RadioButtonclear(grpTajetacredito)
+        RadioButtonclear(grpInstitucion)
+        txtTematratar.Clear()
+        txtTelMovEmp.Clear()
+        txtEspeSPE.Clear() : txtEspOtros.Clear()
+        txtEspeCharla.Clear()
+
+    End Sub
+    Sub CheckBoxclear(grpbx As GroupBox)
+        For Each element As Control In grpbx.Controls
             If TypeOf element Is CheckBox Then
                 If DirectCast(element, CheckBox).Checked Then
                     DirectCast(element, CheckBox).Checked = False
+                End If
+            End If
+        Next
+    End Sub
+    Sub RadioButtonclear(grpbx As GroupBox)
+        For Each element As Control In grpbx.Controls
+            If TypeOf element Is RadioButton Then
+                If DirectCast(element, RadioButton).Checked Then
+                    DirectCast(element, RadioButton).Checked = False
                 End If
             End If
         Next
@@ -82,6 +102,7 @@ Public Class frmFichaCapacitacion
             grp5.Enabled = True
             grpCharla.Enabled = True
             btnRegistrar.Enabled = True : btnLimpiar.Enabled = True
+            grpTajetacredito.Enabled = True
         Else
             lblApeNom.Text = "Apellidos y Nombres"
             grbRubro.Enabled = False
@@ -90,6 +111,7 @@ Public Class frmFichaCapacitacion
             grp5.Enabled = False
             grpCharla.Enabled = False
             btnRegistrar.Enabled = False : btnLimpiar.Enabled = False
+            grpTajetacredito.Enabled = False
         End If
 
     End Sub
@@ -124,7 +146,6 @@ Public Class frmFichaCapacitacion
 
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
-
         With FichaCE
             .codcap = Trim(cboCapacitacion.SelectedValue)
             .codpart = Trim(txtCodigop.Text)
