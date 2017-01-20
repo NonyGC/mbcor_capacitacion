@@ -22,17 +22,17 @@ Partial Class frmFichaCapacitacion
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim GridViewTextBoxColumn5 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn6 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn7 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn8 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim ConditionalFormattingObject2 As Telerik.WinControls.UI.ConditionalFormattingObject = New Telerik.WinControls.UI.ConditionalFormattingObject()
-        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim RadListDataItem6 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem7 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem8 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem9 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem10 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn4 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim ConditionalFormattingObject1 As Telerik.WinControls.UI.ConditionalFormattingObject = New Telerik.WinControls.UI.ConditionalFormattingObject()
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim RadListDataItem1 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem2 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem3 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem4 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem5 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Me.VisualStudio2012LightTheme1 = New Telerik.WinControls.Themes.VisualStudio2012LightTheme()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
@@ -70,7 +70,6 @@ Partial Class frmFichaCapacitacion
         Me.btnRegistrar = New Telerik.WinControls.UI.RadButton()
         Me.btnLimpiar = New Telerik.WinControls.UI.RadButton()
         Me.Label36 = New System.Windows.Forms.Label()
-        Me.btnBuscar = New Telerik.WinControls.UI.RadButton()
         Me.cboCapacitacion = New Telerik.WinControls.UI.RadMultiColumnComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
@@ -176,7 +175,6 @@ Partial Class frmFichaCapacitacion
         CType(Me.RadTextBox23, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnRegistrar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnLimpiar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboCapacitacion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboCapacitacion.EditorControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboCapacitacion.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -220,7 +218,7 @@ Partial Class frmFichaCapacitacion
         Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(-2, -8)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(979, 35)
+        Me.Label15.Size = New System.Drawing.Size(1038, 35)
         Me.Label15.TabIndex = 32
         Me.Label15.Text = "FICHA REGISTRO DE CAPACITACIÓN"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -605,20 +603,11 @@ Partial Class frmFichaCapacitacion
         '
         Me.Label36.AutoSize = True
         Me.Label36.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(352, 45)
+        Me.Label36.Location = New System.Drawing.Point(404, 48)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(103, 17)
         Me.Label36.TabIndex = 85
         Me.Label36.Text = "CAPACITACIÓN"
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.Location = New System.Drawing.Point(892, 37)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(110, 24)
-        Me.btnBuscar.TabIndex = 87
-        Me.btnBuscar.Text = "BUSCAR"
-        Me.btnBuscar.ThemeName = "VisualStudio2012Light"
         '
         'cboCapacitacion
         '
@@ -640,51 +629,51 @@ Partial Class frmFichaCapacitacion
         Me.cboCapacitacion.EditorControl.MasterTemplate.AllowCellContextMenu = False
         Me.cboCapacitacion.EditorControl.MasterTemplate.AllowColumnChooser = False
         Me.cboCapacitacion.EditorControl.MasterTemplate.AllowColumnResize = False
-        GridViewTextBoxColumn5.AllowSort = False
-        GridViewTextBoxColumn5.EnableExpressionEditor = False
-        GridViewTextBoxColumn5.FieldName = "codigo"
-        GridViewTextBoxColumn5.HeaderText = "Codigo"
-        GridViewTextBoxColumn5.IsVisible = False
-        GridViewTextBoxColumn5.Name = "codigo"
-        GridViewTextBoxColumn5.ReadOnly = True
-        GridViewTextBoxColumn6.AllowSort = False
-        GridViewTextBoxColumn6.EnableExpressionEditor = False
-        GridViewTextBoxColumn6.FieldName = "local"
-        GridViewTextBoxColumn6.HeaderText = "Local"
-        GridViewTextBoxColumn6.Name = "local"
-        GridViewTextBoxColumn6.ReadOnly = True
-        GridViewTextBoxColumn6.Width = 150
-        GridViewTextBoxColumn7.AllowSort = False
-        GridViewTextBoxColumn7.EnableExpressionEditor = False
-        GridViewTextBoxColumn7.FieldName = "tema"
-        GridViewTextBoxColumn7.HeaderText = "Tema"
-        GridViewTextBoxColumn7.Name = "tema"
-        GridViewTextBoxColumn7.ReadOnly = True
-        GridViewTextBoxColumn7.Width = 150
-        ConditionalFormattingObject2.CellBackColor = System.Drawing.Color.Empty
-        ConditionalFormattingObject2.CellForeColor = System.Drawing.Color.Empty
-        ConditionalFormattingObject2.Name = "NewCondition"
-        ConditionalFormattingObject2.RowBackColor = System.Drawing.Color.Empty
-        ConditionalFormattingObject2.RowForeColor = System.Drawing.Color.Empty
-        GridViewTextBoxColumn8.ConditionalFormattingObjectList.Add(ConditionalFormattingObject2)
-        GridViewTextBoxColumn8.EnableExpressionEditor = False
-        GridViewTextBoxColumn8.FieldName = "fecha"
-        GridViewTextBoxColumn8.HeaderText = "Fecha"
-        GridViewTextBoxColumn8.Name = "fecha"
-        GridViewTextBoxColumn8.Width = 75
-        Me.cboCapacitacion.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn5, GridViewTextBoxColumn6, GridViewTextBoxColumn7, GridViewTextBoxColumn8})
+        GridViewTextBoxColumn1.AllowSort = False
+        GridViewTextBoxColumn1.EnableExpressionEditor = False
+        GridViewTextBoxColumn1.FieldName = "codigo"
+        GridViewTextBoxColumn1.HeaderText = "Codigo"
+        GridViewTextBoxColumn1.IsVisible = False
+        GridViewTextBoxColumn1.Name = "codigo"
+        GridViewTextBoxColumn1.ReadOnly = True
+        GridViewTextBoxColumn2.AllowSort = False
+        GridViewTextBoxColumn2.EnableExpressionEditor = False
+        GridViewTextBoxColumn2.FieldName = "local"
+        GridViewTextBoxColumn2.HeaderText = "Local"
+        GridViewTextBoxColumn2.Name = "local"
+        GridViewTextBoxColumn2.ReadOnly = True
+        GridViewTextBoxColumn2.Width = 150
+        GridViewTextBoxColumn3.AllowSort = False
+        GridViewTextBoxColumn3.EnableExpressionEditor = False
+        GridViewTextBoxColumn3.FieldName = "tema"
+        GridViewTextBoxColumn3.HeaderText = "Tema"
+        GridViewTextBoxColumn3.Name = "tema"
+        GridViewTextBoxColumn3.ReadOnly = True
+        GridViewTextBoxColumn3.Width = 150
+        ConditionalFormattingObject1.CellBackColor = System.Drawing.Color.Empty
+        ConditionalFormattingObject1.CellForeColor = System.Drawing.Color.Empty
+        ConditionalFormattingObject1.Name = "NewCondition"
+        ConditionalFormattingObject1.RowBackColor = System.Drawing.Color.Empty
+        ConditionalFormattingObject1.RowForeColor = System.Drawing.Color.Empty
+        GridViewTextBoxColumn4.ConditionalFormattingObjectList.Add(ConditionalFormattingObject1)
+        GridViewTextBoxColumn4.EnableExpressionEditor = False
+        GridViewTextBoxColumn4.FieldName = "fecha"
+        GridViewTextBoxColumn4.HeaderText = "Fecha"
+        GridViewTextBoxColumn4.Name = "fecha"
+        GridViewTextBoxColumn4.Width = 75
+        Me.cboCapacitacion.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4})
         Me.cboCapacitacion.EditorControl.MasterTemplate.EnableGrouping = False
         Me.cboCapacitacion.EditorControl.MasterTemplate.ShowFilteringRow = False
-        Me.cboCapacitacion.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition2
+        Me.cboCapacitacion.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.cboCapacitacion.EditorControl.Name = "NestedRadGridView"
         Me.cboCapacitacion.EditorControl.ReadOnly = True
         Me.cboCapacitacion.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.cboCapacitacion.EditorControl.ShowGroupPanel = False
         Me.cboCapacitacion.EditorControl.Size = New System.Drawing.Size(240, 150)
         Me.cboCapacitacion.EditorControl.TabIndex = 0
-        Me.cboCapacitacion.Location = New System.Drawing.Point(480, 37)
+        Me.cboCapacitacion.Location = New System.Drawing.Point(532, 40)
         Me.cboCapacitacion.Name = "cboCapacitacion"
-        Me.cboCapacitacion.Size = New System.Drawing.Size(396, 24)
+        Me.cboCapacitacion.Size = New System.Drawing.Size(415, 24)
         Me.cboCapacitacion.TabIndex = 90
         Me.cboCapacitacion.TabStop = False
         Me.cboCapacitacion.ThemeName = "VisualStudio2012Light"
@@ -811,16 +800,16 @@ Partial Class frmFichaCapacitacion
         '
         Me.cboOperadorempresa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.cboOperadorempresa.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadListDataItem6.Text = "Movistar"
-        RadListDataItem7.Text = "Claro"
-        RadListDataItem8.Text = "Entel"
-        RadListDataItem9.Text = "Bitel"
-        RadListDataItem10.Text = "Virgin"
-        Me.cboOperadorempresa.Items.Add(RadListDataItem6)
-        Me.cboOperadorempresa.Items.Add(RadListDataItem7)
-        Me.cboOperadorempresa.Items.Add(RadListDataItem8)
-        Me.cboOperadorempresa.Items.Add(RadListDataItem9)
-        Me.cboOperadorempresa.Items.Add(RadListDataItem10)
+        RadListDataItem1.Text = "Movistar"
+        RadListDataItem2.Text = "Claro"
+        RadListDataItem3.Text = "Entel"
+        RadListDataItem4.Text = "Bitel"
+        RadListDataItem5.Text = "Virgin"
+        Me.cboOperadorempresa.Items.Add(RadListDataItem1)
+        Me.cboOperadorempresa.Items.Add(RadListDataItem2)
+        Me.cboOperadorempresa.Items.Add(RadListDataItem3)
+        Me.cboOperadorempresa.Items.Add(RadListDataItem4)
+        Me.cboOperadorempresa.Items.Add(RadListDataItem5)
         Me.cboOperadorempresa.Location = New System.Drawing.Point(631, 91)
         Me.cboOperadorempresa.Name = "cboOperadorempresa"
         Me.cboOperadorempresa.Size = New System.Drawing.Size(118, 27)
@@ -1603,7 +1592,7 @@ Partial Class frmFichaCapacitacion
         '
         'RadButton2
         '
-        Me.RadButton2.Location = New System.Drawing.Point(892, 67)
+        Me.RadButton2.Location = New System.Drawing.Point(837, 70)
         Me.RadButton2.Name = "RadButton2"
         Me.RadButton2.Size = New System.Drawing.Size(110, 24)
         Me.RadButton2.TabIndex = 91
@@ -1614,7 +1603,7 @@ Partial Class frmFichaCapacitacion
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(356, 71)
+        Me.Label8.Location = New System.Drawing.Point(408, 74)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(99, 17)
         Me.Label8.TabIndex = 93
@@ -1624,18 +1613,18 @@ Partial Class frmFichaCapacitacion
         '
         Me.lblApeNom.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.lblApeNom.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApeNom.Location = New System.Drawing.Point(562, 106)
+        Me.lblApeNom.Location = New System.Drawing.Point(614, 109)
         Me.lblApeNom.Name = "lblApeNom"
-        Me.lblApeNom.Size = New System.Drawing.Size(300, 21)
+        Me.lblApeNom.Size = New System.Drawing.Size(329, 21)
         Me.lblApeNom.TabIndex = 98
         Me.lblApeNom.Text = "Apellidos y Nombres"
         Me.lblApeNom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'cboParticipanteSearch
         '
-        Me.cboParticipanteSearch.Location = New System.Drawing.Point(480, 67)
+        Me.cboParticipanteSearch.Location = New System.Drawing.Point(532, 70)
         Me.cboParticipanteSearch.Name = "cboParticipanteSearch"
-        Me.cboParticipanteSearch.Size = New System.Drawing.Size(396, 24)
+        Me.cboParticipanteSearch.Size = New System.Drawing.Size(299, 24)
         Me.cboParticipanteSearch.TabIndex = 96
         Me.cboParticipanteSearch.ThemeName = "VisualStudio2012Light"
         '
@@ -1643,14 +1632,14 @@ Partial Class frmFichaCapacitacion
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.txtCodigop)
-        Me.Panel1.Location = New System.Drawing.Point(480, 100)
+        Me.Panel1.Location = New System.Drawing.Point(532, 103)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(396, 34)
+        Me.Panel1.Size = New System.Drawing.Size(415, 34)
         Me.Panel1.TabIndex = 97
         '
         'txtCodigop
         '
-        Me.txtCodigop.Location = New System.Drawing.Point(3, 6)
+        Me.txtCodigop.Location = New System.Drawing.Point(3, 4)
         Me.txtCodigop.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtCodigop.Name = "txtCodigop"
         Me.txtCodigop.ReadOnly = True
@@ -1715,7 +1704,6 @@ Partial Class frmFichaCapacitacion
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.grpCharla)
         Me.Controls.Add(Me.cboCapacitacion)
-        Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.Label36)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnRegistrar)
@@ -1761,7 +1749,6 @@ Partial Class frmFichaCapacitacion
         CType(Me.RadTextBox23, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnRegistrar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnLimpiar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cboCapacitacion.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cboCapacitacion.EditorControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cboCapacitacion, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1853,7 +1840,6 @@ Partial Class frmFichaCapacitacion
     Friend WithEvents btnRegistrar As Telerik.WinControls.UI.RadButton
     Friend WithEvents btnLimpiar As Telerik.WinControls.UI.RadButton
     Friend WithEvents Label36 As System.Windows.Forms.Label
-    Friend WithEvents btnBuscar As Telerik.WinControls.UI.RadButton
     Friend WithEvents cboCapacitacion As Telerik.WinControls.UI.RadMultiColumnComboBox
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label

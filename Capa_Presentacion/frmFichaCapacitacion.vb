@@ -59,7 +59,8 @@ Public Class frmFichaCapacitacion
         txtTelMovEmp.Clear()
         txtEspeSPE.Clear() : txtEspOtros.Clear()
         txtEspeCharla.Clear()
-
+        cboParticipanteSearch.SelectedIndex = -1
+        txtCodigop.Clear() : lblApeNom.Text = Nothing
     End Sub
     Sub CheckBoxclear(grpbx As GroupBox)
         For Each element As Control In grpbx.Controls
@@ -146,6 +147,11 @@ Public Class frmFichaCapacitacion
 
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
+        Dim espRubro As String = Trim(txtEspeSPE.Text) & "-" & Trim(txtEspOtros.Text)
+        If InStr(espRubro, "-") = 1 Or Trim(txtEspeSPE.Text).Length = espRubro.Length - 1 Then
+            espRubro = espRubro.Replace("-", String.Empty)
+        End If
+
         With FichaCE
             .codcap = Trim(cboCapacitacion.SelectedValue)
             .codpart = Trim(txtCodigop.Text)
@@ -160,7 +166,7 @@ Public Class frmFichaCapacitacion
             .telMovEmp = txtTelMovEmp.Text
             .opeMovEmp = cboOperadorempresa.Text
             .rubro = getCheckboxVal(grbRubro)
-            .espRubro = txtEspeSPE.Text & "-" & txtEspOtros.Text
+            .espRubro = espRubro
             .charla = getCheckboxVal(grpCharla)
             .espCharla = txtEspeCharla.Text
             .dominioTem = If(Not IsNothing(GetGrpBxCheckedBbt(grpRessin1)), GetGrpBxCheckedBbt(grpRessin1).Text, String.Empty)
@@ -176,10 +182,10 @@ Public Class frmFichaCapacitacion
 
         If fichtEst Then
             RadMessageBox.Show("SE REGISTRO CORRECTAMENTE", "", MessageBoxButtons.OK, RadMessageIcon.Info)
+            Limpiar()
         Else
             RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A REGISTRAR", "", MessageBoxButtons.OK, RadMessageIcon.Error)
         End If
-
     End Sub
 
 
