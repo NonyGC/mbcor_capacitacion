@@ -96,34 +96,34 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmCapacitacion.Designer.vb">
+    <Compile Include="Form\frmCapacitacion.Designer.vb">
       <DependentUpon>frmCapacitacion.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmCapacitacion.vb">
+    <Compile Include="Form\frmCapacitacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmFichaCapacitacion.Designer.vb">
+    <Compile Include="Form\frmFichaCapacitacion.Designer.vb">
       <DependentUpon>frmFichaCapacitacion.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmFichaCapacitacion.vb">
+    <Compile Include="Form\frmFichaCapacitacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLocal.Designer.vb">
+    <Compile Include="Form\frmLocal.Designer.vb">
       <DependentUpon>frmLocal.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmLocal.vb">
+    <Compile Include="Form\frmLocal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmParticipante.Designer.vb">
+    <Compile Include="Form\FrmParticipante.Designer.vb">
       <DependentUpon>FrmParticipante.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmParticipante.vb">
+    <Compile Include="Form\FrmParticipante.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.vb">
+    <Compile Include="Form\Menu.Designer.vb">
       <DependentUpon>Menu.vb</DependentUpon>
     </Compile>
-    <Compile Include="Menu.vb">
+    <Compile Include="Form\Menu.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -144,19 +144,19 @@
     <Compile Include="Shared\Base.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmCapacitacion.resx">
+    <EmbeddedResource Include="Form\frmCapacitacion.resx">
       <DependentUpon>frmCapacitacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmFichaCapacitacion.resx">
+    <EmbeddedResource Include="Form\frmFichaCapacitacion.resx">
       <DependentUpon>frmFichaCapacitacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLocal.resx">
+    <EmbeddedResource Include="Form\frmLocal.resx">
       <DependentUpon>frmLocal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmParticipante.resx">
+    <EmbeddedResource Include="Form\FrmParticipante.resx">
       <DependentUpon>FrmParticipante.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="Form\Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
