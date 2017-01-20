@@ -24,9 +24,7 @@ Public Class frmLocal
                 cboProvincia.DisplayMember = "Provincia"
             End If
         Catch ex As Exception
-
         End Try
-
     End Sub
 
     Private Sub cboProvincia_SelectedIndexChanged(sender As Object, e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles cboProvincia.SelectedIndexChanged
@@ -39,7 +37,6 @@ Public Class frmLocal
                 cboDistrito.DisplayMember = "Distrito"
             End If
         Catch ex As Exception
-
         End Try
     End Sub
 
@@ -64,8 +61,6 @@ Public Class frmLocal
         Limpiar()
     End Sub
 
-
-
     Sub Limpiar()
         txtCodigo.Text = localCN.Local_CodAutogenerado()
         txtNombre.Clear()
@@ -73,6 +68,5 @@ Public Class frmLocal
         txtAforo.Value = 0
         cboDepartamento.SelectedIndex = 0
     End Sub
-
 
 End Class
