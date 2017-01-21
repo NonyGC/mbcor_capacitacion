@@ -52,4 +52,5 @@ Public Class frmCapacitacion
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
         Limpiar()
     End Sub
+
 End Class
