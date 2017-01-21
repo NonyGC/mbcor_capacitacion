@@ -163,9 +163,8 @@ Partial Class frmCapacitacion
         Me.dtmFecha.Size = New System.Drawing.Size(124, 24)
         Me.dtmFecha.TabIndex = 91
         Me.dtmFecha.TabStop = False
-        Me.dtmFecha.Text = "18/01/2017"
         Me.dtmFecha.ThemeName = "VisualStudio2012Light"
-        Me.dtmFecha.Value = New Date(2017, 1, 18, 0, 0, 0, 0)
+        Me.dtmFecha.Value = New Date(CType(0, Long))
         '
         'txtEspositor
         '

@@ -38,6 +38,7 @@ Public Class frmCapacitacion
         cboLocal.DataSource = capCN.obtenerLocal()
         cboLocal.DisplayMember = "nombre"
         cboLocal.ValueMember = "codigo"
+        dtmFecha.Value = Now
     End Sub
     Sub Limpiar()
         CargarForm()
