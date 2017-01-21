@@ -58,6 +58,14 @@ Public Class FrmParticipante_vb
         Solo_numeros(e)
     End Sub
 
+    Private Sub cboDepartamento_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboDepartamento.SelectedValueChanged
+        cboProvincia.DataSource = Nothing
+        cboDistrito.DataSource = Nothing
+    End Sub
+
+    Private Sub cboProvincia_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboProvincia.SelectedValueChanged
+        cboDistrito.DataSource = Nothing
+    End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
 

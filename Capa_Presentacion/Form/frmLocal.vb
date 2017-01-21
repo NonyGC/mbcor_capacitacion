@@ -13,31 +13,31 @@ Public Class frmLocal
         cboDepartamento.DataSource = localCN.ubigeo_Departamento()
         cboDepartamento.DisplayMember = "Departamento"
         cboDepartamento.ValueMember = "idDep"
+
+        cboDepartamento.SelectedIndex = -1
+        cboDepartamento.DropDownListElement.AutoCompleteAppend.LimitToList = True
+        cboProvincia.DropDownListElement.AutoCompleteAppend.LimitToList = True
+        cboDistrito.DropDownListElement.AutoCompleteAppend.LimitToList = True
     End Sub
 
-    Private Sub cboDepartamento_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboDepartamento.SelectedValueChanged
-        Try
-            idDep = cboDepartamento.SelectedValue.ToString
-            If (idDep <> "System.Data.DataRowView") Then
-                cboProvincia.DataSource = localCN.ubigeo_Provincia(idDep)
-                cboProvincia.ValueMember = "idProv"
-                cboProvincia.DisplayMember = "Provincia"
-            End If
-        Catch ex As Exception
-        End Try
+    Private Sub cboProvincia_Leave(sender As Object, e As EventArgs) Handles cboProvincia.Leave
+        Dim idDep As String = Trim(cboDepartamento.SelectedValue)
+        Dim idProv As String = Trim(cboProvincia.SelectedValue)
+        If idDep IsNot String.Empty And idProv IsNot String.Empty Then
+            idDep = cboDepartamento.SelectedValue
+            cboDistrito.DataSource = localCN.ubigeo_Distrito(idDep, idProv)
+            cboDistrito.ValueMember = "idDist"
+            cboDistrito.DisplayMember = "Distrito"
+        End If
     End Sub
 
-    Private Sub cboProvincia_SelectedIndexChanged(sender As Object, e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles cboProvincia.SelectedIndexChanged
-        Try
-            idProv = cboProvincia.SelectedValue.ToString
-            If (idProv <> "System.Data.DataRowView") Then
-                idDep = cboDepartamento.SelectedValue.ToString
-                cboDistrito.DataSource = localCN.ubigeo_Distrito(idDep, idProv)
-                cboDistrito.ValueMember = "idDist"
-                cboDistrito.DisplayMember = "Distrito"
-            End If
-        Catch ex As Exception
-        End Try
+    Private Sub cboDepartamento_Leave(sender As Object, e As EventArgs) Handles cboDepartamento.Leave
+        Dim idDep As String = Trim(cboDepartamento.SelectedValue)
+        If idDep IsNot String.Empty Then
+            cboProvincia.DataSource = localCN.ubigeo_Provincia(idDep)
+            cboProvincia.ValueMember = "idProv"
+            cboProvincia.DisplayMember = "Provincia"
+        End If
     End Sub
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
@@ -59,6 +59,15 @@ Public Class frmLocal
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
         Limpiar()
+    End Sub
+
+    Private Sub cboDepartamento_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboDepartamento.SelectedValueChanged
+        cboProvincia.DataSource = Nothing
+        cboDistrito.DataSource = Nothing
+    End Sub
+
+    Private Sub cboProvincia_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboProvincia.SelectedValueChanged
+        cboDistrito.DataSource = Nothing
     End Sub
 
     Sub Limpiar()

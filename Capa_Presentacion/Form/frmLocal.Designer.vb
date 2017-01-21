@@ -34,9 +34,6 @@ Partial Class frmLocal
         Me.btnRegistrar = New Telerik.WinControls.UI.RadButton()
         Me.btnLimpiar = New Telerik.WinControls.UI.RadButton()
         Me.VisualStudio2012LightTheme1 = New Telerik.WinControls.Themes.VisualStudio2012LightTheme()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.cboDistrito = New Telerik.WinControls.UI.RadDropDownList()
         Me.cboProvincia = New Telerik.WinControls.UI.RadDropDownList()
         Me.cboDepartamento = New Telerik.WinControls.UI.RadDropDownList()
@@ -86,7 +83,7 @@ Partial Class frmLocal
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(64, 174)
+        Me.Label4.Location = New System.Drawing.Point(64, 160)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(46, 15)
         Me.Label4.TabIndex = 3
@@ -95,7 +92,7 @@ Partial Class frmLocal
         'txtAforo
         '
         Me.txtAforo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAforo.Location = New System.Drawing.Point(128, 169)
+        Me.txtAforo.Location = New System.Drawing.Point(128, 155)
         Me.txtAforo.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtAforo.Name = "txtAforo"
         '
@@ -163,9 +160,9 @@ Partial Class frmLocal
         'btnRegistrar
         '
         Me.btnRegistrar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistrar.Location = New System.Drawing.Point(351, 207)
+        Me.btnRegistrar.Location = New System.Drawing.Point(351, 188)
         Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(138, 28)
+        Me.btnRegistrar.Size = New System.Drawing.Size(138, 31)
         Me.btnRegistrar.TabIndex = 35
         Me.btnRegistrar.Text = "REGISTRAR"
         Me.btnRegistrar.ThemeName = "VisualStudio2012Light"
@@ -173,67 +170,43 @@ Partial Class frmLocal
         'btnLimpiar
         '
         Me.btnLimpiar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLimpiar.Location = New System.Drawing.Point(497, 207)
+        Me.btnLimpiar.Location = New System.Drawing.Point(497, 188)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(137, 28)
+        Me.btnLimpiar.Size = New System.Drawing.Size(137, 31)
         Me.btnLimpiar.TabIndex = 36
         Me.btnLimpiar.Text = "LIMPIAR"
         Me.btnLimpiar.ThemeName = "VisualStudio2012Light"
         '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(447, 120)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(57, 15)
-        Me.Label10.TabIndex = 99
-        Me.Label10.Text = "DISTRITO"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(282, 120)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(68, 15)
-        Me.Label9.TabIndex = 98
-        Me.Label9.Text = "PROVINCIA"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(128, 120)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(106, 15)
-        Me.Label8.TabIndex = 97
-        Me.Label8.Text = "DEPARTEAMENTO"
-        '
         'cboDistrito
         '
+        Me.cboDistrito.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboDistrito.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboDistrito.Location = New System.Drawing.Point(447, 138)
+        Me.cboDistrito.Location = New System.Drawing.Point(447, 119)
         Me.cboDistrito.Name = "cboDistrito"
-        Me.cboDistrito.Size = New System.Drawing.Size(187, 27)
+        Me.cboDistrito.NullText = "DISTRITO"
+        Me.cboDistrito.Size = New System.Drawing.Size(187, 31)
         Me.cboDistrito.TabIndex = 96
         Me.cboDistrito.ThemeName = "VisualStudio2012Light"
         '
         'cboProvincia
         '
+        Me.cboProvincia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboProvincia.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboProvincia.Location = New System.Drawing.Point(282, 138)
+        Me.cboProvincia.Location = New System.Drawing.Point(282, 119)
         Me.cboProvincia.Name = "cboProvincia"
-        Me.cboProvincia.Size = New System.Drawing.Size(150, 27)
+        Me.cboProvincia.NullText = "PROVINCIA"
+        Me.cboProvincia.Size = New System.Drawing.Size(150, 31)
         Me.cboProvincia.TabIndex = 95
         Me.cboProvincia.ThemeName = "VisualStudio2012Light"
         '
         'cboDepartamento
         '
+        Me.cboDepartamento.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboDepartamento.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboDepartamento.Location = New System.Drawing.Point(128, 138)
+        Me.cboDepartamento.Location = New System.Drawing.Point(128, 119)
         Me.cboDepartamento.Name = "cboDepartamento"
-        Me.cboDepartamento.Size = New System.Drawing.Size(144, 27)
+        Me.cboDepartamento.NullText = "DEPARTAMENTO"
+        Me.cboDepartamento.Size = New System.Drawing.Size(144, 31)
         Me.cboDepartamento.TabIndex = 94
         Me.cboDepartamento.ThemeName = "VisualStudio2012Light"
         '
@@ -241,13 +214,10 @@ Partial Class frmLocal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(674, 251)
+        Me.ClientSize = New System.Drawing.Size(674, 236)
         Me.Controls.Add(Me.cboDistrito)
         Me.Controls.Add(Me.cboProvincia)
         Me.Controls.Add(Me.cboDepartamento)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnRegistrar)
         Me.Controls.Add(Me.Label15)
@@ -295,9 +265,6 @@ Partial Class frmLocal
     Friend WithEvents btnRegistrar As Telerik.WinControls.UI.RadButton
     Friend WithEvents btnLimpiar As Telerik.WinControls.UI.RadButton
     Friend WithEvents VisualStudio2012LightTheme1 As Telerik.WinControls.Themes.VisualStudio2012LightTheme
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents cboDistrito As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents cboProvincia As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents cboDepartamento As Telerik.WinControls.UI.RadDropDownList
