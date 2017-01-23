@@ -62,7 +62,7 @@
     <StartupObject>Capa_Presentacion.Menu</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resource\M.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\nexus2cee_android-m.png.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -277,7 +277,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resource\M.ico" />
+    <None Include="Resources\nexus2cee_android-m.png.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -59,5 +59,15 @@ Namespace My.Resources
                 resourceCulture = value
             End Set
         End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        '''</summary>
+        Friend ReadOnly Property nexus2cee_android_m_png() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("nexus2cee_android_m_png", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
     End Module
 End Namespace
