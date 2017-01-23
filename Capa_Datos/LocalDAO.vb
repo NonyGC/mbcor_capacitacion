@@ -12,7 +12,7 @@ Public Class LocalDAO
     End Function
     Public Function ubigeo_Depatamento() As DataTable
         Dim dtDepartamento As New DataTable
-        Dim cmd As SqlCommand = CommandText("SELECT idDep,Departamento FROM	ubDepartamento")
+        Dim cmd As SqlCommand = CommandText("SELECT idDep,Departamento,codTelef FROM ubDepartamento")
         dtDepartamento = GetDataTable(cmd)
         Return dtDepartamento
     End Function

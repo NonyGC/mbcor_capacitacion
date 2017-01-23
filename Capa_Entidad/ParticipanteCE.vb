@@ -12,6 +12,9 @@
     Private _telFijo As String
     Private _telMovil As String
     Private _opeMovil As String
+    Private _telFijo2 As String
+    Private _telMovil2 As String
+    Private _opeMovil2 As String
     Private _correo As String
     Public Property codpart As String
         Get
@@ -60,6 +63,30 @@
         End Get
         Set(ByVal value As String)
             _telFijo = value
+        End Set
+    End Property
+    Public Property opeMovil2 As String
+        Get
+            Return _opeMovil2
+        End Get
+        Set(ByVal value As String)
+            _opeMovil2 = value
+        End Set
+    End Property
+    Public Property telMovil2 As String
+        Get
+            Return _telMovil2
+        End Get
+        Set(ByVal value As String)
+            _telMovil2 = value
+        End Set
+    End Property
+    Public Property telFijo2 As String
+        Get
+            Return _telFijo2
+        End Get
+        Set(ByVal value As String)
+            _telFijo2 = value
         End Set
     End Property
     Public Property ubigeo As String

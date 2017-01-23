@@ -6,6 +6,7 @@ Imports Capa_Presentacion.Base
 Public Class FrmParticipante_vb
     Dim LocalCN As New LocalCN, ParticipanteCE As New ParticipanteCE
     Dim ParticipanteCN As New ParticipanteCN
+    Dim datadep As DataTable
     Public Sub New()
 
         ' Esta llamada es exigida por el diseñador.
@@ -15,8 +16,9 @@ Public Class FrmParticipante_vb
         RadMessageBox.SetThemeName("VisualStudio2012Light")
     End Sub
     Private Sub FrmParticipante_vb_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        RadMessageBox.SetThemeName("VisualStudio2012Light")
-        cboDepartamento.DataSource = LocalCN.ubigeo_Departamento()
+        datadep = New DataTable
+        datadep = LocalCN.ubigeo_Departamento()
+        cboDepartamento.DataSource = datadep
         cboDepartamento.DisplayMember = "Departamento"
         cboDepartamento.ValueMember = "idDep"
         cboDepartamento.SelectedIndex = -1
@@ -48,13 +50,18 @@ Public Class FrmParticipante_vb
     Private Sub cboDepartamento_Leave(sender As Object, e As EventArgs) Handles cboDepartamento.Leave
         Dim idDep As String = Trim(cboDepartamento.SelectedValue)
         If idDep IsNot String.Empty Then
+            Dim codTel As String = datadep.Select("idDep=" & idDep)(0).ItemArray(2)
+            txtCodtel1.Text = "(" & codTel & ")"
+            txtCodtel2.Text = "(" & codTel & ")"
+            txtCodtelM1.Text = "(" & codTel & ")"
+            txtCodtelM2.Text = "(" & codTel & ")"
             cboProvincia.DataSource = LocalCN.ubigeo_Provincia(idDep)
             cboProvincia.ValueMember = "idProv"
             cboProvincia.DisplayMember = "Provincia"
         End If
     End Sub
 
-    Private Sub txtTelFijo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTelFijo.KeyPress, txtTelMovil.KeyPress
+    Private Sub txtTelFijo_KeyPress(sender As Object, e As KeyPressEventArgs)
         Solo_numeros(e)
     End Sub
 

@@ -22,15 +22,20 @@ Partial Class FrmParticipante_vb
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim RadListDataItem6 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem7 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem8 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem9 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem10 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem11 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem12 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem13 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem14 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem1 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem2 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem3 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem4 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem5 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem6 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem7 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem8 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem9 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmParticipante_vb))
         Me.grp = New System.Windows.Forms.GroupBox()
         Me.cboOperadorM = New Telerik.WinControls.UI.RadDropDownList()
@@ -52,8 +57,6 @@ Partial Class FrmParticipante_vb
         Me.txtCorreo = New Telerik.WinControls.UI.RadTextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.txtTelMovil = New Telerik.WinControls.UI.RadTextBox()
-        Me.txtTelFijo = New Telerik.WinControls.UI.RadTextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.txtDireccion = New Telerik.WinControls.UI.RadTextBox()
@@ -69,6 +72,18 @@ Partial Class FrmParticipante_vb
         Me.btnGuardar = New Telerik.WinControls.UI.RadButton()
         Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.RadDropDownList1 = New Telerik.WinControls.UI.RadDropDownList()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtTelFijo = New System.Windows.Forms.MaskedTextBox()
+        Me.txtCodtel1 = New System.Windows.Forms.TextBox()
+        Me.txtCodtel2 = New System.Windows.Forms.TextBox()
+        Me.txtTelFijo2 = New System.Windows.Forms.MaskedTextBox()
+        Me.txtTelMovil = New System.Windows.Forms.MaskedTextBox()
+        Me.txtCodtelM1 = New System.Windows.Forms.TextBox()
+        Me.txtCodtelM2 = New System.Windows.Forms.TextBox()
+        Me.txtTelMovil2 = New System.Windows.Forms.MaskedTextBox()
         Me.grp.SuspendLayout()
         CType(Me.cboOperadorM, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox5.SuspendLayout()
@@ -81,20 +96,31 @@ Partial Class FrmParticipante_vb
         CType(Me.txtDNICE, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboEstadoCivil, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCorreo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTelMovil, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTelFijo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDireccion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtNombres, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtApeMat, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtApePat, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadDropDownList1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'grp
         '
         Me.grp.AccessibleDescription = ""
+        Me.grp.Controls.Add(Me.txtCodtelM2)
+        Me.grp.Controls.Add(Me.txtTelMovil2)
+        Me.grp.Controls.Add(Me.txtCodtelM1)
+        Me.grp.Controls.Add(Me.txtTelMovil)
+        Me.grp.Controls.Add(Me.txtCodtel2)
+        Me.grp.Controls.Add(Me.txtTelFijo2)
+        Me.grp.Controls.Add(Me.txtCodtel1)
+        Me.grp.Controls.Add(Me.txtTelFijo)
+        Me.grp.Controls.Add(Me.RadDropDownList1)
+        Me.grp.Controls.Add(Me.Label8)
+        Me.grp.Controls.Add(Me.Label9)
+        Me.grp.Controls.Add(Me.Label10)
         Me.grp.Controls.Add(Me.cboOperadorM)
         Me.grp.Controls.Add(Me.GroupBox5)
         Me.grp.Controls.Add(Me.txtCodPart)
@@ -110,8 +136,6 @@ Partial Class FrmParticipante_vb
         Me.grp.Controls.Add(Me.txtCorreo)
         Me.grp.Controls.Add(Me.Label14)
         Me.grp.Controls.Add(Me.Label13)
-        Me.grp.Controls.Add(Me.txtTelMovil)
-        Me.grp.Controls.Add(Me.txtTelFijo)
         Me.grp.Controls.Add(Me.Label12)
         Me.grp.Controls.Add(Me.Label11)
         Me.grp.Controls.Add(Me.txtDireccion)
@@ -127,7 +151,7 @@ Partial Class FrmParticipante_vb
         Me.grp.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grp.Location = New System.Drawing.Point(23, 27)
         Me.grp.Name = "grp"
-        Me.grp.Size = New System.Drawing.Size(899, 276)
+        Me.grp.Size = New System.Drawing.Size(875, 323)
         Me.grp.TabIndex = 79
         Me.grp.TabStop = False
         Me.grp.Text = "DATOS PERSONALES"
@@ -136,19 +160,19 @@ Partial Class FrmParticipante_vb
         '
         Me.cboOperadorM.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.cboOperadorM.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadListDataItem1.Text = "Movistar"
-        RadListDataItem2.Text = "Claro"
-        RadListDataItem3.Text = "Entel"
-        RadListDataItem4.Text = "Bitel"
-        RadListDataItem5.Text = "Virgin"
-        Me.cboOperadorM.Items.Add(RadListDataItem1)
-        Me.cboOperadorM.Items.Add(RadListDataItem2)
-        Me.cboOperadorM.Items.Add(RadListDataItem3)
-        Me.cboOperadorM.Items.Add(RadListDataItem4)
-        Me.cboOperadorM.Items.Add(RadListDataItem5)
-        Me.cboOperadorM.Location = New System.Drawing.Point(683, 209)
+        RadListDataItem6.Text = "Movistar"
+        RadListDataItem7.Text = "Claro"
+        RadListDataItem8.Text = "Entel"
+        RadListDataItem9.Text = "Bitel"
+        RadListDataItem10.Text = "Virgin"
+        Me.cboOperadorM.Items.Add(RadListDataItem6)
+        Me.cboOperadorM.Items.Add(RadListDataItem7)
+        Me.cboOperadorM.Items.Add(RadListDataItem8)
+        Me.cboOperadorM.Items.Add(RadListDataItem9)
+        Me.cboOperadorM.Items.Add(RadListDataItem10)
+        Me.cboOperadorM.Location = New System.Drawing.Point(683, 213)
         Me.cboOperadorM.Name = "cboOperadorM"
-        Me.cboOperadorM.Size = New System.Drawing.Size(162, 27)
+        Me.cboOperadorM.Size = New System.Drawing.Size(147, 27)
         Me.cboOperadorM.TabIndex = 18
         Me.cboOperadorM.ThemeName = "VisualStudio2012Light"
         '
@@ -241,7 +265,7 @@ Partial Class FrmParticipante_vb
         Me.grpSexo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grpSexo.Location = New System.Drawing.Point(683, 108)
         Me.grpSexo.Name = "grpSexo"
-        Me.grpSexo.Size = New System.Drawing.Size(194, 44)
+        Me.grpSexo.Size = New System.Drawing.Size(179, 44)
         Me.grpSexo.TabIndex = 122
         Me.grpSexo.TabStop = False
         Me.grpSexo.Text = "Sexo"
@@ -261,7 +285,7 @@ Partial Class FrmParticipante_vb
         '
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RadioButton3.Location = New System.Drawing.Point(102, 18)
+        Me.RadioButton3.Location = New System.Drawing.Point(92, 18)
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(84, 21)
         Me.RadioButton3.TabIndex = 11
@@ -331,14 +355,14 @@ Partial Class FrmParticipante_vb
         '
         Me.cboEstadoCivil.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.cboEstadoCivil.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadListDataItem6.Text = "Soltero"
-        RadListDataItem7.Text = "Casado"
-        RadListDataItem8.Text = "Viudo"
-        RadListDataItem9.Text = "Divorciado"
-        Me.cboEstadoCivil.Items.Add(RadListDataItem6)
-        Me.cboEstadoCivil.Items.Add(RadListDataItem7)
-        Me.cboEstadoCivil.Items.Add(RadListDataItem8)
-        Me.cboEstadoCivil.Items.Add(RadListDataItem9)
+        RadListDataItem11.Text = "Soltero"
+        RadListDataItem12.Text = "Casado"
+        RadListDataItem13.Text = "Viudo"
+        RadListDataItem14.Text = "Divorciado"
+        Me.cboEstadoCivil.Items.Add(RadListDataItem11)
+        Me.cboEstadoCivil.Items.Add(RadListDataItem12)
+        Me.cboEstadoCivil.Items.Add(RadListDataItem13)
+        Me.cboEstadoCivil.Items.Add(RadListDataItem14)
         Me.cboEstadoCivil.Location = New System.Drawing.Point(331, 121)
         Me.cboEstadoCivil.Name = "cboEstadoCivil"
         Me.cboEstadoCivil.Size = New System.Drawing.Size(123, 27)
@@ -349,7 +373,7 @@ Partial Class FrmParticipante_vb
         '
         Me.txtCorreo.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.txtCorreo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCorreo.Location = New System.Drawing.Point(144, 239)
+        Me.txtCorreo.Location = New System.Drawing.Point(144, 281)
         Me.txtCorreo.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtCorreo.Name = "txtCorreo"
         '
@@ -364,7 +388,7 @@ Partial Class FrmParticipante_vb
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(77, 244)
+        Me.Label14.Location = New System.Drawing.Point(77, 286)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(59, 17)
         Me.Label14.TabIndex = 110
@@ -374,45 +398,17 @@ Partial Class FrmParticipante_vb
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(547, 216)
+        Me.Label13.Location = New System.Drawing.Point(547, 218)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(118, 17)
         Me.Label13.TabIndex = 114
         Me.Label13.Text = "OPERADOR MOVIL"
         '
-        'txtTelMovil
-        '
-        Me.txtTelMovil.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelMovil.Location = New System.Drawing.Point(385, 212)
-        Me.txtTelMovil.MinimumSize = New System.Drawing.Size(0, 24)
-        Me.txtTelMovil.Name = "txtTelMovil"
-        '
-        '
-        '
-        Me.txtTelMovil.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.txtTelMovil.Size = New System.Drawing.Size(150, 24)
-        Me.txtTelMovil.TabIndex = 17
-        Me.txtTelMovil.ThemeName = "VisualStudio2012Light"
-        '
-        'txtTelFijo
-        '
-        Me.txtTelFijo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelFijo.Location = New System.Drawing.Point(144, 212)
-        Me.txtTelFijo.MinimumSize = New System.Drawing.Size(0, 24)
-        Me.txtTelFijo.Name = "txtTelFijo"
-        '
-        '
-        '
-        Me.txtTelFijo.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.txtTelFijo.Size = New System.Drawing.Size(141, 24)
-        Me.txtTelFijo.TabIndex = 16
-        Me.txtTelFijo.ThemeName = "VisualStudio2012Light"
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(308, 216)
+        Me.Label12.Location = New System.Drawing.Point(308, 218)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(74, 17)
         Me.Label12.TabIndex = 112
@@ -422,7 +418,7 @@ Partial Class FrmParticipante_vb
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(76, 216)
+        Me.Label11.Location = New System.Drawing.Point(76, 218)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(59, 17)
         Me.Label11.TabIndex = 111
@@ -550,7 +546,7 @@ Partial Class FrmParticipante_vb
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(598, 312)
+        Me.btnGuardar.Location = New System.Drawing.Point(573, 360)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(159, 33)
         Me.btnGuardar.TabIndex = 80
@@ -559,7 +555,7 @@ Partial Class FrmParticipante_vb
         '
         'RadButton3
         '
-        Me.RadButton3.Location = New System.Drawing.Point(763, 312)
+        Me.RadButton3.Location = New System.Drawing.Point(738, 360)
         Me.RadButton3.Name = "RadButton3"
         Me.RadButton3.Size = New System.Drawing.Size(159, 33)
         Me.RadButton3.TabIndex = 81
@@ -576,11 +572,157 @@ Partial Class FrmParticipante_vb
         Me.Label15.Text = "REGISTRAR PARTICIPANTE"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'RadDropDownList1
+        '
+        Me.RadDropDownList1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.RadDropDownList1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        RadListDataItem1.Text = "Movistar"
+        RadListDataItem2.Text = "Claro"
+        RadListDataItem3.Text = "Entel"
+        RadListDataItem4.Text = "Bitel"
+        RadListDataItem5.Text = "Virgin"
+        Me.RadDropDownList1.Items.Add(RadListDataItem1)
+        Me.RadDropDownList1.Items.Add(RadListDataItem2)
+        Me.RadDropDownList1.Items.Add(RadListDataItem3)
+        Me.RadDropDownList1.Items.Add(RadListDataItem4)
+        Me.RadDropDownList1.Items.Add(RadListDataItem5)
+        Me.RadDropDownList1.Location = New System.Drawing.Point(683, 243)
+        Me.RadDropDownList1.Name = "RadDropDownList1"
+        Me.RadDropDownList1.Size = New System.Drawing.Size(147, 27)
+        Me.RadDropDownList1.TabIndex = 130
+        Me.RadDropDownList1.ThemeName = "VisualStudio2012Light"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(547, 248)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(118, 17)
+        Me.Label8.TabIndex = 133
+        Me.Label8.Text = "OPERADOR MOVIL"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(308, 248)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(74, 17)
+        Me.Label9.TabIndex = 132
+        Me.Label9.Text = "TEL. MOVIL"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(76, 248)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(59, 17)
+        Me.Label10.TabIndex = 131
+        Me.Label10.Text = "TEL. FIJO"
+        '
+        'txtTelFijo
+        '
+        Me.txtTelFijo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtTelFijo.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtTelFijo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelFijo.Location = New System.Drawing.Point(187, 214)
+        Me.txtTelFijo.Mask = "000-0000"
+        Me.txtTelFijo.Name = "txtTelFijo"
+        Me.txtTelFijo.Size = New System.Drawing.Size(98, 25)
+        Me.txtTelFijo.TabIndex = 83
+        Me.txtTelFijo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtCodtel1
+        '
+        Me.txtCodtel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCodtel1.Enabled = False
+        Me.txtCodtel1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodtel1.Location = New System.Drawing.Point(145, 214)
+        Me.txtCodtel1.Name = "txtCodtel1"
+        Me.txtCodtel1.Size = New System.Drawing.Size(38, 25)
+        Me.txtCodtel1.TabIndex = 129
+        Me.txtCodtel1.Text = "(___)"
+        Me.txtCodtel1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtCodtel2
+        '
+        Me.txtCodtel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCodtel2.Enabled = False
+        Me.txtCodtel2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodtel2.Location = New System.Drawing.Point(145, 244)
+        Me.txtCodtel2.Name = "txtCodtel2"
+        Me.txtCodtel2.Size = New System.Drawing.Size(38, 25)
+        Me.txtCodtel2.TabIndex = 135
+        Me.txtCodtel2.Text = "(___)"
+        Me.txtCodtel2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtTelFijo2
+        '
+        Me.txtTelFijo2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtTelFijo2.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtTelFijo2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelFijo2.Location = New System.Drawing.Point(187, 244)
+        Me.txtTelFijo2.Mask = "000-0000"
+        Me.txtTelFijo2.Name = "txtTelFijo2"
+        Me.txtTelFijo2.Size = New System.Drawing.Size(98, 25)
+        Me.txtTelFijo2.TabIndex = 134
+        Me.txtTelFijo2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtTelMovil
+        '
+        Me.txtTelMovil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtTelMovil.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtTelMovil.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelMovil.Location = New System.Drawing.Point(430, 214)
+        Me.txtTelMovil.Mask = "000-000-000"
+        Me.txtTelMovil.Name = "txtTelMovil"
+        Me.txtTelMovil.Size = New System.Drawing.Size(111, 25)
+        Me.txtTelMovil.TabIndex = 136
+        Me.txtTelMovil.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtCodtelM1
+        '
+        Me.txtCodtelM1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCodtelM1.Enabled = False
+        Me.txtCodtelM1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodtelM1.Location = New System.Drawing.Point(388, 214)
+        Me.txtCodtelM1.Name = "txtCodtelM1"
+        Me.txtCodtelM1.Size = New System.Drawing.Size(38, 25)
+        Me.txtCodtelM1.TabIndex = 137
+        Me.txtCodtelM1.Text = "(___)"
+        Me.txtCodtelM1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtCodtelM2
+        '
+        Me.txtCodtelM2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCodtelM2.Enabled = False
+        Me.txtCodtelM2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodtelM2.Location = New System.Drawing.Point(388, 244)
+        Me.txtCodtelM2.Name = "txtCodtelM2"
+        Me.txtCodtelM2.Size = New System.Drawing.Size(38, 25)
+        Me.txtCodtelM2.TabIndex = 139
+        Me.txtCodtelM2.Text = "(___)"
+        Me.txtCodtelM2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtTelMovil2
+        '
+        Me.txtTelMovil2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtTelMovil2.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtTelMovil2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelMovil2.Location = New System.Drawing.Point(430, 244)
+        Me.txtTelMovil2.Mask = "000-000-000"
+        Me.txtTelMovil2.Name = "txtTelMovil2"
+        Me.txtTelMovil2.Size = New System.Drawing.Size(111, 25)
+        Me.txtTelMovil2.TabIndex = 138
+        Me.txtTelMovil2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'FrmParticipante_vb
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(937, 361)
+        Me.ClientSize = New System.Drawing.Size(937, 405)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.RadButton3)
         Me.Controls.Add(Me.btnGuardar)
@@ -608,14 +750,13 @@ Partial Class FrmParticipante_vb
         CType(Me.txtDNICE, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cboEstadoCivil, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCorreo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTelMovil, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTelFijo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDireccion, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtNombres, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtApeMat, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtApePat, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnGuardar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadDropDownList1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -641,8 +782,6 @@ Partial Class FrmParticipante_vb
     Friend WithEvents txtCorreo As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents txtTelMovil As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents txtTelFijo As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents txtDireccion As Telerik.WinControls.UI.RadTextBox
@@ -658,5 +797,17 @@ Partial Class FrmParticipante_vb
     Friend WithEvents btnGuardar As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButton3 As Telerik.WinControls.UI.RadButton
     Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents RadDropDownList1 As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents txtTelFijo As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents txtCodtel1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtTelMovil As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents txtCodtel2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtTelFijo2 As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents txtCodtelM2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtTelMovil2 As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents txtCodtelM1 As System.Windows.Forms.TextBox
 End Class
 
