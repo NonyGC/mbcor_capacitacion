@@ -41,19 +41,23 @@ Public Class frmLocal
     End Sub
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
-        Dim codUbi As String = cboDepartamento.SelectedValue & cboProvincia.SelectedValue & cboDistrito.SelectedValue
-        With LocalCE
-            .codigo = txtCodigo.Text
-            .nombre = txtNombre.Text
-            .direccion = txtDireccion.Text
-            .codUbigeo = codUbi
-            .aforo = txtAforo.Value
-        End With
-        If (localCN.Registrar(LocalCE)) Then
-            RadMessageBox.Show("SE REGISTRO CORRECTAMENTE", "", MessageBoxButtons.OK, RadMessageIcon.Info)
-            Limpiar()
+        If Trim(txtNombre.Text).Length > 0 Then
+            Dim codUbi As String = cboDepartamento.SelectedValue & cboProvincia.SelectedValue & cboDistrito.SelectedValue
+            With LocalCE
+                .codigo = txtCodigo.Text
+                .nombre = txtNombre.Text
+                .direccion = txtDireccion.Text
+                .codUbigeo = codUbi
+                .aforo = txtAforo.Value
+            End With
+            If (localCN.Registrar(LocalCE)) Then
+                RadMessageBox.Show("SE REGISTRO CORRECTAMENTE", "", MessageBoxButtons.OK, RadMessageIcon.Info)
+                Limpiar()
+            Else
+                RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A REGISTRAR", "", MessageBoxButtons.OK, RadMessageIcon.Error)
+            End If
         Else
-            RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A REGISTRAR", "", MessageBoxButtons.OK, RadMessageIcon.Error)
+            RadMessageBox.Show("DATOS INCOMPLETOS", "", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
         End If
     End Sub
 
@@ -75,7 +79,7 @@ Public Class frmLocal
         txtNombre.Clear()
         txtDireccion.Clear()
         txtAforo.Value = 0
-        cboDepartamento.SelectedIndex = 0
+        cboDepartamento.SelectedIndex = -1
     End Sub
 
 End Class

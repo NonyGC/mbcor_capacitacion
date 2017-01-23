@@ -31,6 +31,7 @@ Partial Class FrmParticipante_vb
         Dim RadListDataItem7 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem8 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem9 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmParticipante_vb))
         Me.grp = New System.Windows.Forms.GroupBox()
         Me.cboOperadorM = New Telerik.WinControls.UI.RadDropDownList()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
@@ -584,6 +585,7 @@ Partial Class FrmParticipante_vb
         Me.Controls.Add(Me.RadButton3)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.grp)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmParticipante_vb"
         '
         '
