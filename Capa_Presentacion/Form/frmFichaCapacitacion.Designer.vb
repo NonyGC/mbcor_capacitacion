@@ -75,14 +75,8 @@ Partial Class frmFichaCapacitacion
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.txtTelFijoEmp = New Telerik.WinControls.UI.RadTextBox()
-        Me.txtTelMovEmp = New Telerik.WinControls.UI.RadTextBox()
-        Me.Label24 = New System.Windows.Forms.Label()
         Me.txtEmpresa = New Telerik.WinControls.UI.RadTextBox()
         Me.txtCargo = New Telerik.WinControls.UI.RadTextBox()
-        Me.cboOperadorempresa = New Telerik.WinControls.UI.RadDropDownList()
         Me.txtRuc = New Telerik.WinControls.UI.RadTextBox()
         Me.grp2 = New System.Windows.Forms.GroupBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
@@ -152,6 +146,14 @@ Partial Class frmFichaCapacitacion
         Me.RadioButton16 = New System.Windows.Forms.RadioButton()
         Me.RadioButton17 = New System.Windows.Forms.RadioButton()
         Me.grpTajetacredito = New System.Windows.Forms.GroupBox()
+        Me.txtCodtelM1 = New System.Windows.Forms.TextBox()
+        Me.txtTelMovEmp = New System.Windows.Forms.MaskedTextBox()
+        Me.txtCodtel1 = New System.Windows.Forms.TextBox()
+        Me.txtTelFijoEmp = New System.Windows.Forms.MaskedTextBox()
+        Me.cboOperadorempresa = New Telerik.WinControls.UI.RadDropDownList()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.RadTextBox17, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBox18, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -179,11 +181,8 @@ Partial Class frmFichaCapacitacion
         CType(Me.cboCapacitacion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboCapacitacion.EditorControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboCapacitacion.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTelFijoEmp, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTelMovEmp, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtEmpresa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCargo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cboOperadorempresa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtRuc, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grp2.SuspendLayout()
         CType(Me.txtEspOtros, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -211,6 +210,7 @@ Partial Class frmFichaCapacitacion
         Me.Panel1.SuspendLayout()
         CType(Me.txtCodigop, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpTajetacredito.SuspendLayout()
+        CType(Me.cboOperadorempresa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -585,7 +585,7 @@ Partial Class frmFichaCapacitacion
         Me.btnRegistrar.Location = New System.Drawing.Point(605, 763)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(190, 39)
-        Me.btnRegistrar.TabIndex = 83
+        Me.btnRegistrar.TabIndex = 46
         Me.btnRegistrar.Text = "REGISTRAR"
         Me.btnRegistrar.ThemeName = "VisualStudio2012Light"
         '
@@ -596,7 +596,7 @@ Partial Class frmFichaCapacitacion
         Me.btnLimpiar.Location = New System.Drawing.Point(806, 763)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(190, 39)
-        Me.btnLimpiar.TabIndex = 84
+        Me.btnLimpiar.TabIndex = 47
         Me.btnLimpiar.Text = "LIMPIAR"
         Me.btnLimpiar.ThemeName = "VisualStudio2012Light"
         '
@@ -675,7 +675,7 @@ Partial Class frmFichaCapacitacion
         Me.cboCapacitacion.Location = New System.Drawing.Point(532, 40)
         Me.cboCapacitacion.Name = "cboCapacitacion"
         Me.cboCapacitacion.Size = New System.Drawing.Size(415, 24)
-        Me.cboCapacitacion.TabIndex = 90
+        Me.cboCapacitacion.TabIndex = 2
         Me.cboCapacitacion.TabStop = False
         Me.cboCapacitacion.ThemeName = "VisualStudio2012Light"
         '
@@ -683,7 +683,7 @@ Partial Class frmFichaCapacitacion
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(291, 35)
+        Me.Label18.Location = New System.Drawing.Point(299, 35)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(64, 17)
         Me.Label18.TabIndex = 65
@@ -709,77 +709,19 @@ Partial Class frmFichaCapacitacion
         Me.Label21.TabIndex = 67
         Me.Label21.Text = "CARGO"
         '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(74, 96)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(59, 17)
-        Me.Label23.TabIndex = 70
-        Me.Label23.Text = "TEL. FIJO"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(290, 96)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(74, 17)
-        Me.Label22.TabIndex = 71
-        Me.Label22.Text = "TEL. MOVIL"
-        '
-        'txtTelFijoEmp
-        '
-        Me.txtTelFijoEmp.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelFijoEmp.Location = New System.Drawing.Point(144, 92)
-        Me.txtTelFijoEmp.MinimumSize = New System.Drawing.Size(0, 24)
-        Me.txtTelFijoEmp.Name = "txtTelFijoEmp"
-        '
-        '
-        '
-        Me.txtTelFijoEmp.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.txtTelFijoEmp.Size = New System.Drawing.Size(139, 24)
-        Me.txtTelFijoEmp.TabIndex = 29
-        Me.txtTelFijoEmp.ThemeName = "VisualStudio2012Light"
-        '
-        'txtTelMovEmp
-        '
-        Me.txtTelMovEmp.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelMovEmp.Location = New System.Drawing.Point(371, 92)
-        Me.txtTelMovEmp.MinimumSize = New System.Drawing.Size(0, 24)
-        Me.txtTelMovEmp.Name = "txtTelMovEmp"
-        '
-        '
-        '
-        Me.txtTelMovEmp.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.txtTelMovEmp.Size = New System.Drawing.Size(134, 24)
-        Me.txtTelMovEmp.TabIndex = 30
-        Me.txtTelMovEmp.ThemeName = "VisualStudio2012Light"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(511, 96)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(118, 17)
-        Me.Label24.TabIndex = 73
-        Me.Label24.Text = "OPERADOR MOVIL"
-        '
         'txtEmpresa
         '
         Me.txtEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtEmpresa.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmpresa.Location = New System.Drawing.Point(371, 31)
+        Me.txtEmpresa.Location = New System.Drawing.Point(379, 31)
         Me.txtEmpresa.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtEmpresa.Name = "txtEmpresa"
         '
         '
         '
         Me.txtEmpresa.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.txtEmpresa.Size = New System.Drawing.Size(378, 24)
-        Me.txtEmpresa.TabIndex = 27
+        Me.txtEmpresa.Size = New System.Drawing.Size(426, 24)
+        Me.txtEmpresa.TabIndex = 18
         Me.txtEmpresa.ThemeName = "VisualStudio2012Light"
         '
         'txtCargo
@@ -793,29 +735,9 @@ Partial Class frmFichaCapacitacion
         '
         '
         Me.txtCargo.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.txtCargo.Size = New System.Drawing.Size(605, 24)
-        Me.txtCargo.TabIndex = 28
+        Me.txtCargo.Size = New System.Drawing.Size(660, 24)
+        Me.txtCargo.TabIndex = 19
         Me.txtCargo.ThemeName = "VisualStudio2012Light"
-        '
-        'cboOperadorempresa
-        '
-        Me.cboOperadorempresa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
-        Me.cboOperadorempresa.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadListDataItem1.Text = "Movistar"
-        RadListDataItem2.Text = "Claro"
-        RadListDataItem3.Text = "Entel"
-        RadListDataItem4.Text = "Bitel"
-        RadListDataItem5.Text = "Virgin"
-        Me.cboOperadorempresa.Items.Add(RadListDataItem1)
-        Me.cboOperadorempresa.Items.Add(RadListDataItem2)
-        Me.cboOperadorempresa.Items.Add(RadListDataItem3)
-        Me.cboOperadorempresa.Items.Add(RadListDataItem4)
-        Me.cboOperadorempresa.Items.Add(RadListDataItem5)
-        Me.cboOperadorempresa.Location = New System.Drawing.Point(631, 91)
-        Me.cboOperadorempresa.Name = "cboOperadorempresa"
-        Me.cboOperadorempresa.Size = New System.Drawing.Size(118, 27)
-        Me.cboOperadorempresa.TabIndex = 31
-        Me.cboOperadorempresa.ThemeName = "VisualStudio2012Light"
         '
         'txtRuc
         '
@@ -828,29 +750,31 @@ Partial Class frmFichaCapacitacion
         '
         Me.txtRuc.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtRuc.Size = New System.Drawing.Size(139, 24)
-        Me.txtRuc.TabIndex = 26
+        Me.txtRuc.TabIndex = 17
         Me.txtRuc.ThemeName = "VisualStudio2012Light"
         '
         'grp2
         '
-        Me.grp2.Controls.Add(Me.txtRuc)
+        Me.grp2.Controls.Add(Me.txtCodtelM1)
+        Me.grp2.Controls.Add(Me.txtTelMovEmp)
+        Me.grp2.Controls.Add(Me.txtCodtel1)
+        Me.grp2.Controls.Add(Me.txtTelFijoEmp)
         Me.grp2.Controls.Add(Me.cboOperadorempresa)
+        Me.grp2.Controls.Add(Me.Label13)
+        Me.grp2.Controls.Add(Me.Label12)
+        Me.grp2.Controls.Add(Me.Label11)
+        Me.grp2.Controls.Add(Me.txtRuc)
         Me.grp2.Controls.Add(Me.txtCargo)
         Me.grp2.Controls.Add(Me.txtEmpresa)
-        Me.grp2.Controls.Add(Me.Label24)
-        Me.grp2.Controls.Add(Me.txtTelMovEmp)
-        Me.grp2.Controls.Add(Me.txtTelFijoEmp)
-        Me.grp2.Controls.Add(Me.Label22)
-        Me.grp2.Controls.Add(Me.Label23)
         Me.grp2.Controls.Add(Me.Label21)
         Me.grp2.Controls.Add(Me.Label20)
         Me.grp2.Controls.Add(Me.Label18)
         Me.grp2.Enabled = False
         Me.grp2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grp2.Location = New System.Drawing.Point(27, 245)
+        Me.grp2.Location = New System.Drawing.Point(27, 267)
         Me.grp2.Name = "grp2"
         Me.grp2.Size = New System.Drawing.Size(978, 132)
-        Me.grp2.TabIndex = 80
+        Me.grp2.TabIndex = 16
         Me.grp2.TabStop = False
         Me.grp2.Text = "DATOS LABORALES / PROFESIONALES"
         '
@@ -862,7 +786,7 @@ Partial Class frmFichaCapacitacion
         Me.CheckBox1.Location = New System.Drawing.Point(28, 31)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(95, 21)
-        Me.CheckBox1.TabIndex = 32
+        Me.CheckBox1.TabIndex = 6
         Me.CheckBox1.Text = "Arquitectura"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
@@ -874,7 +798,7 @@ Partial Class frmFichaCapacitacion
         Me.CheckBox2.Location = New System.Drawing.Point(28, 58)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(84, 21)
-        Me.CheckBox2.TabIndex = 35
+        Me.CheckBox2.TabIndex = 10
         Me.CheckBox2.Text = "Estudiante"
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
@@ -886,7 +810,7 @@ Partial Class frmFichaCapacitacion
         Me.CheckBox3.Location = New System.Drawing.Point(510, 58)
         Me.CheckBox3.Name = "CheckBox3"
         Me.CheckBox3.Size = New System.Drawing.Size(182, 21)
-        Me.CheckBox3.TabIndex = 38
+        Me.CheckBox3.TabIndex = 12
         Me.CheckBox3.Text = "Sector Público o Educación"
         Me.CheckBox3.UseVisualStyleBackColor = True
         '
@@ -898,7 +822,7 @@ Partial Class frmFichaCapacitacion
         Me.CheckBox4.Location = New System.Drawing.Point(264, 31)
         Me.CheckBox4.Name = "CheckBox4"
         Me.CheckBox4.Size = New System.Drawing.Size(232, 21)
-        Me.CheckBox4.TabIndex = 33
+        Me.CheckBox4.TabIndex = 7
         Me.CheckBox4.Text = "Carpinteria, Ebanisteria y Muebleria"
         Me.CheckBox4.UseVisualStyleBackColor = True
         '
@@ -910,7 +834,7 @@ Partial Class frmFichaCapacitacion
         Me.CheckBox5.Location = New System.Drawing.Point(27, 85)
         Me.CheckBox5.Name = "CheckBox5"
         Me.CheckBox5.Size = New System.Drawing.Size(51, 21)
-        Me.CheckBox5.TabIndex = 40
+        Me.CheckBox5.TabIndex = 14
         Me.CheckBox5.Text = "Otro"
         Me.CheckBox5.UseVisualStyleBackColor = True
         '
@@ -922,7 +846,7 @@ Partial Class frmFichaCapacitacion
         Me.CheckBox6.Location = New System.Drawing.Point(510, 31)
         Me.CheckBox6.Name = "CheckBox6"
         Me.CheckBox6.Size = New System.Drawing.Size(99, 21)
-        Me.CheckBox6.TabIndex = 34
+        Me.CheckBox6.TabIndex = 8
         Me.CheckBox6.Text = "Construcción"
         Me.CheckBox6.UseVisualStyleBackColor = True
         '
@@ -934,7 +858,7 @@ Partial Class frmFichaCapacitacion
         Me.CheckBox7.Location = New System.Drawing.Point(615, 31)
         Me.CheckBox7.Name = "CheckBox7"
         Me.CheckBox7.Size = New System.Drawing.Size(335, 21)
-        Me.CheckBox7.TabIndex = 37
+        Me.CheckBox7.TabIndex = 9
         Me.CheckBox7.Text = "Distribución de Madera y Materiales de Construcción"
         Me.CheckBox7.UseVisualStyleBackColor = True
         '
@@ -951,7 +875,7 @@ Partial Class frmFichaCapacitacion
         '
         Me.txtEspOtros.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtEspOtros.Size = New System.Drawing.Size(407, 24)
-        Me.txtEspOtros.TabIndex = 41
+        Me.txtEspOtros.TabIndex = 15
         Me.txtEspOtros.ThemeName = "VisualStudio2012Light"
         '
         'txtEspeSPE
@@ -967,7 +891,7 @@ Partial Class frmFichaCapacitacion
         '
         Me.txtEspeSPE.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtEspeSPE.Size = New System.Drawing.Size(254, 24)
-        Me.txtEspeSPE.TabIndex = 39
+        Me.txtEspeSPE.TabIndex = 13
         Me.txtEspeSPE.ThemeName = "VisualStudio2012Light"
         '
         'CheckBox10
@@ -978,7 +902,7 @@ Partial Class frmFichaCapacitacion
         Me.CheckBox10.Location = New System.Drawing.Point(264, 58)
         Me.CheckBox10.Name = "CheckBox10"
         Me.CheckBox10.Size = New System.Drawing.Size(144, 21)
-        Me.CheckBox10.TabIndex = 36
+        Me.CheckBox10.TabIndex = 11
         Me.CheckBox10.Text = "Diseño y Decoración"
         Me.CheckBox10.UseVisualStyleBackColor = True
         '
@@ -996,10 +920,10 @@ Partial Class frmFichaCapacitacion
         Me.grbRubro.Controls.Add(Me.CheckBox1)
         Me.grbRubro.Enabled = False
         Me.grbRubro.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grbRubro.Location = New System.Drawing.Point(27, 378)
+        Me.grbRubro.Location = New System.Drawing.Point(27, 142)
         Me.grbRubro.Name = "grbRubro"
         Me.grbRubro.Size = New System.Drawing.Size(978, 124)
-        Me.grbRubro.TabIndex = 81
+        Me.grbRubro.TabIndex = 5
         Me.grbRubro.TabStop = False
         Me.grbRubro.Text = "RUBRO EN QUE SE DESEMPEÑA"
         '
@@ -1035,7 +959,7 @@ Partial Class frmFichaCapacitacion
         '
         Me.txtNomInstitu.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtNomInstitu.Size = New System.Drawing.Size(465, 24)
-        Me.txtNomInstitu.TabIndex = 75
+        Me.txtNomInstitu.TabIndex = 25
         Me.txtNomInstitu.ThemeName = "VisualStudio2012Light"
         '
         'Label16
@@ -1060,7 +984,7 @@ Partial Class frmFichaCapacitacion
         '
         Me.txtProfeCarrera.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtProfeCarrera.Size = New System.Drawing.Size(201, 24)
-        Me.txtProfeCarrera.TabIndex = 20
+        Me.txtProfeCarrera.TabIndex = 23
         Me.txtProfeCarrera.ThemeName = "VisualStudio2012Light"
         '
         'txtNivelEst
@@ -1075,7 +999,7 @@ Partial Class frmFichaCapacitacion
         '
         Me.txtNivelEst.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtNivelEst.Size = New System.Drawing.Size(144, 24)
-        Me.txtNivelEst.TabIndex = 21
+        Me.txtNivelEst.TabIndex = 24
         Me.txtNivelEst.ThemeName = "VisualStudio2012Light"
         '
         'grpInstitucion
@@ -1088,7 +1012,7 @@ Partial Class frmFichaCapacitacion
         Me.grpInstitucion.Location = New System.Drawing.Point(616, 37)
         Me.grpInstitucion.Name = "grpInstitucion"
         Me.grpInstitucion.Size = New System.Drawing.Size(264, 54)
-        Me.grpInstitucion.TabIndex = 22
+        Me.grpInstitucion.TabIndex = 26
         Me.grpInstitucion.TabStop = False
         Me.grpInstitucion.Text = "INSTITUCIÓN EDUCATIVA"
         '
@@ -1099,7 +1023,7 @@ Partial Class frmFichaCapacitacion
         Me.RadioButton5.Location = New System.Drawing.Point(196, 23)
         Me.RadioButton5.Name = "RadioButton5"
         Me.RadioButton5.Size = New System.Drawing.Size(58, 21)
-        Me.RadioButton5.TabIndex = 25
+        Me.RadioButton5.TabIndex = 29
         Me.RadioButton5.TabStop = True
         Me.RadioButton5.Text = "Otros"
         Me.RadioButton5.UseVisualStyleBackColor = True
@@ -1111,7 +1035,7 @@ Partial Class frmFichaCapacitacion
         Me.RadioButton2.Location = New System.Drawing.Point(118, 23)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(71, 21)
-        Me.RadioButton2.TabIndex = 24
+        Me.RadioButton2.TabIndex = 28
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Instituto"
         Me.RadioButton2.UseVisualStyleBackColor = True
@@ -1123,7 +1047,7 @@ Partial Class frmFichaCapacitacion
         Me.RadioButton1.Location = New System.Drawing.Point(17, 23)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(94, 21)
-        Me.RadioButton1.TabIndex = 23
+        Me.RadioButton1.TabIndex = 27
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Universidad"
         Me.RadioButton1.UseVisualStyleBackColor = True
@@ -1139,7 +1063,7 @@ Partial Class frmFichaCapacitacion
         Me.grp1.Controls.Add(Me.Label19)
         Me.grp1.Enabled = False
         Me.grp1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grp1.Location = New System.Drawing.Point(25, 139)
+        Me.grp1.Location = New System.Drawing.Point(27, 400)
         Me.grp1.Name = "grp1"
         Me.grp1.Size = New System.Drawing.Size(978, 105)
         Me.grp1.TabIndex = 79
@@ -1186,10 +1110,10 @@ Partial Class frmFichaCapacitacion
         Me.grp5.Controls.Add(Me.txtTematratar)
         Me.grp5.Enabled = False
         Me.grp5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grp5.Location = New System.Drawing.Point(27, 579)
+        Me.grp5.Location = New System.Drawing.Point(27, 581)
         Me.grp5.Name = "grp5"
         Me.grp5.Size = New System.Drawing.Size(978, 158)
-        Me.grp5.TabIndex = 89
+        Me.grp5.TabIndex = 36
         Me.grp5.TabStop = False
         Me.grp5.Text = "RESPONDA SINCERAMENTE"
         '
@@ -1202,7 +1126,7 @@ Partial Class frmFichaCapacitacion
         Me.grpRessin1.Location = New System.Drawing.Point(16, 18)
         Me.grpRessin1.Name = "grpRessin1"
         Me.grpRessin1.Size = New System.Drawing.Size(475, 41)
-        Me.grpRessin1.TabIndex = 27
+        Me.grpRessin1.TabIndex = 37
         Me.grpRessin1.TabStop = False
         '
         'RadioButton6
@@ -1251,7 +1175,7 @@ Partial Class frmFichaCapacitacion
         Me.Label2.Location = New System.Drawing.Point(21, 17)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(187, 17)
-        Me.Label2.TabIndex = 16
+        Me.Label2.TabIndex = 37
         Me.Label2.Text = "■ El expositor domina el tema"
         '
         'grpRessin5
@@ -1262,7 +1186,7 @@ Partial Class frmFichaCapacitacion
         Me.grpRessin5.Location = New System.Drawing.Point(16, 104)
         Me.grpRessin5.Name = "grpRessin5"
         Me.grpRessin5.Size = New System.Drawing.Size(475, 41)
-        Me.grpRessin5.TabIndex = 31
+        Me.grpRessin5.TabIndex = 41
         Me.grpRessin5.TabStop = False
         '
         'RadioButton18
@@ -1310,7 +1234,7 @@ Partial Class frmFichaCapacitacion
         Me.grpRessin4.Location = New System.Drawing.Point(497, 61)
         Me.grpRessin4.Name = "grpRessin4"
         Me.grpRessin4.Size = New System.Drawing.Size(475, 41)
-        Me.grpRessin4.TabIndex = 30
+        Me.grpRessin4.TabIndex = 40
         Me.grpRessin4.TabStop = False
         '
         'RadioButton13
@@ -1371,7 +1295,7 @@ Partial Class frmFichaCapacitacion
         Me.grpRessin3.Location = New System.Drawing.Point(16, 61)
         Me.grpRessin3.Name = "grpRessin3"
         Me.grpRessin3.Size = New System.Drawing.Size(475, 41)
-        Me.grpRessin3.TabIndex = 29
+        Me.grpRessin3.TabIndex = 39
         Me.grpRessin3.TabStop = False
         '
         'RadioButton7
@@ -1432,7 +1356,7 @@ Partial Class frmFichaCapacitacion
         Me.grpRessin2.Location = New System.Drawing.Point(497, 18)
         Me.grpRessin2.Name = "grpRessin2"
         Me.grpRessin2.Size = New System.Drawing.Size(475, 41)
-        Me.grpRessin2.TabIndex = 28
+        Me.grpRessin2.TabIndex = 38
         Me.grpRessin2.TabStop = False
         '
         'RadioButton10
@@ -1498,7 +1422,7 @@ Partial Class frmFichaCapacitacion
         '
         Me.txtTematratar.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtTematratar.Size = New System.Drawing.Size(473, 37)
-        Me.txtTematratar.TabIndex = 12
+        Me.txtTematratar.TabIndex = 42
         Me.txtTematratar.ThemeName = "VisualStudio2012Light"
         '
         'grpCharla
@@ -1511,10 +1435,10 @@ Partial Class frmFichaCapacitacion
         Me.grpCharla.Controls.Add(Me.txtEspeCharla)
         Me.grpCharla.Enabled = False
         Me.grpCharla.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpCharla.Location = New System.Drawing.Point(27, 504)
+        Me.grpCharla.Location = New System.Drawing.Point(27, 508)
         Me.grpCharla.Name = "grpCharla"
         Me.grpCharla.Size = New System.Drawing.Size(978, 71)
-        Me.grpCharla.TabIndex = 88
+        Me.grpCharla.TabIndex = 30
         Me.grpCharla.TabStop = False
         Me.grpCharla.Text = "CÓMO SE ENTERÓ DE LA CHARLA"
         '
@@ -1526,7 +1450,7 @@ Partial Class frmFichaCapacitacion
         Me.CheckBox12.Location = New System.Drawing.Point(278, 30)
         Me.CheckBox12.Name = "CheckBox12"
         Me.CheckBox12.Size = New System.Drawing.Size(137, 21)
-        Me.CheckBox12.TabIndex = 40
+        Me.CheckBox12.TabIndex = 34
         Me.CheckBox12.Text = "Publicación Medios"
         Me.CheckBox12.UseVisualStyleBackColor = True
         '
@@ -1538,7 +1462,7 @@ Partial Class frmFichaCapacitacion
         Me.CheckBox11.Location = New System.Drawing.Point(113, 30)
         Me.CheckBox11.Name = "CheckBox11"
         Me.CheckBox11.Size = New System.Drawing.Size(68, 21)
-        Me.CheckBox11.TabIndex = 39
+        Me.CheckBox11.TabIndex = 32
         Me.CheckBox11.Text = "Internet"
         Me.CheckBox11.UseVisualStyleBackColor = True
         '
@@ -1550,7 +1474,7 @@ Partial Class frmFichaCapacitacion
         Me.CheckBox9.Location = New System.Drawing.Point(197, 30)
         Me.CheckBox9.Name = "CheckBox9"
         Me.CheckBox9.Size = New System.Drawing.Size(65, 21)
-        Me.CheckBox9.TabIndex = 38
+        Me.CheckBox9.TabIndex = 33
         Me.CheckBox9.Text = "Correo"
         Me.CheckBox9.UseVisualStyleBackColor = True
         '
@@ -1562,7 +1486,7 @@ Partial Class frmFichaCapacitacion
         Me.CheckBox8.Location = New System.Drawing.Point(27, 30)
         Me.CheckBox8.Name = "CheckBox8"
         Me.CheckBox8.Size = New System.Drawing.Size(70, 21)
-        Me.CheckBox8.TabIndex = 37
+        Me.CheckBox8.TabIndex = 31
         Me.CheckBox8.Text = "Anuncio"
         Me.CheckBox8.UseVisualStyleBackColor = True
         '
@@ -1588,7 +1512,7 @@ Partial Class frmFichaCapacitacion
         '
         Me.txtEspeCharla.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtEspeCharla.Size = New System.Drawing.Size(320, 24)
-        Me.txtEspeCharla.TabIndex = 5
+        Me.txtEspeCharla.TabIndex = 35
         Me.txtEspeCharla.ThemeName = "VisualStudio2012Light"
         '
         'RadButton2
@@ -1626,7 +1550,7 @@ Partial Class frmFichaCapacitacion
         Me.cboParticipanteSearch.Location = New System.Drawing.Point(532, 70)
         Me.cboParticipanteSearch.Name = "cboParticipanteSearch"
         Me.cboParticipanteSearch.Size = New System.Drawing.Size(299, 24)
-        Me.cboParticipanteSearch.TabIndex = 96
+        Me.cboParticipanteSearch.TabIndex = 3
         Me.cboParticipanteSearch.ThemeName = "VisualStudio2012Light"
         '
         'Panel1
@@ -1649,7 +1573,7 @@ Partial Class frmFichaCapacitacion
         '
         Me.txtCodigop.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtCodigop.Size = New System.Drawing.Size(76, 24)
-        Me.txtCodigop.TabIndex = 99
+        Me.txtCodigop.TabIndex = 4
         Me.txtCodigop.ThemeName = "VisualStudio2012Light"
         '
         'RadioButton16
@@ -1660,7 +1584,7 @@ Partial Class frmFichaCapacitacion
         Me.RadioButton16.Location = New System.Drawing.Point(94, 20)
         Me.RadioButton16.Name = "RadioButton16"
         Me.RadioButton16.Size = New System.Drawing.Size(42, 19)
-        Me.RadioButton16.TabIndex = 27
+        Me.RadioButton16.TabIndex = 45
         Me.RadioButton16.TabStop = True
         Me.RadioButton16.Text = "NO"
         Me.RadioButton16.UseVisualStyleBackColor = True
@@ -1673,7 +1597,7 @@ Partial Class frmFichaCapacitacion
         Me.RadioButton17.Location = New System.Drawing.Point(42, 20)
         Me.RadioButton17.Name = "RadioButton17"
         Me.RadioButton17.Size = New System.Drawing.Size(33, 19)
-        Me.RadioButton17.TabIndex = 26
+        Me.RadioButton17.TabIndex = 44
         Me.RadioButton17.TabStop = True
         Me.RadioButton17.Text = "SI"
         Me.RadioButton17.UseVisualStyleBackColor = True
@@ -1687,15 +1611,114 @@ Partial Class frmFichaCapacitacion
         Me.grpTajetacredito.Location = New System.Drawing.Point(315, 748)
         Me.grpTajetacredito.Name = "grpTajetacredito"
         Me.grpTajetacredito.Size = New System.Drawing.Size(205, 54)
-        Me.grpTajetacredito.TabIndex = 99
+        Me.grpTajetacredito.TabIndex = 43
         Me.grpTajetacredito.TabStop = False
         Me.grpTajetacredito.Text = "POSEE TARJETA DE CREDITO"
+        '
+        'txtCodtelM1
+        '
+        Me.txtCodtelM1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCodtelM1.Enabled = False
+        Me.txtCodtelM1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodtelM1.Location = New System.Drawing.Point(379, 92)
+        Me.txtCodtelM1.Name = "txtCodtelM1"
+        Me.txtCodtelM1.Size = New System.Drawing.Size(38, 25)
+        Me.txtCodtelM1.TabIndex = 145
+        Me.txtCodtelM1.Text = "(___)"
+        Me.txtCodtelM1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtTelMovEmp
+        '
+        Me.txtTelMovEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtTelMovEmp.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtTelMovEmp.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelMovEmp.Location = New System.Drawing.Point(419, 92)
+        Me.txtTelMovEmp.Mask = "000-000-000"
+        Me.txtTelMovEmp.Name = "txtTelMovEmp"
+        Me.txtTelMovEmp.Size = New System.Drawing.Size(98, 25)
+        Me.txtTelMovEmp.TabIndex = 21
+        Me.txtTelMovEmp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtCodtel1
+        '
+        Me.txtCodtel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCodtel1.Enabled = False
+        Me.txtCodtel1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodtel1.Location = New System.Drawing.Point(144, 92)
+        Me.txtCodtel1.Name = "txtCodtel1"
+        Me.txtCodtel1.Size = New System.Drawing.Size(38, 25)
+        Me.txtCodtel1.TabIndex = 143
+        Me.txtCodtel1.Text = "(___)"
+        Me.txtCodtel1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtTelFijoEmp
+        '
+        Me.txtTelFijoEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtTelFijoEmp.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtTelFijoEmp.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelFijoEmp.Location = New System.Drawing.Point(184, 92)
+        Me.txtTelFijoEmp.Mask = "000-0000"
+        Me.txtTelFijoEmp.Name = "txtTelFijoEmp"
+        Me.txtTelFijoEmp.Size = New System.Drawing.Size(97, 25)
+        Me.txtTelFijoEmp.TabIndex = 20
+        Me.txtTelFijoEmp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'cboOperadorempresa
+        '
+        Me.cboOperadorempresa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cboOperadorempresa.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        RadListDataItem1.Text = "Movistar"
+        RadListDataItem2.Text = "Claro"
+        RadListDataItem3.Text = "Entel"
+        RadListDataItem4.Text = "Bitel"
+        RadListDataItem5.Text = "Virgin"
+        Me.cboOperadorempresa.Items.Add(RadListDataItem1)
+        Me.cboOperadorempresa.Items.Add(RadListDataItem2)
+        Me.cboOperadorempresa.Items.Add(RadListDataItem3)
+        Me.cboOperadorempresa.Items.Add(RadListDataItem4)
+        Me.cboOperadorempresa.Items.Add(RadListDataItem5)
+        Me.cboOperadorempresa.Location = New System.Drawing.Point(675, 91)
+        Me.cboOperadorempresa.Name = "cboOperadorempresa"
+        Me.cboOperadorempresa.Size = New System.Drawing.Size(130, 27)
+        Me.cboOperadorempresa.TabIndex = 22
+        Me.cboOperadorempresa.ThemeName = "VisualStudio2012Light"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(539, 96)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(118, 17)
+        Me.Label13.TabIndex = 142
+        Me.Label13.Text = "OPERADOR MOVIL"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(299, 96)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(74, 17)
+        Me.Label12.TabIndex = 141
+        Me.Label12.Text = "TEL. MOVIL"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(74, 96)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(59, 17)
+        Me.Label11.TabIndex = 140
+        Me.Label11.Text = "TEL. FIJO"
         '
         'frmFichaCapacitacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1032, 820)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.grpTajetacredito)
         Me.Controls.Add(Me.cboParticipanteSearch)
         Me.Controls.Add(Me.lblApeNom)
@@ -1712,7 +1735,6 @@ Partial Class frmFichaCapacitacion
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.grbRubro)
         Me.Controls.Add(Me.grp2)
-        Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "frmFichaCapacitacion"
@@ -1722,7 +1744,7 @@ Partial Class frmFichaCapacitacion
         '
         Me.RootElement.ApplyShapeToControl = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = ""
+        Me.Text = "MBCORP"
         Me.ThemeName = "VisualStudio2012Light"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -1754,11 +1776,8 @@ Partial Class frmFichaCapacitacion
         CType(Me.cboCapacitacion.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cboCapacitacion.EditorControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cboCapacitacion, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTelFijoEmp, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTelMovEmp, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtEmpresa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCargo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cboOperadorempresa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtRuc, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grp2.ResumeLayout(False)
         Me.grp2.PerformLayout()
@@ -1799,6 +1818,7 @@ Partial Class frmFichaCapacitacion
         CType(Me.txtCodigop, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpTajetacredito.ResumeLayout(False)
         Me.grpTajetacredito.PerformLayout()
+        CType(Me.cboOperadorempresa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -1846,14 +1866,8 @@ Partial Class frmFichaCapacitacion
     Friend WithEvents Label18 As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents Label23 As System.Windows.Forms.Label
-    Friend WithEvents Label22 As System.Windows.Forms.Label
-    Friend WithEvents txtTelFijoEmp As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents txtTelMovEmp As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents txtEmpresa As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents txtCargo As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents cboOperadorempresa As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents txtRuc As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents grp2 As System.Windows.Forms.GroupBox
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
@@ -1914,14 +1928,22 @@ Partial Class frmFichaCapacitacion
     Friend WithEvents RadioButton10 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton11 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton12 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton17 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton16 As System.Windows.Forms.RadioButton
-    Friend WithEvents grpTajetacredito As System.Windows.Forms.GroupBox
     Friend WithEvents RadioButton18 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton19 As System.Windows.Forms.RadioButton
     Friend WithEvents CheckBox12 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox11 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox9 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox8 As System.Windows.Forms.CheckBox
+    Friend WithEvents RadioButton16 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton17 As System.Windows.Forms.RadioButton
+    Friend WithEvents grpTajetacredito As System.Windows.Forms.GroupBox
+    Friend WithEvents txtCodtelM1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtTelMovEmp As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents txtCodtel1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtTelFijoEmp As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents cboOperadorempresa As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
 End Class
 

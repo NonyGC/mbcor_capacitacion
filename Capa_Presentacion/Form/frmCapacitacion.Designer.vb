@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmCapacitacion
     Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,12 @@ Partial Class frmCapacitacion
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim RadListDataItem1 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem2 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem3 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem4 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCapacitacion))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -44,6 +48,9 @@ Partial Class frmCapacitacion
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtCantMasisa = New Telerik.WinControls.UI.RadSpinEditor()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.cboOrigen = New Telerik.WinControls.UI.RadDropDownList()
+        Me.txtOrigenOtro = New Telerik.WinControls.UI.RadTextBox()
         CType(Me.txtCodigo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnNewLocal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboLocal, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -55,13 +62,15 @@ Partial Class frmCapacitacion
         CType(Me.btnRegistar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtOrganizador, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCantMasisa, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboOrigen, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtOrigenOtro, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(79, 46)
+        Me.Label1.Location = New System.Drawing.Point(75, 64)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(51, 13)
         Me.Label1.TabIndex = 0
@@ -70,7 +79,7 @@ Partial Class frmCapacitacion
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(95, 185)
+        Me.Label3.Location = New System.Drawing.Point(91, 248)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(35, 13)
         Me.Label3.TabIndex = 2
@@ -79,7 +88,7 @@ Partial Class frmCapacitacion
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(66, 212)
+        Me.Label4.Location = New System.Drawing.Point(62, 275)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(64, 13)
         Me.Label4.TabIndex = 3
@@ -88,7 +97,7 @@ Partial Class frmCapacitacion
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(270, 158)
+        Me.Label5.Location = New System.Drawing.Point(85, 186)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(41, 13)
         Me.Label5.TabIndex = 4
@@ -98,7 +107,7 @@ Partial Class frmCapacitacion
         '
         Me.txtCodigo.Enabled = False
         Me.txtCodigo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodigo.Location = New System.Drawing.Point(146, 43)
+        Me.txtCodigo.Location = New System.Drawing.Point(142, 58)
         Me.txtCodigo.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtCodigo.Name = "txtCodigo"
         '
@@ -111,7 +120,7 @@ Partial Class frmCapacitacion
         '
         'btnNewLocal
         '
-        Me.btnNewLocal.Location = New System.Drawing.Point(504, 97)
+        Me.btnNewLocal.Location = New System.Drawing.Point(500, 152)
         Me.btnNewLocal.Name = "btnNewLocal"
         Me.btnNewLocal.Size = New System.Drawing.Size(142, 24)
         Me.btnNewLocal.TabIndex = 90
@@ -121,7 +130,7 @@ Partial Class frmCapacitacion
         'cboLocal
         '
         Me.cboLocal.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboLocal.Location = New System.Drawing.Point(146, 97)
+        Me.cboLocal.Location = New System.Drawing.Point(142, 152)
         Me.cboLocal.Name = "cboLocal"
         Me.cboLocal.Size = New System.Drawing.Size(335, 25)
         Me.cboLocal.TabIndex = 89
@@ -130,7 +139,7 @@ Partial Class frmCapacitacion
         'Label36
         '
         Me.Label36.AutoSize = True
-        Me.Label36.Location = New System.Drawing.Point(90, 103)
+        Me.Label36.Location = New System.Drawing.Point(86, 158)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(40, 13)
         Me.Label36.TabIndex = 88
@@ -139,7 +148,7 @@ Partial Class frmCapacitacion
         'txtTema
         '
         Me.txtTema.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTema.Location = New System.Drawing.Point(146, 179)
+        Me.txtTema.Location = New System.Drawing.Point(142, 242)
         Me.txtTema.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtTema.Name = "txtTema"
         '
@@ -154,14 +163,14 @@ Partial Class frmCapacitacion
         '
         Me.dtmFecha.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtmFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtmFecha.Location = New System.Drawing.Point(327, 152)
+        Me.dtmFecha.Location = New System.Drawing.Point(142, 180)
         Me.dtmFecha.MinimumSize = New System.Drawing.Size(0, 24)
         Me.dtmFecha.Name = "dtmFecha"
         '
         '
         '
         Me.dtmFecha.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.dtmFecha.Size = New System.Drawing.Size(124, 24)
+        Me.dtmFecha.Size = New System.Drawing.Size(100, 24)
         Me.dtmFecha.TabIndex = 91
         Me.dtmFecha.TabStop = False
         Me.dtmFecha.ThemeName = "VisualStudio2012Light"
@@ -170,7 +179,7 @@ Partial Class frmCapacitacion
         'txtEspositor
         '
         Me.txtEspositor.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEspositor.Location = New System.Drawing.Point(146, 206)
+        Me.txtEspositor.Location = New System.Drawing.Point(142, 269)
         Me.txtEspositor.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtEspositor.Name = "txtEspositor"
         '
@@ -184,7 +193,7 @@ Partial Class frmCapacitacion
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(7, 158)
+        Me.Label2.Location = New System.Drawing.Point(260, 217)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(123, 13)
         Me.Label2.TabIndex = 92
@@ -193,7 +202,7 @@ Partial Class frmCapacitacion
         'txtCantIngresado
         '
         Me.txtCantIngresado.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCantIngresado.Location = New System.Drawing.Point(146, 152)
+        Me.txtCantIngresado.Location = New System.Drawing.Point(399, 211)
         Me.txtCantIngresado.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtCantIngresado.Name = "txtCantIngresado"
         '
@@ -208,7 +217,7 @@ Partial Class frmCapacitacion
         'btnLimpiar
         '
         Me.btnLimpiar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLimpiar.Location = New System.Drawing.Point(525, 247)
+        Me.btnLimpiar.Location = New System.Drawing.Point(521, 310)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(121, 30)
         Me.btnLimpiar.TabIndex = 95
@@ -218,7 +227,7 @@ Partial Class frmCapacitacion
         'btnRegistar
         '
         Me.btnRegistar.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistar.Location = New System.Drawing.Point(398, 247)
+        Me.btnRegistar.Location = New System.Drawing.Point(394, 310)
         Me.btnRegistar.Name = "btnRegistar"
         Me.btnRegistar.Size = New System.Drawing.Size(121, 30)
         Me.btnRegistar.TabIndex = 94
@@ -238,7 +247,7 @@ Partial Class frmCapacitacion
         'txtOrganizador
         '
         Me.txtOrganizador.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtOrganizador.Location = New System.Drawing.Point(146, 70)
+        Me.txtOrganizador.Location = New System.Drawing.Point(142, 125)
         Me.txtOrganizador.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtOrganizador.Name = "txtOrganizador"
         '
@@ -252,7 +261,7 @@ Partial Class frmCapacitacion
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(44, 75)
+        Me.Label6.Location = New System.Drawing.Point(40, 130)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(86, 13)
         Me.Label6.TabIndex = 97
@@ -261,7 +270,7 @@ Partial Class frmCapacitacion
         'txtCantMasisa
         '
         Me.txtCantMasisa.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCantMasisa.Location = New System.Drawing.Point(146, 125)
+        Me.txtCantMasisa.Location = New System.Drawing.Point(142, 211)
         Me.txtCantMasisa.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtCantMasisa.Name = "txtCantMasisa"
         '
@@ -276,17 +285,63 @@ Partial Class frmCapacitacion
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(28, 128)
+        Me.Label7.Location = New System.Drawing.Point(24, 217)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(102, 13)
         Me.Label7.TabIndex = 94
         Me.Label7.Text = "CANTIDAD MASISA"
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(78, 100)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(48, 13)
+        Me.Label8.TabIndex = 99
+        Me.Label8.Text = "ORIGEN"
+        '
+        'cboOrigen
+        '
+        Me.cboOrigen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cboOrigen.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        RadListDataItem1.Text = "Charla Técnica"
+        RadListDataItem2.Text = "Muestrario de Productos"
+        RadListDataItem3.Text = "Red M"
+        RadListDataItem4.Text = "Otros"
+        Me.cboOrigen.Items.Add(RadListDataItem1)
+        Me.cboOrigen.Items.Add(RadListDataItem2)
+        Me.cboOrigen.Items.Add(RadListDataItem3)
+        Me.cboOrigen.Items.Add(RadListDataItem4)
+        Me.cboOrigen.Location = New System.Drawing.Point(142, 94)
+        Me.cboOrigen.Name = "cboOrigen"
+        Me.cboOrigen.Size = New System.Drawing.Size(210, 27)
+        Me.cboOrigen.TabIndex = 100
+        Me.cboOrigen.ThemeName = "VisualStudio2012Light"
+        '
+        'txtOrigenOtro
+        '
+        Me.txtOrigenOtro.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtOrigenOtro.Location = New System.Drawing.Point(358, 94)
+        Me.txtOrigenOtro.MinimumSize = New System.Drawing.Size(0, 24)
+        Me.txtOrigenOtro.Name = "txtOrigenOtro"
+        Me.txtOrigenOtro.NullText = "Otros"
+        '
+        '
+        '
+        Me.txtOrigenOtro.RootElement.MinSize = New System.Drawing.Size(0, 24)
+        Me.txtOrigenOtro.Size = New System.Drawing.Size(284, 24)
+        Me.txtOrigenOtro.TabIndex = 101
+        Me.txtOrigenOtro.ThemeName = "VisualStudio2012Light"
+        Me.txtOrigenOtro.Visible = False
+        '
         'frmCapacitacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(674, 299)
+        Me.ClientSize = New System.Drawing.Size(673, 359)
+        Me.Controls.Add(Me.txtOrigenOtro)
+        Me.Controls.Add(Me.cboOrigen)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.txtCantMasisa)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtOrganizador)
@@ -315,7 +370,7 @@ Partial Class frmCapacitacion
         '
         Me.RootElement.ApplyShapeToControl = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = ""
+        Me.Text = "MBCORP"
         Me.ThemeName = "VisualStudio2012Light"
         CType(Me.txtCodigo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnNewLocal, System.ComponentModel.ISupportInitialize).EndInit()
@@ -328,6 +383,8 @@ Partial Class frmCapacitacion
         CType(Me.btnRegistar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtOrganizador, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCantMasisa, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboOrigen, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtOrigenOtro, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -355,5 +412,8 @@ Partial Class frmCapacitacion
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents txtCantMasisa As Telerik.WinControls.UI.RadSpinEditor
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents cboOrigen As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents txtOrigenOtro As Telerik.WinControls.UI.RadTextBox
 End Class
 

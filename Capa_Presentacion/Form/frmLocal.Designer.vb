@@ -238,7 +238,7 @@ Partial Class frmLocal
         '
         Me.RootElement.ApplyShapeToControl = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = ""
+        Me.Text = "MBCORP"
         Me.ThemeName = "VisualStudio2012Light"
         CType(Me.txtAforo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDireccion, System.ComponentModel.ISupportInitialize).EndInit()

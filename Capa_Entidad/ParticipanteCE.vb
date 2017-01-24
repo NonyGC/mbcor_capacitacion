@@ -16,6 +16,7 @@
     Private _telMovil2 As String
     Private _opeMovil2 As String
     Private _correo As String
+    Private _proocu As String
     Public Property codpart As String
         Get
             Return _codpart
@@ -119,6 +120,14 @@
         End Get
         Set(ByVal value As String)
             _estadoCiv = value
+        End Set
+    End Property
+    Public Property profeOcupa As String
+        Get
+            Return _proocu
+        End Get
+        Set(ByVal value As String)
+            _proocu = value
         End Set
     End Property
     Public Property fechaNaci As String

@@ -14,7 +14,7 @@ Public Class ParticipanteDAO
             Dim i As Integer
             Dim cmd As SqlCommand = CommandProcedure("spParticipante_upsert")
             With part
-                cmd = Parameters(cmd, { .codpart, .apePat, .apeMat, .nombres, .sexo, .fechaNaci, .dnice, .direccion, .ubigeo, .telFijo, .telMovil, .opeMovil, .correo, .EstadoCiv})
+                cmd = Parameters(cmd, { .codpart, .apePat, .apeMat, .nombres, .sexo, .fechaNaci, .dnice, .direccion, .ubigeo, .telFijo, .telMovil, .opeMovil, .telFijo2, .telMovil2, .opeMovil2, .correo, .EstadoCiv})
             End With
             i = cmd.ExecuteNonQuery
             Return If(i > 0, True, False)

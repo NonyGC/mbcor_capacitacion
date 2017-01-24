@@ -6,18 +6,28 @@ Imports Telerik.WinControls
 Public Class frmCapacitacion
     Dim capCN As New CapacitacionCN
     Dim capCE As New CapacitacionCE
+    Sub New()
+
+        ' Esta llamada es exigida por el diseñador.
+        InitializeComponent()
+
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+        RadMessageBox.SetThemeName("VisualStudio2012Light")
+    End Sub
     Private Sub RadButton4_Click(sender As Object, e As EventArgs) Handles btnNewLocal.Click
         frmLocal.Show()
     End Sub
 
     Private Sub frmCapacitacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        RadMessageBox.SetThemeName("VisualStudio2012Light")
         CargarForm()
+        cboOrigen.DropDownListElement.AutoCompleteAppend.LimitToList = True
     End Sub
 
     Private Sub btnRegistar_Click(sender As Object, e As EventArgs) Handles btnRegistar.Click
         With capCE
             .codigo = txtCodigo.Text
+            .origen = cboOrigen.Text
+            .origenOtro = txtOrigenOtro.Text
             .organizador = txtOrganizador.Text
             .local = cboLocal.SelectedValue
             .cantMasisa = txtCantMasisa.Value
@@ -54,4 +64,13 @@ Public Class frmCapacitacion
         Limpiar()
     End Sub
 
+    Private Sub cboOrigen_SelectedIndexChanged(sender As Object, e As UI.Data.PositionChangedEventArgs) Handles cboOrigen.SelectedIndexChanged
+        If cboOrigen.SelectedIndex = 3 Then
+            txtOrigenOtro.Visible = True
+            txtOrigenOtro.Clear()
+        Else
+            txtOrigenOtro.Visible = False
+            txtOrigenOtro.Clear()
+        End If
+    End Sub
 End Class

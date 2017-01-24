@@ -74,8 +74,17 @@ Public Class FrmParticipante_vb
         cboDistrito.DataSource = Nothing
     End Sub
 
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+    Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
 
+    End Sub
+
+
+    'Sub limpiar()
+    '    txtCodPart.Text = ParticipanteCN.participante_CodAutogenerado()
+    '    cboDepartamento.SelectedIndex = -1
+    'End Sub
+
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim codUbi As String = cboDepartamento.SelectedValue & cboProvincia.SelectedValue & cboDistrito.SelectedValue
         Dim fechaN As String
         fechaN = If(txtFechaN.Value = "__/__/____", String.Empty, txtFechaN.Value)
@@ -91,10 +100,14 @@ Public Class FrmParticipante_vb
             .sexo = If(Not IsNothing(GetGrpBxCheckedBbt(grpSexo)), GetGrpBxCheckedBbt(grpSexo).Text, "")
             .direccion = txtDireccion.Text
             .ubigeo = codUbi
-            .telFijo = txtTelFijo.Text
-            .telMovil = txtTelMovil.Text
+            .telFijo = txtCodtel1.Text & txtTelFijo.Text
+            .telMovil = txtCodtelM1.Text & txtTelMovil.Text
             .opeMovil = cboOperadorM.Text
+            .telFijo2 = txtCodtel2.Text & txtTelFijo2.Text
+            .telMovil2 = txtCodtelM2.Text & txtTelMovil2.Text
+            .opeMovil2 = cboOperadorM2.Text
             .correo = txtCorreo.Text
+            .profeOcupa = txtProfesionOcupacion.Text
         End With
 
         Dim partEst As Boolean = If(ParticipanteCN.participante_upsert(ParticipanteCE), True, False)

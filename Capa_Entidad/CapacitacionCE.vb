@@ -9,13 +9,31 @@
     Private _tema As String
     Private _expositor As String
     Private _estado As String
-
+    Private _origen As String
     Public Property codigo As String
         Get
             Return _codigo
         End Get
         Set(ByVal value As String)
             _codigo = value
+        End Set
+    End Property
+
+    Public Property origen As String
+        Get
+            Return _origen
+        End Get
+        Set(ByVal value As String)
+            _origen = value
+        End Set
+    End Property
+    Private _origenOtro As String
+    Public Property origenOtro As String
+        Get
+            Return _origenOtro
+        End Get
+        Set(ByVal value As String)
+            _origenOtro = value
         End Set
     End Property
     Public Property organizador As String

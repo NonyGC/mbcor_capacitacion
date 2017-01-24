@@ -81,7 +81,7 @@ Public Class frmFichaCapacitacion
         Next
     End Sub
 
-    Private Sub txtRuc_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtTelFijoEmp.KeyPress, txtTelMovEmp.KeyPress
+    Private Sub txtRuc_KeyPress(sender As Object, e As KeyPressEventArgs)
         Solo_numeros(e)
     End Sub
 
