@@ -5,6 +5,11 @@ Public Class ParticipanteCN
     Public Function participante_upsert(part As ParticipanteCE) As Boolean
         Return partDAO.participanteUpsert(part)
     End Function
+
+    Public Function participante_table() As DataTable
+        Return partDAO.participante_table()
+    End Function
+
     Public Function participante_CodAutogenerado() As String
         Return partDAO.participante_CodAutogenerado()
     End Function
