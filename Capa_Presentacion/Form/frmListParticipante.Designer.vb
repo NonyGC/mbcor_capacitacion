@@ -32,13 +32,13 @@ Partial Class FrmListParticipante
         '
         'RadGridView1
         '
-        Me.RadGridView1.Location = New System.Drawing.Point(70, 120)
+        Me.RadGridView1.Location = New System.Drawing.Point(25, 68)
         '
         '
         '
         Me.RadGridView1.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.RadGridView1.Name = "RadGridView1"
-        Me.RadGridView1.Size = New System.Drawing.Size(520, 150)
+        Me.RadGridView1.Size = New System.Drawing.Size(732, 376)
         Me.RadGridView1.TabIndex = 0
         Me.RadGridView1.Text = "RadGridView1"
         '

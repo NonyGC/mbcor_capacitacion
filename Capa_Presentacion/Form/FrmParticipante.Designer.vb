@@ -145,9 +145,9 @@ Partial Class FrmParticipante_vb
         Me.grp.Controls.Add(Me.Label1)
         Me.grp.Controls.Add(Me.Label7)
         Me.grp.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grp.Location = New System.Drawing.Point(23, 27)
+        Me.grp.Location = New System.Drawing.Point(22, 27)
         Me.grp.Name = "grp"
-        Me.grp.Size = New System.Drawing.Size(863, 337)
+        Me.grp.Size = New System.Drawing.Size(844, 337)
         Me.grp.TabIndex = 79
         Me.grp.TabStop = False
         Me.grp.Text = "DATOS PERSONALES"
@@ -190,7 +190,7 @@ Partial Class FrmParticipante_vb
         Me.grpSexo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grpSexo.Location = New System.Drawing.Point(666, 90)
         Me.grpSexo.Name = "grpSexo"
-        Me.grpSexo.Size = New System.Drawing.Size(181, 44)
+        Me.grpSexo.Size = New System.Drawing.Size(124, 44)
         Me.grpSexo.TabIndex = 122
         Me.grpSexo.TabStop = False
         Me.grpSexo.Text = "Sexo"
@@ -199,22 +199,22 @@ Partial Class FrmParticipante_vb
         '
         Me.RadioButton4.AutoSize = True
         Me.RadioButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RadioButton4.Location = New System.Drawing.Point(11, 18)
+        Me.RadioButton4.Location = New System.Drawing.Point(71, 17)
         Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(81, 21)
+        Me.RadioButton4.Size = New System.Drawing.Size(31, 21)
         Me.RadioButton4.TabIndex = 10
-        Me.RadioButton4.Text = "Femenino"
+        Me.RadioButton4.Text = "F"
         Me.RadioButton4.UseVisualStyleBackColor = True
         '
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RadioButton3.Location = New System.Drawing.Point(92, 18)
+        Me.RadioButton3.Location = New System.Drawing.Point(18, 17)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(84, 21)
+        Me.RadioButton3.Size = New System.Drawing.Size(37, 21)
         Me.RadioButton3.TabIndex = 11
-        Me.RadioButton3.Text = "Masculino"
+        Me.RadioButton3.Text = "M"
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'Label16
@@ -650,7 +650,7 @@ Partial Class FrmParticipante_vb
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(562, 382)
+        Me.btnGuardar.Location = New System.Drawing.Point(541, 382)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(159, 33)
         Me.btnGuardar.TabIndex = 24
@@ -659,7 +659,7 @@ Partial Class FrmParticipante_vb
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(727, 382)
+        Me.btnLimpiar.Location = New System.Drawing.Point(706, 382)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(159, 33)
         Me.btnLimpiar.TabIndex = 25
@@ -680,7 +680,7 @@ Partial Class FrmParticipante_vb
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(911, 428)
+        Me.ClientSize = New System.Drawing.Size(887, 428)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnGuardar)
