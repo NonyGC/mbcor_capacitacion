@@ -23,7 +23,7 @@ Public Class FrmParticipante_vb
         cboDepartamento.ValueMember = "idDep"
         cboDepartamento.SelectedIndex = -1
 
-        txtCodPart.Text = ParticipanteCN.participante_CodAutogenerado()
+        'txtCodPart.Text = ParticipanteCN.participante_CodAutogenerado()
 
         cboOperadorM.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboEstadoCivil.DropDownListElement.AutoCompleteAppend.LimitToList = True
@@ -83,6 +83,11 @@ Public Class FrmParticipante_vb
     '    txtCodPart.Text = ParticipanteCN.participante_CodAutogenerado()
     '    cboDepartamento.SelectedIndex = -1
     'End Sub
+    Function CodigoAuto(ap As String, am As String) As String
+        Dim cod As String = If(Trim(ap) = String.Empty, "_", Trim(ap).Substring(0, 1)) & If(Trim(am) = String.Empty, "_", Trim(am).Substring(0, 1))
+        Return cod
+    End Function
+
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim codUbi As String = cboDepartamento.SelectedValue & cboProvincia.SelectedValue & cboDistrito.SelectedValue
@@ -90,7 +95,7 @@ Public Class FrmParticipante_vb
         fechaN = If(txtFechaN.Value = "__/__/____", String.Empty, txtFechaN.Value)
 
         With ParticipanteCE
-            .codpart = txtCodPart.Text
+            .codpart = CodigoAuto(txtApePat.Text, txtApeMat.Text)
             .dnice = Trim(txtDNICE.Text)
             .apePat = txtApePat.Text
             .apeMat = txtApeMat.Text

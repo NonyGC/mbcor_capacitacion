@@ -79,6 +79,14 @@ Partial Class frmFichaCapacitacion
         Me.txtCargo = New Telerik.WinControls.UI.RadTextBox()
         Me.txtRuc = New Telerik.WinControls.UI.RadTextBox()
         Me.grp2 = New System.Windows.Forms.GroupBox()
+        Me.txtCodtelM = New System.Windows.Forms.TextBox()
+        Me.txtTelMovEmp = New System.Windows.Forms.MaskedTextBox()
+        Me.txtCodtel = New System.Windows.Forms.TextBox()
+        Me.txtTelFijoEmp = New System.Windows.Forms.MaskedTextBox()
+        Me.cboOperadorempresa = New Telerik.WinControls.UI.RadDropDownList()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
@@ -146,14 +154,6 @@ Partial Class frmFichaCapacitacion
         Me.RadioButton16 = New System.Windows.Forms.RadioButton()
         Me.RadioButton17 = New System.Windows.Forms.RadioButton()
         Me.grpTajetacredito = New System.Windows.Forms.GroupBox()
-        Me.txtCodtelM1 = New System.Windows.Forms.TextBox()
-        Me.txtTelMovEmp = New System.Windows.Forms.MaskedTextBox()
-        Me.txtCodtel1 = New System.Windows.Forms.TextBox()
-        Me.txtTelFijoEmp = New System.Windows.Forms.MaskedTextBox()
-        Me.cboOperadorempresa = New Telerik.WinControls.UI.RadDropDownList()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.RadTextBox17, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBox18, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -185,6 +185,7 @@ Partial Class frmFichaCapacitacion
         CType(Me.txtCargo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtRuc, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grp2.SuspendLayout()
+        CType(Me.cboOperadorempresa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtEspOtros, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtEspeSPE, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grbRubro.SuspendLayout()
@@ -210,7 +211,6 @@ Partial Class frmFichaCapacitacion
         Me.Panel1.SuspendLayout()
         CType(Me.txtCodigop, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpTajetacredito.SuspendLayout()
-        CType(Me.cboOperadorempresa, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -755,9 +755,9 @@ Partial Class frmFichaCapacitacion
         '
         'grp2
         '
-        Me.grp2.Controls.Add(Me.txtCodtelM1)
+        Me.grp2.Controls.Add(Me.txtCodtelM)
         Me.grp2.Controls.Add(Me.txtTelMovEmp)
-        Me.grp2.Controls.Add(Me.txtCodtel1)
+        Me.grp2.Controls.Add(Me.txtCodtel)
         Me.grp2.Controls.Add(Me.txtTelFijoEmp)
         Me.grp2.Controls.Add(Me.cboOperadorempresa)
         Me.grp2.Controls.Add(Me.Label13)
@@ -777,6 +777,104 @@ Partial Class frmFichaCapacitacion
         Me.grp2.TabIndex = 16
         Me.grp2.TabStop = False
         Me.grp2.Text = "DATOS LABORALES / PROFESIONALES"
+        '
+        'txtCodtelM
+        '
+        Me.txtCodtelM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCodtelM.Enabled = False
+        Me.txtCodtelM.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodtelM.Location = New System.Drawing.Point(379, 92)
+        Me.txtCodtelM.Name = "txtCodtelM"
+        Me.txtCodtelM.Size = New System.Drawing.Size(38, 25)
+        Me.txtCodtelM.TabIndex = 145
+        Me.txtCodtelM.Text = "(___)"
+        Me.txtCodtelM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtTelMovEmp
+        '
+        Me.txtTelMovEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtTelMovEmp.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtTelMovEmp.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelMovEmp.Location = New System.Drawing.Point(419, 92)
+        Me.txtTelMovEmp.Mask = "000-000-000"
+        Me.txtTelMovEmp.Name = "txtTelMovEmp"
+        Me.txtTelMovEmp.Size = New System.Drawing.Size(98, 25)
+        Me.txtTelMovEmp.TabIndex = 21
+        Me.txtTelMovEmp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtCodtel
+        '
+        Me.txtCodtel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtCodtel.Enabled = False
+        Me.txtCodtel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodtel.Location = New System.Drawing.Point(144, 92)
+        Me.txtCodtel.Name = "txtCodtel"
+        Me.txtCodtel.Size = New System.Drawing.Size(38, 25)
+        Me.txtCodtel.TabIndex = 143
+        Me.txtCodtel.Text = "(___)"
+        Me.txtCodtel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'txtTelFijoEmp
+        '
+        Me.txtTelFijoEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.txtTelFijoEmp.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtTelFijoEmp.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelFijoEmp.Location = New System.Drawing.Point(184, 92)
+        Me.txtTelFijoEmp.Mask = "000-0000"
+        Me.txtTelFijoEmp.Name = "txtTelFijoEmp"
+        Me.txtTelFijoEmp.Size = New System.Drawing.Size(97, 25)
+        Me.txtTelFijoEmp.TabIndex = 20
+        Me.txtTelFijoEmp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'cboOperadorempresa
+        '
+        Me.cboOperadorempresa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cboOperadorempresa.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        RadListDataItem1.Text = "Movistar"
+        RadListDataItem2.Text = "Claro"
+        RadListDataItem3.Text = "Entel"
+        RadListDataItem4.Text = "Bitel"
+        RadListDataItem5.Text = "Virgin"
+        Me.cboOperadorempresa.Items.Add(RadListDataItem1)
+        Me.cboOperadorempresa.Items.Add(RadListDataItem2)
+        Me.cboOperadorempresa.Items.Add(RadListDataItem3)
+        Me.cboOperadorempresa.Items.Add(RadListDataItem4)
+        Me.cboOperadorempresa.Items.Add(RadListDataItem5)
+        Me.cboOperadorempresa.Location = New System.Drawing.Point(675, 91)
+        Me.cboOperadorempresa.Name = "cboOperadorempresa"
+        Me.cboOperadorempresa.Size = New System.Drawing.Size(130, 27)
+        Me.cboOperadorempresa.TabIndex = 22
+        Me.cboOperadorempresa.ThemeName = "VisualStudio2012Light"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(539, 96)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(118, 17)
+        Me.Label13.TabIndex = 142
+        Me.Label13.Text = "OPERADOR MOVIL"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(299, 96)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(74, 17)
+        Me.Label12.TabIndex = 141
+        Me.Label12.Text = "TEL. MOVIL"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(74, 96)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(59, 17)
+        Me.Label11.TabIndex = 140
+        Me.Label11.Text = "TEL. FIJO"
         '
         'CheckBox1
         '
@@ -1538,9 +1636,9 @@ Partial Class frmFichaCapacitacion
         '
         Me.lblApeNom.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.lblApeNom.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApeNom.Location = New System.Drawing.Point(614, 109)
+        Me.lblApeNom.Location = New System.Drawing.Point(643, 109)
         Me.lblApeNom.Name = "lblApeNom"
-        Me.lblApeNom.Size = New System.Drawing.Size(329, 21)
+        Me.lblApeNom.Size = New System.Drawing.Size(300, 21)
         Me.lblApeNom.TabIndex = 98
         Me.lblApeNom.Text = "Apellidos y Nombres"
         Me.lblApeNom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1572,7 +1670,7 @@ Partial Class frmFichaCapacitacion
         '
         '
         Me.txtCodigop.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.txtCodigop.Size = New System.Drawing.Size(76, 24)
+        Me.txtCodigop.Size = New System.Drawing.Size(101, 24)
         Me.txtCodigop.TabIndex = 4
         Me.txtCodigop.ThemeName = "VisualStudio2012Light"
         '
@@ -1615,110 +1713,11 @@ Partial Class frmFichaCapacitacion
         Me.grpTajetacredito.TabStop = False
         Me.grpTajetacredito.Text = "POSEE TARJETA DE CREDITO"
         '
-        'txtCodtelM1
-        '
-        Me.txtCodtelM1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCodtelM1.Enabled = False
-        Me.txtCodtelM1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodtelM1.Location = New System.Drawing.Point(379, 92)
-        Me.txtCodtelM1.Name = "txtCodtelM1"
-        Me.txtCodtelM1.Size = New System.Drawing.Size(38, 25)
-        Me.txtCodtelM1.TabIndex = 145
-        Me.txtCodtelM1.Text = "(___)"
-        Me.txtCodtelM1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtTelMovEmp
-        '
-        Me.txtTelMovEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtTelMovEmp.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtTelMovEmp.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelMovEmp.Location = New System.Drawing.Point(419, 92)
-        Me.txtTelMovEmp.Mask = "000-000-000"
-        Me.txtTelMovEmp.Name = "txtTelMovEmp"
-        Me.txtTelMovEmp.Size = New System.Drawing.Size(98, 25)
-        Me.txtTelMovEmp.TabIndex = 21
-        Me.txtTelMovEmp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtCodtel1
-        '
-        Me.txtCodtel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtCodtel1.Enabled = False
-        Me.txtCodtel1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodtel1.Location = New System.Drawing.Point(144, 92)
-        Me.txtCodtel1.Name = "txtCodtel1"
-        Me.txtCodtel1.Size = New System.Drawing.Size(38, 25)
-        Me.txtCodtel1.TabIndex = 143
-        Me.txtCodtel1.Text = "(___)"
-        Me.txtCodtel1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'txtTelFijoEmp
-        '
-        Me.txtTelFijoEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtTelFijoEmp.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtTelFijoEmp.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelFijoEmp.Location = New System.Drawing.Point(184, 92)
-        Me.txtTelFijoEmp.Mask = "000-0000"
-        Me.txtTelFijoEmp.Name = "txtTelFijoEmp"
-        Me.txtTelFijoEmp.Size = New System.Drawing.Size(97, 25)
-        Me.txtTelFijoEmp.TabIndex = 20
-        Me.txtTelFijoEmp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'cboOperadorempresa
-        '
-        Me.cboOperadorempresa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
-        Me.cboOperadorempresa.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadListDataItem1.Text = "Movistar"
-        RadListDataItem2.Text = "Claro"
-        RadListDataItem3.Text = "Entel"
-        RadListDataItem4.Text = "Bitel"
-        RadListDataItem5.Text = "Virgin"
-        Me.cboOperadorempresa.Items.Add(RadListDataItem1)
-        Me.cboOperadorempresa.Items.Add(RadListDataItem2)
-        Me.cboOperadorempresa.Items.Add(RadListDataItem3)
-        Me.cboOperadorempresa.Items.Add(RadListDataItem4)
-        Me.cboOperadorempresa.Items.Add(RadListDataItem5)
-        Me.cboOperadorempresa.Location = New System.Drawing.Point(675, 91)
-        Me.cboOperadorempresa.Name = "cboOperadorempresa"
-        Me.cboOperadorempresa.Size = New System.Drawing.Size(130, 27)
-        Me.cboOperadorempresa.TabIndex = 22
-        Me.cboOperadorempresa.ThemeName = "VisualStudio2012Light"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(539, 96)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(118, 17)
-        Me.Label13.TabIndex = 142
-        Me.Label13.Text = "OPERADOR MOVIL"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(299, 96)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(74, 17)
-        Me.Label12.TabIndex = 141
-        Me.Label12.Text = "TEL. MOVIL"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(74, 96)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(59, 17)
-        Me.Label11.TabIndex = 140
-        Me.Label11.Text = "TEL. FIJO"
-        '
         'frmFichaCapacitacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1032, 820)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.grpTajetacredito)
         Me.Controls.Add(Me.cboParticipanteSearch)
         Me.Controls.Add(Me.lblApeNom)
@@ -1735,6 +1734,7 @@ Partial Class frmFichaCapacitacion
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.grbRubro)
         Me.Controls.Add(Me.grp2)
+        Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "frmFichaCapacitacion"
@@ -1781,6 +1781,7 @@ Partial Class frmFichaCapacitacion
         CType(Me.txtRuc, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grp2.ResumeLayout(False)
         Me.grp2.PerformLayout()
+        CType(Me.cboOperadorempresa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtEspOtros, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtEspeSPE, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grbRubro.ResumeLayout(False)
@@ -1818,7 +1819,6 @@ Partial Class frmFichaCapacitacion
         CType(Me.txtCodigop, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpTajetacredito.ResumeLayout(False)
         Me.grpTajetacredito.PerformLayout()
-        CType(Me.cboOperadorempresa, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -1937,9 +1937,9 @@ Partial Class frmFichaCapacitacion
     Friend WithEvents RadioButton16 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton17 As System.Windows.Forms.RadioButton
     Friend WithEvents grpTajetacredito As System.Windows.Forms.GroupBox
-    Friend WithEvents txtCodtelM1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtCodtelM As System.Windows.Forms.TextBox
     Friend WithEvents txtTelMovEmp As System.Windows.Forms.MaskedTextBox
-    Friend WithEvents txtCodtel1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtCodtel As System.Windows.Forms.TextBox
     Friend WithEvents txtTelFijoEmp As System.Windows.Forms.MaskedTextBox
     Friend WithEvents cboOperadorempresa As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents Label13 As System.Windows.Forms.Label

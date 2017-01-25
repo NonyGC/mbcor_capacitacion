@@ -61,6 +61,7 @@ Public Class frmFichaCapacitacion
         txtEspeCharla.Clear()
         cboParticipanteSearch.SelectedIndex = -1
         txtCodigop.Clear() : lblApeNom.Text = Nothing
+        txtCodtel.Text = "(___)" : txtCodtelM.Text = "(___)"
     End Sub
     Sub CheckBoxclear(grpbx As GroupBox)
         For Each element As Control In grpbx.Controls
@@ -88,7 +89,17 @@ Public Class frmFichaCapacitacion
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
         Limpiar()
     End Sub
-
+    Sub bloquear()
+        lblApeNom.Text = "Apellidos y Nombres"
+        txtCodtel.Text = "(___)" : txtCodtelM.Text = "(___)"
+        grbRubro.Enabled = False
+        grp1.Enabled = False
+        grp2.Enabled = False
+        grp5.Enabled = False
+        grpCharla.Enabled = False
+        btnRegistrar.Enabled = False : btnLimpiar.Enabled = False
+        grpTajetacredito.Enabled = False
+    End Sub
     Private Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButton2.Click
         FrmParticipante_vb.Show()
     End Sub
@@ -96,7 +107,9 @@ Public Class frmFichaCapacitacion
     Private Sub cboParticipanteSearch_Leave(sender As Object, e As EventArgs) Handles cboParticipanteSearch.Leave
         txtCodigop.Text = cboParticipanteSearch.SelectedValue
         If Trim(txtCodigop.Text) IsNot String.Empty Then
-            lblApeNom.Text = FichCN.fichaCapacitacion_getPartiCod(txtCodigop.Text)
+            Dim parti() As String = FichCN.fichaCapacitacion_getPartiCod(txtCodigop.Text).Split("|"c)
+            lblApeNom.Text = parti(0)
+            txtCodtel.Text = parti(1) : txtCodtelM.Text = parti(1)
             grbRubro.Enabled = True
             grp1.Enabled = True
             grp2.Enabled = True
@@ -105,14 +118,7 @@ Public Class frmFichaCapacitacion
             btnRegistrar.Enabled = True : btnLimpiar.Enabled = True
             grpTajetacredito.Enabled = True
         Else
-            lblApeNom.Text = "Apellidos y Nombres"
-            grbRubro.Enabled = False
-            grp1.Enabled = False
-            grp2.Enabled = False
-            grp5.Enabled = False
-            grpCharla.Enabled = False
-            btnRegistrar.Enabled = False : btnLimpiar.Enabled = False
-            grpTajetacredito.Enabled = False
+            bloquear()
         End If
 
     End Sub
@@ -162,8 +168,8 @@ Public Class frmFichaCapacitacion
             .ruc = txtRuc.Text
             .empresa = txtEmpresa.Text
             .cargo = txtCargo.Text
-            .telFijoEmp = txtTelFijoEmp.Text
-            .telMovEmp = txtTelMovEmp.Text
+            .telFijoEmp = txtCodtel.Text & txtTelFijoEmp.Text
+            .telMovEmp = txtCodtelM.Text & txtTelMovEmp.Text
             .opeMovEmp = cboOperadorempresa.Text
             .rubro = getCheckboxVal(grbRubro)
             .espRubro = espRubro
@@ -183,6 +189,7 @@ Public Class frmFichaCapacitacion
         If fichtEst Then
             RadMessageBox.Show("SE REGISTRO CORRECTAMENTE", "", MessageBoxButtons.OK, RadMessageIcon.Info)
             Limpiar()
+            bloquear()
         Else
             RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A REGISTRAR", "", MessageBoxButtons.OK, RadMessageIcon.Error)
         End If
