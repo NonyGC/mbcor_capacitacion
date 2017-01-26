@@ -33,7 +33,6 @@ Public Class Base
         End If
         Return Fg_SoloNumeros
     End Function
-
     Shared Sub solo_decimales(e As KeyPressEventArgs, ByVal Texto As String)
         If Char.IsNumber(e.KeyChar) Or InStr(".", e.KeyChar) = 1 Then
             If IsNumeric(Texto) = True Then
@@ -46,5 +45,23 @@ Public Class Base
         Else
             e.Handled = True
         End If
+    End Sub
+    Shared Sub RadioButtonclear(grpbx As GroupBox)
+        For Each element As Control In grpbx.Controls
+            If TypeOf element Is RadioButton Then
+                If DirectCast(element, RadioButton).Checked Then
+                    DirectCast(element, RadioButton).Checked = False
+                End If
+            End If
+        Next
+    End Sub
+    Shared Sub CheckBoxclear(grpbx As GroupBox)
+        For Each element As Control In grpbx.Controls
+            If TypeOf element Is CheckBox Then
+                If DirectCast(element, CheckBox).Checked Then
+                    DirectCast(element, CheckBox).Checked = False
+                End If
+            End If
+        Next
     End Sub
 End Class

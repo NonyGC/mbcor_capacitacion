@@ -63,24 +63,6 @@ Public Class frmFichaCapacitacion
         txtCodigop.Clear() : lblApeNom.Text = Nothing
         txtCodtel.Text = "(___)" : txtCodtelM.Text = "(___)"
     End Sub
-    Sub CheckBoxclear(grpbx As GroupBox)
-        For Each element As Control In grpbx.Controls
-            If TypeOf element Is CheckBox Then
-                If DirectCast(element, CheckBox).Checked Then
-                    DirectCast(element, CheckBox).Checked = False
-                End If
-            End If
-        Next
-    End Sub
-    Sub RadioButtonclear(grpbx As GroupBox)
-        For Each element As Control In grpbx.Controls
-            If TypeOf element Is RadioButton Then
-                If DirectCast(element, RadioButton).Checked Then
-                    DirectCast(element, RadioButton).Checked = False
-                End If
-            End If
-        Next
-    End Sub
 
     Private Sub txtRuc_KeyPress(sender As Object, e As KeyPressEventArgs)
         Solo_numeros(e)

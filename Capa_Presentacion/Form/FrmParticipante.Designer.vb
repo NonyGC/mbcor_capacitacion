@@ -662,7 +662,7 @@ Partial Class FrmParticipante_vb
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(159, 33)
         Me.btnLimpiar.TabIndex = 25
-        Me.btnLimpiar.Text = "CANCELAR"
+        Me.btnLimpiar.Text = "LIMPIAR"
         Me.btnLimpiar.ThemeName = "VisualStudio2012Light"
         '
         'Label15
@@ -670,7 +670,7 @@ Partial Class FrmParticipante_vb
         Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(-3, -4)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(926, 21)
+        Me.Label15.Size = New System.Drawing.Size(893, 21)
         Me.Label15.TabIndex = 82
         Me.Label15.Text = "REGISTRAR PARTICIPANTE"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

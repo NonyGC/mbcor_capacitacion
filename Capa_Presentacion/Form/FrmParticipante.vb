@@ -75,14 +75,26 @@ Public Class FrmParticipante_vb
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
-
+        limpiar()
     End Sub
 
 
-    'Sub limpiar()
-    '    txtCodPart.Text = ParticipanteCN.participante_CodAutogenerado()
-    '    cboDepartamento.SelectedIndex = -1
-    'End Sub
+    Sub limpiar()
+        cboDepartamento.SelectedIndex = -1
+        RadioButtonclear(grpSexo)
+        txtCodtel1.Text = "(___)" : txtCodtelM1.Text = "(___)"
+        txtCodtel2.Text = "(___)" : txtCodtelM2.Text = "(___)"
+        txtTelFijo.Clear() : txtTelFijo2.Clear()
+        txtTelMovil.Clear() : txtTelMovil2.Clear()
+        cboOperadorM.SelectedIndex = -1 : cboOperadorM2.SelectedIndex = -1
+        txtDireccion.Clear()
+        txtApeMat.Clear() : txtApePat.Clear()
+        txtNombres.Clear() : cboEstadoCivil.SelectedIndex = -1
+        txtDNICE.Clear()
+        txtCorreo.Clear()
+        txtProfesionOcupacion.Clear()
+        txtFechaN.Clear()
+    End Sub
     Function CodigoAuto(ap As String, am As String) As String
         Dim cod As String = If(Trim(ap) = String.Empty, "_", Trim(ap).Substring(0, 1)) & If(Trim(am) = String.Empty, "_", Trim(am).Substring(0, 1))
         Return cod
@@ -118,7 +130,6 @@ Public Class FrmParticipante_vb
         Dim partEst As Boolean = If(ParticipanteCN.participante_upsert(ParticipanteCE), True, False)
         If partEst Then
             RadMessageBox.Show("SE REGISTRO CORRECTAMENTE", "", MessageBoxButtons.OK, RadMessageIcon.Info)
-            Close()
         Else
             RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A REGISTRAR", "", MessageBoxButtons.OK, RadMessageIcon.Error)
         End If
