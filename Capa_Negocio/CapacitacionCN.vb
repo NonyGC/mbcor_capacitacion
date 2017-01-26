@@ -6,6 +6,11 @@ Public Class CapacitacionCN
     Public Function capacitacion_CodAutogenerado() As String
         Return CDAO.capacitacion_CodAutogenerado()
     End Function
+
+    Public Function Capacitacion_table() As DataTable
+        Return CDAO.Capacitacion_table()
+    End Function
+
     Public Function obtenerLocal() As DataTable
         Return CDAO.obtenerLocal()
     End Function

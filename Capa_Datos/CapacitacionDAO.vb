@@ -12,8 +12,15 @@ Public Class CapacitacionDAO
         codigo = cmd.ExecuteScalar
         Return codigo
     End Function
+
+    Public Function Capacitacion_table() As DataTable
+        Dim cmd As SqlCommand = CommandText("SELECT * FROM capacitacion")
+        Dim data As New DataTable
+        data = GetDataTable(cmd)
+        Return data
+    End Function
+
     Public Function obtenerLocal() As DataTable
-        conn = conectar()
         Dim cmd As SqlCommand = CommandText("SELECT codigo,nombre FROM local")
         Dim data As New DataTable
         data = GetDataTable(cmd)

@@ -123,7 +123,7 @@ Partial Class frmCapacitacion
         Me.btnNewLocal.Location = New System.Drawing.Point(500, 152)
         Me.btnNewLocal.Name = "btnNewLocal"
         Me.btnNewLocal.Size = New System.Drawing.Size(142, 24)
-        Me.btnNewLocal.TabIndex = 90
+        Me.btnNewLocal.TabIndex = 6
         Me.btnNewLocal.Text = "NUEVO LOCAL"
         Me.btnNewLocal.ThemeName = "VisualStudio2012Light"
         '
@@ -133,7 +133,7 @@ Partial Class frmCapacitacion
         Me.cboLocal.Location = New System.Drawing.Point(142, 152)
         Me.cboLocal.Name = "cboLocal"
         Me.cboLocal.Size = New System.Drawing.Size(335, 25)
-        Me.cboLocal.TabIndex = 89
+        Me.cboLocal.TabIndex = 5
         Me.cboLocal.ThemeName = "VisualStudio2012Light"
         '
         'Label36
@@ -156,7 +156,7 @@ Partial Class frmCapacitacion
         '
         Me.txtTema.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtTema.Size = New System.Drawing.Size(500, 24)
-        Me.txtTema.TabIndex = 7
+        Me.txtTema.TabIndex = 10
         Me.txtTema.ThemeName = "VisualStudio2012Light"
         '
         'dtmFecha
@@ -171,7 +171,7 @@ Partial Class frmCapacitacion
         '
         Me.dtmFecha.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.dtmFecha.Size = New System.Drawing.Size(100, 24)
-        Me.dtmFecha.TabIndex = 91
+        Me.dtmFecha.TabIndex = 7
         Me.dtmFecha.TabStop = False
         Me.dtmFecha.ThemeName = "VisualStudio2012Light"
         Me.dtmFecha.Value = New Date(CType(0, Long))
@@ -187,7 +187,7 @@ Partial Class frmCapacitacion
         '
         Me.txtEspositor.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtEspositor.Size = New System.Drawing.Size(500, 24)
-        Me.txtEspositor.TabIndex = 8
+        Me.txtEspositor.TabIndex = 11
         Me.txtEspositor.ThemeName = "VisualStudio2012Light"
         '
         'Label2
@@ -210,7 +210,7 @@ Partial Class frmCapacitacion
         '
         Me.txtCantIngresado.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtCantIngresado.Size = New System.Drawing.Size(100, 24)
-        Me.txtCantIngresado.TabIndex = 93
+        Me.txtCantIngresado.TabIndex = 9
         Me.txtCantIngresado.TabStop = False
         Me.txtCantIngresado.ThemeName = "VisualStudio2012Light"
         '
@@ -220,7 +220,7 @@ Partial Class frmCapacitacion
         Me.btnLimpiar.Location = New System.Drawing.Point(521, 310)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(121, 30)
-        Me.btnLimpiar.TabIndex = 95
+        Me.btnLimpiar.TabIndex = 13
         Me.btnLimpiar.Text = "LIMPIAR"
         Me.btnLimpiar.ThemeName = "VisualStudio2012Light"
         '
@@ -230,7 +230,7 @@ Partial Class frmCapacitacion
         Me.btnRegistar.Location = New System.Drawing.Point(394, 310)
         Me.btnRegistar.Name = "btnRegistar"
         Me.btnRegistar.Size = New System.Drawing.Size(121, 30)
-        Me.btnRegistar.TabIndex = 94
+        Me.btnRegistar.TabIndex = 12
         Me.btnRegistar.Text = "REGISTRAR"
         Me.btnRegistar.ThemeName = "VisualStudio2012Light"
         '
@@ -255,7 +255,7 @@ Partial Class frmCapacitacion
         '
         Me.txtOrganizador.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtOrganizador.Size = New System.Drawing.Size(500, 24)
-        Me.txtOrganizador.TabIndex = 98
+        Me.txtOrganizador.TabIndex = 4
         Me.txtOrganizador.ThemeName = "VisualStudio2012Light"
         '
         'Label6
@@ -278,7 +278,7 @@ Partial Class frmCapacitacion
         '
         Me.txtCantMasisa.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtCantMasisa.Size = New System.Drawing.Size(100, 24)
-        Me.txtCantMasisa.TabIndex = 95
+        Me.txtCantMasisa.TabIndex = 8
         Me.txtCantMasisa.TabStop = False
         Me.txtCantMasisa.ThemeName = "VisualStudio2012Light"
         '
@@ -315,7 +315,7 @@ Partial Class frmCapacitacion
         Me.cboOrigen.Location = New System.Drawing.Point(142, 94)
         Me.cboOrigen.Name = "cboOrigen"
         Me.cboOrigen.Size = New System.Drawing.Size(210, 27)
-        Me.cboOrigen.TabIndex = 100
+        Me.cboOrigen.TabIndex = 2
         Me.cboOrigen.ThemeName = "VisualStudio2012Light"
         '
         'txtOrigenOtro
@@ -330,7 +330,7 @@ Partial Class frmCapacitacion
         '
         Me.txtOrigenOtro.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtOrigenOtro.Size = New System.Drawing.Size(284, 24)
-        Me.txtOrigenOtro.TabIndex = 101
+        Me.txtOrigenOtro.TabIndex = 3
         Me.txtOrigenOtro.ThemeName = "VisualStudio2012Light"
         Me.txtOrigenOtro.Visible = False
         '

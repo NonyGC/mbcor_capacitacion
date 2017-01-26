@@ -101,7 +101,7 @@ Partial Class frmLocal
         '
         Me.txtAforo.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtAforo.Size = New System.Drawing.Size(100, 24)
-        Me.txtAforo.TabIndex = 4
+        Me.txtAforo.TabIndex = 7
         Me.txtAforo.TabStop = False
         Me.txtAforo.ThemeName = "VisualStudio2012Light"
         '
@@ -116,7 +116,7 @@ Partial Class frmLocal
         '
         Me.txtDireccion.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtDireccion.Size = New System.Drawing.Size(506, 24)
-        Me.txtDireccion.TabIndex = 5
+        Me.txtDireccion.TabIndex = 3
         Me.txtDireccion.ThemeName = "VisualStudio2012Light"
         '
         'txtNombre
@@ -130,7 +130,7 @@ Partial Class frmLocal
         '
         Me.txtNombre.RootElement.MinSize = New System.Drawing.Size(0, 24)
         Me.txtNombre.Size = New System.Drawing.Size(506, 24)
-        Me.txtNombre.TabIndex = 6
+        Me.txtNombre.TabIndex = 2
         Me.txtNombre.ThemeName = "VisualStudio2012Light"
         '
         'txtCodigo
@@ -164,7 +164,7 @@ Partial Class frmLocal
         Me.btnRegistrar.Location = New System.Drawing.Point(351, 188)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(138, 31)
-        Me.btnRegistrar.TabIndex = 35
+        Me.btnRegistrar.TabIndex = 8
         Me.btnRegistrar.Text = "REGISTRAR"
         Me.btnRegistrar.ThemeName = "VisualStudio2012Light"
         '
@@ -174,7 +174,7 @@ Partial Class frmLocal
         Me.btnLimpiar.Location = New System.Drawing.Point(497, 188)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(137, 31)
-        Me.btnLimpiar.TabIndex = 36
+        Me.btnLimpiar.TabIndex = 9
         Me.btnLimpiar.Text = "LIMPIAR"
         Me.btnLimpiar.ThemeName = "VisualStudio2012Light"
         '
@@ -186,7 +186,7 @@ Partial Class frmLocal
         Me.cboDistrito.Name = "cboDistrito"
         Me.cboDistrito.NullText = "DISTRITO"
         Me.cboDistrito.Size = New System.Drawing.Size(187, 31)
-        Me.cboDistrito.TabIndex = 96
+        Me.cboDistrito.TabIndex = 6
         Me.cboDistrito.ThemeName = "VisualStudio2012Light"
         '
         'cboProvincia
@@ -197,7 +197,7 @@ Partial Class frmLocal
         Me.cboProvincia.Name = "cboProvincia"
         Me.cboProvincia.NullText = "PROVINCIA"
         Me.cboProvincia.Size = New System.Drawing.Size(150, 31)
-        Me.cboProvincia.TabIndex = 95
+        Me.cboProvincia.TabIndex = 5
         Me.cboProvincia.ThemeName = "VisualStudio2012Light"
         '
         'cboDepartamento
@@ -208,7 +208,7 @@ Partial Class frmLocal
         Me.cboDepartamento.Name = "cboDepartamento"
         Me.cboDepartamento.NullText = "DEPARTAMENTO"
         Me.cboDepartamento.Size = New System.Drawing.Size(144, 31)
-        Me.cboDepartamento.TabIndex = 94
+        Me.cboDepartamento.TabIndex = 4
         Me.cboDepartamento.ThemeName = "VisualStudio2012Light"
         '
         'frmLocal

@@ -147,7 +147,7 @@ Partial Class FrmParticipante_vb
         Me.grp.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grp.Location = New System.Drawing.Point(22, 27)
         Me.grp.Name = "grp"
-        Me.grp.Size = New System.Drawing.Size(844, 337)
+        Me.grp.Size = New System.Drawing.Size(844, 376)
         Me.grp.TabIndex = 79
         Me.grp.TabStop = False
         Me.grp.Text = "DATOS PERSONALES"
@@ -171,7 +171,7 @@ Partial Class FrmParticipante_vb
         '
         Me.txtProfesionOcupacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.txtProfesionOcupacion.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtProfesionOcupacion.Location = New System.Drawing.Point(140, 293)
+        Me.txtProfesionOcupacion.Location = New System.Drawing.Point(139, 341)
         Me.txtProfesionOcupacion.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtProfesionOcupacion.Name = "txtProfesionOcupacion"
         '
@@ -188,7 +188,7 @@ Partial Class FrmParticipante_vb
         Me.grpSexo.Controls.Add(Me.RadioButton3)
         Me.grpSexo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.grpSexo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpSexo.Location = New System.Drawing.Point(666, 90)
+        Me.grpSexo.Location = New System.Drawing.Point(139, 128)
         Me.grpSexo.Name = "grpSexo"
         Me.grpSexo.Size = New System.Drawing.Size(124, 44)
         Me.grpSexo.TabIndex = 122
@@ -221,7 +221,7 @@ Partial Class FrmParticipante_vb
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(11, 297)
+        Me.Label16.Location = New System.Drawing.Point(10, 345)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(121, 17)
         Me.Label16.TabIndex = 112
@@ -232,7 +232,7 @@ Partial Class FrmParticipante_vb
         Me.txtCodtelM2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCodtelM2.Enabled = False
         Me.txtCodtelM2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodtelM2.Location = New System.Drawing.Point(384, 226)
+        Me.txtCodtelM2.Location = New System.Drawing.Point(383, 274)
         Me.txtCodtelM2.Name = "txtCodtelM2"
         Me.txtCodtelM2.Size = New System.Drawing.Size(38, 25)
         Me.txtCodtelM2.TabIndex = 139
@@ -244,7 +244,7 @@ Partial Class FrmParticipante_vb
         Me.txtTelMovil2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTelMovil2.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtTelMovil2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelMovil2.Location = New System.Drawing.Point(426, 226)
+        Me.txtTelMovil2.Location = New System.Drawing.Point(425, 274)
         Me.txtTelMovil2.Mask = "000-000-000"
         Me.txtTelMovil2.Name = "txtTelMovil2"
         Me.txtTelMovil2.Size = New System.Drawing.Size(111, 25)
@@ -256,7 +256,7 @@ Partial Class FrmParticipante_vb
         Me.txtCodtelM1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCodtelM1.Enabled = False
         Me.txtCodtelM1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodtelM1.Location = New System.Drawing.Point(384, 196)
+        Me.txtCodtelM1.Location = New System.Drawing.Point(383, 244)
         Me.txtCodtelM1.Name = "txtCodtelM1"
         Me.txtCodtelM1.Size = New System.Drawing.Size(38, 25)
         Me.txtCodtelM1.TabIndex = 137
@@ -268,7 +268,7 @@ Partial Class FrmParticipante_vb
         Me.txtTelMovil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTelMovil.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtTelMovil.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelMovil.Location = New System.Drawing.Point(426, 196)
+        Me.txtTelMovil.Location = New System.Drawing.Point(425, 244)
         Me.txtTelMovil.Mask = "000-000-000"
         Me.txtTelMovil.Name = "txtTelMovil"
         Me.txtTelMovil.Size = New System.Drawing.Size(111, 25)
@@ -280,7 +280,7 @@ Partial Class FrmParticipante_vb
         Me.txtCodtel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCodtel2.Enabled = False
         Me.txtCodtel2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodtel2.Location = New System.Drawing.Point(141, 226)
+        Me.txtCodtel2.Location = New System.Drawing.Point(140, 274)
         Me.txtCodtel2.Name = "txtCodtel2"
         Me.txtCodtel2.Size = New System.Drawing.Size(38, 25)
         Me.txtCodtel2.TabIndex = 135
@@ -292,7 +292,7 @@ Partial Class FrmParticipante_vb
         Me.txtTelFijo2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTelFijo2.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtTelFijo2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelFijo2.Location = New System.Drawing.Point(183, 226)
+        Me.txtTelFijo2.Location = New System.Drawing.Point(182, 274)
         Me.txtTelFijo2.Mask = "000-0000"
         Me.txtTelFijo2.Name = "txtTelFijo2"
         Me.txtTelFijo2.Size = New System.Drawing.Size(98, 25)
@@ -304,7 +304,7 @@ Partial Class FrmParticipante_vb
         Me.txtCodtel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCodtel1.Enabled = False
         Me.txtCodtel1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodtel1.Location = New System.Drawing.Point(141, 196)
+        Me.txtCodtel1.Location = New System.Drawing.Point(140, 244)
         Me.txtCodtel1.Name = "txtCodtel1"
         Me.txtCodtel1.Size = New System.Drawing.Size(38, 25)
         Me.txtCodtel1.TabIndex = 129
@@ -316,7 +316,7 @@ Partial Class FrmParticipante_vb
         Me.txtTelFijo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTelFijo.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtTelFijo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelFijo.Location = New System.Drawing.Point(183, 196)
+        Me.txtTelFijo.Location = New System.Drawing.Point(182, 244)
         Me.txtTelFijo.Mask = "000-0000"
         Me.txtTelFijo.Name = "txtTelFijo"
         Me.txtTelFijo.Size = New System.Drawing.Size(98, 25)
@@ -337,7 +337,7 @@ Partial Class FrmParticipante_vb
         Me.cboOperadorM2.Items.Add(RadListDataItem3)
         Me.cboOperadorM2.Items.Add(RadListDataItem4)
         Me.cboOperadorM2.Items.Add(RadListDataItem5)
-        Me.cboOperadorM2.Location = New System.Drawing.Point(679, 225)
+        Me.cboOperadorM2.Location = New System.Drawing.Point(678, 273)
         Me.cboOperadorM2.Name = "cboOperadorM2"
         Me.cboOperadorM2.Size = New System.Drawing.Size(147, 27)
         Me.cboOperadorM2.TabIndex = 21
@@ -347,7 +347,7 @@ Partial Class FrmParticipante_vb
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(543, 230)
+        Me.Label8.Location = New System.Drawing.Point(542, 278)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(118, 17)
         Me.Label8.TabIndex = 133
@@ -357,7 +357,7 @@ Partial Class FrmParticipante_vb
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(304, 230)
+        Me.Label9.Location = New System.Drawing.Point(303, 278)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(74, 17)
         Me.Label9.TabIndex = 132
@@ -367,7 +367,7 @@ Partial Class FrmParticipante_vb
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(73, 230)
+        Me.Label10.Location = New System.Drawing.Point(72, 278)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(59, 17)
         Me.Label10.TabIndex = 131
@@ -387,7 +387,7 @@ Partial Class FrmParticipante_vb
         Me.cboOperadorM.Items.Add(RadListDataItem8)
         Me.cboOperadorM.Items.Add(RadListDataItem9)
         Me.cboOperadorM.Items.Add(RadListDataItem10)
-        Me.cboOperadorM.Location = New System.Drawing.Point(679, 195)
+        Me.cboOperadorM.Location = New System.Drawing.Point(678, 243)
         Me.cboOperadorM.Name = "cboOperadorM"
         Me.cboOperadorM.Size = New System.Drawing.Size(147, 27)
         Me.cboOperadorM.TabIndex = 18
@@ -415,7 +415,7 @@ Partial Class FrmParticipante_vb
         '
         Me.cboDistrito.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboDistrito.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboDistrito.Location = New System.Drawing.Point(498, 160)
+        Me.cboDistrito.Location = New System.Drawing.Point(497, 208)
         Me.cboDistrito.Name = "cboDistrito"
         Me.cboDistrito.NullText = "DISTRITO"
         Me.cboDistrito.Size = New System.Drawing.Size(162, 31)
@@ -426,7 +426,7 @@ Partial Class FrmParticipante_vb
         '
         Me.cboProvincia.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboProvincia.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboProvincia.Location = New System.Drawing.Point(310, 160)
+        Me.cboProvincia.Location = New System.Drawing.Point(309, 208)
         Me.cboProvincia.Name = "cboProvincia"
         Me.cboProvincia.NullText = "PROVINCIA"
         Me.cboProvincia.Size = New System.Drawing.Size(162, 31)
@@ -437,7 +437,7 @@ Partial Class FrmParticipante_vb
         '
         Me.cboDepartamento.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboDepartamento.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboDepartamento.Location = New System.Drawing.Point(140, 160)
+        Me.cboDepartamento.Location = New System.Drawing.Point(139, 208)
         Me.cboDepartamento.Name = "cboDepartamento"
         Me.cboDepartamento.NullText = "DEPARTAMENTO"
         Me.cboDepartamento.Size = New System.Drawing.Size(141, 31)
@@ -490,9 +490,8 @@ Partial Class FrmParticipante_vb
         '
         'txtCorreo
         '
-        Me.txtCorreo.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.txtCorreo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCorreo.Location = New System.Drawing.Point(140, 263)
+        Me.txtCorreo.Location = New System.Drawing.Point(139, 311)
         Me.txtCorreo.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtCorreo.Name = "txtCorreo"
         '
@@ -507,7 +506,7 @@ Partial Class FrmParticipante_vb
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(73, 267)
+        Me.Label14.Location = New System.Drawing.Point(72, 315)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(59, 17)
         Me.Label14.TabIndex = 110
@@ -517,7 +516,7 @@ Partial Class FrmParticipante_vb
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(543, 200)
+        Me.Label13.Location = New System.Drawing.Point(542, 248)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(118, 17)
         Me.Label13.TabIndex = 114
@@ -527,7 +526,7 @@ Partial Class FrmParticipante_vb
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(304, 200)
+        Me.Label12.Location = New System.Drawing.Point(303, 248)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(74, 17)
         Me.Label12.TabIndex = 112
@@ -537,7 +536,7 @@ Partial Class FrmParticipante_vb
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(73, 200)
+        Me.Label11.Location = New System.Drawing.Point(72, 248)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(59, 17)
         Me.Label11.TabIndex = 111
@@ -547,7 +546,7 @@ Partial Class FrmParticipante_vb
         '
         Me.txtDireccion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtDireccion.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDireccion.Location = New System.Drawing.Point(141, 133)
+        Me.txtDireccion.Location = New System.Drawing.Point(139, 178)
         Me.txtDireccion.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtDireccion.Name = "txtDireccion"
         '
@@ -642,7 +641,7 @@ Partial Class FrmParticipante_vb
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(58, 138)
+        Me.Label7.Location = New System.Drawing.Point(56, 183)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(74, 17)
         Me.Label7.TabIndex = 87
@@ -650,7 +649,7 @@ Partial Class FrmParticipante_vb
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(541, 382)
+        Me.btnGuardar.Location = New System.Drawing.Point(542, 409)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(159, 33)
         Me.btnGuardar.TabIndex = 24
@@ -659,7 +658,7 @@ Partial Class FrmParticipante_vb
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(706, 382)
+        Me.btnLimpiar.Location = New System.Drawing.Point(707, 409)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(159, 33)
         Me.btnLimpiar.TabIndex = 25
@@ -680,7 +679,7 @@ Partial Class FrmParticipante_vb
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(887, 428)
+        Me.ClientSize = New System.Drawing.Size(887, 458)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnGuardar)

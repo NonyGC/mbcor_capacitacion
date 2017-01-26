@@ -97,7 +97,7 @@ Partial Class FrmListParticipante
         Me.dtgParticipantes.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.dtgParticipantes.Name = "dtgParticipantes"
         Me.dtgParticipantes.ReadOnly = True
-        Me.dtgParticipantes.Size = New System.Drawing.Size(930, 513)
+        Me.dtgParticipantes.Size = New System.Drawing.Size(924, 524)
         Me.dtgParticipantes.TabIndex = 0
         Me.dtgParticipantes.ThemeName = "VisualStudio2012Light"
         '

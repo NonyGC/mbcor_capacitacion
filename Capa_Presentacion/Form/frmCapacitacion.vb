@@ -21,6 +21,7 @@ Public Class frmCapacitacion
     Private Sub frmCapacitacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarForm()
         cboOrigen.DropDownListElement.AutoCompleteAppend.LimitToList = True
+        cboLocal.SelectedIndex = -1
     End Sub
 
     Private Sub btnRegistar_Click(sender As Object, e As EventArgs) Handles btnRegistar.Click
@@ -58,6 +59,7 @@ Public Class frmCapacitacion
         dtmFecha.Value = Now
         txtTema.Clear()
         txtEspositor.Clear()
+        cboLocal.SelectedIndex = -1
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
