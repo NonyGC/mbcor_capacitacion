@@ -165,10 +165,10 @@
     <Compile Include="Form\frmListadoCapacitacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\frmListParticipante.Designer.vb">
+    <Compile Include="Form\Participante\frmListParticipante.Designer.vb">
       <DependentUpon>frmListParticipante.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\frmListParticipante.vb">
+    <Compile Include="Form\Participante\frmListParticipante.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\frmLocal.Designer.vb">
@@ -177,10 +177,10 @@
     <Compile Include="Form\frmLocal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\FrmParticipante.Designer.vb">
+    <Compile Include="Form\Participante\FrmParticipante.Designer.vb">
       <DependentUpon>FrmParticipante.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\FrmParticipante.vb">
+    <Compile Include="Form\Participante\FrmParticipante.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Menu.Designer.vb">
@@ -228,13 +228,13 @@
     <EmbeddedResource Include="Form\frmListadoCapacitacion.resx">
       <DependentUpon>frmListadoCapacitacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\frmListParticipante.resx">
+    <EmbeddedResource Include="Form\Participante\frmListParticipante.resx">
       <DependentUpon>frmListParticipante.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frmLocal.resx">
       <DependentUpon>frmLocal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\FrmParticipante.resx">
+    <EmbeddedResource Include="Form\Participante\FrmParticipante.resx">
       <DependentUpon>FrmParticipante.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Menu.resx">

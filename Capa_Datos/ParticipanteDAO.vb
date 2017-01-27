@@ -10,7 +10,7 @@ Public Class ParticipanteDAO
     End Function
 
     Public Function participante_table() As DataTable
-        Dim cmd As SqlCommand = CommandText("SELECT codigo,apellido_pat,apellido_mat,nombres,fecha_nacimiento,dni_ce,tel_fijo,tel_mol,ope_movil,tel_fijo2,tel_mol2,ope_movil2,email  FROM dbmasisa.dbo.participante")
+        Dim cmd As SqlCommand = CommandText("SELECT *  FROM participante")
         Dim data As New DataTable
         data = GetDataTable(cmd)
         Return data

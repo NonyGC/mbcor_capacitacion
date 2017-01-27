@@ -7,36 +7,73 @@ Public Class FrmParticipante_vb
     Dim LocalCN As New LocalCN, ParticipanteCE As New ParticipanteCE
     Dim ParticipanteCN As New ParticipanteCN
     Dim datadep As DataTable
+    Private partCE As ParticipanteCE
+    Private Value As Integer
+
+    Enum Initialize
+        ini = 0
+        upd = 1
+    End Enum
     Public Sub New()
 
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
-
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         RadMessageBox.SetThemeName("VisualStudio2012Light")
+        Value = 0
     End Sub
+
+    Public Sub New(partCE As ParticipanteCE)
+        InitializeComponent()
+        Me.partCE = partCE
+        Value = 1
+    End Sub
+
     Private Sub FrmParticipante_vb_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         datadep = New DataTable
         datadep = LocalCN.ubigeo_Departamento()
         cboDepartamento.DataSource = datadep
         cboDepartamento.DisplayMember = "Departamento"
         cboDepartamento.ValueMember = "idDep"
-        cboDepartamento.SelectedIndex = -1
-
-        'txtCodPart.Text = ParticipanteCN.participante_CodAutogenerado()
-
+        Select Case Value
+            Case Initialize.ini
+                cboDepartamento.SelectedIndex = -1
+            Case Initialize.upd
+                loadDataUpdate()
+        End Select
         cboOperadorM.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboEstadoCivil.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboDepartamento.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboProvincia.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboDistrito.DropDownListElement.AutoCompleteAppend.LimitToList = True
     End Sub
-    Private Function GetGrpBxCheckedBbt(grpb As GroupBox) As RadioButton
-        Dim rButton As RadioButton = grpb.Controls.OfType(Of RadioButton).Where(Function(r) r.Checked = True).FirstOrDefault()
-        Return rButton
-    End Function
+    Sub loadDataUpdate()
+        With partCE
+            txtApePat.Text = .apePat
+            txtApeMat.Text = .apeMat
+            txtNombres.Text = .nombres
+            txtDNICE.Text = .dnice
+            txtDireccion.Text = .direccion
+            cboDepartamento.SelectedValue = (partCE.ubigeo).Substring(0, 2) : loadProvincia()
+            cboProvincia.SelectedValue = (partCE.ubigeo).Substring(2, 2) : loadDistrito()
+            cboDistrito.SelectedValue = (partCE.ubigeo).Substring(4, 2)
+            'txtTelFijo.Text = (partCE.telFijo).Substring(6, 8)
+            'txtTelMovil.Text = (partCE.telMovil).Substring(6, 11)
+            'Debug.WriteLine((partCE.telFijo).Substring(6, 8))
+            'Debug.WriteLine((partCE.telMovil).Substring(6, 11))
+            cboOperadorM.SelectedText = Trim(partCE.opeMovil)
+            txtCorreo.Text = .correo
+            cboEstadoCivil.SelectedValue = Trim(.EstadoCiv)
+            txtProfesionOcupacion.Text = .profeOcupa
+
+        End With
+
+    End Sub
 
     Private Sub cboProvincia_Leave(sender As Object, e As EventArgs) Handles cboProvincia.Leave
+        loadDistrito()
+    End Sub
+    Sub loadDistrito()
         Dim idDep As String = Trim(cboDepartamento.SelectedValue)
         Dim idProv As String = Trim(cboProvincia.SelectedValue)
         If idDep IsNot String.Empty And idProv IsNot String.Empty Then
@@ -48,6 +85,9 @@ Public Class FrmParticipante_vb
     End Sub
 
     Private Sub cboDepartamento_Leave(sender As Object, e As EventArgs) Handles cboDepartamento.Leave
+        loadProvincia()
+    End Sub
+    Sub loadProvincia()
         Dim idDep As String = Trim(cboDepartamento.SelectedValue)
         If idDep IsNot String.Empty Then
             Dim codTel As String = datadep.Select("idDep=" & idDep)(0).ItemArray(2)
@@ -78,7 +118,6 @@ Public Class FrmParticipante_vb
         limpiar()
     End Sub
 
-
     Sub limpiar()
         cboDepartamento.SelectedIndex = -1
         RadioButtonclear(grpSexo)
@@ -99,6 +138,10 @@ Public Class FrmParticipante_vb
         Dim cod As String = If(Trim(ap) = String.Empty, "_", Trim(ap).Substring(0, 1)) & If(Trim(am) = String.Empty, "_", Trim(am).Substring(0, 1))
         Return cod
     End Function
+
+    Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
+
+    End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim codUbi As String = cboDepartamento.SelectedValue & cboProvincia.SelectedValue & cboDistrito.SelectedValue

@@ -64,4 +64,8 @@ Public Class Base
             End If
         Next
     End Sub
+    Shared Function GetGrpBxCheckedBbt(grpb As GroupBox) As RadioButton
+        Dim rButton As RadioButton = grpb.Controls.OfType(Of RadioButton).Where(Function(r) r.Checked = True).FirstOrDefault()
+        Return rButton
+    End Function
 End Class
