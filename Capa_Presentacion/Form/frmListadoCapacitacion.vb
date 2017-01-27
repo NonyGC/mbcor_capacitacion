@@ -22,4 +22,11 @@ Public Class FrmListadoCapacitacion
         End With
     End Sub
 
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+        frmCapacitacion.ShowDialog()
+    End Sub
+
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+        frmCapacitacion.Show()
+    End Sub
 End Class

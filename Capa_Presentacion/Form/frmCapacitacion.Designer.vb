@@ -239,7 +239,7 @@ Partial Class frmCapacitacion
         Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(-3, 1)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(679, 21)
+        Me.Label15.Size = New System.Drawing.Size(690, 21)
         Me.Label15.TabIndex = 96
         Me.Label15.Text = "REGISTRO DE CAPACITACIÓN"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -338,7 +338,7 @@ Partial Class frmCapacitacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(673, 359)
+        Me.ClientSize = New System.Drawing.Size(685, 359)
         Me.Controls.Add(Me.txtOrigenOtro)
         Me.Controls.Add(Me.cboOrigen)
         Me.Controls.Add(Me.Label8)

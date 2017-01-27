@@ -35,11 +35,13 @@ Partial Class FrmListadoCapacitacion
         Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmListadoCapacitacion))
         Me.dgvCapacitacion = New Telerik.WinControls.UI.RadGridView()
-        Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton2 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
+        Me.btnAgregar = New Telerik.WinControls.UI.RadButton()
+        Me.btnModificar = New Telerik.WinControls.UI.RadButton()
+        Me.btnEliminar = New Telerik.WinControls.UI.RadButton()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.RadPanel1 = New Telerik.WinControls.UI.RadPanel()
+        Me.txtOrigenOtro = New Telerik.WinControls.UI.RadTextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.txtExpositor = New Telerik.WinControls.UI.RadTextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtOrigen = New Telerik.WinControls.UI.RadTextBox()
@@ -58,15 +60,14 @@ Partial Class FrmListadoCapacitacion
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtOrigenOtro = New Telerik.WinControls.UI.RadTextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.dgvCapacitacion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvCapacitacion.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnModificar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadPanel1.SuspendLayout()
+        CType(Me.txtOrigenOtro, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtExpositor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtOrigen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTema, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -75,7 +76,6 @@ Partial Class FrmListadoCapacitacion
         CType(Me.txtFecha, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtLocal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtOrganizador, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtOrigenOtro, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -138,32 +138,32 @@ Partial Class FrmListadoCapacitacion
         Me.dgvCapacitacion.TabIndex = 0
         Me.dgvCapacitacion.ThemeName = "VisualStudio2012Light"
         '
-        'RadButton1
+        'btnAgregar
         '
-        Me.RadButton1.Location = New System.Drawing.Point(288, 84)
-        Me.RadButton1.Name = "RadButton1"
-        Me.RadButton1.Size = New System.Drawing.Size(151, 24)
-        Me.RadButton1.TabIndex = 1
-        Me.RadButton1.Text = "AGREGAR"
-        Me.RadButton1.ThemeName = "VisualStudio2012Light"
+        Me.btnAgregar.Location = New System.Drawing.Point(288, 84)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(151, 24)
+        Me.btnAgregar.TabIndex = 1
+        Me.btnAgregar.Text = "AGREGAR"
+        Me.btnAgregar.ThemeName = "VisualStudio2012Light"
         '
-        'RadButton2
+        'btnModificar
         '
-        Me.RadButton2.Location = New System.Drawing.Point(445, 84)
-        Me.RadButton2.Name = "RadButton2"
-        Me.RadButton2.Size = New System.Drawing.Size(151, 24)
-        Me.RadButton2.TabIndex = 2
-        Me.RadButton2.Text = "MODIFICAR"
-        Me.RadButton2.ThemeName = "VisualStudio2012Light"
+        Me.btnModificar.Location = New System.Drawing.Point(445, 84)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(151, 24)
+        Me.btnModificar.TabIndex = 2
+        Me.btnModificar.Text = "MODIFICAR"
+        Me.btnModificar.ThemeName = "VisualStudio2012Light"
         '
-        'RadButton3
+        'btnEliminar
         '
-        Me.RadButton3.Location = New System.Drawing.Point(602, 84)
-        Me.RadButton3.Name = "RadButton3"
-        Me.RadButton3.Size = New System.Drawing.Size(151, 24)
-        Me.RadButton3.TabIndex = 2
-        Me.RadButton3.Text = "ELIMINAR"
-        Me.RadButton3.ThemeName = "VisualStudio2012Light"
+        Me.btnEliminar.Location = New System.Drawing.Point(602, 84)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(151, 24)
+        Me.btnEliminar.TabIndex = 2
+        Me.btnEliminar.Text = "ELIMINAR"
+        Me.btnEliminar.ThemeName = "VisualStudio2012Light"
         '
         'Label15
         '
@@ -202,6 +202,31 @@ Partial Class FrmListadoCapacitacion
         Me.RadPanel1.Size = New System.Drawing.Size(374, 323)
         Me.RadPanel1.TabIndex = 85
         Me.RadPanel1.ThemeName = "VisualStudio2012Light"
+        '
+        'txtOrigenOtro
+        '
+        Me.txtOrigenOtro.AutoSize = False
+        Me.txtOrigenOtro.Location = New System.Drawing.Point(118, 85)
+        Me.txtOrigenOtro.MinimumSize = New System.Drawing.Size(0, 24)
+        Me.txtOrigenOtro.Multiline = True
+        Me.txtOrigenOtro.Name = "txtOrigenOtro"
+        Me.txtOrigenOtro.ReadOnly = True
+        '
+        '
+        '
+        Me.txtOrigenOtro.RootElement.MinSize = New System.Drawing.Size(0, 24)
+        Me.txtOrigenOtro.Size = New System.Drawing.Size(244, 24)
+        Me.txtOrigenOtro.TabIndex = 129
+        Me.txtOrigenOtro.ThemeName = "VisualStudio2012Light"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(28, 91)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(84, 13)
+        Me.Label2.TabIndex = 128
+        Me.Label2.Text = "OTRO ORIGEN:"
         '
         'txtExpositor
         '
@@ -421,31 +446,6 @@ Partial Class FrmListadoCapacitacion
         Me.Label1.TabIndex = 112
         Me.Label1.Text = "CÓDIGO"
         '
-        'txtOrigenOtro
-        '
-        Me.txtOrigenOtro.AutoSize = False
-        Me.txtOrigenOtro.Location = New System.Drawing.Point(118, 85)
-        Me.txtOrigenOtro.MinimumSize = New System.Drawing.Size(0, 24)
-        Me.txtOrigenOtro.Multiline = True
-        Me.txtOrigenOtro.Name = "txtOrigenOtro"
-        Me.txtOrigenOtro.ReadOnly = True
-        '
-        '
-        '
-        Me.txtOrigenOtro.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.txtOrigenOtro.Size = New System.Drawing.Size(244, 24)
-        Me.txtOrigenOtro.TabIndex = 129
-        Me.txtOrigenOtro.ThemeName = "VisualStudio2012Light"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(28, 91)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(84, 13)
-        Me.Label2.TabIndex = 128
-        Me.Label2.Text = "OTRO ORIGEN:"
-        '
         'FrmListadoCapacitacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -453,9 +453,9 @@ Partial Class FrmListadoCapacitacion
         Me.ClientSize = New System.Drawing.Size(1157, 550)
         Me.Controls.Add(Me.RadPanel1)
         Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.RadButton3)
-        Me.Controls.Add(Me.RadButton2)
-        Me.Controls.Add(Me.RadButton1)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnModificar)
+        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.dgvCapacitacion)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmListadoCapacitacion"
@@ -467,12 +467,13 @@ Partial Class FrmListadoCapacitacion
         Me.ThemeName = "VisualStudio2012Light"
         CType(Me.dgvCapacitacion.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvCapacitacion, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnAgregar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnModificar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadPanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadPanel1.ResumeLayout(False)
         Me.RadPanel1.PerformLayout()
+        CType(Me.txtOrigenOtro, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtExpositor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtOrigen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTema, System.ComponentModel.ISupportInitialize).EndInit()
@@ -481,16 +482,15 @@ Partial Class FrmListadoCapacitacion
         CType(Me.txtFecha, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtLocal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtOrganizador, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtOrigenOtro, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents dgvCapacitacion As Telerik.WinControls.UI.RadGridView
-    Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton2 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton3 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents btnAgregar As Telerik.WinControls.UI.RadButton
+    Friend WithEvents btnModificar As Telerik.WinControls.UI.RadButton
+    Friend WithEvents btnEliminar As Telerik.WinControls.UI.RadButton
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents RadPanel1 As Telerik.WinControls.UI.RadPanel
     Friend WithEvents txtExpositor As Telerik.WinControls.UI.RadTextBox

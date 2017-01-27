@@ -36,8 +36,16 @@ Partial Class FrmListParticipante
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmListParticipante))
         Me.dtgParticipantes = New Telerik.WinControls.UI.RadGridView()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.btnEliminar = New Telerik.WinControls.UI.RadButton()
+        Me.btnModificar = New Telerik.WinControls.UI.RadButton()
+        Me.btnAgregar = New Telerik.WinControls.UI.RadButton()
+        Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
         CType(Me.dtgParticipantes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgParticipantes.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnModificar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,7 +53,7 @@ Partial Class FrmListParticipante
         '
         Me.dtgParticipantes.AutoScroll = True
         Me.dtgParticipantes.AutoSizeRows = True
-        Me.dtgParticipantes.Location = New System.Drawing.Point(36, 56)
+        Me.dtgParticipantes.Location = New System.Drawing.Point(38, 99)
         '
         '
         '
@@ -97,25 +105,65 @@ Partial Class FrmListParticipante
         Me.dtgParticipantes.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.dtgParticipantes.Name = "dtgParticipantes"
         Me.dtgParticipantes.ReadOnly = True
-        Me.dtgParticipantes.Size = New System.Drawing.Size(924, 524)
+        Me.dtgParticipantes.Size = New System.Drawing.Size(924, 435)
         Me.dtgParticipantes.TabIndex = 0
         Me.dtgParticipantes.ThemeName = "VisualStudio2012Light"
         '
         'Label15
         '
         Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(-5, 9)
+        Me.Label15.Location = New System.Drawing.Point(-2, -3)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(1019, 21)
+        Me.Label15.Size = New System.Drawing.Size(1015, 21)
         Me.Label15.TabIndex = 83
         Me.Label15.Text = "LISTADO DE PARTICIPANTES REGISTRADOS"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'btnEliminar
+        '
+        Me.btnEliminar.Location = New System.Drawing.Point(810, 55)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(151, 24)
+        Me.btnEliminar.TabIndex = 86
+        Me.btnEliminar.Text = "ELIMINAR"
+        Me.btnEliminar.ThemeName = "VisualStudio2012Light"
+        '
+        'btnModificar
+        '
+        Me.btnModificar.Location = New System.Drawing.Point(652, 55)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(151, 24)
+        Me.btnModificar.TabIndex = 85
+        Me.btnModificar.Text = "MODIFICAR"
+        Me.btnModificar.ThemeName = "VisualStudio2012Light"
+        '
+        'btnAgregar
+        '
+        Me.btnAgregar.Location = New System.Drawing.Point(494, 55)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(151, 24)
+        Me.btnAgregar.TabIndex = 84
+        Me.btnAgregar.Text = "AGREGAR"
+        Me.btnAgregar.ThemeName = "VisualStudio2012Light"
+        '
+        'RadButton1
+        '
+        Me.RadButton1.Location = New System.Drawing.Point(38, 55)
+        Me.RadButton1.Name = "RadButton1"
+        Me.RadButton1.Size = New System.Drawing.Size(151, 24)
+        Me.RadButton1.TabIndex = 87
+        Me.RadButton1.Text = "ACTUALIZAR"
+        Me.RadButton1.ThemeName = "VisualStudio2012Light"
         '
         'FrmListParticipante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1010, 629)
+        Me.ClientSize = New System.Drawing.Size(1010, 565)
+        Me.Controls.Add(Me.RadButton1)
+        Me.Controls.Add(Me.btnEliminar)
+        Me.Controls.Add(Me.btnModificar)
+        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.dtgParticipantes)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -128,6 +176,10 @@ Partial Class FrmListParticipante
         Me.ThemeName = "VisualStudio2012Light"
         CType(Me.dtgParticipantes.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgParticipantes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnModificar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnAgregar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -135,5 +187,9 @@ Partial Class FrmListParticipante
 
     Friend WithEvents dtgParticipantes As Telerik.WinControls.UI.RadGridView
     Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents btnEliminar As Telerik.WinControls.UI.RadButton
+    Friend WithEvents btnModificar As Telerik.WinControls.UI.RadButton
+    Friend WithEvents btnAgregar As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
 End Class
 

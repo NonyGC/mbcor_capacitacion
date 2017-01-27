@@ -100,7 +100,6 @@ Public Class FrmParticipante_vb
         Return cod
     End Function
 
-
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim codUbi As String = cboDepartamento.SelectedValue & cboProvincia.SelectedValue & cboDistrito.SelectedValue
         Dim fechaN As String
@@ -130,6 +129,7 @@ Public Class FrmParticipante_vb
         Dim partEst As Boolean = If(ParticipanteCN.participante_upsert(ParticipanteCE), True, False)
         If partEst Then
             RadMessageBox.Show("SE REGISTRO CORRECTAMENTE", "", MessageBoxButtons.OK, RadMessageIcon.Info)
+            limpiar()
         Else
             RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A REGISTRAR", "", MessageBoxButtons.OK, RadMessageIcon.Error)
         End If
