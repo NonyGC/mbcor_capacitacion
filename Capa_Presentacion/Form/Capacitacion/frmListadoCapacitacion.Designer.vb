@@ -52,7 +52,7 @@ Partial Class FrmListadoCapacitacion
         'dgvCapacitacion
         '
         Me.dgvCapacitacion.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvCapacitacion.Location = New System.Drawing.Point(34, 114)
+        Me.dgvCapacitacion.Location = New System.Drawing.Point(34, 127)
         '
         '
         '
@@ -98,11 +98,12 @@ Partial Class FrmListadoCapacitacion
         GridViewTextBoxColumn10.Name = "expositor"
         GridViewTextBoxColumn10.Width = 150
         Me.dgvCapacitacion.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4, GridViewTextBoxColumn5, GridViewTextBoxColumn6, GridViewTextBoxColumn7, GridViewTextBoxColumn8, GridViewTextBoxColumn9, GridViewTextBoxColumn10})
+        Me.dgvCapacitacion.MasterTemplate.EnableGrouping = False
         Me.dgvCapacitacion.MasterTemplate.EnablePaging = True
         Me.dgvCapacitacion.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.dgvCapacitacion.Name = "dgvCapacitacion"
         Me.dgvCapacitacion.ReadOnly = True
-        Me.dgvCapacitacion.Size = New System.Drawing.Size(932, 418)
+        Me.dgvCapacitacion.Size = New System.Drawing.Size(932, 405)
         Me.dgvCapacitacion.TabIndex = 0
         Me.dgvCapacitacion.ThemeName = "VisualStudio2012Light"
         '

@@ -72,9 +72,8 @@ Partial Class FrmListParticipante
         'dtgParticipantes
         '
         Me.dtgParticipantes.AutoScroll = True
-        Me.dtgParticipantes.AutoSizeRows = True
         Me.dtgParticipantes.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgParticipantes.Location = New System.Drawing.Point(27, 157)
+        Me.dtgParticipantes.Location = New System.Drawing.Point(31, 116)
         '
         '
         '
@@ -147,9 +146,10 @@ Partial Class FrmListParticipante
         GridViewTextBoxColumn17.Name = "estado_civ"
         GridViewTextBoxColumn18.FieldName = "profe_ocupa"
         GridViewTextBoxColumn18.HeaderText = "PROFE/OFICIO"
-        GridViewTextBoxColumn18.IsVisible = False
         GridViewTextBoxColumn18.Name = "profe_ocupa"
+        GridViewTextBoxColumn18.Width = 80
         Me.dtgParticipantes.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4, GridViewTextBoxColumn5, GridViewTextBoxColumn6, GridViewTextBoxColumn7, GridViewTextBoxColumn8, GridViewTextBoxColumn9, GridViewTextBoxColumn10, GridViewTextBoxColumn11, GridViewTextBoxColumn12, GridViewTextBoxColumn13, GridViewTextBoxColumn14, GridViewTextBoxColumn15, GridViewTextBoxColumn16, GridViewTextBoxColumn17, GridViewTextBoxColumn18})
+        Me.dtgParticipantes.MasterTemplate.EnableGrouping = False
         Me.dtgParticipantes.MasterTemplate.EnablePaging = True
         Me.dtgParticipantes.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.dtgParticipantes.Name = "dtgParticipantes"
@@ -170,8 +170,9 @@ Partial Class FrmListParticipante
         '
         'btnEliminar
         '
+        Me.btnEliminar.Enabled = False
         Me.btnEliminar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminar.Location = New System.Drawing.Point(809, 65)
+        Me.btnEliminar.Location = New System.Drawing.Point(813, 70)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(151, 24)
         Me.btnEliminar.TabIndex = 86
@@ -181,7 +182,7 @@ Partial Class FrmListParticipante
         'btnModificar
         '
         Me.btnModificar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificar.Location = New System.Drawing.Point(651, 65)
+        Me.btnModificar.Location = New System.Drawing.Point(655, 70)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(151, 24)
         Me.btnModificar.TabIndex = 85
@@ -191,7 +192,7 @@ Partial Class FrmListParticipante
         'btnAgregar
         '
         Me.btnAgregar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregar.Location = New System.Drawing.Point(493, 65)
+        Me.btnAgregar.Location = New System.Drawing.Point(497, 70)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(151, 24)
         Me.btnAgregar.TabIndex = 84
@@ -201,7 +202,7 @@ Partial Class FrmListParticipante
         'RadButton1
         '
         Me.RadButton1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton1.Location = New System.Drawing.Point(27, 65)
+        Me.RadButton1.Location = New System.Drawing.Point(31, 70)
         Me.RadButton1.Name = "RadButton1"
         Me.RadButton1.Size = New System.Drawing.Size(151, 24)
         Me.RadButton1.TabIndex = 87
@@ -259,28 +260,30 @@ Partial Class FrmListParticipante
         Me.cboFilterP.EditorControl.ShowGroupPanel = False
         Me.cboFilterP.EditorControl.Size = New System.Drawing.Size(240, 150)
         Me.cboFilterP.EditorControl.TabIndex = 0
-        Me.cboFilterP.Location = New System.Drawing.Point(493, 126)
+        Me.cboFilterP.Location = New System.Drawing.Point(497, 40)
         Me.cboFilterP.Name = "cboFilterP"
         Me.cboFilterP.NullText = "Seleccionar Local"
-        Me.cboFilterP.Size = New System.Drawing.Size(377, 20)
+        Me.cboFilterP.Size = New System.Drawing.Size(377, 24)
         Me.cboFilterP.TabIndex = 89
         Me.cboFilterP.TabStop = False
         Me.cboFilterP.ThemeName = "VisualStudio2012Light"
+        Me.cboFilterP.Visible = False
         '
         'RadButton2
         '
-        Me.RadButton2.Location = New System.Drawing.Point(888, 125)
+        Me.RadButton2.Location = New System.Drawing.Point(892, 39)
         Me.RadButton2.Name = "RadButton2"
         Me.RadButton2.Size = New System.Drawing.Size(72, 26)
         Me.RadButton2.TabIndex = 90
         Me.RadButton2.Text = "BUSCAR"
         Me.RadButton2.ThemeName = "VisualStudio2012Light"
+        Me.RadButton2.Visible = False
         '
         'FrmListParticipante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(984, 619)
+        Me.ClientSize = New System.Drawing.Size(984, 572)
         Me.Controls.Add(Me.dtgParticipantes)
         Me.Controls.Add(Me.RadButton2)
         Me.Controls.Add(Me.cboFilterP)

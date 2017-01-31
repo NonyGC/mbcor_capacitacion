@@ -76,6 +76,7 @@ Public Class FrmParticipante_vb
             txtCorreo.Text = .correo
             cboEstadoCivil.SelectedValue = Trim(.EstadoCiv)
             txtProfesionOcupacion.Text = .profeOcupa
+            txtFechaN.Text = Trim(.fechaNaci)
             btnGuardar.Text = "ACTUALIZAR"
             btnLimpiar.Enabled = False
         End With

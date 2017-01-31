@@ -169,7 +169,6 @@ Partial Class FrmParticipante_vb
         '
         'txtProfesionOcupacion
         '
-        Me.txtProfesionOcupacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.txtProfesionOcupacion.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProfesionOcupacion.Location = New System.Drawing.Point(139, 341)
         Me.txtProfesionOcupacion.MinimumSize = New System.Drawing.Size(0, 24)
@@ -649,7 +648,7 @@ Partial Class FrmParticipante_vb
         '
         'btnGuardar
         '
-        Me.btnGuardar.Location = New System.Drawing.Point(542, 409)
+        Me.btnGuardar.Location = New System.Drawing.Point(542, 411)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(159, 33)
         Me.btnGuardar.TabIndex = 24
@@ -658,7 +657,7 @@ Partial Class FrmParticipante_vb
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.Location = New System.Drawing.Point(707, 409)
+        Me.btnLimpiar.Location = New System.Drawing.Point(707, 411)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(159, 33)
         Me.btnLimpiar.TabIndex = 25

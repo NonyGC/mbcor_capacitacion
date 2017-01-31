@@ -37,14 +37,10 @@ Public Class FrmListParticipante
             PartCE.correo = .Cells("email").Value
             PartCE.EstadoCiv = .Cells("estado_civ").Value
             PartCE.profeOcupa = .Cells("profe_ocupa").Value
-
-            ',createat
-            ',updateat
         End With
 
         Dim Frm As New FrmParticipante_vb(PartCE)
         Frm.Show()
-        'FrmParticipante_vb.ShowDialog()
     End Sub
 
     Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click

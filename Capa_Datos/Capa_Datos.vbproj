@@ -68,6 +68,7 @@
   <ItemGroup>
     <Compile Include="BaseDao.vb" />
     <Compile Include="CapacitacionDAO.vb" />
+    <Compile Include="EstadisticaDao.vb" />
     <Compile Include="FichaCapaDAO.vb" />
     <Compile Include="LocalDAO.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
