@@ -30,7 +30,7 @@ Partial Class FrmEtdLocalParticipante
         '
         'ListView1
         '
-        Me.ListView1.Location = New System.Drawing.Point(48, 60)
+        Me.ListView1.Location = New System.Drawing.Point(44, 52)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(542, 232)
         Me.ListView1.TabIndex = 0

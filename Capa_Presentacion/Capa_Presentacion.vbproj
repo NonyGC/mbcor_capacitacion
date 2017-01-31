@@ -152,28 +152,28 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form\frmCapacitacion.Designer.vb">
+    <Compile Include="Form\Capacitacion\frmCapacitacion.Designer.vb">
       <DependentUpon>frmCapacitacion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\frmCapacitacion.vb">
+    <Compile Include="Form\Capacitacion\frmCapacitacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\frmFichaCapacitacion.Designer.vb">
+    <Compile Include="Form\Ficha\frmFichaCapacitacion.Designer.vb">
       <DependentUpon>frmFichaCapacitacion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\frmFichaCapacitacion.vb">
+    <Compile Include="Form\Ficha\frmFichaCapacitacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\frmListadoCapacitacion.Designer.vb">
+    <Compile Include="Form\Capacitacion\frmListadoCapacitacion.Designer.vb">
       <DependentUpon>frmListadoCapacitacion.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\frmListadoCapacitacion.vb">
+    <Compile Include="Form\Capacitacion\frmListadoCapacitacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Participante\frmEtdLocalParticipante.Designer.vb">
+    <Compile Include="Form\Estadistico\frmEtdLocalParticipante.Designer.vb">
       <DependentUpon>frmEtdLocalParticipante.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\Participante\frmEtdLocalParticipante.vb">
+    <Compile Include="Form\Estadistico\frmEtdLocalParticipante.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Participante\frmListParticipante.Designer.vb">
@@ -182,10 +182,10 @@
     <Compile Include="Form\Participante\frmListParticipante.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\frmLocal.Designer.vb">
+    <Compile Include="Form\Local\frmLocal.Designer.vb">
       <DependentUpon>frmLocal.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\frmLocal.vb">
+    <Compile Include="Form\Local\frmLocal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Participante\FrmParticipante.Designer.vb">
@@ -230,22 +230,22 @@
     <Compile Include="Shared\Base.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form\frmCapacitacion.resx">
+    <EmbeddedResource Include="Form\Capacitacion\frmCapacitacion.resx">
       <DependentUpon>frmCapacitacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\frmFichaCapacitacion.resx">
+    <EmbeddedResource Include="Form\Ficha\frmFichaCapacitacion.resx">
       <DependentUpon>frmFichaCapacitacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\frmListadoCapacitacion.resx">
+    <EmbeddedResource Include="Form\Capacitacion\frmListadoCapacitacion.resx">
       <DependentUpon>frmListadoCapacitacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Participante\frmEtdLocalParticipante.resx">
+    <EmbeddedResource Include="Form\Estadistico\frmEtdLocalParticipante.resx">
       <DependentUpon>frmEtdLocalParticipante.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Participante\frmListParticipante.resx">
       <DependentUpon>frmListParticipante.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\frmLocal.resx">
+    <EmbeddedResource Include="Form\Local\frmLocal.resx">
       <DependentUpon>frmLocal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Participante\FrmParticipante.resx">
