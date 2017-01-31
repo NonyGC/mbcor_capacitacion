@@ -51,7 +51,6 @@ Partial Class FrmListParticipante
         Me.dtgParticipantes = New Telerik.WinControls.UI.RadGridView()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.btnEliminar = New Telerik.WinControls.UI.RadButton()
-        Me.btnModificar = New Telerik.WinControls.UI.RadButton()
         Me.btnAgregar = New Telerik.WinControls.UI.RadButton()
         Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
         Me.cboFilterP = New Telerik.WinControls.UI.RadMultiColumnComboBox()
@@ -59,7 +58,6 @@ Partial Class FrmListParticipante
         CType(Me.dtgParticipantes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgParticipantes.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnModificar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboFilterP, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -147,7 +145,7 @@ Partial Class FrmListParticipante
         GridViewTextBoxColumn18.FieldName = "profe_ocupa"
         GridViewTextBoxColumn18.HeaderText = "PROFE/OFICIO"
         GridViewTextBoxColumn18.Name = "profe_ocupa"
-        GridViewTextBoxColumn18.Width = 80
+        GridViewTextBoxColumn18.Width = 150
         Me.dtgParticipantes.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4, GridViewTextBoxColumn5, GridViewTextBoxColumn6, GridViewTextBoxColumn7, GridViewTextBoxColumn8, GridViewTextBoxColumn9, GridViewTextBoxColumn10, GridViewTextBoxColumn11, GridViewTextBoxColumn12, GridViewTextBoxColumn13, GridViewTextBoxColumn14, GridViewTextBoxColumn15, GridViewTextBoxColumn16, GridViewTextBoxColumn17, GridViewTextBoxColumn18})
         Me.dtgParticipantes.MasterTemplate.EnableGrouping = False
         Me.dtgParticipantes.MasterTemplate.EnablePaging = True
@@ -179,20 +177,10 @@ Partial Class FrmListParticipante
         Me.btnEliminar.Text = "ELIMINAR"
         Me.btnEliminar.ThemeName = "VisualStudio2012Light"
         '
-        'btnModificar
-        '
-        Me.btnModificar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificar.Location = New System.Drawing.Point(655, 70)
-        Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(151, 24)
-        Me.btnModificar.TabIndex = 85
-        Me.btnModificar.Text = "MODIFICAR"
-        Me.btnModificar.ThemeName = "VisualStudio2012Light"
-        '
         'btnAgregar
         '
         Me.btnAgregar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregar.Location = New System.Drawing.Point(497, 70)
+        Me.btnAgregar.Location = New System.Drawing.Point(656, 70)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(151, 24)
         Me.btnAgregar.TabIndex = 84
@@ -289,7 +277,6 @@ Partial Class FrmListParticipante
         Me.Controls.Add(Me.cboFilterP)
         Me.Controls.Add(Me.RadButton1)
         Me.Controls.Add(Me.btnEliminar)
-        Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.Label15)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -304,7 +291,6 @@ Partial Class FrmListParticipante
         CType(Me.dtgParticipantes.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgParticipantes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnModificar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnAgregar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cboFilterP.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
@@ -320,7 +306,6 @@ Partial Class FrmListParticipante
     Friend WithEvents dtgParticipantes As Telerik.WinControls.UI.RadGridView
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents btnEliminar As Telerik.WinControls.UI.RadButton
-    Friend WithEvents btnModificar As Telerik.WinControls.UI.RadButton
     Friend WithEvents btnAgregar As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
     Friend WithEvents cboFilterP As Telerik.WinControls.UI.RadMultiColumnComboBox

@@ -17,7 +17,15 @@ Public Class FrmListParticipante
         'Debug.WriteLine(result)
     End Sub
 
-    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
+        dtgParticipantes.DataSource = ParticipanteCN.participante_table()
+    End Sub
+
+    Private Sub dtgParticipantes_Click(sender As Object, e As EventArgs) Handles dtgParticipantes.Click
+
+    End Sub
+
+    Private Sub dtgParticipantes_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dtgParticipantes.CellDoubleClick
         With dtgParticipantes.CurrentRow
             PartCE.codpart = .Cells("codigo").Value
             PartCE.apePat = .Cells("apellido_pat").Value
@@ -41,13 +49,5 @@ Public Class FrmListParticipante
 
         Dim Frm As New FrmParticipante_vb(PartCE)
         Frm.Show()
-    End Sub
-
-    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
-        dtgParticipantes.DataSource = ParticipanteCN.participante_table()
-    End Sub
-
-    Private Sub dtgParticipantes_Click(sender As Object, e As EventArgs) Handles dtgParticipantes.Click
-
     End Sub
 End Class

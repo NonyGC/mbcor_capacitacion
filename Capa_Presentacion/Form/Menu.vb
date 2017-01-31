@@ -1,5 +1,5 @@
 ﻿Public Class Menu
-    Private Sub RadButton3_Click(sender As Object, e As EventArgs) Handles RadButton3.Click
+    Private Sub RadButton3_Click(sender As Object, e As EventArgs) 
         frmCapacitacion.Show()
     End Sub
 

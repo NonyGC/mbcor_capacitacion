@@ -5,7 +5,15 @@ Imports Telerik.WinControls
 
 Public Class frmCapacitacion
     Dim capCN As New CapacitacionCN
-    Dim capCE As New CapacitacionCE
+    Dim capNewCE As New CapacitacionCE
+
+    Private capEN As CapacitacionCE
+    Private value As Integer
+    Enum Initialize
+        ini = 0
+        upd = 1
+    End Enum
+
     Sub New()
 
         ' Esta llamada es exigida por el diseñador.
@@ -13,19 +21,52 @@ Public Class frmCapacitacion
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         RadMessageBox.SetThemeName("VisualStudio2012Light")
+        value = 0
     End Sub
+
+    Public Sub New(capEN As CapacitacionCE)
+        InitializeComponent()
+        Me.capEN = capEN
+        RadMessageBox.SetThemeName("VisualStudio2012Light")
+        value = 1
+    End Sub
+
     Private Sub RadButton4_Click(sender As Object, e As EventArgs) Handles btnNewLocal.Click
         frmLocal.Show()
     End Sub
 
     Private Sub frmCapacitacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CargarForm()
+        cboLocal.DataSource = capCN.obtenerLocal()
+        cboLocal.DisplayMember = "nombre"
+        cboLocal.ValueMember = "codigo"
         cboOrigen.DropDownListElement.AutoCompleteAppend.LimitToList = True
-        cboLocal.SelectedIndex = -1
+        Select Case value
+            Case Initialize.ini
+                LoadDataIni()
+            Case Initialize.upd
+                loadDataUpdate()
+        End Select
+    End Sub
+
+    Private Sub loadDataUpdate()
+        With capEN
+            txtCodigo.Text = .codigo
+            cboOrigen.SelectedText = .origen
+            txtOrigenOtro.Text = .origenOtro
+            txtOrganizador.Text = .organizador
+            cboLocal.SelectedText = .local
+            dtmFecha.Value = .fecha
+            txtCantMasisa.Value = .cantMasisa
+            txtCantIngresado.Value = .cantIngresada
+            txtTema.Text = .tema
+            txtEspositor.Text = .expositor
+        End With
+        btnRegistar.Text = "ACTUALIZAR"
+        btnLimpiar.Enabled = False
     End Sub
 
     Private Sub btnRegistar_Click(sender As Object, e As EventArgs) Handles btnRegistar.Click
-        With capCE
+        With capNewCE
             .codigo = txtCodigo.Text
             .origen = cboOrigen.Text
             .origenOtro = txtOrigenOtro.Text
@@ -35,27 +76,38 @@ Public Class frmCapacitacion
             .cantIngresada = txtCantIngresado.Value
             .fecha = (dtmFecha.Value).ToString("yyyy-MM-dd")
             .tema = txtTema.Text
-            .expositor=txtEspositor.Text
+            .expositor = txtEspositor.Text
         End With
-        If (capCN.registrar(capCE)) Then
-            RadMessageBox.Show("SE REGISTRO CORRECTAMENTE", "", MessageBoxButtons.OK, RadMessageIcon.Info)
-            Limpiar()
+        Select Case value
+            Case Initialize.ini
+                Dim est As Boolean = If(capCN.registrar(capNewCE), True, False)
+                Dim mssj As String = If(est, "SE REGISTRO CORRECTAMENTE", "OCURRIO UN ERROR,VUELVA A REGISTRAR")
+                mssje(est, mssj) : Limpiar()
+            Case Initialize.upd
+                Dim est As Boolean = If(capCN.actualizar(capNewCE), True, False)
+                Dim mssj As String = If(est, "SE ACTUALIZO CORRECTAMENTE", "OCURRIO UN ERROR,VUELVA A INTENTAR")
+                mssje(est, mssj)
+        End Select
+
+    End Sub
+    Sub mssje(est As Boolean, mssj As String)
+        If est Then
+            RadMessageBox.Show(mssj, "", MessageBoxButtons.OK, RadMessageIcon.Info)
         Else
-            RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A REGISTRAR", "", MessageBoxButtons.OK, RadMessageIcon.Error)
+            RadMessageBox.Show(mssj, "", MessageBoxButtons.OK, RadMessageIcon.Error)
         End If
     End Sub
-    Sub CargarForm()
+    Sub LoadDataIni()
         txtCodigo.Text = capCN.capacitacion_CodAutogenerado()
-        cboLocal.DataSource = capCN.obtenerLocal()
-        cboLocal.DisplayMember = "nombre"
-        cboLocal.ValueMember = "codigo"
         dtmFecha.Value = Now
+        cboLocal.SelectedIndex = -1
     End Sub
     Sub Limpiar()
-        CargarForm()
+        LoadDataIni()
         txtOrganizador.Clear()
         txtCantMasisa.Value = 0
         txtCantIngresado.Value = 0
+        cboOrigen.SelectedIndex = -1
         dtmFecha.Value = Now
         txtTema.Clear()
         txtEspositor.Clear()

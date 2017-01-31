@@ -17,4 +17,8 @@ Public Class CapacitacionCN
     Public Function registrar(cap As CapacitacionCE) As Boolean
         Return CDAO.Registrar(cap)
     End Function
+
+    Public Function actualizar(capEN As CapacitacionCE) As Boolean
+        Return CDAO.Actualizar(capEN)
+    End Function
 End Class

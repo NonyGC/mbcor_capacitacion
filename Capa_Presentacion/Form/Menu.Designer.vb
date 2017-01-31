@@ -25,14 +25,12 @@ Partial Class Menu
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Menu))
         Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
         Me.RadButton2 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
         Me.VisualStudio2012LightTheme1 = New Telerik.WinControls.Themes.VisualStudio2012LightTheme()
         Me.RadButton4 = New Telerik.WinControls.UI.RadButton()
         Me.RadButton5 = New Telerik.WinControls.UI.RadButton()
         Me.RadButton6 = New Telerik.WinControls.UI.RadButton()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,7 +39,7 @@ Partial Class Menu
         '
         'RadButton1
         '
-        Me.RadButton1.Location = New System.Drawing.Point(46, 247)
+        Me.RadButton1.Location = New System.Drawing.Point(46, 158)
         Me.RadButton1.Name = "RadButton1"
         Me.RadButton1.Size = New System.Drawing.Size(266, 28)
         Me.RadButton1.TabIndex = 0
@@ -57,27 +55,18 @@ Partial Class Menu
         Me.RadButton2.Text = "GESTIONAR LOCAL"
         Me.RadButton2.ThemeName = "VisualStudio2012Light"
         '
-        'RadButton3
-        '
-        Me.RadButton3.Location = New System.Drawing.Point(46, 104)
-        Me.RadButton3.Name = "RadButton3"
-        Me.RadButton3.Size = New System.Drawing.Size(266, 28)
-        Me.RadButton3.TabIndex = 2
-        Me.RadButton3.Text = "REGISTRAR CAPACITACIÓN"
-        Me.RadButton3.ThemeName = "VisualStudio2012Light"
-        '
         'RadButton4
         '
-        Me.RadButton4.Location = New System.Drawing.Point(46, 281)
+        Me.RadButton4.Location = New System.Drawing.Point(46, 192)
         Me.RadButton4.Name = "RadButton4"
         Me.RadButton4.Size = New System.Drawing.Size(266, 28)
         Me.RadButton4.TabIndex = 2
-        Me.RadButton4.Text = "LISTADO PARTICIPANTES"
+        Me.RadButton4.Text = "GESTIONAR PARTICIPANTES"
         Me.RadButton4.ThemeName = "VisualStudio2012Light"
         '
         'RadButton5
         '
-        Me.RadButton5.Location = New System.Drawing.Point(46, 138)
+        Me.RadButton5.Location = New System.Drawing.Point(46, 105)
         Me.RadButton5.Name = "RadButton5"
         Me.RadButton5.Size = New System.Drawing.Size(266, 28)
         Me.RadButton5.TabIndex = 2
@@ -86,7 +75,7 @@ Partial Class Menu
         '
         'RadButton6
         '
-        Me.RadButton6.Location = New System.Drawing.Point(46, 315)
+        Me.RadButton6.Location = New System.Drawing.Point(46, 226)
         Me.RadButton6.Name = "RadButton6"
         Me.RadButton6.Size = New System.Drawing.Size(266, 28)
         Me.RadButton6.TabIndex = 3
@@ -97,11 +86,10 @@ Partial Class Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(356, 401)
+        Me.ClientSize = New System.Drawing.Size(356, 287)
         Me.Controls.Add(Me.RadButton6)
         Me.Controls.Add(Me.RadButton4)
         Me.Controls.Add(Me.RadButton5)
-        Me.Controls.Add(Me.RadButton3)
         Me.Controls.Add(Me.RadButton2)
         Me.Controls.Add(Me.RadButton1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -115,7 +103,6 @@ Partial Class Menu
         Me.ThemeName = "VisualStudio2012Light"
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton6, System.ComponentModel.ISupportInitialize).EndInit()
@@ -126,7 +113,6 @@ Partial Class Menu
 
     Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButton2 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton3 As Telerik.WinControls.UI.RadButton
     Friend WithEvents VisualStudio2012LightTheme1 As Telerik.WinControls.Themes.VisualStudio2012LightTheme
     Friend WithEvents RadButton4 As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButton5 As Telerik.WinControls.UI.RadButton

@@ -20,6 +20,27 @@ Public Class CapacitacionDAO
         Return data
     End Function
 
+    Public Function Actualizar(cap As CapacitacionCE) As Boolean
+        Try
+            Dim i As Integer
+            Dim cmd As SqlCommand = CommandText("UPDATE capacitacion SET origen=@ori,origOtro=@oriotro,organizador=@org, local=@loc, cantMasisa=@cantMa, cantIngresada=@cantIngr, fecha=@fec, tema=@tma, expositor=@exp, estado='0' WHERE (codigo=@cod)")
+            With cmd.Parameters
+                .AddWithValue("@ori", cap.origen) : .AddWithValue("@oriotro", cap.origenOtro)
+                .AddWithValue("@org", cap.organizador) : .AddWithValue("@loc", cap.local)
+                .AddWithValue("@cantMa", cap.cantMasisa) : .AddWithValue("@cantIngr", cap.cantIngresada)
+                .AddWithValue("@fec", cap.fecha) : .AddWithValue("@tma", cap.tema)
+                .AddWithValue("@exp", cap.expositor) : .AddWithValue("@cod", cap.codigo)
+            End With
+            i = cmd.ExecuteNonQuery
+            Return If(i > 0, True, False)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            CloseDB()
+        End Try
+    End Function
+
     Public Function obtenerLocal() As DataTable
         Dim cmd As SqlCommand = CommandText("SELECT codigo,nombre FROM local")
         Dim data As New DataTable
