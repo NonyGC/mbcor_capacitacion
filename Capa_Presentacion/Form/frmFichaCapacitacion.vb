@@ -112,6 +112,14 @@ Public Class frmFichaCapacitacion
         cboParticipanteSearch.SelectedIndex = -1
     End Sub
 
+    Private Sub CheckBox7_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox7.CheckedChanged
+
+    End Sub
+
+    Private Sub grp2_Enter(sender As Object, e As EventArgs) Handles grp2.Enter
+
+    End Sub
+
     Private Sub cboCapacitacion_Enter(sender As Object, e As EventArgs) Handles cboCapacitacion.Enter
         cboCapacitacion.DataSource = FichCN.fichaCapacitacion_Capacitacion()
         cboCapacitacion.ValueMember = "codigo"
@@ -130,8 +138,6 @@ Public Class frmFichaCapacitacion
         value = If(value Is String.Empty, value, value.Substring(0, value.Length - 1))
         Return value
     End Function
-
-
 
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click

@@ -100,6 +100,7 @@
       <HintPath>..\packages\log4net.2.0.7\lib\net45-full\log4net.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -107,6 +108,7 @@
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
@@ -120,7 +122,9 @@
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Telerik\UI for WinForms Q1 2016\Bin40\Telerik.WinControls.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Telerik.WinControls.ChartView, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.GridView, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.PivotGrid, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.RichTextEditor, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.Office2013Light, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.Themes.TelerikMetro, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
@@ -134,6 +138,7 @@
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Telerik\UI for WinForms Q1 2016\Bin40\TelerikCommon.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="TelerikData, Version=2016.1.216.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -163,6 +168,12 @@
       <DependentUpon>frmListadoCapacitacion.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\frmListadoCapacitacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Participante\frmEtdLocalParticipante.Designer.vb">
+      <DependentUpon>frmEtdLocalParticipante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Participante\frmEtdLocalParticipante.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Participante\frmListParticipante.Designer.vb">
@@ -227,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\frmListadoCapacitacion.resx">
       <DependentUpon>frmListadoCapacitacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Participante\frmEtdLocalParticipante.resx">
+      <DependentUpon>frmEtdLocalParticipante.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Participante\frmListParticipante.resx">
       <DependentUpon>frmListParticipante.vb</DependentUpon>

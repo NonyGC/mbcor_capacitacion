@@ -53,19 +53,31 @@ Public Class FrmParticipante_vb
             txtApeMat.Text = .apeMat
             txtNombres.Text = .nombres
             txtDNICE.Text = .dnice
+            If (M.Name = .sexo) Then
+                M.Checked = True
+            End If
+            If (F.Name = .sexo) Then
+                F.Checked = True
+            End If
             txtDireccion.Text = .direccion
             cboDepartamento.SelectedValue = (partCE.ubigeo).Substring(0, 2) : loadProvincia()
             cboProvincia.SelectedValue = (partCE.ubigeo).Substring(2, 2) : loadDistrito()
             cboDistrito.SelectedValue = (partCE.ubigeo).Substring(4, 2)
-            'txtTelFijo.Text = (partCE.telFijo).Substring(6, 8)
-            'txtTelMovil.Text = (partCE.telMovil).Substring(6, 11)
-            'Debug.WriteLine((partCE.telFijo).Substring(6, 8))
-            'Debug.WriteLine((partCE.telMovil).Substring(6, 11))
+            Dim telFijo As String = (partCE.telFijo).Substring(5, (partCE.telFijo).Length - 5)
+            Dim telMovil As String = (partCE.telMovil).Substring(5, (partCE.telMovil).Length - 5)
+            Dim telFijo2 As String = (partCE.telFijo2).Substring(5, (partCE.telFijo2).Length - 5)
+            Dim telMovil2 As String = (partCE.telMovil2).Substring(5, (partCE.telMovil2).Length - 5)
+            txtTelFijo.Text = telFijo
+            txtTelMovil.Text = telMovil
             cboOperadorM.SelectedText = Trim(partCE.opeMovil)
+            txtTelFijo2.Text = telFijo2
+            txtTelMovil2.Text = telMovil2
+            cboOperadorM2.SelectedText = Trim(partCE.opeMovil2)
             txtCorreo.Text = .correo
             cboEstadoCivil.SelectedValue = Trim(.EstadoCiv)
             txtProfesionOcupacion.Text = .profeOcupa
-
+            btnGuardar.Text = "ACTUALIZAR"
+            btnLimpiar.Enabled = False
         End With
 
     End Sub
@@ -149,7 +161,11 @@ Public Class FrmParticipante_vb
         fechaN = If(txtFechaN.Value = "__/__/____", String.Empty, txtFechaN.Value)
 
         With ParticipanteCE
-            .codpart = CodigoAuto(txtApePat.Text, txtApeMat.Text)
+            If btnGuardar.Text = "GUARDAR" Then
+                .codpart = CodigoAuto(txtApePat.Text, txtApeMat.Text)
+            Else
+                .codpart = partCE.codpart
+            End If
             .dnice = Trim(txtDNICE.Text)
             .apePat = txtApePat.Text
             .apeMat = txtApeMat.Text
@@ -168,13 +184,23 @@ Public Class FrmParticipante_vb
             .correo = txtCorreo.Text
             .profeOcupa = txtProfesionOcupacion.Text
         End With
-
-        Dim partEst As Boolean = If(ParticipanteCN.participante_upsert(ParticipanteCE), True, False)
-        If partEst Then
-            RadMessageBox.Show("SE REGISTRO CORRECTAMENTE", "", MessageBoxButtons.OK, RadMessageIcon.Info)
-            limpiar()
-        Else
-            RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A REGISTRAR", "", MessageBoxButtons.OK, RadMessageIcon.Error)
+        If btnGuardar.Text = "GUARDAR" Then
+            Dim partEst As Boolean = If(ParticipanteCN.participante_upsert(ParticipanteCE), True, False)
+            If partEst Then
+                RadMessageBox.Show("SE REGISTRO CORRECTAMENTE", "", MessageBoxButtons.OK, RadMessageIcon.Info)
+                limpiar()
+            Else
+                RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A REGISTRAR", "", MessageBoxButtons.OK, RadMessageIcon.Error)
+            End If
+        ElseIf btnGuardar.Text = "ACTUALIZAR" Then
+            Dim partEst As Boolean = If(ParticipanteCN.participante_update(ParticipanteCE), True, False)
+            If partEst Then
+                RadMessageBox.Show("SE ACTUALIZO CORRECTAMENTE", "", MessageBoxButtons.OK, RadMessageIcon.Info)
+                limpiar()
+            Else
+                RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A INTENTAR", "", MessageBoxButtons.OK, RadMessageIcon.Error)
+            End If
         End If
+
     End Sub
 End Class

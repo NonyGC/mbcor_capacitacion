@@ -41,8 +41,8 @@ Partial Class FrmParticipante_vb
         Me.txtApeMat = New Telerik.WinControls.UI.RadTextBox()
         Me.txtProfesionOcupacion = New Telerik.WinControls.UI.RadTextBox()
         Me.grpSexo = New System.Windows.Forms.GroupBox()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.F = New System.Windows.Forms.RadioButton()
+        Me.M = New System.Windows.Forms.RadioButton()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.txtCodtelM2 = New System.Windows.Forms.TextBox()
         Me.txtTelMovil2 = New System.Windows.Forms.MaskedTextBox()
@@ -184,8 +184,8 @@ Partial Class FrmParticipante_vb
         '
         'grpSexo
         '
-        Me.grpSexo.Controls.Add(Me.RadioButton4)
-        Me.grpSexo.Controls.Add(Me.RadioButton3)
+        Me.grpSexo.Controls.Add(Me.F)
+        Me.grpSexo.Controls.Add(Me.M)
         Me.grpSexo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.grpSexo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grpSexo.Location = New System.Drawing.Point(139, 128)
@@ -195,27 +195,27 @@ Partial Class FrmParticipante_vb
         Me.grpSexo.TabStop = False
         Me.grpSexo.Text = "Sexo"
         '
-        'RadioButton4
+        'F
         '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RadioButton4.Location = New System.Drawing.Point(71, 17)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(31, 21)
-        Me.RadioButton4.TabIndex = 10
-        Me.RadioButton4.Text = "F"
-        Me.RadioButton4.UseVisualStyleBackColor = True
+        Me.F.AutoSize = True
+        Me.F.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.F.Location = New System.Drawing.Point(71, 17)
+        Me.F.Name = "F"
+        Me.F.Size = New System.Drawing.Size(31, 21)
+        Me.F.TabIndex = 10
+        Me.F.Text = "F"
+        Me.F.UseVisualStyleBackColor = True
         '
-        'RadioButton3
+        'M
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.RadioButton3.Location = New System.Drawing.Point(18, 17)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(37, 21)
-        Me.RadioButton3.TabIndex = 11
-        Me.RadioButton3.Text = "M"
-        Me.RadioButton3.UseVisualStyleBackColor = True
+        Me.M.AutoSize = True
+        Me.M.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.M.Location = New System.Drawing.Point(18, 17)
+        Me.M.Name = "M"
+        Me.M.Size = New System.Drawing.Size(37, 21)
+        Me.M.TabIndex = 11
+        Me.M.Text = "M"
+        Me.M.UseVisualStyleBackColor = True
         '
         'Label16
         '
@@ -690,6 +690,7 @@ Partial Class FrmParticipante_vb
         '
         '
         Me.RootElement.ApplyShapeToControl = True
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MBCORP"
         Me.ThemeName = "VisualStudio2012Light"
         Me.grp.ResumeLayout(False)
@@ -721,8 +722,8 @@ Partial Class FrmParticipante_vb
     Friend WithEvents cboOperadorM As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents txtFechaN As Telerik.WinControls.UI.RadMaskedEditBox
     Friend WithEvents grpSexo As System.Windows.Forms.GroupBox
-    Friend WithEvents RadioButton4 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
+    Friend WithEvents F As System.Windows.Forms.RadioButton
+    Friend WithEvents M As System.Windows.Forms.RadioButton
     Friend WithEvents cboDistrito As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents cboProvincia As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents cboDepartamento As Telerik.WinControls.UI.RadDropDownList

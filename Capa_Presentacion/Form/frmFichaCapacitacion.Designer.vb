@@ -109,9 +109,6 @@ Partial Class frmFichaCapacitacion
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.grp1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.RadRadioButton3 = New Telerik.WinControls.UI.RadRadioButton()
-        Me.RadRadioButton4 = New Telerik.WinControls.UI.RadRadioButton()
         Me.grp5 = New System.Windows.Forms.GroupBox()
         Me.grpRessin1 = New System.Windows.Forms.GroupBox()
         Me.RadioButton6 = New System.Windows.Forms.RadioButton()
@@ -154,6 +151,7 @@ Partial Class frmFichaCapacitacion
         Me.RadioButton16 = New System.Windows.Forms.RadioButton()
         Me.RadioButton17 = New System.Windows.Forms.RadioButton()
         Me.grpTajetacredito = New System.Windows.Forms.GroupBox()
+        Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
         Me.GroupBox1.SuspendLayout()
         CType(Me.RadTextBox17, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBox18, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -194,9 +192,6 @@ Partial Class frmFichaCapacitacion
         CType(Me.txtNivelEst, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpInstitucion.SuspendLayout()
         Me.grp1.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
-        CType(Me.RadRadioButton3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadRadioButton4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grp5.SuspendLayout()
         Me.grpRessin1.SuspendLayout()
         Me.grpRessin5.SuspendLayout()
@@ -211,15 +206,16 @@ Partial Class frmFichaCapacitacion
         Me.Panel1.SuspendLayout()
         CType(Me.txtCodigop, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpTajetacredito.SuspendLayout()
+        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label15
         '
         Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(-2, -8)
+        Me.Label15.Location = New System.Drawing.Point(-2, 2)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(1038, 35)
+        Me.Label15.Size = New System.Drawing.Size(920, 35)
         Me.Label15.TabIndex = 32
         Me.Label15.Text = "FICHA REGISTRO DE CAPACITACIÓN"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -582,9 +578,9 @@ Partial Class frmFichaCapacitacion
         '
         Me.btnRegistrar.Enabled = False
         Me.btnRegistrar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistrar.Location = New System.Drawing.Point(605, 763)
+        Me.btnRegistrar.Location = New System.Drawing.Point(533, 674)
         Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(190, 39)
+        Me.btnRegistrar.Size = New System.Drawing.Size(164, 35)
         Me.btnRegistrar.TabIndex = 46
         Me.btnRegistrar.Text = "REGISTRAR"
         Me.btnRegistrar.ThemeName = "VisualStudio2012Light"
@@ -593,9 +589,9 @@ Partial Class frmFichaCapacitacion
         '
         Me.btnLimpiar.Enabled = False
         Me.btnLimpiar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLimpiar.Location = New System.Drawing.Point(806, 763)
+        Me.btnLimpiar.Location = New System.Drawing.Point(714, 674)
         Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(190, 39)
+        Me.btnLimpiar.Size = New System.Drawing.Size(164, 35)
         Me.btnLimpiar.TabIndex = 47
         Me.btnLimpiar.Text = "LIMPIAR"
         Me.btnLimpiar.ThemeName = "VisualStudio2012Light"
@@ -603,10 +599,10 @@ Partial Class frmFichaCapacitacion
         'Label36
         '
         Me.Label36.AutoSize = True
-        Me.Label36.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(404, 48)
+        Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label36.Location = New System.Drawing.Point(279, 49)
         Me.Label36.Name = "Label36"
-        Me.Label36.Size = New System.Drawing.Size(103, 17)
+        Me.Label36.Size = New System.Drawing.Size(97, 13)
         Me.Label36.TabIndex = 85
         Me.Label36.Text = "CAPACITACIÓN"
         '
@@ -672,9 +668,10 @@ Partial Class frmFichaCapacitacion
         Me.cboCapacitacion.EditorControl.ShowGroupPanel = False
         Me.cboCapacitacion.EditorControl.Size = New System.Drawing.Size(240, 150)
         Me.cboCapacitacion.EditorControl.TabIndex = 0
-        Me.cboCapacitacion.Location = New System.Drawing.Point(532, 40)
+        Me.cboCapacitacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboCapacitacion.Location = New System.Drawing.Point(407, 44)
         Me.cboCapacitacion.Name = "cboCapacitacion"
-        Me.cboCapacitacion.Size = New System.Drawing.Size(415, 24)
+        Me.cboCapacitacion.Size = New System.Drawing.Size(355, 22)
         Me.cboCapacitacion.TabIndex = 2
         Me.cboCapacitacion.TabStop = False
         Me.cboCapacitacion.ThemeName = "VisualStudio2012Light"
@@ -682,38 +679,38 @@ Partial Class frmFichaCapacitacion
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(299, 35)
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(253, 28)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(64, 17)
+        Me.Label18.Size = New System.Drawing.Size(59, 13)
         Me.Label18.TabIndex = 65
         Me.Label18.Text = "EMPRESA"
         '
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(100, 35)
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(54, 28)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(33, 17)
+        Me.Label20.Size = New System.Drawing.Size(30, 13)
         Me.Label20.TabIndex = 65
         Me.Label20.Text = "RUC"
         '
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(82, 65)
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(36, 58)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(51, 17)
+        Me.Label21.Size = New System.Drawing.Size(45, 13)
         Me.Label21.TabIndex = 67
         Me.Label21.Text = "CARGO"
         '
         'txtEmpresa
         '
         Me.txtEmpresa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtEmpresa.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEmpresa.Location = New System.Drawing.Point(379, 31)
+        Me.txtEmpresa.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEmpresa.Location = New System.Drawing.Point(333, 24)
         Me.txtEmpresa.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtEmpresa.Name = "txtEmpresa"
         '
@@ -727,8 +724,8 @@ Partial Class frmFichaCapacitacion
         'txtCargo
         '
         Me.txtCargo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtCargo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCargo.Location = New System.Drawing.Point(144, 61)
+        Me.txtCargo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCargo.Location = New System.Drawing.Point(98, 52)
         Me.txtCargo.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtCargo.Name = "txtCargo"
         '
@@ -741,7 +738,8 @@ Partial Class frmFichaCapacitacion
         '
         'txtRuc
         '
-        Me.txtRuc.Location = New System.Drawing.Point(144, 31)
+        Me.txtRuc.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtRuc.Location = New System.Drawing.Point(98, 24)
         Me.txtRuc.MaxLength = 11
         Me.txtRuc.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtRuc.Name = "txtRuc"
@@ -770,10 +768,10 @@ Partial Class frmFichaCapacitacion
         Me.grp2.Controls.Add(Me.Label20)
         Me.grp2.Controls.Add(Me.Label18)
         Me.grp2.Enabled = False
-        Me.grp2.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grp2.Location = New System.Drawing.Point(27, 267)
+        Me.grp2.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grp2.Location = New System.Drawing.Point(24, 243)
         Me.grp2.Name = "grp2"
-        Me.grp2.Size = New System.Drawing.Size(978, 132)
+        Me.grp2.Size = New System.Drawing.Size(854, 112)
         Me.grp2.TabIndex = 16
         Me.grp2.TabStop = False
         Me.grp2.Text = "DATOS LABORALES / PROFESIONALES"
@@ -782,10 +780,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.txtCodtelM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCodtelM.Enabled = False
-        Me.txtCodtelM.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodtelM.Location = New System.Drawing.Point(379, 92)
+        Me.txtCodtelM.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodtelM.Location = New System.Drawing.Point(333, 80)
         Me.txtCodtelM.Name = "txtCodtelM"
-        Me.txtCodtelM.Size = New System.Drawing.Size(38, 25)
+        Me.txtCodtelM.Size = New System.Drawing.Size(38, 20)
         Me.txtCodtelM.TabIndex = 145
         Me.txtCodtelM.Text = "(___)"
         Me.txtCodtelM.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -794,11 +792,11 @@ Partial Class frmFichaCapacitacion
         '
         Me.txtTelMovEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTelMovEmp.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtTelMovEmp.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelMovEmp.Location = New System.Drawing.Point(419, 92)
+        Me.txtTelMovEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelMovEmp.Location = New System.Drawing.Point(373, 80)
         Me.txtTelMovEmp.Mask = "000-000-000"
         Me.txtTelMovEmp.Name = "txtTelMovEmp"
-        Me.txtTelMovEmp.Size = New System.Drawing.Size(98, 25)
+        Me.txtTelMovEmp.Size = New System.Drawing.Size(98, 20)
         Me.txtTelMovEmp.TabIndex = 21
         Me.txtTelMovEmp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -806,10 +804,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.txtCodtel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCodtel.Enabled = False
-        Me.txtCodtel.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCodtel.Location = New System.Drawing.Point(144, 92)
+        Me.txtCodtel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCodtel.Location = New System.Drawing.Point(98, 80)
         Me.txtCodtel.Name = "txtCodtel"
-        Me.txtCodtel.Size = New System.Drawing.Size(38, 25)
+        Me.txtCodtel.Size = New System.Drawing.Size(38, 20)
         Me.txtCodtel.TabIndex = 143
         Me.txtCodtel.Text = "(___)"
         Me.txtCodtel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -818,18 +816,18 @@ Partial Class frmFichaCapacitacion
         '
         Me.txtTelFijoEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtTelFijoEmp.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtTelFijoEmp.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTelFijoEmp.Location = New System.Drawing.Point(184, 92)
+        Me.txtTelFijoEmp.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTelFijoEmp.Location = New System.Drawing.Point(138, 80)
         Me.txtTelFijoEmp.Mask = "000-0000"
         Me.txtTelFijoEmp.Name = "txtTelFijoEmp"
-        Me.txtTelFijoEmp.Size = New System.Drawing.Size(97, 25)
+        Me.txtTelFijoEmp.Size = New System.Drawing.Size(97, 20)
         Me.txtTelFijoEmp.TabIndex = 20
         Me.txtTelFijoEmp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'cboOperadorempresa
         '
         Me.cboOperadorempresa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
-        Me.cboOperadorempresa.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboOperadorempresa.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         RadListDataItem1.Text = "Movistar"
         RadListDataItem2.Text = "Claro"
         RadListDataItem3.Text = "Entel"
@@ -840,39 +838,39 @@ Partial Class frmFichaCapacitacion
         Me.cboOperadorempresa.Items.Add(RadListDataItem3)
         Me.cboOperadorempresa.Items.Add(RadListDataItem4)
         Me.cboOperadorempresa.Items.Add(RadListDataItem5)
-        Me.cboOperadorempresa.Location = New System.Drawing.Point(675, 91)
+        Me.cboOperadorempresa.Location = New System.Drawing.Point(629, 79)
         Me.cboOperadorempresa.Name = "cboOperadorempresa"
-        Me.cboOperadorempresa.Size = New System.Drawing.Size(130, 27)
+        Me.cboOperadorempresa.Size = New System.Drawing.Size(130, 22)
         Me.cboOperadorempresa.TabIndex = 22
         Me.cboOperadorempresa.ThemeName = "VisualStudio2012Light"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(539, 96)
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(493, 84)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(118, 17)
+        Me.Label13.Size = New System.Drawing.Size(104, 13)
         Me.Label13.TabIndex = 142
         Me.Label13.Text = "OPERADOR MOVIL"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(299, 96)
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(253, 84)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(74, 17)
+        Me.Label12.Size = New System.Drawing.Size(66, 13)
         Me.Label12.TabIndex = 141
         Me.Label12.Text = "TEL. MOVIL"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(74, 96)
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(28, 89)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(59, 17)
+        Me.Label11.Size = New System.Drawing.Size(55, 13)
         Me.Label11.TabIndex = 140
         Me.Label11.Text = "TEL. FIJO"
         '
@@ -880,10 +878,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox1.Location = New System.Drawing.Point(28, 31)
+        Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox1.Location = New System.Drawing.Point(28, 26)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(95, 21)
+        Me.CheckBox1.Size = New System.Drawing.Size(87, 17)
         Me.CheckBox1.TabIndex = 6
         Me.CheckBox1.Text = "Arquitectura"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -892,10 +890,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CheckBox2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox2.Location = New System.Drawing.Point(28, 58)
+        Me.CheckBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox2.Location = New System.Drawing.Point(28, 49)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(84, 21)
+        Me.CheckBox2.Size = New System.Drawing.Size(78, 17)
         Me.CheckBox2.TabIndex = 10
         Me.CheckBox2.Text = "Estudiante"
         Me.CheckBox2.UseVisualStyleBackColor = True
@@ -904,10 +902,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.CheckBox3.AutoSize = True
         Me.CheckBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CheckBox3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox3.Location = New System.Drawing.Point(510, 58)
+        Me.CheckBox3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox3.Location = New System.Drawing.Point(415, 49)
         Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(182, 21)
+        Me.CheckBox3.Size = New System.Drawing.Size(162, 17)
         Me.CheckBox3.TabIndex = 12
         Me.CheckBox3.Text = "Sector Público o Educación"
         Me.CheckBox3.UseVisualStyleBackColor = True
@@ -916,10 +914,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.CheckBox4.AutoSize = True
         Me.CheckBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CheckBox4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox4.Location = New System.Drawing.Point(264, 31)
+        Me.CheckBox4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox4.Location = New System.Drawing.Point(184, 26)
         Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(232, 21)
+        Me.CheckBox4.Size = New System.Drawing.Size(206, 17)
         Me.CheckBox4.TabIndex = 7
         Me.CheckBox4.Text = "Carpinteria, Ebanisteria y Muebleria"
         Me.CheckBox4.UseVisualStyleBackColor = True
@@ -928,10 +926,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.CheckBox5.AutoSize = True
         Me.CheckBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CheckBox5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox5.Location = New System.Drawing.Point(27, 85)
+        Me.CheckBox5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox5.Location = New System.Drawing.Point(27, 72)
         Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(51, 21)
+        Me.CheckBox5.Size = New System.Drawing.Size(47, 17)
         Me.CheckBox5.TabIndex = 14
         Me.CheckBox5.Text = "Otro"
         Me.CheckBox5.UseVisualStyleBackColor = True
@@ -940,10 +938,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.CheckBox6.AutoSize = True
         Me.CheckBox6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CheckBox6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox6.Location = New System.Drawing.Point(510, 31)
+        Me.CheckBox6.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox6.Location = New System.Drawing.Point(415, 26)
         Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(99, 21)
+        Me.CheckBox6.Size = New System.Drawing.Size(91, 17)
         Me.CheckBox6.TabIndex = 8
         Me.CheckBox6.Text = "Construcción"
         Me.CheckBox6.UseVisualStyleBackColor = True
@@ -952,10 +950,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.CheckBox7.AutoSize = True
         Me.CheckBox7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CheckBox7.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox7.Location = New System.Drawing.Point(615, 31)
+        Me.CheckBox7.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox7.Location = New System.Drawing.Point(520, 26)
         Me.CheckBox7.Name = "CheckBox7"
-        Me.CheckBox7.Size = New System.Drawing.Size(335, 21)
+        Me.CheckBox7.Size = New System.Drawing.Size(295, 17)
         Me.CheckBox7.TabIndex = 9
         Me.CheckBox7.Text = "Distribución de Madera y Materiales de Construcción"
         Me.CheckBox7.UseVisualStyleBackColor = True
@@ -963,8 +961,8 @@ Partial Class frmFichaCapacitacion
         'txtEspOtros
         '
         Me.txtEspOtros.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtEspOtros.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEspOtros.Location = New System.Drawing.Point(84, 85)
+        Me.txtEspOtros.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEspOtros.Location = New System.Drawing.Point(84, 68)
         Me.txtEspOtros.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtEspOtros.Name = "txtEspOtros"
         Me.txtEspOtros.NullText = "Especificar"
@@ -972,15 +970,15 @@ Partial Class frmFichaCapacitacion
         '
         '
         Me.txtEspOtros.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.txtEspOtros.Size = New System.Drawing.Size(407, 24)
+        Me.txtEspOtros.Size = New System.Drawing.Size(306, 24)
         Me.txtEspOtros.TabIndex = 15
         Me.txtEspOtros.ThemeName = "VisualStudio2012Light"
         '
         'txtEspeSPE
         '
         Me.txtEspeSPE.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtEspeSPE.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEspeSPE.Location = New System.Drawing.Point(696, 56)
+        Me.txtEspeSPE.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEspeSPE.Location = New System.Drawing.Point(601, 45)
         Me.txtEspeSPE.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtEspeSPE.Name = "txtEspeSPE"
         Me.txtEspeSPE.NullText = "Especificar"
@@ -988,7 +986,7 @@ Partial Class frmFichaCapacitacion
         '
         '
         Me.txtEspeSPE.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.txtEspeSPE.Size = New System.Drawing.Size(254, 24)
+        Me.txtEspeSPE.Size = New System.Drawing.Size(214, 24)
         Me.txtEspeSPE.TabIndex = 13
         Me.txtEspeSPE.ThemeName = "VisualStudio2012Light"
         '
@@ -996,10 +994,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.CheckBox10.AutoSize = True
         Me.CheckBox10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CheckBox10.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox10.Location = New System.Drawing.Point(264, 58)
+        Me.CheckBox10.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox10.Location = New System.Drawing.Point(184, 49)
         Me.CheckBox10.Name = "CheckBox10"
-        Me.CheckBox10.Size = New System.Drawing.Size(144, 21)
+        Me.CheckBox10.Size = New System.Drawing.Size(128, 17)
         Me.CheckBox10.TabIndex = 11
         Me.CheckBox10.Text = "Diseño y Decoración"
         Me.CheckBox10.UseVisualStyleBackColor = True
@@ -1017,18 +1015,18 @@ Partial Class frmFichaCapacitacion
         Me.grbRubro.Controls.Add(Me.CheckBox2)
         Me.grbRubro.Controls.Add(Me.CheckBox1)
         Me.grbRubro.Enabled = False
-        Me.grbRubro.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grbRubro.Location = New System.Drawing.Point(27, 142)
+        Me.grbRubro.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grbRubro.Location = New System.Drawing.Point(24, 136)
         Me.grbRubro.Name = "grbRubro"
-        Me.grbRubro.Size = New System.Drawing.Size(978, 124)
+        Me.grbRubro.Size = New System.Drawing.Size(854, 101)
         Me.grbRubro.TabIndex = 5
         Me.grbRubro.TabStop = False
         Me.grbRubro.Text = "RUBRO EN QUE SE DESEMPEÑA"
         '
         'Label19
         '
-        Me.Label19.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(53, 66)
+        Me.Label19.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(7, 54)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(80, 30)
         Me.Label19.TabIndex = 76
@@ -1038,18 +1036,18 @@ Partial Class frmFichaCapacitacion
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(352, 42)
+        Me.Label17.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(306, 34)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(111, 15)
+        Me.Label17.Size = New System.Drawing.Size(106, 13)
         Me.Label17.TabIndex = 74
         Me.Label17.Text = "NILVEL DE ESTUDIO"
         '
         'txtNomInstitu
         '
         Me.txtNomInstitu.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtNomInstitu.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNomInstitu.Location = New System.Drawing.Point(144, 67)
+        Me.txtNomInstitu.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNomInstitu.Location = New System.Drawing.Point(98, 55)
         Me.txtNomInstitu.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtNomInstitu.Name = "txtNomInstitu"
         '
@@ -1062,8 +1060,8 @@ Partial Class frmFichaCapacitacion
         '
         'Label16
         '
-        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(52, 31)
+        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(6, 23)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(81, 33)
         Me.Label16.TabIndex = 72
@@ -1073,8 +1071,8 @@ Partial Class frmFichaCapacitacion
         'txtProfeCarrera
         '
         Me.txtProfeCarrera.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtProfeCarrera.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtProfeCarrera.Location = New System.Drawing.Point(144, 37)
+        Me.txtProfeCarrera.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtProfeCarrera.Location = New System.Drawing.Point(98, 29)
         Me.txtProfeCarrera.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtProfeCarrera.Name = "txtProfeCarrera"
         '
@@ -1088,8 +1086,8 @@ Partial Class frmFichaCapacitacion
         'txtNivelEst
         '
         Me.txtNivelEst.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtNivelEst.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNivelEst.Location = New System.Drawing.Point(465, 37)
+        Me.txtNivelEst.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNivelEst.Location = New System.Drawing.Point(419, 29)
         Me.txtNivelEst.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtNivelEst.Name = "txtNivelEst"
         '
@@ -1106,8 +1104,8 @@ Partial Class frmFichaCapacitacion
         Me.grpInstitucion.Controls.Add(Me.RadioButton2)
         Me.grpInstitucion.Controls.Add(Me.RadioButton1)
         Me.grpInstitucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.grpInstitucion.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpInstitucion.Location = New System.Drawing.Point(616, 37)
+        Me.grpInstitucion.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpInstitucion.Location = New System.Drawing.Point(570, 29)
         Me.grpInstitucion.Name = "grpInstitucion"
         Me.grpInstitucion.Size = New System.Drawing.Size(264, 54)
         Me.grpInstitucion.TabIndex = 26
@@ -1120,7 +1118,7 @@ Partial Class frmFichaCapacitacion
         Me.RadioButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.RadioButton5.Location = New System.Drawing.Point(196, 23)
         Me.RadioButton5.Name = "RadioButton5"
-        Me.RadioButton5.Size = New System.Drawing.Size(58, 21)
+        Me.RadioButton5.Size = New System.Drawing.Size(53, 17)
         Me.RadioButton5.TabIndex = 29
         Me.RadioButton5.TabStop = True
         Me.RadioButton5.Text = "Otros"
@@ -1132,7 +1130,7 @@ Partial Class frmFichaCapacitacion
         Me.RadioButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.RadioButton2.Location = New System.Drawing.Point(118, 23)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(71, 21)
+        Me.RadioButton2.Size = New System.Drawing.Size(68, 17)
         Me.RadioButton2.TabIndex = 28
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "Instituto"
@@ -1144,7 +1142,7 @@ Partial Class frmFichaCapacitacion
         Me.RadioButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.RadioButton1.Location = New System.Drawing.Point(17, 23)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(94, 21)
+        Me.RadioButton1.Size = New System.Drawing.Size(85, 17)
         Me.RadioButton1.TabIndex = 27
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "Universidad"
@@ -1160,57 +1158,27 @@ Partial Class frmFichaCapacitacion
         Me.grp1.Controls.Add(Me.Label17)
         Me.grp1.Controls.Add(Me.Label19)
         Me.grp1.Enabled = False
-        Me.grp1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grp1.Location = New System.Drawing.Point(27, 400)
+        Me.grp1.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grp1.Location = New System.Drawing.Point(24, 361)
         Me.grp1.Name = "grp1"
-        Me.grp1.Size = New System.Drawing.Size(978, 105)
+        Me.grp1.Size = New System.Drawing.Size(854, 105)
         Me.grp1.TabIndex = 79
         Me.grp1.TabStop = False
         Me.grp1.Text = "DATOS SÓLO PARA ESTUDIANTES"
         '
-        'GroupBox5
-        '
-        Me.GroupBox5.Controls.Add(Me.RadRadioButton3)
-        Me.GroupBox5.Controls.Add(Me.RadRadioButton4)
-        Me.GroupBox5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox5.Location = New System.Drawing.Point(50, 972)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(520, 57)
-        Me.GroupBox5.TabIndex = 90
-        Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "POSEE TARJETA DE CREDITO"
-        '
-        'RadRadioButton3
-        '
-        Me.RadRadioButton3.Location = New System.Drawing.Point(87, 22)
-        Me.RadRadioButton3.Name = "RadRadioButton3"
-        Me.RadRadioButton3.Size = New System.Drawing.Size(40, 18)
-        Me.RadRadioButton3.TabIndex = 4
-        Me.RadRadioButton3.Text = "NO"
-        Me.RadRadioButton3.ThemeName = "VisualStudio2012Light"
-        '
-        'RadRadioButton4
-        '
-        Me.RadRadioButton4.Location = New System.Drawing.Point(29, 22)
-        Me.RadRadioButton4.Name = "RadRadioButton4"
-        Me.RadRadioButton4.Size = New System.Drawing.Size(32, 18)
-        Me.RadRadioButton4.TabIndex = 3
-        Me.RadRadioButton4.Text = "SI"
-        Me.RadRadioButton4.ThemeName = "VisualStudio2012Light"
-        '
         'grp5
         '
+        Me.grp5.Controls.Add(Me.grpRessin2)
         Me.grp5.Controls.Add(Me.grpRessin1)
-        Me.grp5.Controls.Add(Me.grpRessin5)
         Me.grp5.Controls.Add(Me.grpRessin4)
         Me.grp5.Controls.Add(Me.grpRessin3)
-        Me.grp5.Controls.Add(Me.grpRessin2)
         Me.grp5.Controls.Add(Me.txtTematratar)
+        Me.grp5.Controls.Add(Me.grpRessin5)
         Me.grp5.Enabled = False
-        Me.grp5.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grp5.Location = New System.Drawing.Point(27, 581)
+        Me.grp5.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grp5.Location = New System.Drawing.Point(24, 529)
         Me.grp5.Name = "grp5"
-        Me.grp5.Size = New System.Drawing.Size(978, 158)
+        Me.grp5.Size = New System.Drawing.Size(854, 130)
         Me.grp5.TabIndex = 36
         Me.grp5.TabStop = False
         Me.grp5.Text = "RESPONDA SINCERAMENTE"
@@ -1221,9 +1189,10 @@ Partial Class frmFichaCapacitacion
         Me.grpRessin1.Controls.Add(Me.RadioButton4)
         Me.grpRessin1.Controls.Add(Me.RadioButton3)
         Me.grpRessin1.Controls.Add(Me.Label2)
-        Me.grpRessin1.Location = New System.Drawing.Point(16, 18)
+        Me.grpRessin1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpRessin1.Location = New System.Drawing.Point(16, 14)
         Me.grpRessin1.Name = "grpRessin1"
-        Me.grpRessin1.Size = New System.Drawing.Size(475, 41)
+        Me.grpRessin1.Size = New System.Drawing.Size(408, 39)
         Me.grpRessin1.TabIndex = 37
         Me.grpRessin1.TabStop = False
         '
@@ -1231,10 +1200,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.RadioButton6.AutoSize = True
         Me.RadioButton6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.RadioButton6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton6.Location = New System.Drawing.Point(320, 16)
+        Me.RadioButton6.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton6.Location = New System.Drawing.Point(272, 16)
         Me.RadioButton6.Name = "RadioButton6"
-        Me.RadioButton6.Size = New System.Drawing.Size(74, 19)
+        Me.RadioButton6.Size = New System.Drawing.Size(72, 17)
         Me.RadioButton6.TabIndex = 22
         Me.RadioButton6.TabStop = True
         Me.RadioButton6.Text = "REGULAR"
@@ -1244,10 +1213,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.RadioButton4.AutoSize = True
         Me.RadioButton4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.RadioButton4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton4.Location = New System.Drawing.Point(412, 16)
+        Me.RadioButton4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton4.Location = New System.Drawing.Point(364, 16)
         Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(42, 19)
+        Me.RadioButton4.Size = New System.Drawing.Size(41, 17)
         Me.RadioButton4.TabIndex = 21
         Me.RadioButton4.TabStop = True
         Me.RadioButton4.Text = "NO"
@@ -1257,10 +1226,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.RadioButton3.AutoSize = True
         Me.RadioButton3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.RadioButton3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton3.Location = New System.Drawing.Point(268, 16)
+        Me.RadioButton3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton3.Location = New System.Drawing.Point(220, 16)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(33, 19)
+        Me.RadioButton3.Size = New System.Drawing.Size(33, 17)
         Me.RadioButton3.TabIndex = 20
         Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "SI"
@@ -1269,10 +1238,10 @@ Partial Class frmFichaCapacitacion
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(21, 17)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(187, 17)
+        Me.Label2.Size = New System.Drawing.Size(161, 13)
         Me.Label2.TabIndex = 37
         Me.Label2.Text = "■ El expositor domina el tema"
         '
@@ -1281,9 +1250,10 @@ Partial Class frmFichaCapacitacion
         Me.grpRessin5.Controls.Add(Me.RadioButton18)
         Me.grpRessin5.Controls.Add(Me.Label6)
         Me.grpRessin5.Controls.Add(Me.RadioButton19)
-        Me.grpRessin5.Location = New System.Drawing.Point(16, 104)
+        Me.grpRessin5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpRessin5.Location = New System.Drawing.Point(16, 82)
         Me.grpRessin5.Name = "grpRessin5"
-        Me.grpRessin5.Size = New System.Drawing.Size(475, 41)
+        Me.grpRessin5.Size = New System.Drawing.Size(408, 41)
         Me.grpRessin5.TabIndex = 41
         Me.grpRessin5.TabStop = False
         '
@@ -1291,10 +1261,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.RadioButton18.AutoSize = True
         Me.RadioButton18.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.RadioButton18.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton18.Location = New System.Drawing.Point(359, 15)
+        Me.RadioButton18.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton18.Location = New System.Drawing.Point(320, 14)
         Me.RadioButton18.Name = "RadioButton18"
-        Me.RadioButton18.Size = New System.Drawing.Size(33, 19)
+        Me.RadioButton18.Size = New System.Drawing.Size(33, 17)
         Me.RadioButton18.TabIndex = 28
         Me.RadioButton18.TabStop = True
         Me.RadioButton18.Text = "SI"
@@ -1303,10 +1273,10 @@ Partial Class frmFichaCapacitacion
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(21, 16)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(324, 17)
+        Me.Label6.Size = New System.Drawing.Size(284, 13)
         Me.Label6.TabIndex = 27
         Me.Label6.Text = "■ Ha visitado la página web Masisa: www.masisa.com"
         '
@@ -1314,10 +1284,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.RadioButton19.AutoSize = True
         Me.RadioButton19.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.RadioButton19.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton19.Location = New System.Drawing.Point(403, 15)
+        Me.RadioButton19.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton19.Location = New System.Drawing.Point(364, 14)
         Me.RadioButton19.Name = "RadioButton19"
-        Me.RadioButton19.Size = New System.Drawing.Size(42, 19)
+        Me.RadioButton19.Size = New System.Drawing.Size(41, 17)
         Me.RadioButton19.TabIndex = 29
         Me.RadioButton19.TabStop = True
         Me.RadioButton19.Text = "NO"
@@ -1329,9 +1299,10 @@ Partial Class frmFichaCapacitacion
         Me.grpRessin4.Controls.Add(Me.RadioButton14)
         Me.grpRessin4.Controls.Add(Me.RadioButton15)
         Me.grpRessin4.Controls.Add(Me.Label5)
-        Me.grpRessin4.Location = New System.Drawing.Point(497, 61)
+        Me.grpRessin4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpRessin4.Location = New System.Drawing.Point(430, 49)
         Me.grpRessin4.Name = "grpRessin4"
-        Me.grpRessin4.Size = New System.Drawing.Size(475, 41)
+        Me.grpRessin4.Size = New System.Drawing.Size(412, 39)
         Me.grpRessin4.TabIndex = 40
         Me.grpRessin4.TabStop = False
         '
@@ -1339,10 +1310,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.RadioButton13.AutoSize = True
         Me.RadioButton13.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.RadioButton13.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton13.Location = New System.Drawing.Point(299, 14)
+        Me.RadioButton13.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton13.Location = New System.Drawing.Point(261, 13)
         Me.RadioButton13.Name = "RadioButton13"
-        Me.RadioButton13.Size = New System.Drawing.Size(74, 19)
+        Me.RadioButton13.Size = New System.Drawing.Size(72, 17)
         Me.RadioButton13.TabIndex = 28
         Me.RadioButton13.TabStop = True
         Me.RadioButton13.Text = "REGULAR"
@@ -1352,10 +1323,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.RadioButton14.AutoSize = True
         Me.RadioButton14.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.RadioButton14.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton14.Location = New System.Drawing.Point(391, 14)
+        Me.RadioButton14.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton14.Location = New System.Drawing.Point(353, 13)
         Me.RadioButton14.Name = "RadioButton14"
-        Me.RadioButton14.Size = New System.Drawing.Size(42, 19)
+        Me.RadioButton14.Size = New System.Drawing.Size(41, 17)
         Me.RadioButton14.TabIndex = 27
         Me.RadioButton14.TabStop = True
         Me.RadioButton14.Text = "NO"
@@ -1365,10 +1336,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.RadioButton15.AutoSize = True
         Me.RadioButton15.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.RadioButton15.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton15.Location = New System.Drawing.Point(247, 14)
+        Me.RadioButton15.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton15.Location = New System.Drawing.Point(209, 13)
         Me.RadioButton15.Name = "RadioButton15"
-        Me.RadioButton15.Size = New System.Drawing.Size(33, 19)
+        Me.RadioButton15.Size = New System.Drawing.Size(33, 17)
         Me.RadioButton15.TabIndex = 26
         Me.RadioButton15.TabStop = True
         Me.RadioButton15.Text = "SI"
@@ -1377,10 +1348,10 @@ Partial Class frmFichaCapacitacion
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(21, 15)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(207, 17)
+        Me.Label5.Size = New System.Drawing.Size(176, 13)
         Me.Label5.TabIndex = 25
         Me.Label5.Text = "■ La charla debe ser más extensa"
         '
@@ -1390,9 +1361,10 @@ Partial Class frmFichaCapacitacion
         Me.grpRessin3.Controls.Add(Me.RadioButton8)
         Me.grpRessin3.Controls.Add(Me.RadioButton9)
         Me.grpRessin3.Controls.Add(Me.Label4)
-        Me.grpRessin3.Location = New System.Drawing.Point(16, 61)
+        Me.grpRessin3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpRessin3.Location = New System.Drawing.Point(16, 48)
         Me.grpRessin3.Name = "grpRessin3"
-        Me.grpRessin3.Size = New System.Drawing.Size(475, 41)
+        Me.grpRessin3.Size = New System.Drawing.Size(408, 39)
         Me.grpRessin3.TabIndex = 39
         Me.grpRessin3.TabStop = False
         '
@@ -1400,10 +1372,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.RadioButton7.AutoSize = True
         Me.RadioButton7.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.RadioButton7.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton7.Location = New System.Drawing.Point(319, 15)
+        Me.RadioButton7.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton7.Location = New System.Drawing.Point(272, 16)
         Me.RadioButton7.Name = "RadioButton7"
-        Me.RadioButton7.Size = New System.Drawing.Size(74, 19)
+        Me.RadioButton7.Size = New System.Drawing.Size(72, 17)
         Me.RadioButton7.TabIndex = 25
         Me.RadioButton7.TabStop = True
         Me.RadioButton7.Text = "REGULAR"
@@ -1413,10 +1385,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.RadioButton8.AutoSize = True
         Me.RadioButton8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.RadioButton8.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton8.Location = New System.Drawing.Point(411, 15)
+        Me.RadioButton8.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton8.Location = New System.Drawing.Point(364, 16)
         Me.RadioButton8.Name = "RadioButton8"
-        Me.RadioButton8.Size = New System.Drawing.Size(42, 19)
+        Me.RadioButton8.Size = New System.Drawing.Size(41, 17)
         Me.RadioButton8.TabIndex = 24
         Me.RadioButton8.TabStop = True
         Me.RadioButton8.Text = "NO"
@@ -1426,10 +1398,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.RadioButton9.AutoSize = True
         Me.RadioButton9.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.RadioButton9.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton9.Location = New System.Drawing.Point(267, 15)
+        Me.RadioButton9.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton9.Location = New System.Drawing.Point(220, 16)
         Me.RadioButton9.Name = "RadioButton9"
-        Me.RadioButton9.Size = New System.Drawing.Size(33, 19)
+        Me.RadioButton9.Size = New System.Drawing.Size(33, 17)
         Me.RadioButton9.TabIndex = 23
         Me.RadioButton9.TabStop = True
         Me.RadioButton9.Text = "SI"
@@ -1438,10 +1410,10 @@ Partial Class frmFichaCapacitacion
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(21, 16)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(156, 17)
+        Me.Label4.Size = New System.Drawing.Size(137, 13)
         Me.Label4.TabIndex = 22
         Me.Label4.Text = "■ El tema fue interesante"
         '
@@ -1451,9 +1423,10 @@ Partial Class frmFichaCapacitacion
         Me.grpRessin2.Controls.Add(Me.RadioButton11)
         Me.grpRessin2.Controls.Add(Me.RadioButton12)
         Me.grpRessin2.Controls.Add(Me.Label3)
-        Me.grpRessin2.Location = New System.Drawing.Point(497, 18)
+        Me.grpRessin2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpRessin2.Location = New System.Drawing.Point(430, 14)
         Me.grpRessin2.Name = "grpRessin2"
-        Me.grpRessin2.Size = New System.Drawing.Size(475, 41)
+        Me.grpRessin2.Size = New System.Drawing.Size(412, 39)
         Me.grpRessin2.TabIndex = 38
         Me.grpRessin2.TabStop = False
         '
@@ -1461,10 +1434,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.RadioButton10.AutoSize = True
         Me.RadioButton10.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.RadioButton10.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton10.Location = New System.Drawing.Point(299, 14)
+        Me.RadioButton10.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton10.Location = New System.Drawing.Point(261, 15)
         Me.RadioButton10.Name = "RadioButton10"
-        Me.RadioButton10.Size = New System.Drawing.Size(74, 19)
+        Me.RadioButton10.Size = New System.Drawing.Size(72, 17)
         Me.RadioButton10.TabIndex = 25
         Me.RadioButton10.TabStop = True
         Me.RadioButton10.Text = "REGULAR"
@@ -1474,10 +1447,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.RadioButton11.AutoSize = True
         Me.RadioButton11.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.RadioButton11.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton11.Location = New System.Drawing.Point(391, 14)
+        Me.RadioButton11.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton11.Location = New System.Drawing.Point(353, 15)
         Me.RadioButton11.Name = "RadioButton11"
-        Me.RadioButton11.Size = New System.Drawing.Size(42, 19)
+        Me.RadioButton11.Size = New System.Drawing.Size(41, 17)
         Me.RadioButton11.TabIndex = 24
         Me.RadioButton11.TabStop = True
         Me.RadioButton11.Text = "NO"
@@ -1487,10 +1460,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.RadioButton12.AutoSize = True
         Me.RadioButton12.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.RadioButton12.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton12.Location = New System.Drawing.Point(247, 14)
+        Me.RadioButton12.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton12.Location = New System.Drawing.Point(209, 15)
         Me.RadioButton12.Name = "RadioButton12"
-        Me.RadioButton12.Size = New System.Drawing.Size(33, 19)
+        Me.RadioButton12.Size = New System.Drawing.Size(33, 17)
         Me.RadioButton12.TabIndex = 23
         Me.RadioButton12.TabStop = True
         Me.RadioButton12.Text = "SI"
@@ -1499,10 +1472,10 @@ Partial Class frmFichaCapacitacion
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(21, 15)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(194, 17)
+        Me.Label3.Size = New System.Drawing.Size(168, 13)
         Me.Label3.TabIndex = 19
         Me.Label3.Text = "■ El expositor se deja entender"
         '
@@ -1510,7 +1483,8 @@ Partial Class frmFichaCapacitacion
         '
         Me.txtTematratar.AutoSize = False
         Me.txtTematratar.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtTematratar.Location = New System.Drawing.Point(499, 108)
+        Me.txtTematratar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTematratar.Location = New System.Drawing.Point(430, 89)
         Me.txtTematratar.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtTematratar.Multiline = True
         Me.txtTematratar.Name = "txtTematratar"
@@ -1519,7 +1493,7 @@ Partial Class frmFichaCapacitacion
         '
         '
         Me.txtTematratar.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.txtTematratar.Size = New System.Drawing.Size(473, 37)
+        Me.txtTematratar.Size = New System.Drawing.Size(412, 34)
         Me.txtTematratar.TabIndex = 42
         Me.txtTematratar.ThemeName = "VisualStudio2012Light"
         '
@@ -1532,10 +1506,10 @@ Partial Class frmFichaCapacitacion
         Me.grpCharla.Controls.Add(Me.Label1)
         Me.grpCharla.Controls.Add(Me.txtEspeCharla)
         Me.grpCharla.Enabled = False
-        Me.grpCharla.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpCharla.Location = New System.Drawing.Point(27, 508)
+        Me.grpCharla.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpCharla.Location = New System.Drawing.Point(24, 470)
         Me.grpCharla.Name = "grpCharla"
-        Me.grpCharla.Size = New System.Drawing.Size(978, 71)
+        Me.grpCharla.Size = New System.Drawing.Size(854, 53)
         Me.grpCharla.TabIndex = 30
         Me.grpCharla.TabStop = False
         Me.grpCharla.Text = "CÓMO SE ENTERÓ DE LA CHARLA"
@@ -1544,10 +1518,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.CheckBox12.AutoSize = True
         Me.CheckBox12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CheckBox12.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox12.Location = New System.Drawing.Point(278, 30)
+        Me.CheckBox12.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox12.Location = New System.Drawing.Point(254, 24)
         Me.CheckBox12.Name = "CheckBox12"
-        Me.CheckBox12.Size = New System.Drawing.Size(137, 21)
+        Me.CheckBox12.Size = New System.Drawing.Size(123, 17)
         Me.CheckBox12.TabIndex = 34
         Me.CheckBox12.Text = "Publicación Medios"
         Me.CheckBox12.UseVisualStyleBackColor = True
@@ -1556,10 +1530,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.CheckBox11.AutoSize = True
         Me.CheckBox11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CheckBox11.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox11.Location = New System.Drawing.Point(113, 30)
+        Me.CheckBox11.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox11.Location = New System.Drawing.Point(106, 24)
         Me.CheckBox11.Name = "CheckBox11"
-        Me.CheckBox11.Size = New System.Drawing.Size(68, 21)
+        Me.CheckBox11.Size = New System.Drawing.Size(64, 17)
         Me.CheckBox11.TabIndex = 32
         Me.CheckBox11.Text = "Internet"
         Me.CheckBox11.UseVisualStyleBackColor = True
@@ -1568,10 +1542,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.CheckBox9.AutoSize = True
         Me.CheckBox9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CheckBox9.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox9.Location = New System.Drawing.Point(197, 30)
+        Me.CheckBox9.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox9.Location = New System.Drawing.Point(183, 24)
         Me.CheckBox9.Name = "CheckBox9"
-        Me.CheckBox9.Size = New System.Drawing.Size(65, 21)
+        Me.CheckBox9.Size = New System.Drawing.Size(58, 17)
         Me.CheckBox9.TabIndex = 33
         Me.CheckBox9.Text = "Correo"
         Me.CheckBox9.UseVisualStyleBackColor = True
@@ -1580,10 +1554,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.CheckBox8.AutoSize = True
         Me.CheckBox8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CheckBox8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CheckBox8.Location = New System.Drawing.Point(27, 30)
+        Me.CheckBox8.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CheckBox8.Location = New System.Drawing.Point(27, 24)
         Me.CheckBox8.Name = "CheckBox8"
-        Me.CheckBox8.Size = New System.Drawing.Size(70, 21)
+        Me.CheckBox8.Size = New System.Drawing.Size(66, 17)
         Me.CheckBox8.TabIndex = 31
         Me.CheckBox8.Text = "Anuncio"
         Me.CheckBox8.UseVisualStyleBackColor = True
@@ -1591,18 +1565,18 @@ Partial Class frmFichaCapacitacion
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(431, 33)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(390, 26)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(75, 15)
+        Me.Label1.Size = New System.Drawing.Size(71, 13)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "ESPECIFICAR"
         '
         'txtEspeCharla
         '
         Me.txtEspeCharla.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtEspeCharla.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEspeCharla.Location = New System.Drawing.Point(522, 28)
+        Me.txtEspeCharla.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEspeCharla.Location = New System.Drawing.Point(481, 21)
         Me.txtEspeCharla.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtEspeCharla.Name = "txtEspeCharla"
         '
@@ -1615,7 +1589,8 @@ Partial Class frmFichaCapacitacion
         '
         'RadButton2
         '
-        Me.RadButton2.Location = New System.Drawing.Point(837, 70)
+        Me.RadButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadButton2.Location = New System.Drawing.Point(771, 68)
         Me.RadButton2.Name = "RadButton2"
         Me.RadButton2.Size = New System.Drawing.Size(110, 24)
         Me.RadButton2.TabIndex = 91
@@ -1625,10 +1600,10 @@ Partial Class frmFichaCapacitacion
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(408, 74)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(283, 75)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(99, 17)
+        Me.Label8.Size = New System.Drawing.Size(97, 13)
         Me.Label8.TabIndex = 93
         Me.Label8.Text = "PARTICIPANTE"
         '
@@ -1636,18 +1611,19 @@ Partial Class frmFichaCapacitacion
         '
         Me.lblApeNom.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.lblApeNom.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApeNom.Location = New System.Drawing.Point(643, 109)
+        Me.lblApeNom.Location = New System.Drawing.Point(521, 104)
         Me.lblApeNom.Name = "lblApeNom"
-        Me.lblApeNom.Size = New System.Drawing.Size(300, 21)
+        Me.lblApeNom.Size = New System.Drawing.Size(356, 21)
         Me.lblApeNom.TabIndex = 98
         Me.lblApeNom.Text = "Apellidos y Nombres"
         Me.lblApeNom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'cboParticipanteSearch
         '
-        Me.cboParticipanteSearch.Location = New System.Drawing.Point(532, 70)
+        Me.cboParticipanteSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboParticipanteSearch.Location = New System.Drawing.Point(407, 70)
         Me.cboParticipanteSearch.Name = "cboParticipanteSearch"
-        Me.cboParticipanteSearch.Size = New System.Drawing.Size(299, 24)
+        Me.cboParticipanteSearch.Size = New System.Drawing.Size(356, 22)
         Me.cboParticipanteSearch.TabIndex = 3
         Me.cboParticipanteSearch.ThemeName = "VisualStudio2012Light"
         '
@@ -1655,9 +1631,9 @@ Partial Class frmFichaCapacitacion
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.txtCodigop)
-        Me.Panel1.Location = New System.Drawing.Point(532, 103)
+        Me.Panel1.Location = New System.Drawing.Point(407, 98)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(415, 34)
+        Me.Panel1.Size = New System.Drawing.Size(474, 34)
         Me.Panel1.TabIndex = 97
         '
         'txtCodigop
@@ -1678,10 +1654,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.RadioButton16.AutoSize = True
         Me.RadioButton16.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.RadioButton16.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton16.Location = New System.Drawing.Point(94, 20)
+        Me.RadioButton16.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton16.Location = New System.Drawing.Point(70, 22)
         Me.RadioButton16.Name = "RadioButton16"
-        Me.RadioButton16.Size = New System.Drawing.Size(42, 19)
+        Me.RadioButton16.Size = New System.Drawing.Size(41, 17)
         Me.RadioButton16.TabIndex = 45
         Me.RadioButton16.TabStop = True
         Me.RadioButton16.Text = "NO"
@@ -1691,10 +1667,10 @@ Partial Class frmFichaCapacitacion
         '
         Me.RadioButton17.AutoSize = True
         Me.RadioButton17.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.RadioButton17.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton17.Location = New System.Drawing.Point(42, 20)
+        Me.RadioButton17.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton17.Location = New System.Drawing.Point(18, 22)
         Me.RadioButton17.Name = "RadioButton17"
-        Me.RadioButton17.Size = New System.Drawing.Size(33, 19)
+        Me.RadioButton17.Size = New System.Drawing.Size(33, 17)
         Me.RadioButton17.TabIndex = 44
         Me.RadioButton17.TabStop = True
         Me.RadioButton17.Text = "SI"
@@ -1706,25 +1682,36 @@ Partial Class frmFichaCapacitacion
         Me.grpTajetacredito.Controls.Add(Me.RadioButton16)
         Me.grpTajetacredito.Enabled = False
         Me.grpTajetacredito.Font = New System.Drawing.Font("Segoe UI Semibold", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpTajetacredito.Location = New System.Drawing.Point(315, 748)
+        Me.grpTajetacredito.Location = New System.Drawing.Point(262, 665)
         Me.grpTajetacredito.Name = "grpTajetacredito"
-        Me.grpTajetacredito.Size = New System.Drawing.Size(205, 54)
+        Me.grpTajetacredito.Size = New System.Drawing.Size(186, 44)
         Me.grpTajetacredito.TabIndex = 43
         Me.grpTajetacredito.TabStop = False
         Me.grpTajetacredito.Text = "POSEE TARJETA DE CREDITO"
+        '
+        'RadButton1
+        '
+        Me.RadButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadButton1.Location = New System.Drawing.Point(771, 44)
+        Me.RadButton1.Name = "RadButton1"
+        Me.RadButton1.Size = New System.Drawing.Size(110, 24)
+        Me.RadButton1.TabIndex = 99
+        Me.RadButton1.Text = "AGREGAR"
+        Me.RadButton1.ThemeName = "VisualStudio2012Light"
         '
         'frmFichaCapacitacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1032, 820)
+        Me.AutoScroll = True
+        Me.ClientSize = New System.Drawing.Size(903, 729)
+        Me.Controls.Add(Me.RadButton1)
         Me.Controls.Add(Me.grpTajetacredito)
         Me.Controls.Add(Me.cboParticipanteSearch)
         Me.Controls.Add(Me.lblApeNom)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.RadButton2)
         Me.Controls.Add(Me.grp5)
-        Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.grpCharla)
         Me.Controls.Add(Me.cboCapacitacion)
         Me.Controls.Add(Me.Label36)
@@ -1793,10 +1780,6 @@ Partial Class frmFichaCapacitacion
         Me.grpInstitucion.PerformLayout()
         Me.grp1.ResumeLayout(False)
         Me.grp1.PerformLayout()
-        Me.GroupBox5.ResumeLayout(False)
-        Me.GroupBox5.PerformLayout()
-        CType(Me.RadRadioButton3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadRadioButton4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grp5.ResumeLayout(False)
         Me.grpRessin1.ResumeLayout(False)
         Me.grpRessin1.PerformLayout()
@@ -1819,6 +1802,7 @@ Partial Class frmFichaCapacitacion
         CType(Me.txtCodigop, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpTajetacredito.ResumeLayout(False)
         Me.grpTajetacredito.PerformLayout()
+        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -1892,9 +1876,6 @@ Partial Class frmFichaCapacitacion
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents grp1 As System.Windows.Forms.GroupBox
-    Friend WithEvents GroupBox5 As System.Windows.Forms.GroupBox
-    Friend WithEvents RadRadioButton3 As Telerik.WinControls.UI.RadRadioButton
-    Friend WithEvents RadRadioButton4 As Telerik.WinControls.UI.RadRadioButton
     Friend WithEvents grp5 As System.Windows.Forms.GroupBox
     Friend WithEvents grpRessin1 As System.Windows.Forms.GroupBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -1945,5 +1926,6 @@ Partial Class frmFichaCapacitacion
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
 End Class
 
