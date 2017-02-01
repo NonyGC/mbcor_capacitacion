@@ -259,7 +259,7 @@ Partial Class FrmListParticipante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(984, 572)
+        Me.ClientSize = New System.Drawing.Size(996, 572)
         Me.Controls.Add(Me.dtgParticipante)
         Me.Controls.Add(Me.RadButton2)
         Me.Controls.Add(Me.cboFilterP)

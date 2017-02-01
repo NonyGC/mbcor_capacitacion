@@ -25,6 +25,7 @@ Public Class FrmParticipante_vb
 
     Public Sub New(partCE As ParticipanteCE)
         InitializeComponent()
+        RadMessageBox.SetThemeName("VisualStudio2012Light")
         Me.partCE = partCE
         Value = 1
         btnGuardar.DialogResult = DialogResult.OK
