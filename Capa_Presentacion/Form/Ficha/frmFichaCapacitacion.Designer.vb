@@ -600,7 +600,7 @@ Partial Class frmFichaCapacitacion
         '
         Me.Label36.AutoSize = True
         Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(279, 49)
+        Me.Label36.Location = New System.Drawing.Point(246, 46)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(97, 13)
         Me.Label36.TabIndex = 85
@@ -669,9 +669,9 @@ Partial Class frmFichaCapacitacion
         Me.cboCapacitacion.EditorControl.Size = New System.Drawing.Size(240, 150)
         Me.cboCapacitacion.EditorControl.TabIndex = 0
         Me.cboCapacitacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboCapacitacion.Location = New System.Drawing.Point(407, 44)
+        Me.cboCapacitacion.Location = New System.Drawing.Point(363, 44)
         Me.cboCapacitacion.Name = "cboCapacitacion"
-        Me.cboCapacitacion.Size = New System.Drawing.Size(355, 22)
+        Me.cboCapacitacion.Size = New System.Drawing.Size(399, 22)
         Me.cboCapacitacion.TabIndex = 2
         Me.cboCapacitacion.TabStop = False
         Me.cboCapacitacion.ThemeName = "VisualStudio2012Light"
@@ -1601,7 +1601,7 @@ Partial Class frmFichaCapacitacion
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(283, 75)
+        Me.Label8.Location = New System.Drawing.Point(250, 72)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(97, 13)
         Me.Label8.TabIndex = 93
@@ -1611,9 +1611,9 @@ Partial Class frmFichaCapacitacion
         '
         Me.lblApeNom.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.lblApeNom.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApeNom.Location = New System.Drawing.Point(521, 104)
+        Me.lblApeNom.Location = New System.Drawing.Point(478, 104)
         Me.lblApeNom.Name = "lblApeNom"
-        Me.lblApeNom.Size = New System.Drawing.Size(356, 21)
+        Me.lblApeNom.Size = New System.Drawing.Size(399, 21)
         Me.lblApeNom.TabIndex = 98
         Me.lblApeNom.Text = "Apellidos y Nombres"
         Me.lblApeNom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -1621,9 +1621,9 @@ Partial Class frmFichaCapacitacion
         'cboParticipanteSearch
         '
         Me.cboParticipanteSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboParticipanteSearch.Location = New System.Drawing.Point(407, 70)
+        Me.cboParticipanteSearch.Location = New System.Drawing.Point(363, 70)
         Me.cboParticipanteSearch.Name = "cboParticipanteSearch"
-        Me.cboParticipanteSearch.Size = New System.Drawing.Size(356, 22)
+        Me.cboParticipanteSearch.Size = New System.Drawing.Size(400, 22)
         Me.cboParticipanteSearch.TabIndex = 3
         Me.cboParticipanteSearch.ThemeName = "VisualStudio2012Light"
         '
@@ -1631,9 +1631,9 @@ Partial Class frmFichaCapacitacion
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.txtCodigop)
-        Me.Panel1.Location = New System.Drawing.Point(407, 98)
+        Me.Panel1.Location = New System.Drawing.Point(363, 98)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(474, 34)
+        Me.Panel1.Size = New System.Drawing.Size(518, 34)
         Me.Panel1.TabIndex = 97
         '
         'txtCodigop
@@ -1704,7 +1704,7 @@ Partial Class frmFichaCapacitacion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(903, 728)
+        Me.ClientSize = New System.Drawing.Size(903, 740)
         Me.Controls.Add(Me.RadButton1)
         Me.Controls.Add(Me.grpTajetacredito)
         Me.Controls.Add(Me.cboParticipanteSearch)

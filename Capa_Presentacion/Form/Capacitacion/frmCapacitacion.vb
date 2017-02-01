@@ -25,9 +25,11 @@ Public Class frmCapacitacion
     End Sub
 
     Public Sub New(capEN As CapacitacionCE)
+
         InitializeComponent()
-        Me.capEN = capEN
         RadMessageBox.SetThemeName("VisualStudio2012Light")
+        btnRegistar.DialogResult = DialogResult.OK
+        Me.capEN = capEN
         value = 1
     End Sub
 

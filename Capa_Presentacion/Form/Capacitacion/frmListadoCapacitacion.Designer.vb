@@ -37,11 +37,9 @@ Partial Class FrmListadoCapacitacion
         Me.btnAgregar = New Telerik.WinControls.UI.RadButton()
         Me.btnEliminar = New Telerik.WinControls.UI.RadButton()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
         Me.dgvCapacitacion = New Telerik.WinControls.UI.RadGridView()
         CType(Me.btnAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvCapacitacion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvCapacitacion.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -49,7 +47,7 @@ Partial Class FrmListadoCapacitacion
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(656, 84)
+        Me.btnAgregar.Location = New System.Drawing.Point(602, 44)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(151, 24)
         Me.btnAgregar.TabIndex = 1
@@ -58,7 +56,7 @@ Partial Class FrmListadoCapacitacion
         '
         'btnEliminar
         '
-        Me.btnEliminar.Location = New System.Drawing.Point(813, 84)
+        Me.btnEliminar.Location = New System.Drawing.Point(762, 44)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(151, 24)
         Me.btnEliminar.TabIndex = 2
@@ -70,24 +68,15 @@ Partial Class FrmListadoCapacitacion
         Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(-4, -5)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(1003, 21)
+        Me.Label15.Size = New System.Drawing.Size(956, 21)
         Me.Label15.TabIndex = 84
         Me.Label15.Text = "GESTIONAR CAPACITACIÓN"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'RadButton1
-        '
-        Me.RadButton1.Location = New System.Drawing.Point(34, 84)
-        Me.RadButton1.Name = "RadButton1"
-        Me.RadButton1.Size = New System.Drawing.Size(151, 24)
-        Me.RadButton1.TabIndex = 88
-        Me.RadButton1.Text = "ACTUALIZAR"
-        Me.RadButton1.ThemeName = "VisualStudio2012Light"
-        '
         'dgvCapacitacion
         '
         Me.dgvCapacitacion.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvCapacitacion.Location = New System.Drawing.Point(34, 133)
+        Me.dgvCapacitacion.Location = New System.Drawing.Point(33, 74)
         '
         '
         '
@@ -139,7 +128,7 @@ Partial Class FrmListadoCapacitacion
         Me.dgvCapacitacion.Name = "dgvCapacitacion"
         Me.dgvCapacitacion.ReadOnly = True
         Me.dgvCapacitacion.ShowGroupPanel = False
-        Me.dgvCapacitacion.Size = New System.Drawing.Size(930, 389)
+        Me.dgvCapacitacion.Size = New System.Drawing.Size(880, 389)
         Me.dgvCapacitacion.TabIndex = 89
         Me.dgvCapacitacion.ThemeName = "VisualStudio2012Light"
         '
@@ -147,9 +136,8 @@ Partial Class FrmListadoCapacitacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(997, 563)
+        Me.ClientSize = New System.Drawing.Size(948, 495)
         Me.Controls.Add(Me.dgvCapacitacion)
-        Me.Controls.Add(Me.RadButton1)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnAgregar)
@@ -164,7 +152,6 @@ Partial Class FrmListadoCapacitacion
         Me.ThemeName = "VisualStudio2012Light"
         CType(Me.btnAgregar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvCapacitacion.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvCapacitacion, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
@@ -174,7 +161,6 @@ Partial Class FrmListadoCapacitacion
     Friend WithEvents btnAgregar As Telerik.WinControls.UI.RadButton
     Friend WithEvents btnEliminar As Telerik.WinControls.UI.RadButton
     Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
     Friend WithEvents dgvCapacitacion As Telerik.WinControls.UI.RadGridView
 End Class
 

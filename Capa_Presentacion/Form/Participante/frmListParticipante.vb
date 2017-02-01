@@ -14,12 +14,12 @@ Public Class FrmListParticipante
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
 
-        'Dim Frm As New FrmParticipante_vb()
+        Dim Frm As New FrmParticipante_vb()
 
-        'If Frm.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK Then
-        '    dtgParticipante.DataSource = ParticipanteCN.CargarParticipante()
-        'End If
-        'Frm.Dispose()
+        If Frm.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK Then
+            dtgParticipante.DataSource = ParticipanteCN.CargarParticipante()
+        End If
+        Frm.Dispose()
 
     End Sub
 

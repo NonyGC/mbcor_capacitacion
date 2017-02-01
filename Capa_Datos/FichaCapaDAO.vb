@@ -34,8 +34,8 @@ Public Class FichaCapaDAO
             i = cmd.ExecuteNonQuery
             Return If(i > 0, True, False)
         Catch ex As Exception
-        MsgBox(ex.Message)
-        Return False
+            MsgBox(ex.Message)
+            Return False
         Finally
         CloseDB()
         End Try
