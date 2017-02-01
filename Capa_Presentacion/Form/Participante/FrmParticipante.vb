@@ -152,10 +152,6 @@ Public Class FrmParticipante_vb
         Return cod
     End Function
 
-    Private Sub Label15_Click(sender As Object, e As EventArgs) Handles lblTitulo.Click
-
-    End Sub
-
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim codUbi As String = cboDepartamento.SelectedValue & cboProvincia.SelectedValue & cboDistrito.SelectedValue
         Dim fechaN As String
