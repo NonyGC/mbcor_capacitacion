@@ -39,7 +39,7 @@ Partial Class Menu
         '
         'RadButton1
         '
-        Me.RadButton1.Location = New System.Drawing.Point(46, 158)
+        Me.RadButton1.Location = New System.Drawing.Point(46, 144)
         Me.RadButton1.Name = "RadButton1"
         Me.RadButton1.Size = New System.Drawing.Size(266, 28)
         Me.RadButton1.TabIndex = 0
@@ -48,7 +48,7 @@ Partial Class Menu
         '
         'RadButton2
         '
-        Me.RadButton2.Location = New System.Drawing.Point(46, 52)
+        Me.RadButton2.Location = New System.Drawing.Point(46, 28)
         Me.RadButton2.Name = "RadButton2"
         Me.RadButton2.Size = New System.Drawing.Size(266, 28)
         Me.RadButton2.TabIndex = 1
@@ -57,7 +57,7 @@ Partial Class Menu
         '
         'RadButton4
         '
-        Me.RadButton4.Location = New System.Drawing.Point(46, 206)
+        Me.RadButton4.Location = New System.Drawing.Point(46, 204)
         Me.RadButton4.Name = "RadButton4"
         Me.RadButton4.Size = New System.Drawing.Size(266, 28)
         Me.RadButton4.TabIndex = 2
@@ -66,7 +66,7 @@ Partial Class Menu
         '
         'RadButton5
         '
-        Me.RadButton5.Location = New System.Drawing.Point(46, 105)
+        Me.RadButton5.Location = New System.Drawing.Point(46, 87)
         Me.RadButton5.Name = "RadButton5"
         Me.RadButton5.Size = New System.Drawing.Size(266, 28)
         Me.RadButton5.TabIndex = 2
@@ -75,7 +75,7 @@ Partial Class Menu
         '
         'RadButton6
         '
-        Me.RadButton6.Location = New System.Drawing.Point(46, 240)
+        Me.RadButton6.Location = New System.Drawing.Point(46, 238)
         Me.RadButton6.Name = "RadButton6"
         Me.RadButton6.Size = New System.Drawing.Size(266, 28)
         Me.RadButton6.TabIndex = 3

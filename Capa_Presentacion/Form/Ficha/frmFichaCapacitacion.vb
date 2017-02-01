@@ -83,6 +83,11 @@ Public Class frmFichaCapacitacion
         grpTajetacredito.Enabled = False
     End Sub
     Private Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButton2.Click
+        'Dim Frm As New FrmParticipante_vb()
+        'If Frm.ShowDialog(Me) = DialogResult.OK Then
+
+        'End If
+
         FrmParticipante_vb.Show()
     End Sub
 
