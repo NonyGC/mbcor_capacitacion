@@ -6,27 +6,26 @@ Public Class FrmListParticipante
     Dim PartCE As New ParticipanteCE
 
     Private Sub FrmListParticipante_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
-        dtgParticipantes.DataSource = ParticipanteCN.participante_table()
+
+        dtgParticipante.DataSource = ParticipanteCN.CargarParticipante()
         cboFilterP.DataSource = ParticipanteCN.participante_cargarCapacitacion()
-        'lvLocal.ValueMember = "codigo"
-        'lvLocal.DisplayMember = "nombre"
+
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        FrmParticipante_vb.Show()
-        'Debug.WriteLine(result)
-    End Sub
 
-    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
-        dtgParticipantes.DataSource = ParticipanteCN.participante_table()
-    End Sub
+        Dim Frm As New FrmParticipante_vb()
 
-    Private Sub dtgParticipantes_Click(sender As Object, e As EventArgs) Handles dtgParticipantes.Click
+        If Frm.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK Then
+            dtgParticipante.DataSource = ParticipanteCN.CargarParticipante()
+        End If
+        Frm.Dispose()
 
     End Sub
 
-    Private Sub dtgParticipantes_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dtgParticipantes.CellDoubleClick
-        With dtgParticipantes.CurrentRow
+
+    Private Sub dtgParticipantes_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dtgParticipante.CellDoubleClick
+        With dtgParticipante.CurrentRow
             PartCE.codpart = .Cells("codigo").Value
             PartCE.apePat = .Cells("apellido_pat").Value
             PartCE.apeMat = .Cells("apellido_mat").Value
@@ -48,6 +47,13 @@ Public Class FrmListParticipante
         End With
 
         Dim Frm As New FrmParticipante_vb(PartCE)
-        Frm.Show()
+        'Frm.Show()
+
+        If Frm.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK Then
+            dtgParticipante.DataSource = ParticipanteCN.CargarParticipante()
+        End If
+
+        Frm.Dispose()
+
     End Sub
 End Class

@@ -6,7 +6,7 @@ Public Class ParticipanteCN
         Return partDAO.participanteUpsert(part)
     End Function
 
-    Public Function participante_table() As DataTable
+    Public Function CargarParticipante() As DataTable
         Return partDAO.participante_table()
     End Function
 

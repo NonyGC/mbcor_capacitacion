@@ -15,18 +15,19 @@ Public Class FrmParticipante_vb
         upd = 1
     End Enum
     Public Sub New()
-
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         RadMessageBox.SetThemeName("VisualStudio2012Light")
         Value = 0
+        btnGuardar.DialogResult = DialogResult.OK
     End Sub
 
     Public Sub New(partCE As ParticipanteCE)
         InitializeComponent()
         Me.partCE = partCE
         Value = 1
+        btnGuardar.DialogResult = DialogResult.OK
     End Sub
 
     Private Sub FrmParticipante_vb_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -39,26 +40,25 @@ Public Class FrmParticipante_vb
             Case Initialize.ini
                 cboDepartamento.SelectedIndex = -1
             Case Initialize.upd
-                loadDataUpdate()
+                cargarDat_Actualizacion()
         End Select
+        limitarLista_Autocompletado()
+    End Sub
+    Sub limitarLista_Autocompletado()
         cboOperadorM.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboEstadoCivil.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboDepartamento.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboProvincia.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboDistrito.DropDownListElement.AutoCompleteAppend.LimitToList = True
     End Sub
-    Sub loadDataUpdate()
+    Sub cargarDat_Actualizacion()
         With partCE
             txtApePat.Text = .apePat
             txtApeMat.Text = .apeMat
             txtNombres.Text = .nombres
             txtDNICE.Text = .dnice
-            If (M.Name = .sexo) Then
-                M.Checked = True
-            End If
-            If (F.Name = .sexo) Then
-                F.Checked = True
-            End If
+            If (M.Name = .sexo) Then M.Checked = True
+            If (F.Name = .sexo) Then F.Checked = True
             txtDireccion.Text = .direccion
             cboDepartamento.SelectedValue = (partCE.ubigeo).Substring(0, 2) : loadProvincia()
             cboProvincia.SelectedValue = (partCE.ubigeo).Substring(2, 2) : loadDistrito()
@@ -77,10 +77,10 @@ Public Class FrmParticipante_vb
             cboEstadoCivil.SelectedValue = Trim(.EstadoCiv)
             txtProfesionOcupacion.Text = .profeOcupa
             txtFechaN.Text = Trim(.fechaNaci)
+            lblTitulo.Text = "ACTUALIZAR PARTICIPANTE"
             btnGuardar.Text = "ACTUALIZAR"
             btnLimpiar.Enabled = False
         End With
-
     End Sub
 
     Private Sub cboProvincia_Leave(sender As Object, e As EventArgs) Handles cboProvincia.Leave
@@ -152,7 +152,7 @@ Public Class FrmParticipante_vb
         Return cod
     End Function
 
-    Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
+    Private Sub Label15_Click(sender As Object, e As EventArgs) Handles lblTitulo.Click
 
     End Sub
 

@@ -57,7 +57,7 @@ Partial Class Menu
         '
         'RadButton4
         '
-        Me.RadButton4.Location = New System.Drawing.Point(46, 192)
+        Me.RadButton4.Location = New System.Drawing.Point(46, 206)
         Me.RadButton4.Name = "RadButton4"
         Me.RadButton4.Size = New System.Drawing.Size(266, 28)
         Me.RadButton4.TabIndex = 2
@@ -75,7 +75,7 @@ Partial Class Menu
         '
         'RadButton6
         '
-        Me.RadButton6.Location = New System.Drawing.Point(46, 226)
+        Me.RadButton6.Location = New System.Drawing.Point(46, 240)
         Me.RadButton6.Name = "RadButton6"
         Me.RadButton6.Size = New System.Drawing.Size(266, 28)
         Me.RadButton6.TabIndex = 3
@@ -86,7 +86,7 @@ Partial Class Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(356, 287)
+        Me.ClientSize = New System.Drawing.Size(353, 303)
         Me.Controls.Add(Me.RadButton6)
         Me.Controls.Add(Me.RadButton4)
         Me.Controls.Add(Me.RadButton5)

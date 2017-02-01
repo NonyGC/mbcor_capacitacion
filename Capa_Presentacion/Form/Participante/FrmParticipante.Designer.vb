@@ -80,7 +80,7 @@ Partial Class FrmParticipante_vb
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnGuardar = New Telerik.WinControls.UI.RadButton()
         Me.btnLimpiar = New Telerik.WinControls.UI.RadButton()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.lblTitulo = New System.Windows.Forms.Label()
         Me.VisualStudio2012LightTheme1 = New Telerik.WinControls.Themes.VisualStudio2012LightTheme()
         Me.grp.SuspendLayout()
         CType(Me.txtApeMat, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -664,22 +664,22 @@ Partial Class FrmParticipante_vb
         Me.btnLimpiar.Text = "LIMPIAR"
         Me.btnLimpiar.ThemeName = "VisualStudio2012Light"
         '
-        'Label15
+        'lblTitulo
         '
-        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(-3, -4)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(893, 21)
-        Me.Label15.TabIndex = 82
-        Me.Label15.Text = "REGISTRAR PARTICIPANTE"
-        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblTitulo.Font = New System.Drawing.Font("Segoe UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitulo.Location = New System.Drawing.Point(-3, -4)
+        Me.lblTitulo.Name = "lblTitulo"
+        Me.lblTitulo.Size = New System.Drawing.Size(893, 21)
+        Me.lblTitulo.TabIndex = 82
+        Me.lblTitulo.Text = "REGISTRAR PARTICIPANTE"
+        Me.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'FrmParticipante_vb
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(887, 436)
-        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.lblTitulo)
         Me.Controls.Add(Me.btnLimpiar)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.grp)
@@ -746,7 +746,7 @@ Partial Class FrmParticipante_vb
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents btnGuardar As Telerik.WinControls.UI.RadButton
     Friend WithEvents btnLimpiar As Telerik.WinControls.UI.RadButton
-    Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents lblTitulo As System.Windows.Forms.Label
     Friend WithEvents cboOperadorM2 As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
