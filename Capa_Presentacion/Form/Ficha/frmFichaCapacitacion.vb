@@ -83,12 +83,10 @@ Public Class frmFichaCapacitacion
         grpTajetacredito.Enabled = False
     End Sub
     Private Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButton2.Click
-        'Dim Frm As New FrmParticipante_vb()
-        'If Frm.ShowDialog(Me) = DialogResult.OK Then
-
-        'End If
-
-        FrmParticipante_vb.Show()
+        Dim Frm As New FrmParticipante_vb()
+        If Frm.ShowDialog(Me) = DialogResult.OK And Frm.Opgave() Then
+            Debug.WriteLine(Frm.Opgave())
+        End If
     End Sub
 
     Private Sub cboParticipanteSearch_Leave(sender As Object, e As EventArgs) Handles cboParticipanteSearch.Leave
@@ -123,6 +121,10 @@ Public Class frmFichaCapacitacion
 
     Private Sub grp2_Enter(sender As Object, e As EventArgs) Handles grp2.Enter
 
+    End Sub
+
+    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
+        frmCapacitacion.Show()
     End Sub
 
     Private Sub cboCapacitacion_Enter(sender As Object, e As EventArgs) Handles cboCapacitacion.Enter

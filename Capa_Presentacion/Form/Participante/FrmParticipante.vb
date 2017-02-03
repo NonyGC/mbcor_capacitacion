@@ -7,6 +7,7 @@ Public Class FrmParticipante_vb
     Dim LocalCN As New LocalCN, ParticipanteCE As New ParticipanteCE
     Dim ParticipanteCN As New ParticipanteCN
     Dim datadep As DataTable
+    Dim partEst As Boolean
     Private partCE As ParticipanteCE
     Private Value As Integer
 
@@ -54,6 +55,7 @@ Public Class FrmParticipante_vb
     End Sub
     Sub cargarDat_Actualizacion()
         With partCE
+
             txtApePat.Text = .apePat
             txtApeMat.Text = .apeMat
             txtNombres.Text = .nombres
@@ -61,9 +63,15 @@ Public Class FrmParticipante_vb
             If (M.Name = .sexo) Then M.Checked = True
             If (F.Name = .sexo) Then F.Checked = True
             txtDireccion.Text = .direccion
-            cboDepartamento.SelectedValue = (partCE.ubigeo).Substring(0, 2) : loadProvincia()
-            cboProvincia.SelectedValue = (partCE.ubigeo).Substring(2, 2) : loadDistrito()
-            cboDistrito.SelectedValue = (partCE.ubigeo).Substring(4, 2)
+            Dim dep As String = (partCE.ubigeo).Substring(0, 2)
+            If Trim(dep).Length > 0 Then cboDepartamento.SelectedValue = dep Else cboDepartamento.SelectedIndex = -1 : loadProvincia()
+
+            Dim pro As String = (partCE.ubigeo).Substring(2, 2)
+            If Trim(pro).Length > 0 Then cboProvincia.SelectedValue = pro Else cboProvincia.SelectedIndex = -1 : loadDistrito()
+
+            Dim dis As String = (partCE.ubigeo).Substring(4, 2)
+            If Trim(dis).Length > 0 Then cboDistrito.SelectedValue = dis Else cboDistrito.SelectedIndex = -1 : loadProvincia()
+
             Dim telFijo As String = (partCE.telFijo).Substring(5, (partCE.telFijo).Length - 5)
             Dim telMovil As String = (partCE.telMovil).Substring(5, (partCE.telMovil).Length - 5)
             Dim telFijo2 As String = (partCE.telFijo2).Substring(5, (partCE.telFijo2).Length - 5)
@@ -183,7 +191,7 @@ Public Class FrmParticipante_vb
             .profeOcupa = txtProfesionOcupacion.Text
         End With
         If btnGuardar.Text = "GUARDAR" Then
-            Dim partEst As Boolean = If(ParticipanteCN.participante_upsert(ParticipanteCE), True, False)
+            partEst = If(ParticipanteCN.participante_upsert(ParticipanteCE), True, False)
             If partEst Then
                 RadMessageBox.Show("SE REGISTRO CORRECTAMENTE", "", MessageBoxButtons.OK, RadMessageIcon.Info)
                 limpiar()
@@ -191,14 +199,30 @@ Public Class FrmParticipante_vb
                 RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A REGISTRAR", "", MessageBoxButtons.OK, RadMessageIcon.Error)
             End If
         ElseIf btnGuardar.Text = "ACTUALIZAR" Then
-            Dim partEst As Boolean = If(ParticipanteCN.participante_update(ParticipanteCE), True, False)
+            partEst = If(ParticipanteCN.participante_update(ParticipanteCE), True, False)
             If partEst Then
                 RadMessageBox.Show("SE ACTUALIZO CORRECTAMENTE", "", MessageBoxButtons.OK, RadMessageIcon.Info)
                 limpiar()
             Else
                 RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A INTENTAR", "", MessageBoxButtons.OK, RadMessageIcon.Error)
             End If
+
         End If
 
     End Sub
+
+    Private Sub txtDNICE_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDNICE.KeyPress
+        Solo_numeros(e)
+    End Sub
+
+    Public ReadOnly Property Opgave() As String
+        Get
+            Return partEst
+        End Get
+    End Property
+    'Public ReadOnly Property codeParticipante() As String
+    '    Get
+    '        Return partEst
+    '    End Get
+    'End Property
 End Class

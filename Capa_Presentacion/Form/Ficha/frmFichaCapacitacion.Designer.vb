@@ -1105,7 +1105,7 @@ Partial Class frmFichaCapacitacion
         Me.grpInstitucion.Controls.Add(Me.RadioButton1)
         Me.grpInstitucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.grpInstitucion.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpInstitucion.Location = New System.Drawing.Point(570, 29)
+        Me.grpInstitucion.Location = New System.Drawing.Point(569, 25)
         Me.grpInstitucion.Name = "grpInstitucion"
         Me.grpInstitucion.Size = New System.Drawing.Size(264, 54)
         Me.grpInstitucion.TabIndex = 26
@@ -1613,7 +1613,7 @@ Partial Class frmFichaCapacitacion
         Me.lblApeNom.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblApeNom.Location = New System.Drawing.Point(478, 104)
         Me.lblApeNom.Name = "lblApeNom"
-        Me.lblApeNom.Size = New System.Drawing.Size(399, 21)
+        Me.lblApeNom.Size = New System.Drawing.Size(388, 21)
         Me.lblApeNom.TabIndex = 98
         Me.lblApeNom.Text = "Apellidos y Nombres"
         Me.lblApeNom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft

@@ -447,7 +447,7 @@ Partial Class FrmParticipante_vb
         '
         Me.txtDNICE.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtDNICE.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDNICE.Location = New System.Drawing.Point(527, 83)
+        Me.txtDNICE.Location = New System.Drawing.Point(528, 83)
         Me.txtDNICE.MaxLength = 15
         Me.txtDNICE.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtDNICE.Name = "txtDNICE"
@@ -455,7 +455,7 @@ Partial Class FrmParticipante_vb
         '
         '
         Me.txtDNICE.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.txtDNICE.Size = New System.Drawing.Size(133, 24)
+        Me.txtDNICE.Size = New System.Drawing.Size(131, 24)
         Me.txtDNICE.TabIndex = 9
         Me.txtDNICE.ThemeName = "VisualStudio2012Light"
         '
@@ -560,7 +560,7 @@ Partial Class FrmParticipante_vb
         '
         Me.txtNombres.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtNombres.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombres.Location = New System.Drawing.Point(138, 55)
+        Me.txtNombres.Location = New System.Drawing.Point(139, 55)
         Me.txtNombres.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtNombres.Name = "txtNombres"
         '
