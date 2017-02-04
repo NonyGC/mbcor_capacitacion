@@ -2,8 +2,8 @@
 Imports Capa_Entidad
 Public Class ParticipanteCN
     Dim partDAO As New ParticipanteDAO
-    Public Function participante_upsert(part As ParticipanteCE) As Boolean
-        Return partDAO.participanteUpsert(part)
+    Public Function participante_insert(part As ParticipanteCE) As Boolean
+        Return partDAO.participante_insert(part)
     End Function
 
     Public Function CargarParticipante() As DataTable
@@ -20,5 +20,9 @@ Public Class ParticipanteCN
 
     Public Function participante_update(part As ParticipanteCE) As Boolean
         Return partDAO.participanteUpdate(part)
+    End Function
+
+    Public Function obtUltimoCodigoPart(codpart As String) As String
+        Return partDAO.obtUltimoCodigoPart(codpart)
     End Function
 End Class

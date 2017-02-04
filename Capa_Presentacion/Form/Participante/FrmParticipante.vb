@@ -160,7 +160,7 @@ Public Class FrmParticipante_vb
         Dim cod As String = If(Trim(ap) = String.Empty, "_", Trim(ap).Substring(0, 1)) & If(Trim(am) = String.Empty, "_", Trim(am).Substring(0, 1))
         Return cod
     End Function
-
+    Dim codigo As String
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim codUbi As String = cboDepartamento.SelectedValue & cboProvincia.SelectedValue & cboDistrito.SelectedValue
         Dim fechaN As String
@@ -169,6 +169,7 @@ Public Class FrmParticipante_vb
         With ParticipanteCE
             If btnGuardar.Text = "GUARDAR" Then
                 .codpart = CodigoAuto(txtApePat.Text, txtApeMat.Text)
+                codigo = .codpart
             Else
                 .codpart = partCE.codpart
             End If
@@ -191,7 +192,7 @@ Public Class FrmParticipante_vb
             .profeOcupa = txtProfesionOcupacion.Text
         End With
         If btnGuardar.Text = "GUARDAR" Then
-            partEst = If(ParticipanteCN.participante_upsert(ParticipanteCE), True, False)
+            partEst = If(ParticipanteCN.participante_insert(ParticipanteCE), True, False)
             If partEst Then
                 RadMessageBox.Show("SE REGISTRO CORRECTAMENTE", "", MessageBoxButtons.OK, RadMessageIcon.Info)
                 limpiar()
@@ -220,9 +221,10 @@ Public Class FrmParticipante_vb
             Return partEst
         End Get
     End Property
-    'Public ReadOnly Property codeParticipante() As String
-    '    Get
-    '        Return partEst
-    '    End Get
-    'End Property
+
+    Public ReadOnly Property codeParticipante() As String
+        Get
+            Return ParticipanteCN.obtUltimoCodigoPart(codigo)
+        End Get
+    End Property
 End Class

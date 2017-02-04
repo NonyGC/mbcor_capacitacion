@@ -27,4 +27,8 @@
     Private Sub RadButton6_Click_1(sender As Object, e As EventArgs) Handles RadButton6.Click
         frmLocalParticipante.Show()
     End Sub
+
+    Private Sub RadButton3_Click_1(sender As Object, e As EventArgs) Handles RadButton3.Click
+        FrmReporteParticipante.Show()
+    End Sub
 End Class

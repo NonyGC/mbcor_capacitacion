@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class FrmListParticipante
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class FrmReporteParticipante
     Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmListParticipante
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
@@ -41,27 +41,21 @@ Partial Class FrmListParticipante
         Dim GridViewTextBoxColumn17 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn18 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim GridViewTextBoxColumn19 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn20 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn21 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn22 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim SortDescriptor1 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
-        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmListParticipante))
+        Dim RadCheckedListDataItem1 As Telerik.WinControls.UI.RadCheckedListDataItem = New Telerik.WinControls.UI.RadCheckedListDataItem()
+        Dim RadCheckedListDataItem2 As Telerik.WinControls.UI.RadCheckedListDataItem = New Telerik.WinControls.UI.RadCheckedListDataItem()
+        Dim RadCheckedListDataItem3 As Telerik.WinControls.UI.RadCheckedListDataItem = New Telerik.WinControls.UI.RadCheckedListDataItem()
+        Dim RadCheckedListDataItem4 As Telerik.WinControls.UI.RadCheckedListDataItem = New Telerik.WinControls.UI.RadCheckedListDataItem()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmReporteParticipante))
         Me.dtgParticipante = New Telerik.WinControls.UI.RadGridView()
-        Me.btnEliminar = New Telerik.WinControls.UI.RadButton()
-        Me.btnAgregar = New Telerik.WinControls.UI.RadButton()
-        Me.cboFilterP = New Telerik.WinControls.UI.RadMultiColumnComboBox()
-        Me.RadButton2 = New Telerik.WinControls.UI.RadButton()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.RadTextBox1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.rbtBuscar = New Telerik.WinControls.UI.RadButton()
+        Me.RadCheckedDropDownList1 = New Telerik.WinControls.UI.RadCheckedDropDownList()
         CType(Me.dtgParticipante, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgParticipante.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cboFilterP, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cboFilterP.EditorControl, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cboFilterP.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.rbtBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCheckedDropDownList1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -69,13 +63,12 @@ Partial Class FrmListParticipante
         '
         Me.dtgParticipante.AutoScroll = True
         Me.dtgParticipante.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgParticipante.Location = New System.Drawing.Point(31, 116)
+        Me.dtgParticipante.Location = New System.Drawing.Point(39, 124)
         '
         '
         '
         Me.dtgParticipante.MasterTemplate.AllowAddNewRow = False
         Me.dtgParticipante.MasterTemplate.AllowDeleteRow = False
-        Me.dtgParticipante.MasterTemplate.AllowSearchRow = True
         GridViewTextBoxColumn1.FieldName = "codigo"
         GridViewTextBoxColumn1.HeaderText = "CODIGO"
         GridViewTextBoxColumn1.Name = "codigo"
@@ -145,144 +138,89 @@ Partial Class FrmListParticipante
         GridViewTextBoxColumn18.Name = "profe_ocupa"
         GridViewTextBoxColumn18.Width = 150
         Me.dtgParticipante.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4, GridViewTextBoxColumn5, GridViewTextBoxColumn6, GridViewTextBoxColumn7, GridViewTextBoxColumn8, GridViewTextBoxColumn9, GridViewTextBoxColumn10, GridViewTextBoxColumn11, GridViewTextBoxColumn12, GridViewTextBoxColumn13, GridViewTextBoxColumn14, GridViewTextBoxColumn15, GridViewTextBoxColumn16, GridViewTextBoxColumn17, GridViewTextBoxColumn18})
+        Me.dtgParticipante.MasterTemplate.EnableFiltering = True
         Me.dtgParticipante.MasterTemplate.EnableGrouping = False
         Me.dtgParticipante.MasterTemplate.EnablePaging = True
         Me.dtgParticipante.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.dtgParticipante.Name = "dtgParticipante"
         Me.dtgParticipante.ReadOnly = True
-        Me.dtgParticipante.Size = New System.Drawing.Size(933, 435)
-        Me.dtgParticipante.TabIndex = 0
+        Me.dtgParticipante.Size = New System.Drawing.Size(940, 488)
+        Me.dtgParticipante.TabIndex = 1
         Me.dtgParticipante.ThemeName = "VisualStudio2012Light"
-        '
-        'btnEliminar
-        '
-        Me.btnEliminar.Enabled = False
-        Me.btnEliminar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminar.Location = New System.Drawing.Point(813, 70)
-        Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(151, 24)
-        Me.btnEliminar.TabIndex = 86
-        Me.btnEliminar.Text = "ELIMINAR"
-        Me.btnEliminar.ThemeName = "VisualStudio2012Light"
-        '
-        'btnAgregar
-        '
-        Me.btnAgregar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregar.Location = New System.Drawing.Point(656, 70)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(151, 24)
-        Me.btnAgregar.TabIndex = 84
-        Me.btnAgregar.Text = "AGREGAR"
-        Me.btnAgregar.ThemeName = "VisualStudio2012Light"
-        '
-        'cboFilterP
-        '
-        Me.cboFilterP.AutoSize = True
-        '
-        'cboFilterP.NestedRadGridView
-        '
-        Me.cboFilterP.EditorControl.BackColor = System.Drawing.SystemColors.Window
-        Me.cboFilterP.EditorControl.Cursor = System.Windows.Forms.Cursors.Default
-        Me.cboFilterP.EditorControl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.cboFilterP.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.cboFilterP.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.cboFilterP.EditorControl.Location = New System.Drawing.Point(0, 0)
-        '
-        '
-        '
-        Me.cboFilterP.EditorControl.MasterTemplate.AllowAddNewRow = False
-        Me.cboFilterP.EditorControl.MasterTemplate.AllowCellContextMenu = False
-        Me.cboFilterP.EditorControl.MasterTemplate.AllowColumnChooser = False
-        Me.cboFilterP.EditorControl.MasterTemplate.AllowRowResize = False
-        GridViewTextBoxColumn19.EnableExpressionEditor = False
-        GridViewTextBoxColumn19.FieldName = "codigo"
-        GridViewTextBoxColumn19.HeaderText = "codigo"
-        GridViewTextBoxColumn19.IsVisible = False
-        GridViewTextBoxColumn19.Name = "codigo"
-        GridViewTextBoxColumn20.EnableExpressionEditor = False
-        GridViewTextBoxColumn20.FieldName = "nombre"
-        GridViewTextBoxColumn20.HeaderText = "LOCAL"
-        GridViewTextBoxColumn20.Name = "LOCAL"
-        GridViewTextBoxColumn20.Width = 200
-        GridViewTextBoxColumn21.EnableExpressionEditor = False
-        GridViewTextBoxColumn21.FieldName = "fecha"
-        GridViewTextBoxColumn21.HeaderText = "FECHA"
-        GridViewTextBoxColumn21.Name = "FECHA"
-        GridViewTextBoxColumn21.Width = 80
-        GridViewTextBoxColumn22.EnableExpressionEditor = False
-        GridViewTextBoxColumn22.FieldName = "origen"
-        GridViewTextBoxColumn22.HeaderText = "ORIGEN"
-        GridViewTextBoxColumn22.Name = "ORIGEN"
-        GridViewTextBoxColumn22.Width = 100
-        Me.cboFilterP.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn19, GridViewTextBoxColumn20, GridViewTextBoxColumn21, GridViewTextBoxColumn22})
-        Me.cboFilterP.EditorControl.MasterTemplate.EnableGrouping = False
-        Me.cboFilterP.EditorControl.MasterTemplate.ShowFilteringRow = False
-        SortDescriptor1.PropertyName = "column1"
-        Me.cboFilterP.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor1})
-        Me.cboFilterP.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition2
-        Me.cboFilterP.EditorControl.Name = "NestedRadGridView"
-        Me.cboFilterP.EditorControl.ReadOnly = True
-        Me.cboFilterP.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cboFilterP.EditorControl.ShowGroupPanel = False
-        Me.cboFilterP.EditorControl.Size = New System.Drawing.Size(240, 150)
-        Me.cboFilterP.EditorControl.TabIndex = 0
-        Me.cboFilterP.Location = New System.Drawing.Point(497, 40)
-        Me.cboFilterP.Name = "cboFilterP"
-        Me.cboFilterP.NullText = "Seleccionar Local"
-        Me.cboFilterP.Size = New System.Drawing.Size(377, 24)
-        Me.cboFilterP.TabIndex = 89
-        Me.cboFilterP.TabStop = False
-        Me.cboFilterP.ThemeName = "VisualStudio2012Light"
-        Me.cboFilterP.Visible = False
-        '
-        'RadButton2
-        '
-        Me.RadButton2.Location = New System.Drawing.Point(892, 39)
-        Me.RadButton2.Name = "RadButton2"
-        Me.RadButton2.Size = New System.Drawing.Size(72, 26)
-        Me.RadButton2.TabIndex = 90
-        Me.RadButton2.Text = "BUSCAR"
-        Me.RadButton2.ThemeName = "VisualStudio2012Light"
-        Me.RadButton2.Visible = False
         '
         'Label15
         '
         Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(-1, -2)
+        Me.Label15.Location = New System.Drawing.Point(-5, -4)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(1000, 21)
-        Me.Label15.TabIndex = 83
-        Me.Label15.Text = "GESTIONAR PARTICIPANTE"
+        Me.Label15.Size = New System.Drawing.Size(1026, 21)
+        Me.Label15.TabIndex = 84
+        Me.Label15.Text = "REPORTE PARTICIPATES"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'FrmListParticipante
+        'RadTextBox1
+        '
+        Me.RadTextBox1.Location = New System.Drawing.Point(397, 92)
+        Me.RadTextBox1.MinimumSize = New System.Drawing.Size(0, 24)
+        Me.RadTextBox1.Name = "RadTextBox1"
+        '
+        '
+        '
+        Me.RadTextBox1.RootElement.MinSize = New System.Drawing.Size(0, 24)
+        Me.RadTextBox1.Size = New System.Drawing.Size(270, 24)
+        Me.RadTextBox1.TabIndex = 87
+        Me.RadTextBox1.ThemeName = "VisualStudio2012Light"
+        '
+        'rbtBuscar
+        '
+        Me.rbtBuscar.Enabled = False
+        Me.rbtBuscar.Location = New System.Drawing.Point(818, 92)
+        Me.rbtBuscar.Name = "rbtBuscar"
+        Me.rbtBuscar.Size = New System.Drawing.Size(75, 24)
+        Me.rbtBuscar.TabIndex = 89
+        Me.rbtBuscar.Text = "BUSCAR"
+        Me.rbtBuscar.ThemeName = "VisualStudio2012Light"
+        '
+        'RadCheckedDropDownList1
+        '
+        RadCheckedListDataItem1.Text = "CheckedItem 1"
+        RadCheckedListDataItem2.Text = "CheckedItem 2"
+        RadCheckedListDataItem3.Text = "CheckedItem 3"
+        RadCheckedListDataItem4.Text = "CheckedItem 4"
+        Me.RadCheckedDropDownList1.Items.Add(RadCheckedListDataItem1)
+        Me.RadCheckedDropDownList1.Items.Add(RadCheckedListDataItem2)
+        Me.RadCheckedDropDownList1.Items.Add(RadCheckedListDataItem3)
+        Me.RadCheckedDropDownList1.Items.Add(RadCheckedListDataItem4)
+        Me.RadCheckedDropDownList1.Location = New System.Drawing.Point(680, 92)
+        Me.RadCheckedDropDownList1.Name = "RadCheckedDropDownList1"
+        Me.RadCheckedDropDownList1.NullText = "Filtrar"
+        Me.RadCheckedDropDownList1.Size = New System.Drawing.Size(125, 24)
+        Me.RadCheckedDropDownList1.TabIndex = 90
+        Me.RadCheckedDropDownList1.ThemeName = "VisualStudio2012Light"
+        '
+        'FrmReporteParticipante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(996, 572)
-        Me.Controls.Add(Me.dtgParticipante)
-        Me.Controls.Add(Me.RadButton2)
-        Me.Controls.Add(Me.cboFilterP)
-        Me.Controls.Add(Me.btnEliminar)
-        Me.Controls.Add(Me.btnAgregar)
+        Me.ClientSize = New System.Drawing.Size(1017, 641)
+        Me.Controls.Add(Me.RadCheckedDropDownList1)
+        Me.Controls.Add(Me.rbtBuscar)
+        Me.Controls.Add(Me.RadTextBox1)
         Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.dtgParticipante)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "FrmListParticipante"
+        Me.Name = "FrmReporteParticipante"
         '
         '
         '
         Me.RootElement.ApplyShapeToControl = True
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "MBCORP"
+        Me.Text = ""
         Me.ThemeName = "VisualStudio2012Light"
         CType(Me.dtgParticipante.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgParticipante, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnAgregar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cboFilterP.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cboFilterP.EditorControl, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cboFilterP, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.rbtBuscar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadCheckedDropDownList1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -290,10 +228,9 @@ Partial Class FrmListParticipante
     End Sub
 
     Friend WithEvents dtgParticipante As Telerik.WinControls.UI.RadGridView
-    Friend WithEvents btnEliminar As Telerik.WinControls.UI.RadButton
-    Friend WithEvents btnAgregar As Telerik.WinControls.UI.RadButton
-    Friend WithEvents cboFilterP As Telerik.WinControls.UI.RadMultiColumnComboBox
-    Friend WithEvents RadButton2 As Telerik.WinControls.UI.RadButton
     Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents RadTextBox1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents rbtBuscar As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadCheckedDropDownList1 As Telerik.WinControls.UI.RadCheckedDropDownList
 End Class
 

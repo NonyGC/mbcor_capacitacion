@@ -85,11 +85,14 @@ Public Class frmFichaCapacitacion
     Private Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButton2.Click
         Dim Frm As New FrmParticipante_vb()
         If Frm.ShowDialog(Me) = DialogResult.OK And Frm.Opgave() Then
-            Debug.WriteLine(Frm.Opgave())
+            cboParticipanteSearch.DataSource = FichCN.fichaCapacitacion_ParticipanteAutocomplete()
+            cboParticipanteSearch.ValueMember = "codigo"
+            cboParticipanteSearch.DisplayMember = "participante"
+            cboParticipanteSearch.SelectedValue = Frm.codeParticipante
+            cboParticipanteSearch_Leave()
         End If
     End Sub
-
-    Private Sub cboParticipanteSearch_Leave(sender As Object, e As EventArgs) Handles cboParticipanteSearch.Leave
+    Sub cboParticipanteSearch_Leave()
         txtCodigop.Text = cboParticipanteSearch.SelectedValue
         If Trim(txtCodigop.Text) IsNot String.Empty Then
             Dim parti() As String = FichCN.fichaCapacitacion_getPartiCod(txtCodigop.Text).Split("|"c)
@@ -105,7 +108,10 @@ Public Class frmFichaCapacitacion
         Else
             bloquear()
         End If
+    End Sub
 
+    Private Sub cboParticipanteSearch_Leave(sender As Object, e As EventArgs) Handles cboParticipanteSearch.Leave
+        cboParticipanteSearch_Leave()
     End Sub
 
     Private Sub cboParticipanteSearch_Enter(sender As Object, e As EventArgs) Handles cboParticipanteSearch.Enter
