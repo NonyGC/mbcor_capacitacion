@@ -41,21 +41,17 @@ Partial Class FrmReporteParticipante
         Dim GridViewTextBoxColumn17 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn18 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim RadCheckedListDataItem1 As Telerik.WinControls.UI.RadCheckedListDataItem = New Telerik.WinControls.UI.RadCheckedListDataItem()
-        Dim RadCheckedListDataItem2 As Telerik.WinControls.UI.RadCheckedListDataItem = New Telerik.WinControls.UI.RadCheckedListDataItem()
-        Dim RadCheckedListDataItem3 As Telerik.WinControls.UI.RadCheckedListDataItem = New Telerik.WinControls.UI.RadCheckedListDataItem()
-        Dim RadCheckedListDataItem4 As Telerik.WinControls.UI.RadCheckedListDataItem = New Telerik.WinControls.UI.RadCheckedListDataItem()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmReporteParticipante))
         Me.dtgParticipante = New Telerik.WinControls.UI.RadGridView()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.RadTextBox1 = New Telerik.WinControls.UI.RadTextBox()
         Me.rbtBuscar = New Telerik.WinControls.UI.RadButton()
-        Me.RadCheckedDropDownList1 = New Telerik.WinControls.UI.RadCheckedDropDownList()
+        Me.cboFiltrar = New Telerik.WinControls.UI.RadCheckedDropDownList()
         CType(Me.dtgParticipante, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgParticipante.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.rbtBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadCheckedDropDownList1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboFiltrar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -63,7 +59,7 @@ Partial Class FrmReporteParticipante
         '
         Me.dtgParticipante.AutoScroll = True
         Me.dtgParticipante.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgParticipante.Location = New System.Drawing.Point(39, 124)
+        Me.dtgParticipante.Location = New System.Drawing.Point(40, 98)
         '
         '
         '
@@ -160,50 +156,42 @@ Partial Class FrmReporteParticipante
         '
         'RadTextBox1
         '
-        Me.RadTextBox1.Location = New System.Drawing.Point(397, 92)
+        Me.RadTextBox1.Location = New System.Drawing.Point(158, 66)
         Me.RadTextBox1.MinimumSize = New System.Drawing.Size(0, 24)
         Me.RadTextBox1.Name = "RadTextBox1"
         '
         '
         '
         Me.RadTextBox1.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.RadTextBox1.Size = New System.Drawing.Size(270, 24)
+        Me.RadTextBox1.Size = New System.Drawing.Size(445, 24)
         Me.RadTextBox1.TabIndex = 87
         Me.RadTextBox1.ThemeName = "VisualStudio2012Light"
         '
         'rbtBuscar
         '
         Me.rbtBuscar.Enabled = False
-        Me.rbtBuscar.Location = New System.Drawing.Point(818, 92)
+        Me.rbtBuscar.Location = New System.Drawing.Point(791, 66)
         Me.rbtBuscar.Name = "rbtBuscar"
-        Me.rbtBuscar.Size = New System.Drawing.Size(75, 24)
+        Me.rbtBuscar.Size = New System.Drawing.Size(115, 24)
         Me.rbtBuscar.TabIndex = 89
         Me.rbtBuscar.Text = "BUSCAR"
         Me.rbtBuscar.ThemeName = "VisualStudio2012Light"
         '
-        'RadCheckedDropDownList1
+        'cboFiltrar
         '
-        RadCheckedListDataItem1.Text = "CheckedItem 1"
-        RadCheckedListDataItem2.Text = "CheckedItem 2"
-        RadCheckedListDataItem3.Text = "CheckedItem 3"
-        RadCheckedListDataItem4.Text = "CheckedItem 4"
-        Me.RadCheckedDropDownList1.Items.Add(RadCheckedListDataItem1)
-        Me.RadCheckedDropDownList1.Items.Add(RadCheckedListDataItem2)
-        Me.RadCheckedDropDownList1.Items.Add(RadCheckedListDataItem3)
-        Me.RadCheckedDropDownList1.Items.Add(RadCheckedListDataItem4)
-        Me.RadCheckedDropDownList1.Location = New System.Drawing.Point(680, 92)
-        Me.RadCheckedDropDownList1.Name = "RadCheckedDropDownList1"
-        Me.RadCheckedDropDownList1.NullText = "Filtrar"
-        Me.RadCheckedDropDownList1.Size = New System.Drawing.Size(125, 24)
-        Me.RadCheckedDropDownList1.TabIndex = 90
-        Me.RadCheckedDropDownList1.ThemeName = "VisualStudio2012Light"
+        Me.cboFiltrar.Location = New System.Drawing.Point(616, 66)
+        Me.cboFiltrar.Name = "cboFiltrar"
+        Me.cboFiltrar.NullText = "Filtrar"
+        Me.cboFiltrar.Size = New System.Drawing.Size(169, 24)
+        Me.cboFiltrar.TabIndex = 90
+        Me.cboFiltrar.ThemeName = "VisualStudio2012Light"
         '
         'FrmReporteParticipante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1017, 641)
-        Me.Controls.Add(Me.RadCheckedDropDownList1)
+        Me.ClientSize = New System.Drawing.Size(1017, 609)
+        Me.Controls.Add(Me.cboFiltrar)
         Me.Controls.Add(Me.rbtBuscar)
         Me.Controls.Add(Me.RadTextBox1)
         Me.Controls.Add(Me.Label15)
@@ -220,7 +208,7 @@ Partial Class FrmReporteParticipante
         CType(Me.dtgParticipante, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.rbtBuscar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadCheckedDropDownList1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboFiltrar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -231,6 +219,6 @@ Partial Class FrmReporteParticipante
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents RadTextBox1 As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents rbtBuscar As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadCheckedDropDownList1 As Telerik.WinControls.UI.RadCheckedDropDownList
+    Friend WithEvents cboFiltrar As Telerik.WinControls.UI.RadCheckedDropDownList
 End Class
 
