@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FrmReporteParticipante
     Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FrmReporteParticipante
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
@@ -49,10 +49,10 @@ Partial Class FrmReporteParticipante
         Me.gpbTipBusqueda = New System.Windows.Forms.GroupBox()
         Me.rbtOrigen = New System.Windows.Forms.RadioButton()
         Me.rbtLocal = New System.Windows.Forms.RadioButton()
+        Me.rbtApeNom = New System.Windows.Forms.RadioButton()
         Me.gpbFecha = New System.Windows.Forms.GroupBox()
         Me.txtFechaini = New Telerik.WinControls.UI.RadMaskedEditBox()
         Me.txtFechafin = New Telerik.WinControls.UI.RadMaskedEditBox()
-        Me.rbtApeNom = New System.Windows.Forms.RadioButton()
         CType(Me.dtgParticipante, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgParticipante.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.rbtBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -216,6 +216,18 @@ Partial Class FrmReporteParticipante
         Me.rbtLocal.Text = "Local"
         Me.rbtLocal.UseVisualStyleBackColor = True
         '
+        'rbtApeNom
+        '
+        Me.rbtApeNom.AutoSize = True
+        Me.rbtApeNom.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.rbtApeNom.Location = New System.Drawing.Point(22, 19)
+        Me.rbtApeNom.Name = "rbtApeNom"
+        Me.rbtApeNom.Size = New System.Drawing.Size(129, 17)
+        Me.rbtApeNom.TabIndex = 98
+        Me.rbtApeNom.TabStop = True
+        Me.rbtApeNom.Text = "Apellidos y Nombres"
+        Me.rbtApeNom.UseVisualStyleBackColor = True
+        '
         'gpbFecha
         '
         Me.gpbFecha.Controls.Add(Me.txtFechaini)
@@ -263,18 +275,6 @@ Partial Class FrmReporteParticipante
         Me.txtFechafin.TabStop = False
         Me.txtFechafin.Text = "__/__/____"
         Me.txtFechafin.ThemeName = "VisualStudio2012Light"
-        '
-        'rbtApeNom
-        '
-        Me.rbtApeNom.AutoSize = True
-        Me.rbtApeNom.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.rbtApeNom.Location = New System.Drawing.Point(22, 19)
-        Me.rbtApeNom.Name = "rbtApeNom"
-        Me.rbtApeNom.Size = New System.Drawing.Size(129, 17)
-        Me.rbtApeNom.TabIndex = 98
-        Me.rbtApeNom.TabStop = True
-        Me.rbtApeNom.Text = "Apellidos y Nombres"
-        Me.rbtApeNom.UseVisualStyleBackColor = True
         '
         'FrmReporteParticipante
         '

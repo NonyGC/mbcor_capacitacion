@@ -29,4 +29,20 @@ Public Class ParticipanteCN
     Public Function obtUltimoCodigoPart(codpart As String) As String
         Return partDAO.obtUltimoCodigoPart(codpart)
     End Function
+
+    'Public Function FiltarParticipante(rbtSelected As String) As DataTable
+    '    Return partDAO.FiltarParticipante(rbtSelected)
+    'End Function
+
+    Public Function FiltarParticipanteApeNom(text As String) As DataTable
+        Return partDAO.FiltarParticipanteApeNom(text)
+    End Function
+
+    Public Function FiltarParticipanteLocal(selectedValue As Object, dateini As String, datefin As String) As DataTable
+        Return partDAO.FiltarParticipanteLocal(selectedValue, dateini, datefin)
+    End Function
+
+    Public Function FiltarParticipanteOrigen(selectedValue As Object, dateini As String, datefin As String) As DataTable
+        Return partDAO.FiltarParticipanteOrigen(selectedValue, dateini, datefin)
+    End Function
 End Class

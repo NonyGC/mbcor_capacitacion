@@ -24,8 +24,61 @@ Public Class ParticipanteDAO
     End Function
 
     Public Function cargarAutocompletado_buscar(rbtSelected As String) As Object
-        Throw New NotImplementedException()
+        Dim cmd As New SqlCommand
+        Dim data As New DataTable
+        If rbtSelected = "Apellidos y Nombres" Then
+            cmd = CommandText("SELECT codigo,CONCAT(apellido_pat,' ',apellido_mat,' ',nombres) nombre FROM [dbo].[participante]")
+        ElseIf rbtSelected = "Local" Then
+            cmd = CommandText("SELECT codigo,nombre FROM local")
+        ElseIf rbtSelected = "Origen" Then
+            cmd = CommandText("SELECT codigo,CASE WHEN origen='Otros' THEN origen+' '+origOtro ELSE origen END AS nombre FROM capacitacion")
+        End If
+        data = GetDataTable(cmd)
+        Return data
     End Function
+
+    Public Function FiltarParticipanteApeNom(text As String) As DataTable
+        Dim cmd As SqlCommand = CommandText("")
+        Dim data As New DataTable
+        data = GetDataTable(cmd)
+        Return data
+    End Function
+
+    Public Function FiltarParticipanteLocal(selectedValue As Object, dateini As String, datefin As String) As DataTable
+        Dim cmd As SqlCommand = CommandText("SELECT 
+P.codigo,apellido_pat,apellido_mat,nombres,sexo,fecha_nacimiento,dni_ce,
+direccion,ubigeo,tel_fijo,tel_mol,ope_movil,tel_fijo2,tel_mol2,ope_movil2,
+email,estado_civ,profe_ocupa
+FROM [dbo].[participante] P 
+INNER JOIN [dbo].[ficha_capacitacion] FC ON P.codigo=FC.codpar
+INNER JOIN [dbo].[capacitacion] C ON FC.codcap=C.codigo WHERE c.local=@local")
+        cmd.Parameters.AddWithValue("@local", selectedValue)
+        Dim data As New DataTable
+        data = GetDataTable(cmd)
+        Return data
+    End Function
+
+    Public Function FiltarParticipanteOrigen(selectedValue As Object, dateini As String, datefin As String) As DataTable
+        Dim cmd As SqlCommand = CommandText("")
+        Dim data As New DataTable
+        data = GetDataTable(cmd)
+        Return data
+    End Function
+
+    'Public Function FiltarParticipante(rbtSelected As String) As DataTable
+    '    Dim cmd As New SqlCommand
+    '    Dim data As New DataTable
+    '    If rbtSelected = "Apellidos y Nombres" Then
+    '        cmd = CommandText("SELECT codigo,CONCAT(apellido_pat,' ',apellido_mat,' ',nombres) nombre FROM [dbo].[participante]")
+    '    ElseIf rbtSelected = "Local" Then
+    '        cmd = CommandText("SELECT P.codigo,apellido_pat,apellido_mat,nombres,sexo,fecha_nacimiento,dni_ce,direccion,ubigeo,tel_fijo,tel_mol,ope_movil,tel_fijo2,tel_mol2,ope_movil2,email,estado_civ,profe_ocupa FROM [dbo].[participante] P INNER JOIN [dbo].[ficha_capacitacion] FC ON P.codigo=FC.codpar INNER JOIN [dbo].[capacitacion] C ON FC.codcap=C.codigo WHERE c.local=@local")
+    '        cmd.Parameters.AddWithValue("@local", "")
+    '    ElseIf rbtSelected = "Origen" Then
+    '        cmd = CommandText("SELECT codigo,CASE WHEN origen='Otros' THEN origen+' '+origOtro ELSE origen END AS nombre FROM capacitacion")
+    '    End If
+    '    data = GetDataTable(cmd)
+    '    Return data
+    'End Function
 
     Public Function obtUltimoCodigoPart(codpart As String) As String
         Dim cmd As SqlCommand = CommandProcedure("sp_codigoauto_partul")
