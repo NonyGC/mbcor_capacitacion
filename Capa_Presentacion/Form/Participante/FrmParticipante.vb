@@ -64,13 +64,15 @@ Public Class FrmParticipante_vb
             If (F.Name = .sexo) Then F.Checked = True
             txtDireccion.Text = .direccion
             Dim dep As String = (partCE.ubigeo).Substring(0, 2)
-            If Trim(dep).Length > 0 Then cboDepartamento.SelectedValue = dep Else cboDepartamento.SelectedIndex = -1 : loadProvincia()
+            If Trim(dep).Length > 0 Then cboDepartamento.SelectedValue = dep Else cboDepartamento.SelectedIndex = -1
+            loadProvincia()
 
             Dim pro As String = (partCE.ubigeo).Substring(2, 2)
-            If Trim(pro).Length > 0 Then cboProvincia.SelectedValue = pro Else cboProvincia.SelectedIndex = -1 : loadDistrito()
+            If Trim(pro).Length > 0 Then cboProvincia.SelectedValue = pro Else cboProvincia.SelectedIndex = -1
+            loadDistrito()
 
             Dim dis As String = (partCE.ubigeo).Substring(4, 2)
-            If Trim(dis).Length > 0 Then cboDistrito.SelectedValue = dis Else cboDistrito.SelectedIndex = -1 : loadProvincia()
+            If Trim(dis).Length > 0 Then cboDistrito.SelectedValue = dis Else cboDistrito.SelectedIndex = -1
 
             Dim telFijo As String = (partCE.telFijo).Substring(5, (partCE.telFijo).Length - 5)
             Dim telMovil As String = (partCE.telMovil).Substring(5, (partCE.telMovil).Length - 5)

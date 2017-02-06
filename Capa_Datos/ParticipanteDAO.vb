@@ -23,6 +23,10 @@ Public Class ParticipanteDAO
         Return data
     End Function
 
+    Public Function cargarAutocompletado_buscar(rbtSelected As String) As Object
+        Throw New NotImplementedException()
+    End Function
+
     Public Function obtUltimoCodigoPart(codpart As String) As String
         Dim cmd As SqlCommand = CommandProcedure("sp_codigoauto_partul")
         cmd = Parameters(cmd, {codpart})

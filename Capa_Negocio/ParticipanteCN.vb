@@ -22,6 +22,10 @@ Public Class ParticipanteCN
         Return partDAO.participanteUpdate(part)
     End Function
 
+    Public Function cargarAutocompletado_buscar(rbtSelected As String) As Object
+        Return partDAO.cargarAutocompletado_buscar(rbtSelected)
+    End Function
+
     Public Function obtUltimoCodigoPart(codpart As String) As String
         Return partDAO.obtUltimoCodigoPart(codpart)
     End Function
