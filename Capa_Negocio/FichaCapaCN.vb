@@ -13,7 +13,7 @@ Public Class FichaCapaCN
         Return FichDAO.fichaCapacitacion_ParticipanteAutocomplete()
     End Function
 
-    Public Function fichaCapacitacion_getPartiCod(codigo As String) As String
-        Return FichDAO.fichaCapacitacion_getPartiCod(codigo)
+    Public Function fichaCapacitacion_ParticipanteCargar(v As String) As DataTable
+        Return FichDAO.fichaCapacitacion_ParticipanteCargar(v)
     End Function
 End Class

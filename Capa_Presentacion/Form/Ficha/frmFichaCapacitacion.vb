@@ -16,6 +16,7 @@ Public Class frmFichaCapacitacion
     End Sub
     Dim LocalCN As New LocalCN, FichCN As New FichaCapaCN, FichaCE As New FichaCapaCE
     Dim idDep As String, idProv As String
+    Dim PartCE As New ParticipanteCE
 
     Private Function GetGrpBxCheckedBbt(grpb As GroupBox) As RadioButton
         Dim rButton As RadioButton = grpb.Controls.OfType(Of RadioButton).Where(Function(r) r.Checked = True).FirstOrDefault()
@@ -60,7 +61,8 @@ Public Class frmFichaCapacitacion
         txtEspeSPE.Clear() : txtEspOtros.Clear()
         txtEspeCharla.Clear()
         cboParticipanteSearch.SelectedIndex = -1
-        txtCodigop.Clear() : lblApeNom.Text = Nothing
+        txtCodigop.Clear()
+        'lblApeNom.Text = Nothing
         txtCodtel.Text = "(___)" : txtCodtelM.Text = "(___)"
     End Sub
 
@@ -72,7 +74,7 @@ Public Class frmFichaCapacitacion
         Limpiar()
     End Sub
     Sub bloquear()
-        lblApeNom.Text = "Apellidos y Nombres"
+        'lblApeNom.Text = "Apellidos y Nombres"
         txtCodtel.Text = "(___)" : txtCodtelM.Text = "(___)"
         grbRubro.Enabled = False
         grp1.Enabled = False
@@ -95,9 +97,32 @@ Public Class frmFichaCapacitacion
     Sub cboParticipanteSearch_Leave()
         txtCodigop.Text = cboParticipanteSearch.SelectedValue
         If Trim(txtCodigop.Text) IsNot String.Empty Then
-            Dim parti() As String = FichCN.fichaCapacitacion_getPartiCod(txtCodigop.Text).Split("|"c)
-            lblApeNom.Text = parti(0)
-            txtCodtel.Text = parti(1) : txtCodtelM.Text = parti(1)
+            Dim data As DataTable = FichCN.fichaCapacitacion_ParticipanteCargar(Trim(txtCodigop.Text))
+            With data
+                PartCE.codpart = .Rows(0)(0).ToString()
+                PartCE.apePat = .Rows(0)(1).ToString()
+                PartCE.apeMat = .Rows(0)(2).ToString()
+                PartCE.nombres = .Rows(0)(3).ToString()
+                PartCE.sexo = .Rows(0)(4).ToString()
+                PartCE.fechaNaci = .Rows(0)(5).ToString()
+                PartCE.dnice = .Rows(0)(6).ToString()
+                PartCE.direccion = .Rows(0)(7).ToString()
+                PartCE.ubigeo = .Rows(0)(8).ToString()
+                PartCE.telFijo = .Rows(0)(9).ToString()
+                PartCE.telMovil = .Rows(0)(10).ToString()
+                PartCE.opeMovil = .Rows(0)(11).ToString()
+                PartCE.telFijo2 = .Rows(0)(12).ToString()
+                PartCE.telMovil2 = .Rows(0)(13).ToString()
+                PartCE.opeMovil2 = .Rows(0)(14).ToString()
+                PartCE.correo = .Rows(0)(15).ToString()
+                PartCE.EstadoCiv = .Rows(0)(16).ToString()
+                PartCE.profeOcupa = .Rows(0)(17).ToString()
+            End With
+
+            Dim Frm As New FrmParticipante_vb(PartCE)
+            Frm.ShowDialog(Me)
+            Frm.Dispose()
+            'lblApeNom.Text = Frm.GetApeNom()
             grbRubro.Enabled = True
             grp1.Enabled = True
             grp2.Enabled = True
@@ -121,17 +146,10 @@ Public Class frmFichaCapacitacion
         cboParticipanteSearch.SelectedIndex = -1
     End Sub
 
-    Private Sub CheckBox7_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox7.CheckedChanged
-
-    End Sub
-
-    Private Sub grp2_Enter(sender As Object, e As EventArgs) Handles grp2.Enter
-
-    End Sub
-
     Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
         frmCapacitacion.Show()
     End Sub
+
 
     Private Sub cboCapacitacion_Enter(sender As Object, e As EventArgs) Handles cboCapacitacion.Enter
         cboCapacitacion.DataSource = FichCN.fichaCapacitacion_Capacitacion()

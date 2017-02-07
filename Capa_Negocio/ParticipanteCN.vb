@@ -38,11 +38,19 @@ Public Class ParticipanteCN
         Return partDAO.FiltarParticipanteApeNom(text)
     End Function
 
-    Public Function FiltarParticipanteLocal(selectedValue As Object, dateini As String, datefin As String) As DataTable
-        Return partDAO.FiltarParticipanteLocal(selectedValue, dateini, datefin)
+    Public Function FiltarParticipanteLocal(selectedValue As Object) As DataTable
+        Return partDAO.FiltarParticipanteLocal(selectedValue)
     End Function
 
-    Public Function FiltarParticipanteOrigen(selectedValue As Object, dateini As String, datefin As String) As DataTable
-        Return partDAO.FiltarParticipanteOrigen(selectedValue, dateini, datefin)
+    Public Function FiltarParticipanteOrigen(SelectedText As Object) As DataTable
+        Return partDAO.FiltarParticipanteOrigen(SelectedText)
+    End Function
+
+    Public Function FiltarParticipanteLocalFecha(selectedValue As Object, dateini As String, datefin As String) As Object
+        Return partDAO.FiltarParticipanteLocalFecha(selectedValue, dateini, datefin)
+    End Function
+
+    Public Function FiltarParticipanteOrigenFecha(selectedValue As Object, dateini As String, datefin As String) As Object
+        Return partDAO.FiltarParticipanteOrigenFecha(selectedValue, dateini, datefin)
     End Function
 End Class

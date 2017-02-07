@@ -144,7 +144,6 @@ Partial Class frmFichaCapacitacion
         Me.txtEspeCharla = New Telerik.WinControls.UI.RadTextBox()
         Me.RadButton2 = New Telerik.WinControls.UI.RadButton()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.lblApeNom = New System.Windows.Forms.Label()
         Me.cboParticipanteSearch = New Telerik.WinControls.UI.RadDropDownList()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.txtCodigop = New Telerik.WinControls.UI.RadTextBox()
@@ -1607,17 +1606,6 @@ Partial Class frmFichaCapacitacion
         Me.Label8.TabIndex = 93
         Me.Label8.Text = "PARTICIPANTE"
         '
-        'lblApeNom
-        '
-        Me.lblApeNom.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.lblApeNom.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblApeNom.Location = New System.Drawing.Point(478, 104)
-        Me.lblApeNom.Name = "lblApeNom"
-        Me.lblApeNom.Size = New System.Drawing.Size(388, 21)
-        Me.lblApeNom.TabIndex = 98
-        Me.lblApeNom.Text = "Apellidos y Nombres"
-        Me.lblApeNom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
         'cboParticipanteSearch
         '
         Me.cboParticipanteSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1633,7 +1621,7 @@ Partial Class frmFichaCapacitacion
         Me.Panel1.Controls.Add(Me.txtCodigop)
         Me.Panel1.Location = New System.Drawing.Point(363, 98)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(518, 34)
+        Me.Panel1.Size = New System.Drawing.Size(399, 34)
         Me.Panel1.TabIndex = 97
         '
         'txtCodigop
@@ -1704,11 +1692,10 @@ Partial Class frmFichaCapacitacion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(903, 757)
+        Me.ClientSize = New System.Drawing.Size(903, 808)
         Me.Controls.Add(Me.RadButton1)
         Me.Controls.Add(Me.grpTajetacredito)
         Me.Controls.Add(Me.cboParticipanteSearch)
-        Me.Controls.Add(Me.lblApeNom)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.RadButton2)
         Me.Controls.Add(Me.grp5)
@@ -1893,7 +1880,6 @@ Partial Class frmFichaCapacitacion
     Friend WithEvents txtEspeCharla As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents RadButton2 As Telerik.WinControls.UI.RadButton
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents lblApeNom As System.Windows.Forms.Label
     Friend WithEvents cboParticipanteSearch As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents txtCodigop As Telerik.WinControls.UI.RadTextBox

@@ -44,7 +44,7 @@ Partial Class FrmReporteParticipante
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmReporteParticipante))
         Me.dtgParticipante = New Telerik.WinControls.UI.RadGridView()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.rbtBuscar = New Telerik.WinControls.UI.RadButton()
+        Me.btnBuscar = New Telerik.WinControls.UI.RadButton()
         Me.cboBuscar = New Telerik.WinControls.UI.RadDropDownList()
         Me.gpbTipBusqueda = New System.Windows.Forms.GroupBox()
         Me.rbtOrigen = New System.Windows.Forms.RadioButton()
@@ -55,7 +55,7 @@ Partial Class FrmReporteParticipante
         Me.txtFechafin = New Telerik.WinControls.UI.RadMaskedEditBox()
         CType(Me.dtgParticipante, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgParticipante.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.rbtBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gpbTipBusqueda.SuspendLayout()
         Me.gpbFecha.SuspendLayout()
@@ -163,17 +163,19 @@ Partial Class FrmReporteParticipante
         Me.Label15.Text = "REPORTE PARTICIPATES"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'rbtBuscar
+        'btnBuscar
         '
-        Me.rbtBuscar.Location = New System.Drawing.Point(834, 101)
-        Me.rbtBuscar.Name = "rbtBuscar"
-        Me.rbtBuscar.Size = New System.Drawing.Size(148, 24)
-        Me.rbtBuscar.TabIndex = 89
-        Me.rbtBuscar.Text = "BUSCAR"
-        Me.rbtBuscar.ThemeName = "VisualStudio2012Light"
+        Me.btnBuscar.Enabled = False
+        Me.btnBuscar.Location = New System.Drawing.Point(834, 101)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(148, 24)
+        Me.btnBuscar.TabIndex = 89
+        Me.btnBuscar.Text = "BUSCAR"
+        Me.btnBuscar.ThemeName = "VisualStudio2012Light"
         '
         'cboBuscar
         '
+        Me.cboBuscar.Enabled = False
         Me.cboBuscar.Location = New System.Drawing.Point(362, 101)
         Me.cboBuscar.Name = "cboBuscar"
         Me.cboBuscar.Size = New System.Drawing.Size(452, 24)
@@ -285,7 +287,7 @@ Partial Class FrmReporteParticipante
         Me.Controls.Add(Me.gpbTipBusqueda)
         Me.Controls.Add(Me.dtgParticipante)
         Me.Controls.Add(Me.cboBuscar)
-        Me.Controls.Add(Me.rbtBuscar)
+        Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.Label15)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmReporteParticipante"
@@ -297,7 +299,7 @@ Partial Class FrmReporteParticipante
         Me.ThemeName = "VisualStudio2012Light"
         CType(Me.dtgParticipante.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgParticipante, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.rbtBuscar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cboBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.gpbTipBusqueda.ResumeLayout(False)
         Me.gpbTipBusqueda.PerformLayout()
@@ -313,7 +315,7 @@ Partial Class FrmReporteParticipante
 
     Friend WithEvents dtgParticipante As Telerik.WinControls.UI.RadGridView
     Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents rbtBuscar As Telerik.WinControls.UI.RadButton
+    Friend WithEvents btnBuscar As Telerik.WinControls.UI.RadButton
     Friend WithEvents cboBuscar As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents gpbTipBusqueda As System.Windows.Forms.GroupBox
     Friend WithEvents gpbFecha As System.Windows.Forms.GroupBox

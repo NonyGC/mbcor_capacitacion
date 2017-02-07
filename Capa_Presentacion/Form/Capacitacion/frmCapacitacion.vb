@@ -34,7 +34,14 @@ Public Class frmCapacitacion
     End Sub
 
     Private Sub RadButton4_Click(sender As Object, e As EventArgs) Handles btnNewLocal.Click
-        frmLocal.Show()
+        Dim Frm As New frmLocal()
+        Frm.btnRegistrar.DialogResult = DialogResult.OK
+        If Frm.ShowDialog(Me) = DialogResult.OK Then
+            cboLocal.DataSource = capCN.obtenerLocal()
+            cboLocal.DisplayMember = "nombre"
+            cboLocal.ValueMember = "codigo"
+            cboLocal.SelectedIndex = -1
+        End If
     End Sub
 
     Private Sub frmCapacitacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -128,5 +135,11 @@ Public Class frmCapacitacion
             txtOrigenOtro.Visible = False
             txtOrigenOtro.Clear()
         End If
+    End Sub
+
+    Private Sub cboLocal_Enter(sender As Object, e As EventArgs) Handles cboLocal.Enter
+        'cboLocal.DataSource = capCN.obtenerLocal()
+        'cboLocal.DisplayMember = "nombre"
+        'cboLocal.ValueMember = "codigo"
     End Sub
 End Class

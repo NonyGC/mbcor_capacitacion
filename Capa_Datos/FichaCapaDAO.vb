@@ -41,12 +41,14 @@ Public Class FichaCapaDAO
         End Try
     End Function
 
-    Public Function fichaCapacitacion_getPartiCod(codigo As String) As String
+    Public Function fichaCapacitacion_ParticipanteCargar(v As String) As DataTable
         Dim tbl As New DataTable
-        Dim cmd As SqlCommand = CommandText("SELECT CONCAT(apellido_pat,' ',apellido_mat,' ',nombres,'|',LEFT(tel_fijo,5)) FROM participante WHERE codigo=@cod")
-        cmd.Parameters.AddWithValue("@cod", codigo)
-        Return cmd.ExecuteScalar
+        Dim cmd As SqlCommand = CommandText("SELECT * FROM participante WHERE codigo=@cod")
+        cmd.Parameters.AddWithValue("@cod", v)
+        tbl = GetDataTable(cmd)
+        Return tbl
     End Function
+
 
 
 

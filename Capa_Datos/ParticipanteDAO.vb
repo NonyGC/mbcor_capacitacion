@@ -38,28 +38,41 @@ Public Class ParticipanteDAO
     End Function
 
     Public Function FiltarParticipanteApeNom(text As String) As DataTable
-        Dim cmd As SqlCommand = CommandText("")
+        Throw New NotImplementedException()
+    End Function
+
+    Public Function FiltarParticipanteLocalFecha(selectedValue As Object, dateini As String, datefin As String) As Object
+        Dim cmd As SqlCommand = CommandText("SELECT P.codigo,apellido_pat,apellido_mat,nombres,sexo,fecha_nacimiento,dni_ce,direccion,ubigeo,tel_fijo,tel_mol,ope_movil,tel_fijo2,tel_mol2,ope_movil2,email,estado_civ,profe_ocupa FROM [dbo].[participante] P INNER JOIN [dbo].[ficha_capacitacion] FC ON P.codigo=FC.codpar INNER JOIN [dbo].[capacitacion] C ON FC.codcap=C.codigo WHERE c.local=@local AND C.fecha BETWEEN @ini AND @fin")
+        cmd.Parameters.AddWithValue("@local", selectedValue)
+        cmd.Parameters.AddWithValue("@ini", dateini)
+        cmd.Parameters.AddWithValue("@fin", datefin)
         Dim data As New DataTable
         data = GetDataTable(cmd)
         Return data
     End Function
 
-    Public Function FiltarParticipanteLocal(selectedValue As Object, dateini As String, datefin As String) As DataTable
-        Dim cmd As SqlCommand = CommandText("SELECT 
-P.codigo,apellido_pat,apellido_mat,nombres,sexo,fecha_nacimiento,dni_ce,
-direccion,ubigeo,tel_fijo,tel_mol,ope_movil,tel_fijo2,tel_mol2,ope_movil2,
-email,estado_civ,profe_ocupa
-FROM [dbo].[participante] P 
-INNER JOIN [dbo].[ficha_capacitacion] FC ON P.codigo=FC.codpar
-INNER JOIN [dbo].[capacitacion] C ON FC.codcap=C.codigo WHERE c.local=@local")
+    Public Function FiltarParticipanteLocal(selectedValue As Object) As DataTable
+        Dim cmd As SqlCommand =
+            CommandText("SELECT P.codigo,apellido_pat,apellido_mat,nombres,sexo,fecha_nacimiento,dni_ce,direccion,ubigeo,tel_fijo,tel_mol,ope_movil,tel_fijo2,tel_mol2,ope_movil2,email,estado_civ,profe_ocupa FROM [dbo].[participante] P INNER JOIN [dbo].[ficha_capacitacion] FC ON P.codigo=FC.codpar INNER JOIN [dbo].[capacitacion] C ON FC.codcap=C.codigo WHERE c.local=@local")
         cmd.Parameters.AddWithValue("@local", selectedValue)
         Dim data As New DataTable
         data = GetDataTable(cmd)
         Return data
     End Function
 
-    Public Function FiltarParticipanteOrigen(selectedValue As Object, dateini As String, datefin As String) As DataTable
-        Dim cmd As SqlCommand = CommandText("")
+    Public Function FiltarParticipanteOrigenFecha(selectedValue As Object, dateini As String, datefin As String) As Object
+        Dim cmd As SqlCommand = CommandText("SELECT P.codigo,apellido_pat,apellido_mat,nombres,sexo,fecha_nacimiento,dni_ce,direccion,ubigeo,tel_fijo,tel_mol,ope_movil,tel_fijo2,tel_mol2,ope_movil2,email,estado_civ,profe_ocupa FROM [dbo].[participante] P INNER JOIN [dbo].[ficha_capacitacion] FC ON P.codigo=FC.codpar INNER JOIN [dbo].[capacitacion] C ON FC.codcap=C.codigo WHERE CASE WHEN origen='Otros' THEN origen+' '+origOtro ELSE origen END=@origen  AND C.fecha BETWEEN @ini AND @fin")
+        cmd.Parameters.AddWithValue("@origen", selectedValue)
+        cmd.Parameters.AddWithValue("@ini", dateini)
+        cmd.Parameters.AddWithValue("@fin", datefin)
+        Dim data As New DataTable
+        data = GetDataTable(cmd)
+        Return data
+    End Function
+
+    Public Function FiltarParticipanteOrigen(SelectedText As Object) As DataTable
+        Dim cmd As SqlCommand = CommandText("SELECT P.codigo,apellido_pat,apellido_mat,nombres,sexo,fecha_nacimiento,dni_ce,direccion,ubigeo,tel_fijo,tel_mol,ope_movil,tel_fijo2,tel_mol2,ope_movil2,email,estado_civ,profe_ocupa FROM [dbo].[participante] P INNER JOIN [dbo].[ficha_capacitacion] FC ON P.codigo=FC.codpar INNER JOIN [dbo].[capacitacion] C ON FC.codcap=C.codigo WHERE CASE WHEN origen='Otros' THEN origen+' '+origOtro ELSE origen END=@origen")
+        cmd.Parameters.AddWithValue("@origen", SelectedText)
         Dim data As New DataTable
         data = GetDataTable(cmd)
         Return data
@@ -87,20 +100,20 @@ INNER JOIN [dbo].[capacitacion] C ON FC.codcap=C.codigo WHERE c.local=@local")
     End Function
 
     Public Function participante_insert(part As ParticipanteCE) As Boolean
-        'Try
-        Dim i As Integer
-        Dim cmd As SqlCommand = CommandProcedure("spParticipante_insert")
-        With part
-            cmd = Parameters(cmd, { .codpart, .apePat, .apeMat, .nombres, .sexo, .fechaNaci, .dnice, .direccion, .ubigeo, .telFijo, .telMovil, .opeMovil, .telFijo2, .telMovil2, .opeMovil2, .correo, .EstadoCiv, .profeOcupa})
-        End With
-        i = cmd.ExecuteNonQuery
-        Return If(i > 0, True, False)
-        'Catch ex As Exception
-        '    MsgBox(ex.Message)
-        '    Return False
-        'Finally
-        '    CloseDB()
-        'End Try
+        Try
+            Dim i As Integer
+            Dim cmd As SqlCommand = CommandProcedure("spParticipante_insert")
+            With part
+                cmd = Parameters(cmd, { .codpart, .apePat, .apeMat, .nombres, .sexo, .fechaNaci, .dnice, .direccion, .ubigeo, .telFijo, .telMovil, .opeMovil, .telFijo2, .telMovil2, .opeMovil2, .correo, .EstadoCiv, .profeOcupa})
+            End With
+            i = cmd.ExecuteNonQuery
+            Return If(i > 0, True, False)
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            CloseDB()
+        End Try
     End Function
 
     Public Function participanteUpdate(part As ParticipanteCE) As Boolean
