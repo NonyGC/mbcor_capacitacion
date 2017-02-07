@@ -84,6 +84,7 @@ Public Class frmFichaCapacitacion
         btnRegistrar.Enabled = False : btnLimpiar.Enabled = False
         grpTajetacredito.Enabled = False
     End Sub
+    Dim FormProcedencias As String
     Private Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButton2.Click
         Dim Frm As New FrmParticipante_vb()
         If Frm.ShowDialog(Me) = DialogResult.OK And Frm.Opgave() Then
@@ -91,37 +92,42 @@ Public Class frmFichaCapacitacion
             cboParticipanteSearch.ValueMember = "codigo"
             cboParticipanteSearch.DisplayMember = "participante"
             cboParticipanteSearch.SelectedValue = Frm.codeParticipante
+            FormProcedencias = "Agregar"
             cboParticipanteSearch_Leave()
         End If
     End Sub
     Sub cboParticipanteSearch_Leave()
         txtCodigop.Text = cboParticipanteSearch.SelectedValue
         If Trim(txtCodigop.Text) IsNot String.Empty Then
-            Dim data As DataTable = FichCN.fichaCapacitacion_ParticipanteCargar(Trim(txtCodigop.Text))
-            With data
-                PartCE.codpart = .Rows(0)(0).ToString()
-                PartCE.apePat = .Rows(0)(1).ToString()
-                PartCE.apeMat = .Rows(0)(2).ToString()
-                PartCE.nombres = .Rows(0)(3).ToString()
-                PartCE.sexo = .Rows(0)(4).ToString()
-                PartCE.fechaNaci = .Rows(0)(5).ToString()
-                PartCE.dnice = .Rows(0)(6).ToString()
-                PartCE.direccion = .Rows(0)(7).ToString()
-                PartCE.ubigeo = .Rows(0)(8).ToString()
-                PartCE.telFijo = .Rows(0)(9).ToString()
-                PartCE.telMovil = .Rows(0)(10).ToString()
-                PartCE.opeMovil = .Rows(0)(11).ToString()
-                PartCE.telFijo2 = .Rows(0)(12).ToString()
-                PartCE.telMovil2 = .Rows(0)(13).ToString()
-                PartCE.opeMovil2 = .Rows(0)(14).ToString()
-                PartCE.correo = .Rows(0)(15).ToString()
-                PartCE.EstadoCiv = .Rows(0)(16).ToString()
-                PartCE.profeOcupa = .Rows(0)(17).ToString()
-            End With
 
-            Dim Frm As New FrmParticipante_vb(PartCE)
-            Frm.ShowDialog(Me)
-            Frm.Dispose()
+            If FormProcedencias <> "Agregar" Then
+                Dim data As DataTable = FichCN.fichaCapacitacion_ParticipanteCargar(Trim(txtCodigop.Text))
+                With data
+                    PartCE.codpart = .Rows(0)(0).ToString()
+                    PartCE.apePat = .Rows(0)(1).ToString()
+                    PartCE.apeMat = .Rows(0)(2).ToString()
+                    PartCE.nombres = .Rows(0)(3).ToString()
+                    PartCE.sexo = .Rows(0)(4).ToString()
+                    PartCE.fechaNaci = .Rows(0)(5).ToString()
+                    PartCE.dnice = .Rows(0)(6).ToString()
+                    PartCE.direccion = .Rows(0)(7).ToString()
+                    PartCE.ubigeo = .Rows(0)(8).ToString()
+                    PartCE.telFijo = .Rows(0)(9).ToString()
+                    PartCE.telMovil = .Rows(0)(10).ToString()
+                    PartCE.opeMovil = .Rows(0)(11).ToString()
+                    PartCE.telFijo2 = .Rows(0)(12).ToString()
+                    PartCE.telMovil2 = .Rows(0)(13).ToString()
+                    PartCE.opeMovil2 = .Rows(0)(14).ToString()
+                    PartCE.correo = .Rows(0)(15).ToString()
+                    PartCE.EstadoCiv = .Rows(0)(16).ToString()
+                    PartCE.profeOcupa = .Rows(0)(17).ToString()
+                End With
+
+                Dim Frm As New FrmParticipante_vb(PartCE)
+                Frm.ShowDialog(Me)
+                Frm.Dispose()
+            End If
+            FormProcedencias = ""
             'lblApeNom.Text = Frm.GetApeNom()
             grbRubro.Enabled = True
             grp1.Enabled = True
