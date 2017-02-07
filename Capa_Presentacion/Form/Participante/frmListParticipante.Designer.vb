@@ -41,27 +41,30 @@ Partial Class FrmListParticipante
         Dim GridViewTextBoxColumn17 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn18 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim GridViewTextBoxColumn19 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn20 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn21 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn22 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim SortDescriptor1 As Telerik.WinControls.Data.SortDescriptor = New Telerik.WinControls.Data.SortDescriptor()
-        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmListParticipante))
         Me.dtgParticipante = New Telerik.WinControls.UI.RadGridView()
         Me.btnEliminar = New Telerik.WinControls.UI.RadButton()
         Me.btnAgregar = New Telerik.WinControls.UI.RadButton()
-        Me.cboFilterP = New Telerik.WinControls.UI.RadMultiColumnComboBox()
-        Me.RadButton2 = New Telerik.WinControls.UI.RadButton()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.gpbFecha = New System.Windows.Forms.GroupBox()
+        Me.txtFechaini = New Telerik.WinControls.UI.RadMaskedEditBox()
+        Me.txtFechafin = New Telerik.WinControls.UI.RadMaskedEditBox()
+        Me.gpbTipBusqueda = New System.Windows.Forms.GroupBox()
+        Me.rbtOrigen = New System.Windows.Forms.RadioButton()
+        Me.rbtLocal = New System.Windows.Forms.RadioButton()
+        Me.rbtApeNom = New System.Windows.Forms.RadioButton()
+        Me.cboBuscar = New Telerik.WinControls.UI.RadDropDownList()
+        Me.btnBuscar = New Telerik.WinControls.UI.RadButton()
         CType(Me.dtgParticipante, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgParticipante.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnAgregar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cboFilterP, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cboFilterP.EditorControl, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cboFilterP.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gpbFecha.SuspendLayout()
+        CType(Me.txtFechaini, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtFechafin, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.gpbTipBusqueda.SuspendLayout()
+        CType(Me.cboBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnBuscar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -69,7 +72,7 @@ Partial Class FrmListParticipante
         '
         Me.dtgParticipante.AutoScroll = True
         Me.dtgParticipante.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgParticipante.Location = New System.Drawing.Point(31, 116)
+        Me.dtgParticipante.Location = New System.Drawing.Point(29, 136)
         '
         '
         '
@@ -158,7 +161,7 @@ Partial Class FrmListParticipante
         '
         Me.btnEliminar.Enabled = False
         Me.btnEliminar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminar.Location = New System.Drawing.Point(813, 70)
+        Me.btnEliminar.Location = New System.Drawing.Point(186, 106)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(151, 24)
         Me.btnEliminar.TabIndex = 86
@@ -168,82 +171,12 @@ Partial Class FrmListParticipante
         'btnAgregar
         '
         Me.btnAgregar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregar.Location = New System.Drawing.Point(656, 70)
+        Me.btnAgregar.Location = New System.Drawing.Point(29, 106)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(151, 24)
         Me.btnAgregar.TabIndex = 84
         Me.btnAgregar.Text = "AGREGAR"
         Me.btnAgregar.ThemeName = "VisualStudio2012Light"
-        '
-        'cboFilterP
-        '
-        Me.cboFilterP.AutoSize = True
-        '
-        'cboFilterP.NestedRadGridView
-        '
-        Me.cboFilterP.EditorControl.BackColor = System.Drawing.SystemColors.Window
-        Me.cboFilterP.EditorControl.Cursor = System.Windows.Forms.Cursors.Default
-        Me.cboFilterP.EditorControl.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
-        Me.cboFilterP.EditorControl.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.cboFilterP.EditorControl.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.cboFilterP.EditorControl.Location = New System.Drawing.Point(0, 0)
-        '
-        '
-        '
-        Me.cboFilterP.EditorControl.MasterTemplate.AllowAddNewRow = False
-        Me.cboFilterP.EditorControl.MasterTemplate.AllowCellContextMenu = False
-        Me.cboFilterP.EditorControl.MasterTemplate.AllowColumnChooser = False
-        Me.cboFilterP.EditorControl.MasterTemplate.AllowRowResize = False
-        GridViewTextBoxColumn19.EnableExpressionEditor = False
-        GridViewTextBoxColumn19.FieldName = "codigo"
-        GridViewTextBoxColumn19.HeaderText = "codigo"
-        GridViewTextBoxColumn19.IsVisible = False
-        GridViewTextBoxColumn19.Name = "codigo"
-        GridViewTextBoxColumn20.EnableExpressionEditor = False
-        GridViewTextBoxColumn20.FieldName = "nombre"
-        GridViewTextBoxColumn20.HeaderText = "LOCAL"
-        GridViewTextBoxColumn20.Name = "LOCAL"
-        GridViewTextBoxColumn20.Width = 200
-        GridViewTextBoxColumn21.EnableExpressionEditor = False
-        GridViewTextBoxColumn21.FieldName = "fecha"
-        GridViewTextBoxColumn21.HeaderText = "FECHA"
-        GridViewTextBoxColumn21.Name = "FECHA"
-        GridViewTextBoxColumn21.Width = 80
-        GridViewTextBoxColumn22.EnableExpressionEditor = False
-        GridViewTextBoxColumn22.FieldName = "origen"
-        GridViewTextBoxColumn22.HeaderText = "ORIGEN"
-        GridViewTextBoxColumn22.Name = "ORIGEN"
-        GridViewTextBoxColumn22.Width = 100
-        Me.cboFilterP.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn19, GridViewTextBoxColumn20, GridViewTextBoxColumn21, GridViewTextBoxColumn22})
-        Me.cboFilterP.EditorControl.MasterTemplate.EnableGrouping = False
-        Me.cboFilterP.EditorControl.MasterTemplate.ShowFilteringRow = False
-        SortDescriptor1.PropertyName = "column1"
-        Me.cboFilterP.EditorControl.MasterTemplate.SortDescriptors.AddRange(New Telerik.WinControls.Data.SortDescriptor() {SortDescriptor1})
-        Me.cboFilterP.EditorControl.MasterTemplate.ViewDefinition = TableViewDefinition2
-        Me.cboFilterP.EditorControl.Name = "NestedRadGridView"
-        Me.cboFilterP.EditorControl.ReadOnly = True
-        Me.cboFilterP.EditorControl.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cboFilterP.EditorControl.ShowGroupPanel = False
-        Me.cboFilterP.EditorControl.Size = New System.Drawing.Size(240, 150)
-        Me.cboFilterP.EditorControl.TabIndex = 0
-        Me.cboFilterP.Location = New System.Drawing.Point(497, 40)
-        Me.cboFilterP.Name = "cboFilterP"
-        Me.cboFilterP.NullText = "Seleccionar Local"
-        Me.cboFilterP.Size = New System.Drawing.Size(377, 24)
-        Me.cboFilterP.TabIndex = 89
-        Me.cboFilterP.TabStop = False
-        Me.cboFilterP.ThemeName = "VisualStudio2012Light"
-        Me.cboFilterP.Visible = False
-        '
-        'RadButton2
-        '
-        Me.RadButton2.Location = New System.Drawing.Point(892, 39)
-        Me.RadButton2.Name = "RadButton2"
-        Me.RadButton2.Size = New System.Drawing.Size(72, 26)
-        Me.RadButton2.TabIndex = 90
-        Me.RadButton2.Text = "BUSCAR"
-        Me.RadButton2.ThemeName = "VisualStudio2012Light"
-        Me.RadButton2.Visible = False
         '
         'Label15
         '
@@ -255,14 +188,131 @@ Partial Class FrmListParticipante
         Me.Label15.Text = "GESTIONAR PARTICIPANTE"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'gpbFecha
+        '
+        Me.gpbFecha.Controls.Add(Me.txtFechaini)
+        Me.gpbFecha.Controls.Add(Me.txtFechafin)
+        Me.gpbFecha.Enabled = False
+        Me.gpbFecha.Location = New System.Drawing.Point(660, 53)
+        Me.gpbFecha.Name = "gpbFecha"
+        Me.gpbFecha.Size = New System.Drawing.Size(302, 47)
+        Me.gpbFecha.TabIndex = 101
+        Me.gpbFecha.TabStop = False
+        Me.gpbFecha.Text = "RAGO DE FECHA"
+        '
+        'txtFechaini
+        '
+        Me.txtFechaini.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFechaini.Location = New System.Drawing.Point(20, 17)
+        Me.txtFechaini.Mask = "00/00/0000"
+        Me.txtFechaini.MaskType = Telerik.WinControls.UI.MaskType.Standard
+        Me.txtFechaini.MinimumSize = New System.Drawing.Size(0, 24)
+        Me.txtFechaini.Name = "txtFechaini"
+        '
+        '
+        '
+        Me.txtFechaini.RootElement.MinSize = New System.Drawing.Size(0, 24)
+        Me.txtFechaini.Size = New System.Drawing.Size(97, 24)
+        Me.txtFechaini.TabIndex = 98
+        Me.txtFechaini.TabStop = False
+        Me.txtFechaini.Text = "__/__/____"
+        Me.txtFechaini.ThemeName = "VisualStudio2012Light"
+        '
+        'txtFechafin
+        '
+        Me.txtFechafin.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtFechafin.Location = New System.Drawing.Point(135, 17)
+        Me.txtFechafin.Mask = "00/00/0000"
+        Me.txtFechafin.MaskType = Telerik.WinControls.UI.MaskType.Standard
+        Me.txtFechafin.MinimumSize = New System.Drawing.Size(0, 24)
+        Me.txtFechafin.Name = "txtFechafin"
+        '
+        '
+        '
+        Me.txtFechafin.RootElement.MinSize = New System.Drawing.Size(0, 24)
+        Me.txtFechafin.Size = New System.Drawing.Size(97, 24)
+        Me.txtFechafin.TabIndex = 98
+        Me.txtFechafin.TabStop = False
+        Me.txtFechafin.Text = "__/__/____"
+        Me.txtFechafin.ThemeName = "VisualStudio2012Light"
+        '
+        'gpbTipBusqueda
+        '
+        Me.gpbTipBusqueda.Controls.Add(Me.rbtOrigen)
+        Me.gpbTipBusqueda.Controls.Add(Me.rbtLocal)
+        Me.gpbTipBusqueda.Controls.Add(Me.rbtApeNom)
+        Me.gpbTipBusqueda.Location = New System.Drawing.Point(365, 53)
+        Me.gpbTipBusqueda.Name = "gpbTipBusqueda"
+        Me.gpbTipBusqueda.Size = New System.Drawing.Size(289, 47)
+        Me.gpbTipBusqueda.TabIndex = 100
+        Me.gpbTipBusqueda.TabStop = False
+        Me.gpbTipBusqueda.Text = "BURCAR POR:"
+        '
+        'rbtOrigen
+        '
+        Me.rbtOrigen.AutoSize = True
+        Me.rbtOrigen.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.rbtOrigen.Location = New System.Drawing.Point(215, 19)
+        Me.rbtOrigen.Name = "rbtOrigen"
+        Me.rbtOrigen.Size = New System.Drawing.Size(60, 17)
+        Me.rbtOrigen.TabIndex = 98
+        Me.rbtOrigen.TabStop = True
+        Me.rbtOrigen.Text = "Origen"
+        Me.rbtOrigen.UseVisualStyleBackColor = True
+        '
+        'rbtLocal
+        '
+        Me.rbtLocal.AutoSize = True
+        Me.rbtLocal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.rbtLocal.Location = New System.Drawing.Point(158, 19)
+        Me.rbtLocal.Name = "rbtLocal"
+        Me.rbtLocal.Size = New System.Drawing.Size(50, 17)
+        Me.rbtLocal.TabIndex = 98
+        Me.rbtLocal.TabStop = True
+        Me.rbtLocal.Text = "Local"
+        Me.rbtLocal.UseVisualStyleBackColor = True
+        '
+        'rbtApeNom
+        '
+        Me.rbtApeNom.AutoSize = True
+        Me.rbtApeNom.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.rbtApeNom.Location = New System.Drawing.Point(22, 19)
+        Me.rbtApeNom.Name = "rbtApeNom"
+        Me.rbtApeNom.Size = New System.Drawing.Size(129, 17)
+        Me.rbtApeNom.TabIndex = 98
+        Me.rbtApeNom.TabStop = True
+        Me.rbtApeNom.Text = "Apellidos y Nombres"
+        Me.rbtApeNom.UseVisualStyleBackColor = True
+        '
+        'cboBuscar
+        '
+        Me.cboBuscar.Enabled = False
+        Me.cboBuscar.Location = New System.Drawing.Point(365, 106)
+        Me.cboBuscar.Name = "cboBuscar"
+        Me.cboBuscar.Size = New System.Drawing.Size(430, 24)
+        Me.cboBuscar.TabIndex = 99
+        Me.cboBuscar.ThemeName = "VisualStudio2012Light"
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Enabled = False
+        Me.btnBuscar.Location = New System.Drawing.Point(815, 106)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(148, 24)
+        Me.btnBuscar.TabIndex = 98
+        Me.btnBuscar.Text = "BUSCAR"
+        Me.btnBuscar.ThemeName = "VisualStudio2012Light"
+        '
         'FrmListParticipante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(996, 572)
+        Me.ClientSize = New System.Drawing.Size(989, 599)
+        Me.Controls.Add(Me.gpbFecha)
+        Me.Controls.Add(Me.gpbTipBusqueda)
+        Me.Controls.Add(Me.cboBuscar)
+        Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.dtgParticipante)
-        Me.Controls.Add(Me.RadButton2)
-        Me.Controls.Add(Me.cboFilterP)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.Label15)
@@ -279,10 +329,14 @@ Partial Class FrmListParticipante
         CType(Me.dtgParticipante, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnEliminar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnAgregar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cboFilterP.EditorControl.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cboFilterP.EditorControl, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cboFilterP, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gpbFecha.ResumeLayout(False)
+        Me.gpbFecha.PerformLayout()
+        CType(Me.txtFechaini, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtFechafin, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.gpbTipBusqueda.ResumeLayout(False)
+        Me.gpbTipBusqueda.PerformLayout()
+        CType(Me.cboBuscar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnBuscar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -292,8 +346,15 @@ Partial Class FrmListParticipante
     Friend WithEvents dtgParticipante As Telerik.WinControls.UI.RadGridView
     Friend WithEvents btnEliminar As Telerik.WinControls.UI.RadButton
     Friend WithEvents btnAgregar As Telerik.WinControls.UI.RadButton
-    Friend WithEvents cboFilterP As Telerik.WinControls.UI.RadMultiColumnComboBox
-    Friend WithEvents RadButton2 As Telerik.WinControls.UI.RadButton
     Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents gpbFecha As System.Windows.Forms.GroupBox
+    Friend WithEvents txtFechaini As Telerik.WinControls.UI.RadMaskedEditBox
+    Friend WithEvents txtFechafin As Telerik.WinControls.UI.RadMaskedEditBox
+    Friend WithEvents gpbTipBusqueda As System.Windows.Forms.GroupBox
+    Friend WithEvents rbtOrigen As System.Windows.Forms.RadioButton
+    Friend WithEvents rbtLocal As System.Windows.Forms.RadioButton
+    Friend WithEvents rbtApeNom As System.Windows.Forms.RadioButton
+    Friend WithEvents cboBuscar As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents btnBuscar As Telerik.WinControls.UI.RadButton
 End Class
 

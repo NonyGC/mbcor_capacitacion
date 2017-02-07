@@ -70,7 +70,7 @@ Public Class FrmReporteParticipante
         If rbtSelected IsNot String.Empty Then
             If rbtSelected = "Apellidos y Nombres" Then
 
-                dtgParticipante.DataSource = ParticipanteCN.FiltarParticipanteApeNom(cboBuscar.Text)
+                dtgParticipante.DataSource = ParticipanteCN.FiltarParticipanteApeNom(cboBuscar.SelectedValue)
 
             ElseIf rbtSelected = "Local" Then
                 If IsDate(dateini) And IsDate(datefin) Then
@@ -94,4 +94,5 @@ Public Class FrmReporteParticipante
         End If
 
     End Sub
+
 End Class

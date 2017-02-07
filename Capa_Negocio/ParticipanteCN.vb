@@ -14,9 +14,7 @@ Public Class ParticipanteCN
         Return partDAO.participante_CodAutogenerado()
     End Function
 
-    Public Function participante_cargarCapacitacion() As Object
-        Return partDAO.participante_cargarCapacitacion()
-    End Function
+
 
     Public Function participante_update(part As ParticipanteCE) As Boolean
         Return partDAO.participanteUpdate(part)

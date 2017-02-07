@@ -16,12 +16,6 @@ Public Class ParticipanteDAO
         Return data
     End Function
 
-    Public Function participante_cargarCapacitacion() As Object
-        Dim cmd As SqlCommand = CommandText("SELECT c.codigo,l.nombre,fecha,c.origen,c.origOtro,organizador FROM	capacitacion c inner join local l on c.local=l.codigo")
-        Dim data As New DataTable
-        data = GetDataTable(cmd)
-        Return data
-    End Function
 
     Public Function cargarAutocompletado_buscar(rbtSelected As String) As Object
         Dim cmd As New SqlCommand
@@ -38,7 +32,12 @@ Public Class ParticipanteDAO
     End Function
 
     Public Function FiltarParticipanteApeNom(text As String) As DataTable
-        Throw New NotImplementedException()
+        Dim cmd As SqlCommand =
+            CommandText("SELECT * FROM [dbo].[participante] where codigo=@codigo")
+        cmd.Parameters.AddWithValue("@codigo", text)
+        Dim data As New DataTable
+        data = GetDataTable(cmd)
+        Return data
     End Function
 
     Public Function FiltarParticipanteLocalFecha(selectedValue As Object, dateini As String, datefin As String) As Object

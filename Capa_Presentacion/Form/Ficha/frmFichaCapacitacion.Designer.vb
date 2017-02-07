@@ -1692,7 +1692,7 @@ Partial Class frmFichaCapacitacion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(903, 808)
+        Me.ClientSize = New System.Drawing.Size(903, 742)
         Me.Controls.Add(Me.RadButton1)
         Me.Controls.Add(Me.grpTajetacredito)
         Me.Controls.Add(Me.cboParticipanteSearch)

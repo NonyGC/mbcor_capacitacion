@@ -8,7 +8,6 @@ Public Class FrmListParticipante
     Private Sub FrmListParticipante_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
 
         dtgParticipante.DataSource = ParticipanteCN.CargarParticipante()
-        cboFilterP.DataSource = ParticipanteCN.participante_cargarCapacitacion()
 
     End Sub
 
