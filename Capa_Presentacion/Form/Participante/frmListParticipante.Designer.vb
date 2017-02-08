@@ -78,7 +78,6 @@ Partial Class FrmListParticipante
         '
         Me.dtgParticipante.MasterTemplate.AllowAddNewRow = False
         Me.dtgParticipante.MasterTemplate.AllowDeleteRow = False
-        Me.dtgParticipante.MasterTemplate.AllowSearchRow = True
         GridViewTextBoxColumn1.FieldName = "codigo"
         GridViewTextBoxColumn1.HeaderText = "CODIGO"
         GridViewTextBoxColumn1.Name = "codigo"
@@ -148,12 +147,13 @@ Partial Class FrmListParticipante
         GridViewTextBoxColumn18.Name = "profe_ocupa"
         GridViewTextBoxColumn18.Width = 150
         Me.dtgParticipante.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4, GridViewTextBoxColumn5, GridViewTextBoxColumn6, GridViewTextBoxColumn7, GridViewTextBoxColumn8, GridViewTextBoxColumn9, GridViewTextBoxColumn10, GridViewTextBoxColumn11, GridViewTextBoxColumn12, GridViewTextBoxColumn13, GridViewTextBoxColumn14, GridViewTextBoxColumn15, GridViewTextBoxColumn16, GridViewTextBoxColumn17, GridViewTextBoxColumn18})
+        Me.dtgParticipante.MasterTemplate.EnableFiltering = True
         Me.dtgParticipante.MasterTemplate.EnableGrouping = False
         Me.dtgParticipante.MasterTemplate.EnablePaging = True
         Me.dtgParticipante.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.dtgParticipante.Name = "dtgParticipante"
         Me.dtgParticipante.ReadOnly = True
-        Me.dtgParticipante.Size = New System.Drawing.Size(933, 435)
+        Me.dtgParticipante.Size = New System.Drawing.Size(933, 520)
         Me.dtgParticipante.TabIndex = 0
         Me.dtgParticipante.ThemeName = "VisualStudio2012Light"
         '
@@ -307,7 +307,7 @@ Partial Class FrmListParticipante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(989, 599)
+        Me.ClientSize = New System.Drawing.Size(989, 668)
         Me.Controls.Add(Me.gpbFecha)
         Me.Controls.Add(Me.gpbTipBusqueda)
         Me.Controls.Add(Me.cboBuscar)

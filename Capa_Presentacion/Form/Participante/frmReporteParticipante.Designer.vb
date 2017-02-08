@@ -178,7 +178,7 @@ Partial Class FrmReporteParticipante
         Me.cboBuscar.Enabled = False
         Me.cboBuscar.Location = New System.Drawing.Point(362, 101)
         Me.cboBuscar.Name = "cboBuscar"
-        Me.cboBuscar.Size = New System.Drawing.Size(452, 24)
+        Me.cboBuscar.Size = New System.Drawing.Size(452, 20)
         Me.cboBuscar.TabIndex = 92
         Me.cboBuscar.ThemeName = "VisualStudio2012Light"
         '

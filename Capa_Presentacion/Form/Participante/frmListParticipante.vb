@@ -6,9 +6,8 @@ Public Class FrmListParticipante
     Dim PartCE As New ParticipanteCE
 
     Private Sub FrmListParticipante_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        dtgParticipante.MasterTemplate.ShowFilterCellOperatorText = False
         dtgParticipante.DataSource = ParticipanteCN.CargarParticipante()
-
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
