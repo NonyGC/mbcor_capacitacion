@@ -103,7 +103,7 @@ Public Class ParticipanteDAO
             Dim i As Integer
             Dim cmd As SqlCommand = CommandProcedure("spParticipante_insert")
             With part
-                cmd = Parameters(cmd, { .codpart, .apePat, .apeMat, .nombres, .sexo, .fechaNaci, .dnice, .direccion, .ubigeo, .telFijo, .telMovil, .opeMovil, .telFijo2, .telMovil2, .opeMovil2, .correo, .EstadoCiv, .profeOcupa})
+                cmd = Parameters(cmd, { .codpart, .apePat, .apeMat, .nombres, .sexo, .fechaNaci, .dnice, .direccion, .ubigeo, .telFijo, .telMovil, .opeMovil, .telFijo2, .telMovil2, .opeMovil2, .correo, .EstadoCiv, .profeOcupa, .procarre, .nivestudio, .nomInstitucion, .instEducativa, .empresa, .ruc, .cargo, .telFijoEmp, .telMovEmp, .opeMovEmp, .rubro, .espRubro, "NEW DB"})
             End With
             i = cmd.ExecuteNonQuery
             Return If(i > 0, True, False)
@@ -120,7 +120,7 @@ Public Class ParticipanteDAO
             Dim i As Integer
             Dim cmd As SqlCommand = CommandProcedure("spParticipante_update")
             With part
-                cmd = Parameters(cmd, { .codpart, .apePat, .apeMat, .nombres, .sexo, .fechaNaci, .dnice, .direccion, .ubigeo, .telFijo, .telMovil, .opeMovil, .telFijo2, .telMovil2, .opeMovil2, .correo, .EstadoCiv, .profeOcupa})
+                cmd = Parameters(cmd, { .codpart, .apePat, .apeMat, .nombres, .sexo, .fechaNaci, .dnice, .direccion, .ubigeo, .telFijo, .telMovil, .opeMovil, .telFijo2, .telMovil2, .opeMovil2, .correo, .EstadoCiv, .profeOcupa, .procarre, .nivestudio, .nomInstitucion, .instEducativa, .empresa, .ruc, .cargo, .telFijoEmp, .telMovEmp, .opeMovEmp, .rubro, .espRubro})
             End With
             i = cmd.ExecuteNonQuery
             Return If(i > 0, True, False)

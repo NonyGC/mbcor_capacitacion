@@ -25,10 +25,7 @@ Public Class FichaCapaDAO
             Dim cmd As SqlCommand = CommandProcedure("spfichaCapacitacion_create")
             With fch
                 cmd = Parameters(cmd, { .codcap,
-                                 .codpart, .procarre, .nivestudio, .nomInstitucion,
-                                 .instEducativa, .empresa, .ruc, .cargo,
-                                 .telFijoEmp, .telMovEmp, .opeMovEmp, .rubro,
-                                 .espRubro, .charla, .espCharla, .dominioTem,
+                                 .codpart, .charla, .espCharla, .dominioTem,
                                  .dejaEntender, .fueInteresante, .extCharla, .visitaPagina, .otroTema, .targeta})
             End With
             i = cmd.ExecuteNonQuery

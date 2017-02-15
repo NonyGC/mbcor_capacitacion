@@ -23,8 +23,9 @@ Public Class frmFichaCapacitacion
         Return rButton
     End Function
     Private Sub frmFichaCapacitacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         cboParticipanteSearch_AutoComparer()
-        cboOperadorempresa.DropDownListElement.AutoCompleteAppend.LimitToList = True
+        'cboOperadorempresa.DropDownListElement.AutoCompleteAppend.LimitToList = True
     End Sub
     Public Sub cboParticipanteSearch_AutoComparer()
         cboParticipanteSearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend
@@ -48,22 +49,21 @@ Public Class frmFichaCapacitacion
         End Function
     End Class
     Sub Limpiar()
-        txtProfeCarrera.Clear() : txtNivelEst.Clear()
-        txtNomInstitu.Clear() : txtRuc.Clear() : txtEmpresa.Clear() : txtCargo.Clear()
-        txtTelFijoEmp.Clear() : cboOperadorempresa.SelectedIndex = -1
-        CheckBoxclear(grbRubro)
+        'txtProfeCarrera.Clear() : txtNivelEst.Clear()
+        'txtNomInstitu.Clear() : txtRuc.Clear() : txtEmpresa.Clear() : txtCargo.Clear()
+        'txtTelFijoEmp.Clear() : cboOperadorempresa.SelectedIndex = -1
+        'CheckBoxclear(grbRubro)
         CheckBoxclear(grpCharla)
         RadioButtonclear(grpRessin1) : RadioButtonclear(grpRessin2) : RadioButtonclear(grpRessin3)
         RadioButtonclear(grpRessin4) : RadioButtonclear(grpRessin5) : RadioButtonclear(grpTajetacredito)
-        RadioButtonclear(grpInstitucion)
+        'RadioButtonclear(grpInstitucion)
         txtTematratar.Clear()
-        txtTelMovEmp.Clear()
-        txtEspeSPE.Clear() : txtEspOtros.Clear()
+        'txtTelMovEmp.Clear()
+        'txtEspeSPE.Clear() : txtEspOtros.Clear()
         txtEspeCharla.Clear()
         cboParticipanteSearch.SelectedIndex = -1
         txtCodigop.Clear()
-        'lblApeNom.Text = Nothing
-        txtCodtel.Text = "(___)" : txtCodtelM.Text = "(___)"
+        'txtCodtel.Text = "(___)" : txtCodtelM.Text = "(___)"
     End Sub
 
     Private Sub txtRuc_KeyPress(sender As Object, e As KeyPressEventArgs)
@@ -75,10 +75,11 @@ Public Class frmFichaCapacitacion
     End Sub
     Sub bloquear()
         'lblApeNom.Text = "Apellidos y Nombres"
-        txtCodtel.Text = "(___)" : txtCodtelM.Text = "(___)"
-        grbRubro.Enabled = False
-        grp1.Enabled = False
-        grp2.Enabled = False
+
+        'txtCodtel.Text = "(___)" : txtCodtelM.Text = "(___)"
+        'grbRubro.Enabled = False
+        'grp1.Enabled = False
+        'grp2.Enabled = False
         grp5.Enabled = False
         grpCharla.Enabled = False
         btnRegistrar.Enabled = False : btnLimpiar.Enabled = False
@@ -121,6 +122,19 @@ Public Class frmFichaCapacitacion
                     PartCE.correo = .Rows(0)(15).ToString()
                     PartCE.EstadoCiv = .Rows(0)(16).ToString()
                     PartCE.profeOcupa = .Rows(0)(17).ToString()
+                    PartCE.procarre = .Rows(0)(18).ToString()
+                    PartCE.nivestudio = .Rows(0)(19).ToString()
+                    PartCE.instEducativa = .Rows(0)(20).ToString()
+                    PartCE.nomInstitucion = .Rows(0)(21).ToString()
+                    PartCE.ruc = .Rows(0)(22).ToString()
+                    PartCE.empresa = .Rows(0)(23).ToString()
+                    PartCE.cargo = .Rows(0)(24).ToString()
+                    PartCE.telFijoEmp = .Rows(0)(25).ToString()
+                    PartCE.telMovEmp = .Rows(0)(26).ToString()
+                    PartCE.opeMovEmp = .Rows(0)(27).ToString()
+                    PartCE.rubro = .Rows(0)(28).ToString()
+                    PartCE.espRubro = .Rows(0)(29).ToString()
+                    PartCE.origen = .Rows(0)(30).ToString()
                 End With
 
                 Dim Frm As New FrmParticipante_vb(PartCE)
@@ -129,9 +143,10 @@ Public Class frmFichaCapacitacion
             End If
             FormProcedencias = ""
             'lblApeNom.Text = Frm.GetApeNom()
-            grbRubro.Enabled = True
-            grp1.Enabled = True
-            grp2.Enabled = True
+
+            'grbRubro.Enabled = True
+            'grp1.Enabled = True
+            'grp2.Enabled = True
             grp5.Enabled = True
             grpCharla.Enabled = True
             btnRegistrar.Enabled = True : btnLimpiar.Enabled = True
@@ -156,6 +171,9 @@ Public Class frmFichaCapacitacion
         frmCapacitacion.Show()
     End Sub
 
+    Private Sub CheckBox10_CheckedChanged(sender As Object, e As EventArgs)
+
+    End Sub
 
     Private Sub cboCapacitacion_Enter(sender As Object, e As EventArgs) Handles cboCapacitacion.Enter
         cboCapacitacion.DataSource = FichCN.fichaCapacitacion_Capacitacion()
@@ -176,28 +194,11 @@ Public Class frmFichaCapacitacion
         Return value
     End Function
 
-
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
-        Dim espRubro As String = Trim(txtEspeSPE.Text) & "-" & Trim(txtEspOtros.Text)
-        If InStr(espRubro, "-") = 1 Or Trim(txtEspeSPE.Text).Length = espRubro.Length - 1 Then
-            espRubro = espRubro.Replace("-", String.Empty)
-        End If
 
         With FichaCE
             .codcap = Trim(cboCapacitacion.SelectedValue)
             .codpart = Trim(txtCodigop.Text)
-            .procarre = txtProfeCarrera.Text
-            .nivestudio = txtNivelEst.Text
-            .nomInstitucion = txtNomInstitu.Text
-            .instEducativa = If(Not IsNothing(GetGrpBxCheckedBbt(grpInstitucion)), GetGrpBxCheckedBbt(grpInstitucion).Text, "")
-            .ruc = txtRuc.Text
-            .empresa = txtEmpresa.Text
-            .cargo = txtCargo.Text
-            .telFijoEmp = txtCodtel.Text & txtTelFijoEmp.Text
-            .telMovEmp = txtCodtelM.Text & txtTelMovEmp.Text
-            .opeMovEmp = cboOperadorempresa.Text
-            .rubro = getCheckboxVal(grbRubro)
-            .espRubro = espRubro
             .charla = getCheckboxVal(grpCharla)
             .espCharla = txtEspeCharla.Text
             .dominioTem = If(Not IsNothing(GetGrpBxCheckedBbt(grpRessin1)), GetGrpBxCheckedBbt(grpRessin1).Text, String.Empty)
