@@ -94,11 +94,11 @@ Public Class FrmParticipante_vb
             txtProfeCarrera.Text = .procarre
             txtNivelEst.Text = .nivestudio
             txtNomInstitu.Text = .nomInstitucion
-            If (rbtUniversidad.Name = .instEducativa) Then rbtUniversidad.Checked = True
-            If (rbtInstituto.Name = .instEducativa) Then rbtInstituto.Checked = True
-            If (rbtOtros.Name = .instEducativa) Then rbtOtros.Checked = True
+            If (rbtUniversidad.Text = .instEducativa) Then rbtUniversidad.Checked = True
+            If (rbtInstituto.Text = .instEducativa) Then rbtInstituto.Checked = True
+            If (rbtOtros.Text = .instEducativa) Then rbtOtros.Checked = True
 
-            txtRuc.Text = .ruc
+            txtRuc.Text = Trim(.ruc)
             txtEmpresa.Text = .empresa
             txtCargo.Text = .cargo
             Dim telFijoempresa As String = If(partCE.telFijoEmp.Trim = "", "", (partCE.telFijoEmp).Substring(5, (partCE.telFijoEmp).Length - 5))
@@ -286,6 +286,18 @@ Public Class FrmParticipante_vb
     End Property
 
     Private Sub lblTitulo_Click(sender As Object, e As EventArgs) Handles lblTitulo.Click
+
+    End Sub
+
+    Private Sub CheckBox3_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox3.CheckedChanged
+        txtEspeSPE.Enabled = If(CheckBox3.Checked, True, False)
+    End Sub
+
+    Private Sub CheckBox5_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox5.CheckedChanged
+        txtEspOtros.Enabled = If(CheckBox5.Checked, True, False)
+    End Sub
+
+    Private Sub grp_Enter(sender As Object, e As EventArgs) Handles grp.Enter
 
     End Sub
 

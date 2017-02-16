@@ -124,8 +124,8 @@ Public Class frmFichaCapacitacion
                     PartCE.profeOcupa = .Rows(0)(17).ToString()
                     PartCE.procarre = .Rows(0)(18).ToString()
                     PartCE.nivestudio = .Rows(0)(19).ToString()
-                    PartCE.instEducativa = .Rows(0)(20).ToString()
-                    PartCE.nomInstitucion = .Rows(0)(21).ToString()
+                    PartCE.nomInstitucion = .Rows(0)(20).ToString()
+                    PartCE.instEducativa = .Rows(0)(21).ToString()
                     PartCE.ruc = .Rows(0)(22).ToString()
                     PartCE.empresa = .Rows(0)(23).ToString()
                     PartCE.cargo = .Rows(0)(24).ToString()
@@ -169,10 +169,6 @@ Public Class frmFichaCapacitacion
 
     Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
         frmCapacitacion.Show()
-    End Sub
-
-    Private Sub CheckBox10_CheckedChanged(sender As Object, e As EventArgs)
-
     End Sub
 
     Private Sub cboCapacitacion_Enter(sender As Object, e As EventArgs) Handles cboCapacitacion.Enter

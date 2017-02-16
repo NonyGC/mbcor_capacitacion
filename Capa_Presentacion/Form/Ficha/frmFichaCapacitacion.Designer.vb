@@ -1037,7 +1037,7 @@ Partial Class frmFichaCapacitacion
         '
         '
         Me.txtEspeCharla.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.txtEspeCharla.Size = New System.Drawing.Size(320, 24)
+        Me.txtEspeCharla.Size = New System.Drawing.Size(361, 24)
         Me.txtEspeCharla.TabIndex = 35
         Me.txtEspeCharla.ThemeName = "VisualStudio2012Light"
         '
@@ -1147,7 +1147,7 @@ Partial Class frmFichaCapacitacion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(903, 422)
+        Me.ClientSize = New System.Drawing.Size(903, 414)
         Me.Controls.Add(Me.RadButton1)
         Me.Controls.Add(Me.grpTajetacredito)
         Me.Controls.Add(Me.cboParticipanteSearch)
