@@ -14,7 +14,7 @@ Public Class CapacitacionDAO
     End Function
 
     Public Function Capacitacion_table() As DataTable
-        Dim cmd As SqlCommand = CommandText("SELECT C.codigo,origen,origOtro,organizador,L.nombre local,cantMasisa,cantIngresada,fecha,tema,expositor,estado FROM capacitacion C INNER JOIN local L ON C.local=L.codigo")
+        Dim cmd As SqlCommand = CommandText("SELECT C.codigo,origen,origOtro,organizador,L.codigo lcod,L.nombre local,cantMasisa,cantIngresada,fecha,tema,expositor,estado FROM capacitacion C INNER JOIN local L ON C.local=L.codigo")
         Dim data As New DataTable
         data = GetDataTable(cmd)
         Return data

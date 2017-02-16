@@ -63,7 +63,7 @@ Public Class frmCapacitacion
             cboOrigen.SelectedText = .origen
             txtOrigenOtro.Text = .origenOtro
             txtOrganizador.Text = .organizador
-            cboLocal.SelectedText = .local
+            cboLocal.SelectedValue = .local
             dtmFecha.Value = .fecha
             txtCantMasisa.Value = .cantMasisa
             txtCantIngresado.Value = .cantIngresada

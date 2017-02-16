@@ -45,9 +45,6 @@ Partial Class FrmParticipante_vb
         Me.grp = New System.Windows.Forms.GroupBox()
         Me.txtApeMat = New Telerik.WinControls.UI.RadTextBox()
         Me.txtProfesionOcupacion = New Telerik.WinControls.UI.RadTextBox()
-        Me.grpSexo = New System.Windows.Forms.GroupBox()
-        Me.F = New System.Windows.Forms.RadioButton()
-        Me.M = New System.Windows.Forms.RadioButton()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.txtCodtelM2 = New System.Windows.Forms.TextBox()
         Me.txtTelMovil2 = New System.Windows.Forms.MaskedTextBox()
@@ -83,6 +80,9 @@ Partial Class FrmParticipante_vb
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.grpSexo = New System.Windows.Forms.GroupBox()
+        Me.F = New System.Windows.Forms.RadioButton()
+        Me.M = New System.Windows.Forms.RadioButton()
         Me.btnGuardar = New Telerik.WinControls.UI.RadButton()
         Me.btnLimpiar = New Telerik.WinControls.UI.RadButton()
         Me.lblTitulo = New System.Windows.Forms.Label()
@@ -124,10 +124,10 @@ Partial Class FrmParticipante_vb
         Me.txtNomInstitu = New Telerik.WinControls.UI.RadTextBox()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
         Me.grp.SuspendLayout()
         CType(Me.txtApeMat, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtProfesionOcupacion, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.grpSexo.SuspendLayout()
         CType(Me.cboOperadorM2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboOperadorM, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtFechaN, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -140,6 +140,7 @@ Partial Class FrmParticipante_vb
         CType(Me.txtDireccion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtNombres, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtApePat, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpSexo.SuspendLayout()
         CType(Me.btnGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnLimpiar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grbRubro.SuspendLayout()
@@ -197,6 +198,7 @@ Partial Class FrmParticipante_vb
         Me.grp.Controls.Add(Me.Label3)
         Me.grp.Controls.Add(Me.Label2)
         Me.grp.Controls.Add(Me.Label1)
+        Me.grp.Controls.Add(Me.Label25)
         Me.grp.Controls.Add(Me.Label7)
         Me.grp.Controls.Add(Me.grpSexo)
         Me.grp.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -235,41 +237,6 @@ Partial Class FrmParticipante_vb
         Me.txtProfesionOcupacion.Size = New System.Drawing.Size(520, 24)
         Me.txtProfesionOcupacion.TabIndex = 23
         Me.txtProfesionOcupacion.ThemeName = "VisualStudio2012Light"
-        '
-        'grpSexo
-        '
-        Me.grpSexo.Controls.Add(Me.F)
-        Me.grpSexo.Controls.Add(Me.M)
-        Me.grpSexo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.grpSexo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpSexo.Location = New System.Drawing.Point(678, 78)
-        Me.grpSexo.Name = "grpSexo"
-        Me.grpSexo.Size = New System.Drawing.Size(147, 39)
-        Me.grpSexo.TabIndex = 4
-        Me.grpSexo.TabStop = False
-        Me.grpSexo.Text = "Sexo"
-        '
-        'F
-        '
-        Me.F.AutoSize = True
-        Me.F.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.F.Location = New System.Drawing.Point(89, 14)
-        Me.F.Name = "F"
-        Me.F.Size = New System.Drawing.Size(30, 19)
-        Me.F.TabIndex = 6
-        Me.F.Text = "F"
-        Me.F.UseVisualStyleBackColor = True
-        '
-        'M
-        '
-        Me.M.AutoSize = True
-        Me.M.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.M.Location = New System.Drawing.Point(48, 14)
-        Me.M.Name = "M"
-        Me.M.Size = New System.Drawing.Size(35, 19)
-        Me.M.TabIndex = 5
-        Me.M.Text = "M"
-        Me.M.UseVisualStyleBackColor = True
         '
         'Label16
         '
@@ -421,7 +388,7 @@ Partial Class FrmParticipante_vb
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(72, 216)
+        Me.Label10.Location = New System.Drawing.Point(68, 216)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(54, 15)
         Me.Label10.TabIndex = 131
@@ -560,7 +527,7 @@ Partial Class FrmParticipante_vb
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(72, 247)
+        Me.Label14.Location = New System.Drawing.Point(69, 247)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(53, 15)
         Me.Label14.TabIndex = 110
@@ -590,7 +557,7 @@ Partial Class FrmParticipante_vb
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(72, 186)
+        Me.Label11.Location = New System.Drawing.Point(68, 186)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(54, 15)
         Me.Label11.TabIndex = 111
@@ -654,7 +621,7 @@ Partial Class FrmParticipante_vb
         'Label4
         '
         Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(47, 81)
+        Me.Label4.Location = New System.Drawing.Point(36, 81)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(86, 37)
         Me.Label4.TabIndex = 102
@@ -665,7 +632,7 @@ Partial Class FrmParticipante_vb
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(61, 59)
+        Me.Label3.Location = New System.Drawing.Point(60, 59)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(62, 15)
         Me.Label3.TabIndex = 99
@@ -695,11 +662,46 @@ Partial Class FrmParticipante_vb
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(56, 125)
+        Me.Label7.Location = New System.Drawing.Point(54, 125)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(68, 15)
         Me.Label7.TabIndex = 87
         Me.Label7.Text = "DIRECCIÓN"
+        '
+        'grpSexo
+        '
+        Me.grpSexo.Controls.Add(Me.F)
+        Me.grpSexo.Controls.Add(Me.M)
+        Me.grpSexo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.grpSexo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpSexo.Location = New System.Drawing.Point(678, 78)
+        Me.grpSexo.Name = "grpSexo"
+        Me.grpSexo.Size = New System.Drawing.Size(147, 39)
+        Me.grpSexo.TabIndex = 4
+        Me.grpSexo.TabStop = False
+        Me.grpSexo.Text = "Sexo"
+        '
+        'F
+        '
+        Me.F.AutoSize = True
+        Me.F.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.F.Location = New System.Drawing.Point(89, 14)
+        Me.F.Name = "F"
+        Me.F.Size = New System.Drawing.Size(30, 19)
+        Me.F.TabIndex = 6
+        Me.F.Text = "F"
+        Me.F.UseVisualStyleBackColor = True
+        '
+        'M
+        '
+        Me.M.AutoSize = True
+        Me.M.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.M.Location = New System.Drawing.Point(48, 14)
+        Me.M.Name = "M"
+        Me.M.Size = New System.Drawing.Size(35, 19)
+        Me.M.TabIndex = 5
+        Me.M.Text = "M"
+        Me.M.UseVisualStyleBackColor = True
         '
         'btnGuardar
         '
@@ -1218,6 +1220,16 @@ Partial Class FrmParticipante_vb
         Me.Label24.Text = "NOMBRE DE INSTITUCIÓN"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(74, 155)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(48, 15)
+        Me.Label25.TabIndex = 87
+        Me.Label25.Text = "UBIGEO"
+        '
         'FrmParticipante_vb
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1243,8 +1255,6 @@ Partial Class FrmParticipante_vb
         Me.grp.PerformLayout()
         CType(Me.txtApeMat, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtProfesionOcupacion, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.grpSexo.ResumeLayout(False)
-        Me.grpSexo.PerformLayout()
         CType(Me.cboOperadorM2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cboOperadorM, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtFechaN, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1257,6 +1267,8 @@ Partial Class FrmParticipante_vb
         CType(Me.txtDireccion, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtNombres, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtApePat, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpSexo.ResumeLayout(False)
+        Me.grpSexo.PerformLayout()
         CType(Me.btnGuardar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnLimpiar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grbRubro.ResumeLayout(False)
@@ -1363,5 +1375,6 @@ Partial Class FrmParticipante_vb
     Friend WithEvents txtNomInstitu As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents Label25 As System.Windows.Forms.Label
 End Class
 

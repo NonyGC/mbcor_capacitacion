@@ -41,7 +41,7 @@ Partial Class Menu
         '
         'RadButton1
         '
-        Me.RadButton1.Location = New System.Drawing.Point(39, 113)
+        Me.RadButton1.Location = New System.Drawing.Point(39, 135)
         Me.RadButton1.Name = "RadButton1"
         Me.RadButton1.Size = New System.Drawing.Size(266, 28)
         Me.RadButton1.TabIndex = 0
@@ -59,7 +59,7 @@ Partial Class Menu
         '
         'RadButton4
         '
-        Me.RadButton4.Location = New System.Drawing.Point(39, 168)
+        Me.RadButton4.Location = New System.Drawing.Point(39, 190)
         Me.RadButton4.Name = "RadButton4"
         Me.RadButton4.Size = New System.Drawing.Size(266, 28)
         Me.RadButton4.TabIndex = 2
@@ -68,7 +68,7 @@ Partial Class Menu
         '
         'RadButton5
         '
-        Me.RadButton5.Location = New System.Drawing.Point(39, 60)
+        Me.RadButton5.Location = New System.Drawing.Point(39, 81)
         Me.RadButton5.Name = "RadButton5"
         Me.RadButton5.Size = New System.Drawing.Size(266, 28)
         Me.RadButton5.TabIndex = 2
@@ -77,7 +77,7 @@ Partial Class Menu
         '
         'RadButton6
         '
-        Me.RadButton6.Location = New System.Drawing.Point(39, 202)
+        Me.RadButton6.Location = New System.Drawing.Point(39, 224)
         Me.RadButton6.Name = "RadButton6"
         Me.RadButton6.Size = New System.Drawing.Size(266, 28)
         Me.RadButton6.TabIndex = 3
@@ -86,7 +86,7 @@ Partial Class Menu
         '
         'RadButton3
         '
-        Me.RadButton3.Location = New System.Drawing.Point(39, 236)
+        Me.RadButton3.Location = New System.Drawing.Point(39, 258)
         Me.RadButton3.Name = "RadButton3"
         Me.RadButton3.Size = New System.Drawing.Size(266, 28)
         Me.RadButton3.TabIndex = 4
@@ -97,7 +97,7 @@ Partial Class Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(347, 308)
+        Me.ClientSize = New System.Drawing.Size(341, 320)
         Me.Controls.Add(Me.RadButton3)
         Me.Controls.Add(Me.RadButton6)
         Me.Controls.Add(Me.RadButton4)

@@ -47,7 +47,7 @@ Partial Class frmLocalParticipante
         '
         'dgvLocalParticipante
         '
-        Me.dgvLocalParticipante.Location = New System.Drawing.Point(40, 45)
+        Me.dgvLocalParticipante.Location = New System.Drawing.Point(43, 45)
         '
         '
         '
@@ -61,7 +61,7 @@ Partial Class frmLocalParticipante
         GridViewTextBoxColumn2.FieldName = "nombre"
         GridViewTextBoxColumn2.HeaderText = "LOCAL"
         GridViewTextBoxColumn2.Name = "nombre"
-        GridViewTextBoxColumn2.Width = 301
+        GridViewTextBoxColumn2.Width = 299
         GridViewTextBoxColumn3.FieldName = "fecha"
         GridViewTextBoxColumn3.HeaderText = "FECHA"
         GridViewTextBoxColumn3.Name = "fecha"
@@ -69,14 +69,14 @@ Partial Class frmLocalParticipante
         GridViewTextBoxColumn4.FieldName = "cantidad"
         GridViewTextBoxColumn4.HeaderText = "CANTIDAD"
         GridViewTextBoxColumn4.Name = "cantidad"
-        GridViewTextBoxColumn4.Width = 71
+        GridViewTextBoxColumn4.Width = 70
         Me.dgvLocalParticipante.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4})
         Me.dgvLocalParticipante.MasterTemplate.EnableGrouping = False
         Me.dgvLocalParticipante.MasterTemplate.EnablePaging = True
         Me.dgvLocalParticipante.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.dgvLocalParticipante.Name = "dgvLocalParticipante"
         Me.dgvLocalParticipante.ReadOnly = True
-        Me.dgvLocalParticipante.Size = New System.Drawing.Size(528, 352)
+        Me.dgvLocalParticipante.Size = New System.Drawing.Size(525, 352)
         Me.dgvLocalParticipante.TabIndex = 84
         Me.dgvLocalParticipante.Text = "RadGridView1"
         Me.dgvLocalParticipante.ThemeName = "VisualStudio2012Light"

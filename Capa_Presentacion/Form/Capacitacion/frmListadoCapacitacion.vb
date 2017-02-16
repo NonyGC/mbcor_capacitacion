@@ -24,7 +24,7 @@ Public Class FrmListadoCapacitacion
             capEN.origen = .Cells("origen").Value
             capEN.origenOtro = .Cells("origOtro").Value
             capEN.organizador = .Cells("organizador").Value
-            capEN.local = .Cells("local").Value
+            capEN.local = .Cells("lcod").Value
             capEN.fecha = .Cells("fecha").Value
             capEN.cantMasisa = .Cells("cantMasisa").Value
             capEN.cantIngresada = .Cells("cantIngresada").Value
