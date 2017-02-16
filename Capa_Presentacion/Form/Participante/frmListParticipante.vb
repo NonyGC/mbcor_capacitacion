@@ -23,6 +23,7 @@ Public Class FrmListParticipante
 
 
     Private Sub dtgParticipantes_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dtgParticipante.CellDoubleClick
+
         With dtgParticipante.CurrentRow
             PartCE.codpart = .Cells("codigo").Value
             PartCE.apePat = .Cells("apellido_pat").Value
@@ -30,7 +31,7 @@ Public Class FrmListParticipante
             PartCE.nombres = .Cells("nombres").Value
             PartCE.sexo = .Cells("sexo").Value
             PartCE.fechaNaci = .Cells("fecha_nacimiento").Value
-            PartCE.dnice = .Cells("dni_ce").Value
+            PartCE.dnice = If(IsDBNull(.Cells("dni_ce").Value), String.Empty, .Cells("dni_ce").Value)
             PartCE.direccion = .Cells("direccion").Value
             PartCE.ubigeo = .Cells("ubigeo").Value
             PartCE.telFijo = .Cells("tel_fijo").Value
@@ -42,11 +43,22 @@ Public Class FrmListParticipante
             PartCE.correo = .Cells("email").Value
             PartCE.EstadoCiv = .Cells("estado_civ").Value
             PartCE.profeOcupa = .Cells("profe_ocupa").Value
+            PartCE.procarre = .Cells("profesion_carrera").Value
+            PartCE.nivestudio = .Cells("nivel").Value
+            PartCE.nomInstitucion = .Cells("institucion").Value
+            PartCE.instEducativa = .Cells("tip_institucion").Value
+            PartCE.ruc = .Cells("ruc").Value
+            PartCE.empresa = .Cells("empresa").Value
+            PartCE.cargo = .Cells("cargo").Value
+            PartCE.telFijoEmp = .Cells("tel_fijo_emp").Value
+            PartCE.telMovEmp = .Cells("tel_movil_emp").Value
+            PartCE.opeMovEmp = .Cells("ope_movil_emp").Value
+            PartCE.rubro = .Cells("rubro").Value
+            PartCE.espRubro = .Cells("cargo").Value
+            PartCE.origen = .Cells("espec_rubro").Value
         End With
 
         Dim Frm As New FrmParticipante_vb(PartCE)
-        'Frm.Show()
-
         If Frm.ShowDialog(Me) = System.Windows.Forms.DialogResult.OK Then
             dtgParticipante.DataSource = ParticipanteCN.CargarParticipante()
         End If

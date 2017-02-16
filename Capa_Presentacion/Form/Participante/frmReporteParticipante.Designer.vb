@@ -145,7 +145,6 @@ Partial Class FrmReporteParticipante
         Me.dtgParticipante.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4, GridViewTextBoxColumn5, GridViewTextBoxColumn6, GridViewTextBoxColumn7, GridViewTextBoxColumn8, GridViewTextBoxColumn9, GridViewTextBoxColumn10, GridViewTextBoxColumn11, GridViewTextBoxColumn12, GridViewTextBoxColumn13, GridViewTextBoxColumn14, GridViewTextBoxColumn15, GridViewTextBoxColumn16, GridViewTextBoxColumn17, GridViewTextBoxColumn18})
         Me.dtgParticipante.MasterTemplate.EnableFiltering = True
         Me.dtgParticipante.MasterTemplate.EnableGrouping = False
-        Me.dtgParticipante.MasterTemplate.EnablePaging = True
         Me.dtgParticipante.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.dtgParticipante.Name = "dtgParticipante"
         Me.dtgParticipante.ReadOnly = True
