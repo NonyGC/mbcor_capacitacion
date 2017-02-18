@@ -79,6 +79,7 @@ Partial Class FrmParticipante_vb
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.grpSexo = New System.Windows.Forms.GroupBox()
         Me.F = New System.Windows.Forms.RadioButton()
@@ -124,7 +125,6 @@ Partial Class FrmParticipante_vb
         Me.txtNomInstitu = New Telerik.WinControls.UI.RadTextBox()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
         Me.grp.SuspendLayout()
         CType(Me.txtApeMat, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtProfesionOcupacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -658,6 +658,16 @@ Partial Class FrmParticipante_vb
         Me.Label1.TabIndex = 95
         Me.Label1.Text = "APELLIDO PATERNO"
         '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(74, 155)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(48, 15)
+        Me.Label25.TabIndex = 87
+        Me.Label25.Text = "UBIGEO"
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -957,11 +967,11 @@ Partial Class FrmParticipante_vb
         '
         Me.cboOperadorempresa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.cboOperadorempresa.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadListDataItem15.Text = "Movistar"
-        RadListDataItem16.Text = "Claro"
-        RadListDataItem17.Text = "Entel"
-        RadListDataItem18.Text = "Bitel"
-        RadListDataItem19.Text = "Virgin"
+        RadListDataItem15.Text = "MOVISTAR"
+        RadListDataItem16.Text = "CLARO"
+        RadListDataItem17.Text = "ENTEL"
+        RadListDataItem18.Text = "BITEL"
+        RadListDataItem19.Text = "VIRGIN"
         Me.cboOperadorempresa.Items.Add(RadListDataItem15)
         Me.cboOperadorempresa.Items.Add(RadListDataItem16)
         Me.cboOperadorempresa.Items.Add(RadListDataItem17)
@@ -1219,16 +1229,6 @@ Partial Class FrmParticipante_vb
         Me.Label24.TabIndex = 76
         Me.Label24.Text = "NOMBRE DE INSTITUCIÓN"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(74, 155)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(48, 15)
-        Me.Label25.TabIndex = 87
-        Me.Label25.Text = "UBIGEO"
         '
         'FrmParticipante_vb
         '
