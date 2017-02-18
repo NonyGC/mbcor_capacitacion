@@ -29,13 +29,11 @@ Partial Class Menu
         Me.RadButton4 = New Telerik.WinControls.UI.RadButton()
         Me.RadButton5 = New Telerik.WinControls.UI.RadButton()
         Me.RadButton6 = New Telerik.WinControls.UI.RadButton()
-        Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -84,21 +82,11 @@ Partial Class Menu
         Me.RadButton6.Text = "ESTADISTICA LOCAL PARTICIPANTE"
         Me.RadButton6.ThemeName = "VisualStudio2012Light"
         '
-        'RadButton3
-        '
-        Me.RadButton3.Location = New System.Drawing.Point(39, 258)
-        Me.RadButton3.Name = "RadButton3"
-        Me.RadButton3.Size = New System.Drawing.Size(266, 28)
-        Me.RadButton3.TabIndex = 4
-        Me.RadButton3.Text = "REPORTE PARTICIPANTE"
-        Me.RadButton3.ThemeName = "VisualStudio2012Light"
-        '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(341, 320)
-        Me.Controls.Add(Me.RadButton3)
+        Me.ClientSize = New System.Drawing.Size(341, 286)
         Me.Controls.Add(Me.RadButton6)
         Me.Controls.Add(Me.RadButton4)
         Me.Controls.Add(Me.RadButton5)
@@ -118,7 +106,6 @@ Partial Class Menu
         CType(Me.RadButton4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -130,6 +117,5 @@ Partial Class Menu
     Friend WithEvents RadButton4 As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButton5 As Telerik.WinControls.UI.RadButton
     Friend WithEvents RadButton6 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadButton3 As Telerik.WinControls.UI.RadButton
 End Class
 

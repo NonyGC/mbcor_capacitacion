@@ -198,7 +198,7 @@ Public Class FrmParticipante_vb
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim codUbi As String = cboDepartamento.SelectedValue & cboProvincia.SelectedValue & cboDistrito.SelectedValue
         Dim fechaN As String
-        fechaN = If(txtFechaN.Value = "__/__/____", String.Empty, txtFechaN.Value)
+        fechaN = If(IsDate(txtFechaN.Value), txtFechaN.Value, String.Empty)
 
         Dim espRubro As String = Trim(txtEspeSPE.Text) & "-" & Trim(txtEspOtros.Text)
         If InStr(espRubro, "-") = 1 Or Trim(txtEspeSPE.Text).Length = espRubro.Length - 1 Then
