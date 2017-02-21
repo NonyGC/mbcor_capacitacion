@@ -4,6 +4,7 @@ Imports Capa_Presentacion.Base
 Imports Capa_Entidad
 Imports Telerik.WinControls
 Imports Telerik.WinControls.UI
+Imports Telerik.WinControls.Data
 
 Public Class frmFichaCapacitacion
     Public Sub New()
@@ -25,7 +26,17 @@ Public Class frmFichaCapacitacion
     Private Sub frmFichaCapacitacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         cboParticipanteSearch_AutoComparer()
+        cboCapacitacion_filter()
+
         'cboOperadorempresa.DropDownListElement.AutoCompleteAppend.LimitToList = True
+    End Sub
+    Public Sub cboCapacitacion_filter()
+        cboCapacitacion.AutoFilter = True
+        cboCapacitacion.DisplayMember = "local"
+        Dim filter As New FilterDescriptor()
+        filter.PropertyName = cboCapacitacion.DisplayMember
+        filter.Operator = FilterOperator.Contains
+        cboCapacitacion.EditorControl.MasterTemplate.FilterDescriptors.Add(filter)
     End Sub
     Public Sub cboParticipanteSearch_AutoComparer()
         cboParticipanteSearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend
@@ -169,6 +180,15 @@ Public Class frmFichaCapacitacion
 
     Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
         frmCapacitacion.Show()
+    End Sub
+
+    Private Sub rbtVer_Click(sender As Object, e As EventArgs) Handles rbtVer.Click
+        If cboCapacitacion.SelectedIndex <> -1 Then
+            Dim codcap As String = Trim(cboCapacitacion.SelectedValue)
+            Dim Frm As New frmFiltParticipante(codcap)
+            Frm.ShowDialog(Me)
+            Frm.Dispose()
+        End If
     End Sub
 
     Private Sub cboCapacitacion_Enter(sender As Object, e As EventArgs) Handles cboCapacitacion.Enter

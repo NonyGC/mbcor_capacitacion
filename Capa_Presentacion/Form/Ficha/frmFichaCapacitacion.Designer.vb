@@ -26,7 +26,6 @@ Partial Class frmFichaCapacitacion
         Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn4 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim ConditionalFormattingObject1 As Telerik.WinControls.UI.ConditionalFormattingObject = New Telerik.WinControls.UI.ConditionalFormattingObject()
         Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmFichaCapacitacion))
         Me.VisualStudio2012LightTheme1 = New Telerik.WinControls.Themes.VisualStudio2012LightTheme()
@@ -109,6 +108,7 @@ Partial Class frmFichaCapacitacion
         Me.RadioButton17 = New System.Windows.Forms.RadioButton()
         Me.grpTajetacredito = New System.Windows.Forms.GroupBox()
         Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
+        Me.rbtVer = New Telerik.WinControls.UI.RadButton()
         Me.GroupBox1.SuspendLayout()
         CType(Me.RadTextBox17, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBox18, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -151,6 +151,7 @@ Partial Class frmFichaCapacitacion
         CType(Me.txtCodigop, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpTajetacredito.SuspendLayout()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.rbtVer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -159,7 +160,7 @@ Partial Class frmFichaCapacitacion
         Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(-2, 3)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(908, 35)
+        Me.Label15.Size = New System.Drawing.Size(914, 27)
         Me.Label15.TabIndex = 32
         Me.Label15.Text = "FICHA REGISTRO DE CAPACITACIÓN"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -544,7 +545,7 @@ Partial Class frmFichaCapacitacion
         '
         Me.Label36.AutoSize = True
         Me.Label36.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(246, 46)
+        Me.Label36.Location = New System.Drawing.Point(180, 65)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(97, 13)
         Me.Label36.TabIndex = 85
@@ -566,10 +567,11 @@ Partial Class frmFichaCapacitacion
         '
         '
         '
+        Me.cboCapacitacion.EditorControl.MasterTemplate.AddNewRowPosition = Telerik.WinControls.UI.SystemRowPosition.Bottom
         Me.cboCapacitacion.EditorControl.MasterTemplate.AllowAddNewRow = False
         Me.cboCapacitacion.EditorControl.MasterTemplate.AllowCellContextMenu = False
         Me.cboCapacitacion.EditorControl.MasterTemplate.AllowColumnChooser = False
-        Me.cboCapacitacion.EditorControl.MasterTemplate.AllowColumnResize = False
+        Me.cboCapacitacion.EditorControl.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
         GridViewTextBoxColumn1.AllowSort = False
         GridViewTextBoxColumn1.EnableExpressionEditor = False
         GridViewTextBoxColumn1.FieldName = "codigo"
@@ -577,31 +579,24 @@ Partial Class frmFichaCapacitacion
         GridViewTextBoxColumn1.IsVisible = False
         GridViewTextBoxColumn1.Name = "codigo"
         GridViewTextBoxColumn1.ReadOnly = True
-        GridViewTextBoxColumn2.AllowSort = False
         GridViewTextBoxColumn2.EnableExpressionEditor = False
         GridViewTextBoxColumn2.FieldName = "local"
         GridViewTextBoxColumn2.HeaderText = "Local"
         GridViewTextBoxColumn2.Name = "local"
         GridViewTextBoxColumn2.ReadOnly = True
-        GridViewTextBoxColumn2.Width = 150
-        GridViewTextBoxColumn3.AllowSort = False
+        GridViewTextBoxColumn2.Width = 151
         GridViewTextBoxColumn3.EnableExpressionEditor = False
-        GridViewTextBoxColumn3.FieldName = "tema"
-        GridViewTextBoxColumn3.HeaderText = "Tema"
-        GridViewTextBoxColumn3.Name = "tema"
+        GridViewTextBoxColumn3.FieldName = "fecha"
+        GridViewTextBoxColumn3.HeaderText = "fecha"
+        GridViewTextBoxColumn3.Name = "fecha"
         GridViewTextBoxColumn3.ReadOnly = True
-        GridViewTextBoxColumn3.Width = 150
-        ConditionalFormattingObject1.CellBackColor = System.Drawing.Color.Empty
-        ConditionalFormattingObject1.CellForeColor = System.Drawing.Color.Empty
-        ConditionalFormattingObject1.Name = "NewCondition"
-        ConditionalFormattingObject1.RowBackColor = System.Drawing.Color.Empty
-        ConditionalFormattingObject1.RowForeColor = System.Drawing.Color.Empty
-        GridViewTextBoxColumn4.ConditionalFormattingObjectList.Add(ConditionalFormattingObject1)
+        GridViewTextBoxColumn3.Width = 39
         GridViewTextBoxColumn4.EnableExpressionEditor = False
-        GridViewTextBoxColumn4.FieldName = "fecha"
-        GridViewTextBoxColumn4.HeaderText = "Fecha"
-        GridViewTextBoxColumn4.Name = "fecha"
-        GridViewTextBoxColumn4.Width = 75
+        GridViewTextBoxColumn4.FieldName = "registrados"
+        GridViewTextBoxColumn4.HeaderText = "Ingresado"
+        GridViewTextBoxColumn4.Name = "registrados"
+        GridViewTextBoxColumn4.ReadOnly = True
+        GridViewTextBoxColumn4.Width = 31
         Me.cboCapacitacion.EditorControl.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4})
         Me.cboCapacitacion.EditorControl.MasterTemplate.EnableGrouping = False
         Me.cboCapacitacion.EditorControl.MasterTemplate.ShowFilteringRow = False
@@ -613,9 +608,9 @@ Partial Class frmFichaCapacitacion
         Me.cboCapacitacion.EditorControl.Size = New System.Drawing.Size(240, 150)
         Me.cboCapacitacion.EditorControl.TabIndex = 0
         Me.cboCapacitacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboCapacitacion.Location = New System.Drawing.Point(363, 44)
+        Me.cboCapacitacion.Location = New System.Drawing.Point(296, 63)
         Me.cboCapacitacion.Name = "cboCapacitacion"
-        Me.cboCapacitacion.Size = New System.Drawing.Size(399, 22)
+        Me.cboCapacitacion.Size = New System.Drawing.Size(430, 22)
         Me.cboCapacitacion.TabIndex = 2
         Me.cboCapacitacion.TabStop = False
         Me.cboCapacitacion.ThemeName = "VisualStudio2012Light"
@@ -1044,9 +1039,9 @@ Partial Class frmFichaCapacitacion
         'RadButton2
         '
         Me.RadButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton2.Location = New System.Drawing.Point(771, 69)
+        Me.RadButton2.Location = New System.Drawing.Point(735, 88)
         Me.RadButton2.Name = "RadButton2"
-        Me.RadButton2.Size = New System.Drawing.Size(110, 24)
+        Me.RadButton2.Size = New System.Drawing.Size(147, 24)
         Me.RadButton2.TabIndex = 91
         Me.RadButton2.Text = "NUEVO"
         Me.RadButton2.ThemeName = "VisualStudio2012Light"
@@ -1055,7 +1050,7 @@ Partial Class frmFichaCapacitacion
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(250, 72)
+        Me.Label8.Location = New System.Drawing.Point(180, 91)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(97, 13)
         Me.Label8.TabIndex = 93
@@ -1064,9 +1059,9 @@ Partial Class frmFichaCapacitacion
         'cboParticipanteSearch
         '
         Me.cboParticipanteSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboParticipanteSearch.Location = New System.Drawing.Point(363, 70)
+        Me.cboParticipanteSearch.Location = New System.Drawing.Point(296, 89)
         Me.cboParticipanteSearch.Name = "cboParticipanteSearch"
-        Me.cboParticipanteSearch.Size = New System.Drawing.Size(400, 22)
+        Me.cboParticipanteSearch.Size = New System.Drawing.Size(431, 22)
         Me.cboParticipanteSearch.TabIndex = 3
         Me.cboParticipanteSearch.ThemeName = "VisualStudio2012Light"
         '
@@ -1074,9 +1069,9 @@ Partial Class frmFichaCapacitacion
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.txtCodigop)
-        Me.Panel1.Location = New System.Drawing.Point(363, 98)
+        Me.Panel1.Location = New System.Drawing.Point(296, 117)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(399, 34)
+        Me.Panel1.Size = New System.Drawing.Size(430, 34)
         Me.Panel1.TabIndex = 97
         '
         'txtCodigop
@@ -1135,19 +1130,30 @@ Partial Class frmFichaCapacitacion
         'RadButton1
         '
         Me.RadButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton1.Location = New System.Drawing.Point(771, 43)
+        Me.RadButton1.Location = New System.Drawing.Point(735, 62)
         Me.RadButton1.Name = "RadButton1"
-        Me.RadButton1.Size = New System.Drawing.Size(110, 24)
+        Me.RadButton1.Size = New System.Drawing.Size(73, 24)
         Me.RadButton1.TabIndex = 99
         Me.RadButton1.Text = "NUEVO"
         Me.RadButton1.ThemeName = "VisualStudio2012Light"
+        '
+        'rbtVer
+        '
+        Me.rbtVer.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rbtVer.Location = New System.Drawing.Point(809, 62)
+        Me.rbtVer.Name = "rbtVer"
+        Me.rbtVer.Size = New System.Drawing.Size(73, 24)
+        Me.rbtVer.TabIndex = 99
+        Me.rbtVer.Text = "VER"
+        Me.rbtVer.ThemeName = "VisualStudio2012Light"
         '
         'frmFichaCapacitacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(903, 414)
+        Me.ClientSize = New System.Drawing.Size(910, 419)
+        Me.Controls.Add(Me.rbtVer)
         Me.Controls.Add(Me.RadButton1)
         Me.Controls.Add(Me.grpTajetacredito)
         Me.Controls.Add(Me.cboParticipanteSearch)
@@ -1225,6 +1231,7 @@ Partial Class frmFichaCapacitacion
         Me.grpTajetacredito.ResumeLayout(False)
         Me.grpTajetacredito.PerformLayout()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.rbtVer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -1311,5 +1318,6 @@ Partial Class frmFichaCapacitacion
     Friend WithEvents RadioButton17 As System.Windows.Forms.RadioButton
     Friend WithEvents grpTajetacredito As System.Windows.Forms.GroupBox
     Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents rbtVer As Telerik.WinControls.UI.RadButton
 End Class
 

@@ -93,6 +93,7 @@ Partial Class Menu
         Me.Controls.Add(Me.RadButton2)
         Me.Controls.Add(Me.RadButton1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "Menu"
         '
         '

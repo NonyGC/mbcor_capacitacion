@@ -14,7 +14,7 @@ Public Class frmLocal
         cboDepartamento.DisplayMember = "Departamento"
         cboDepartamento.ValueMember = "idDep"
 
-        cboDepartamento.SelectedIndex = -1
+        cboDepartamento.SelectedValue = "15"
         cboDepartamento.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboProvincia.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboDistrito.DropDownListElement.AutoCompleteAppend.LimitToList = True

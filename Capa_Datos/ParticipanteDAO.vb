@@ -31,6 +31,7 @@ Public Class ParticipanteDAO
         Return data
     End Function
 
+
     Public Function FiltarParticipanteApeNom(text As String) As DataTable
         Dim cmd As SqlCommand =
             CommandText("SELECT * FROM [dbo].[participante] where codigo=@codigo")
@@ -77,20 +78,6 @@ Public Class ParticipanteDAO
         Return data
     End Function
 
-    'Public Function FiltarParticipante(rbtSelected As String) As DataTable
-    '    Dim cmd As New SqlCommand
-    '    Dim data As New DataTable
-    '    If rbtSelected = "Apellidos y Nombres" Then
-    '        cmd = CommandText("SELECT codigo,CONCAT(apellido_pat,' ',apellido_mat,' ',nombres) nombre FROM [dbo].[participante]")
-    '    ElseIf rbtSelected = "Local" Then
-    '        cmd = CommandText("SELECT P.codigo,apellido_pat,apellido_mat,nombres,sexo,fecha_nacimiento,dni_ce,direccion,ubigeo,tel_fijo,tel_mol,ope_movil,tel_fijo2,tel_mol2,ope_movil2,email,estado_civ,profe_ocupa FROM [dbo].[participante] P INNER JOIN [dbo].[ficha_capacitacion] FC ON P.codigo=FC.codpar INNER JOIN [dbo].[capacitacion] C ON FC.codcap=C.codigo WHERE c.local=@local")
-    '        cmd.Parameters.AddWithValue("@local", "")
-    '    ElseIf rbtSelected = "Origen" Then
-    '        cmd = CommandText("SELECT codigo,CASE WHEN origen='Otros' THEN origen+' '+origOtro ELSE origen END AS nombre FROM capacitacion")
-    '    End If
-    '    data = GetDataTable(cmd)
-    '    Return data
-    'End Function
 
     Public Function obtUltimoCodigoPart(codpart As String) As String
         Dim cmd As SqlCommand = CommandProcedure("sp_codigoauto_partul")
@@ -131,4 +118,21 @@ Public Class ParticipanteDAO
             CloseDB()
         End Try
     End Function
+
+#Region "frm filter participante"
+    Public Function cargarCapacitacion(text As String) As DataTable
+        Dim cmd As SqlCommand = CommandText("SELECT * FROM [dbo].[participante] ")
+        Dim data As New DataTable
+        data = GetDataTable(cmd)
+        Return data
+    End Function
+    Public Function CargarParticipante_tabla_codcapacitacion(cod As String) As DataTable
+        Dim cmd As SqlCommand = CommandProcedure("uspGetPartiByCapacitacion")
+        cmd = Parameters(cmd, {cod})
+        Dim data As New DataTable
+        data = GetDataTable(cmd)
+        Return data
+    End Function
+
+#End Region
 End Class

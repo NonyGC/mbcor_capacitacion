@@ -40,7 +40,7 @@ Public Class FrmParticipante_vb
         cboDepartamento.ValueMember = "idDep"
         Select Case Value
             Case Initialize.ini
-                cboDepartamento.SelectedIndex = -1
+                cboDepartamento.SelectedValue = "15"
             Case Initialize.upd
                 cargarDat_Actualizacion()
         End Select
@@ -275,7 +275,7 @@ Public Class FrmParticipante_vb
         Return value
     End Function
 
-    Private Sub txtDNICE_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDNICE.KeyPress
+    Private Sub txtDNICE_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtDNICE.KeyPress, txtRuc.KeyPress
         Solo_numeros(e)
     End Sub
 

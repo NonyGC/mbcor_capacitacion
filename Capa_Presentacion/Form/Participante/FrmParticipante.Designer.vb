@@ -1243,6 +1243,7 @@ Partial Class FrmParticipante_vb
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.grp)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "FrmParticipante_vb"
         '
         '

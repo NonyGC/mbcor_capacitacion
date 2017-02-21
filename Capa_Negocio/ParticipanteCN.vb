@@ -51,4 +51,12 @@ Public Class ParticipanteCN
     Public Function FiltarParticipanteOrigenFecha(selectedValue As Object, dateini As String, datefin As String) As Object
         Return partDAO.FiltarParticipanteOrigenFecha(selectedValue, dateini, datefin)
     End Function
+
+#Region "frm filtrar participante"
+    Public Function CargarParticipante_tabla_codcapacitacion(cod As String) As DataTable
+        Return partDAO.CargarParticipante_tabla_codcapacitacion(cod)
+    End Function
+#End Region
+
+
 End Class

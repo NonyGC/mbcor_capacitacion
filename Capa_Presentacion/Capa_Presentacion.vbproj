@@ -176,6 +176,12 @@
     <Compile Include="Form\Estadistico\frmLocalParticipante.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\Participante\frmFiltParticipante.Designer.vb">
+      <DependentUpon>frmFiltParticipante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Participante\frmFiltParticipante.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\Participante\frmListParticipante.Designer.vb">
       <DependentUpon>frmListParticipante.vb</DependentUpon>
     </Compile>
@@ -242,6 +248,9 @@
     <EmbeddedResource Include="Form\Estadistico\frmLocalParticipante.resx">
       <DependentUpon>frmLocalParticipante.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Participante\frmFiltParticipante.resx">
+      <DependentUpon>frmFiltParticipante.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Participante\frmListParticipante.resx">
       <DependentUpon>frmListParticipante.vb</DependentUpon>
     </EmbeddedResource>
@@ -281,7 +290,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Entidad\Capa_Entidad.vbproj">
