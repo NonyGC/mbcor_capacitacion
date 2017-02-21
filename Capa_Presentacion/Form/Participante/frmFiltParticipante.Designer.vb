@@ -251,11 +251,13 @@ Partial Class frmFiltParticipante
         Me.Controls.Add(Me.dtgParticipante)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(999, 532)
         Me.Name = "frmFiltParticipante"
         '
         '
         '
         Me.RootElement.ApplyShapeToControl = True
+        Me.RootElement.MaxSize = New System.Drawing.Size(999, 532)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = ""
         Me.ThemeName = "VisualStudio2012Light"

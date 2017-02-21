@@ -170,12 +170,6 @@
     <Compile Include="Form\Capacitacion\frmListadoCapacitacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Estadistico\frmLocalParticipante.Designer.vb">
-      <DependentUpon>frmLocalParticipante.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form\Estadistico\frmLocalParticipante.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Form\Participante\frmFiltParticipante.Designer.vb">
       <DependentUpon>frmFiltParticipante.vb</DependentUpon>
     </Compile>
@@ -244,9 +238,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Capacitacion\frmListadoCapacitacion.resx">
       <DependentUpon>frmListadoCapacitacion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form\Estadistico\frmLocalParticipante.resx">
-      <DependentUpon>frmLocalParticipante.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Participante\frmFiltParticipante.resx">
       <DependentUpon>frmFiltParticipante.vb</DependentUpon>
@@ -318,6 +309,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nexus2cee_android-m.png.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Form\Estadistico\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

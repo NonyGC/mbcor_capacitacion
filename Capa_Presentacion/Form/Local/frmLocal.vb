@@ -13,14 +13,31 @@ Public Class frmLocal
         cboDepartamento.DataSource = localCN.ubigeo_Departamento()
         cboDepartamento.DisplayMember = "Departamento"
         cboDepartamento.ValueMember = "idDep"
+        ubigeoPredeterminado()
 
-        cboDepartamento.SelectedValue = "15"
         cboDepartamento.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboProvincia.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboDistrito.DropDownListElement.AutoCompleteAppend.LimitToList = True
     End Sub
 
     Private Sub cboProvincia_Leave(sender As Object, e As EventArgs) Handles cboProvincia.Leave
+        cargarUbigeoDistrito()
+    End Sub
+    Sub ubigeoPredeterminado()
+        cboDepartamento.SelectedValue = "15"
+        cargarUbigeoProvincia()
+        cargarUbigeoDistrito()
+        cboDistrito.SelectedIndex = -1
+    End Sub
+    Sub cargarUbigeoProvincia()
+        Dim idDep As String = Trim(cboDepartamento.SelectedValue)
+        If idDep IsNot String.Empty Then
+            cboProvincia.DataSource = localCN.ubigeo_Provincia(idDep)
+            cboProvincia.ValueMember = "idProv"
+            cboProvincia.DisplayMember = "Provincia"
+        End If
+    End Sub
+    Sub cargarUbigeoDistrito()
         Dim idDep As String = Trim(cboDepartamento.SelectedValue)
         Dim idProv As String = Trim(cboProvincia.SelectedValue)
         If idDep IsNot String.Empty And idProv IsNot String.Empty Then
@@ -30,19 +47,16 @@ Public Class frmLocal
             cboDistrito.DisplayMember = "Distrito"
         End If
     End Sub
-
     Private Sub cboDepartamento_Leave(sender As Object, e As EventArgs) Handles cboDepartamento.Leave
-        Dim idDep As String = Trim(cboDepartamento.SelectedValue)
-        If idDep IsNot String.Empty Then
-            cboProvincia.DataSource = localCN.ubigeo_Provincia(idDep)
-            cboProvincia.ValueMember = "idProv"
-            cboProvincia.DisplayMember = "Provincia"
-        End If
+        cargarUbigeoProvincia()
     End Sub
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
         If Trim(txtNombre.Text).Length > 0 Then
-            Dim codUbi As String = cboDepartamento.SelectedValue & cboProvincia.SelectedValue & cboDistrito.SelectedValue
+            Dim dep As String = If(cboDepartamento.SelectedValue Is Nothing, "00", cboDepartamento.SelectedValue)
+            Dim pro As String = If(cboProvincia.SelectedValue Is Nothing, "00", cboProvincia.SelectedValue)
+            Dim dis As String = If(cboDistrito.SelectedValue Is Nothing, "00", cboDistrito.SelectedValue)
+            Dim codUbi As String = dep & pro & dis
             With LocalCE
                 .codigo = txtCodigo.Text
                 .nombre = txtNombre.Text

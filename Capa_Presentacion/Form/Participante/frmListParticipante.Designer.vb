@@ -374,11 +374,13 @@ Partial Class FrmListParticipante
         Me.Controls.Add(Me.Label15)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(997, 718)
         Me.Name = "FrmListParticipante"
         '
         '
         '
         Me.RootElement.ApplyShapeToControl = True
+        Me.RootElement.MaxSize = New System.Drawing.Size(997, 718)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MBCORP"
         Me.ThemeName = "VisualStudio2012Light"

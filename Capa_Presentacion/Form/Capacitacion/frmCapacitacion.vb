@@ -69,35 +69,39 @@ Public Class frmCapacitacion
             txtCantIngresado.Value = .cantIngresada
             txtTema.Text = .tema
             txtEspositor.Text = .expositor
+            txtOrigenOtro.Visible = If(.origen = "Otros", True, False)
         End With
         btnRegistar.Text = "ACTUALIZAR"
         btnLimpiar.Enabled = False
     End Sub
 
     Private Sub btnRegistar_Click(sender As Object, e As EventArgs) Handles btnRegistar.Click
-        With capNewCE
-            .codigo = txtCodigo.Text
-            .origen = cboOrigen.Text
-            .origenOtro = txtOrigenOtro.Text
-            .organizador = txtOrganizador.Text
-            .local = cboLocal.SelectedValue
-            .cantMasisa = txtCantMasisa.Value
-            .cantIngresada = txtCantIngresado.Value
-            .fecha = (dtmFecha.Value).ToString("yyyy-MM-dd")
-            .tema = txtTema.Text
-            .expositor = txtEspositor.Text
-        End With
-        Select Case value
-            Case Initialize.ini
-                Dim est As Boolean = If(capCN.registrar(capNewCE), True, False)
-                Dim mssj As String = If(est, "SE REGISTRO CORRECTAMENTE", "OCURRIO UN ERROR,VUELVA A REGISTRAR")
-                mssje(est, mssj) : Limpiar()
-            Case Initialize.upd
-                Dim est As Boolean = If(capCN.actualizar(capNewCE), True, False)
-                Dim mssj As String = If(est, "SE ACTUALIZO CORRECTAMENTE", "OCURRIO UN ERROR,VUELVA A INTENTAR")
-                mssje(est, mssj)
-        End Select
-
+        If cboLocal.SelectedValue IsNot Nothing And cboOrigen.SelectedIndex <> -1 Then
+            With capNewCE
+                .codigo = txtCodigo.Text
+                .origen = cboOrigen.Text
+                .origenOtro = txtOrigenOtro.Text
+                .organizador = txtOrganizador.Text
+                .local = cboLocal.SelectedValue
+                .cantMasisa = txtCantMasisa.Value
+                .cantIngresada = txtCantIngresado.Value
+                .fecha = (dtmFecha.Value).ToString("yyyy-MM-dd")
+                .tema = txtTema.Text
+                .expositor = txtEspositor.Text
+            End With
+            Select Case value
+                Case Initialize.ini
+                    Dim est As Boolean = If(capCN.registrar(capNewCE), True, False)
+                    Dim mssj As String = If(est, "SE REGISTRO CORRECTAMENTE", "OCURRIO UN ERROR,VUELVA A REGISTRAR")
+                    mssje(est, mssj) : Limpiar()
+                Case Initialize.upd
+                    Dim est As Boolean = If(capCN.actualizar(capNewCE), True, False)
+                    Dim mssj As String = If(est, "SE ACTUALIZO CORRECTAMENTE", "OCURRIO UN ERROR,VUELVA A INTENTAR")
+                    mssje(est, mssj)
+            End Select
+        Else
+            RadMessageBox.Show("DATOS INCOMPLETOS", "", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+        End If
     End Sub
     Sub mssje(est As Boolean, mssj As String)
         If est Then

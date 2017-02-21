@@ -41,4 +41,5 @@ Public Class FrmListadoCapacitacion
         frm.Dispose()
 
     End Sub
+
 End Class

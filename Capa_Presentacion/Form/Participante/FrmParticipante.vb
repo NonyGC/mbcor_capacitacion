@@ -40,7 +40,7 @@ Public Class FrmParticipante_vb
         cboDepartamento.ValueMember = "idDep"
         Select Case Value
             Case Initialize.ini
-                cboDepartamento.SelectedValue = "15"
+                ubigeoPredeterminado()
             Case Initialize.upd
                 cargarDat_Actualizacion()
         End Select
@@ -120,6 +120,12 @@ Public Class FrmParticipante_vb
             btnGuardar.Text = "ACTUALIZAR"
             btnLimpiar.Enabled = False
         End With
+    End Sub
+    Sub ubigeoPredeterminado()
+        cboDepartamento.SelectedValue = "15"
+        loadProvincia()
+        loadDistrito()
+        cboDistrito.SelectedIndex = -1
     End Sub
 
     Private Sub cboProvincia_Leave(sender As Object, e As EventArgs) Handles cboProvincia.Leave

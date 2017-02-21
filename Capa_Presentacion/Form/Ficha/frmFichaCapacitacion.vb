@@ -85,12 +85,6 @@ Public Class frmFichaCapacitacion
         Limpiar()
     End Sub
     Sub bloquear()
-        'lblApeNom.Text = "Apellidos y Nombres"
-
-        'txtCodtel.Text = "(___)" : txtCodtelM.Text = "(___)"
-        'grbRubro.Enabled = False
-        'grp1.Enabled = False
-        'grp2.Enabled = False
         grp5.Enabled = False
         grpCharla.Enabled = False
         btnRegistrar.Enabled = False : btnLimpiar.Enabled = False
@@ -153,11 +147,7 @@ Public Class frmFichaCapacitacion
                 Frm.Dispose()
             End If
             FormProcedencias = ""
-            'lblApeNom.Text = Frm.GetApeNom()
 
-            'grbRubro.Enabled = True
-            'grp1.Enabled = True
-            'grp2.Enabled = True
             grp5.Enabled = True
             grpCharla.Enabled = True
             btnRegistrar.Enabled = True : btnLimpiar.Enabled = True
@@ -211,29 +201,33 @@ Public Class frmFichaCapacitacion
     End Function
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
+        If cboCapacitacion.SelectedIndex <> -1 Then
 
-        With FichaCE
-            .codcap = Trim(cboCapacitacion.SelectedValue)
-            .codpart = Trim(txtCodigop.Text)
-            .charla = getCheckboxVal(grpCharla)
-            .espCharla = txtEspeCharla.Text
-            .dominioTem = If(Not IsNothing(GetGrpBxCheckedBbt(grpRessin1)), GetGrpBxCheckedBbt(grpRessin1).Text, String.Empty)
-            .dejaEntender = If(Not IsNothing(GetGrpBxCheckedBbt(grpRessin2)), GetGrpBxCheckedBbt(grpRessin2).Text, String.Empty)
-            .fueInteresante = If(Not IsNothing(GetGrpBxCheckedBbt(grpRessin3)), GetGrpBxCheckedBbt(grpRessin3).Text, String.Empty)
-            .extCharla = If(Not IsNothing(GetGrpBxCheckedBbt(grpRessin4)), GetGrpBxCheckedBbt(grpRessin4).Text, String.Empty)
-            .visitaPagina = If(Not IsNothing(GetGrpBxCheckedBbt(grpRessin5)), GetGrpBxCheckedBbt(grpRessin5).Text, String.Empty)
-            .otroTema = txtTematratar.Text
-            .targeta = If(Not IsNothing(GetGrpBxCheckedBbt(grpTajetacredito)), GetGrpBxCheckedBbt(grpTajetacredito).Text, String.Empty)
-        End With
+            With FichaCE
+                .codcap = Trim(cboCapacitacion.SelectedValue)
+                .codpart = Trim(txtCodigop.Text)
+                .charla = getCheckboxVal(grpCharla)
+                .espCharla = txtEspeCharla.Text
+                .dominioTem = If(Not IsNothing(GetGrpBxCheckedBbt(grpRessin1)), GetGrpBxCheckedBbt(grpRessin1).Text, String.Empty)
+                .dejaEntender = If(Not IsNothing(GetGrpBxCheckedBbt(grpRessin2)), GetGrpBxCheckedBbt(grpRessin2).Text, String.Empty)
+                .fueInteresante = If(Not IsNothing(GetGrpBxCheckedBbt(grpRessin3)), GetGrpBxCheckedBbt(grpRessin3).Text, String.Empty)
+                .extCharla = If(Not IsNothing(GetGrpBxCheckedBbt(grpRessin4)), GetGrpBxCheckedBbt(grpRessin4).Text, String.Empty)
+                .visitaPagina = If(Not IsNothing(GetGrpBxCheckedBbt(grpRessin5)), GetGrpBxCheckedBbt(grpRessin5).Text, String.Empty)
+                .otroTema = txtTematratar.Text
+                .targeta = If(Not IsNothing(GetGrpBxCheckedBbt(grpTajetacredito)), GetGrpBxCheckedBbt(grpTajetacredito).Text, String.Empty)
+            End With
 
-        Dim fichtEst As Boolean = If(FichCN.fichaCapacitacion_Registrar(FichaCE), True, False)
+            Dim fichtEst As Boolean = If(FichCN.fichaCapacitacion_Registrar(FichaCE), True, False)
 
-        If fichtEst Then
-            RadMessageBox.Show("SE REGISTRO CORRECTAMENTE", "", MessageBoxButtons.OK, RadMessageIcon.Info)
-            Limpiar()
-            bloquear()
+            If fichtEst Then
+                RadMessageBox.Show("SE REGISTRO CORRECTAMENTE", "", MessageBoxButtons.OK, RadMessageIcon.Info)
+                Limpiar()
+                bloquear()
+            Else
+                RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A REGISTRAR", "", MessageBoxButtons.OK, RadMessageIcon.Error)
+            End If
         Else
-            RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A REGISTRAR", "", MessageBoxButtons.OK, RadMessageIcon.Error)
+            RadMessageBox.Show("FALTA SELECCIONAR CAPACITACIÓN", "", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
         End If
     End Sub
 
