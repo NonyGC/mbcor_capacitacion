@@ -200,6 +200,12 @@
     <Compile Include="Form\Menu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\Reporte\frmReporte.Designer.vb">
+      <DependentUpon>frmReporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Reporte\frmReporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -215,16 +221,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Reporte\ReporteParticipante.vb">
+    <Compile Include="rpt\ReporteParticipante.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ReporteParticipante.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reporte\repParticipante.Designer.vb">
+    <Compile Include="rpt\repParticipante.Designer.vb">
       <DependentUpon>repParticipante.vb</DependentUpon>
     </Compile>
-    <Compile Include="Reporte\repParticipante.vb">
+    <Compile Include="rpt\repParticipante.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Shared\Base.vb" />
@@ -254,6 +260,9 @@
     <EmbeddedResource Include="Form\Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Reporte\frmReporte.resx">
+      <DependentUpon>frmReporte.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -261,11 +270,11 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reporte\ReporteParticipante.rpt">
+    <EmbeddedResource Include="rpt\ReporteParticipante.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteParticipante.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reporte\repParticipante.resx">
+    <EmbeddedResource Include="rpt\repParticipante.resx">
       <DependentUpon>repParticipante.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

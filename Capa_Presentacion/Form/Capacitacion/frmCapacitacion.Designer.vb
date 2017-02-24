@@ -318,10 +318,10 @@ Partial Class frmCapacitacion
         '
         Me.cboOrigen.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboOrigen.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadListDataItem1.Text = "Charla Técnica"
-        RadListDataItem2.Text = "Muestrario de Productos"
-        RadListDataItem3.Text = "Red M"
-        RadListDataItem4.Text = "Otros"
+        RadListDataItem1.Text = "CHARLA TÉCNICA"
+        RadListDataItem2.Text = "MUESTRARIO DE PRODUCTOS"
+        RadListDataItem3.Text = "RED M"
+        RadListDataItem4.Text = "OTROS"
         Me.cboOrigen.Items.Add(RadListDataItem1)
         Me.cboOrigen.Items.Add(RadListDataItem2)
         Me.cboOrigen.Items.Add(RadListDataItem3)
@@ -339,7 +339,7 @@ Partial Class frmCapacitacion
         Me.txtOrigenOtro.Location = New System.Drawing.Point(358, 79)
         Me.txtOrigenOtro.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtOrigenOtro.Name = "txtOrigenOtro"
-        Me.txtOrigenOtro.NullText = "Otros"
+        Me.txtOrigenOtro.NullText = "ESPECIFICAR"
         '
         '
         '

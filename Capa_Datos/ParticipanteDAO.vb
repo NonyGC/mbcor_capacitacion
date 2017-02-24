@@ -25,7 +25,7 @@ Public Class ParticipanteDAO
         ElseIf rbtSelected = "Local" Then
             cmd = CommandText("SELECT codigo,nombre FROM local")
         ElseIf rbtSelected = "Origen" Then
-            cmd = CommandText("SELECT codigo,CASE WHEN origen='Otros' THEN origen+' '+origOtro ELSE origen END AS nombre FROM capacitacion")
+            cmd = CommandText("SELECT DISTINCT CASE WHEN origen='Otros' THEN origen+' '+origOtro ELSE origen END AS nombre FROM capacitacion")
         End If
         data = GetDataTable(cmd)
         Return data
@@ -61,7 +61,7 @@ Public Class ParticipanteDAO
     End Function
 
     Public Function FiltarParticipanteOrigenFecha(selectedValue As Object, dateini As String, datefin As String) As Object
-        Dim cmd As SqlCommand = CommandText("SELECT P.codigo,apellido_pat,apellido_mat,nombres,sexo,fecha_nacimiento,dni_ce,direccion,ubigeo,tel_fijo,tel_mol,ope_movil,tel_fijo2,tel_mol2,ope_movil2,email,estado_civ,profe_ocupa FROM [dbo].[participante] P INNER JOIN [dbo].[ficha_capacitacion] FC ON P.codigo=FC.codpar INNER JOIN [dbo].[capacitacion] C ON FC.codcap=C.codigo WHERE CASE WHEN origen='Otros' THEN origen+' '+origOtro ELSE origen END=@origen  AND C.fecha BETWEEN @ini AND @fin")
+        Dim cmd As SqlCommand = CommandText("SELECT P.codigo,apellido_pat,apellido_mat,nombres,sexo,fecha_nacimiento,dni_ce,direccion,ubigeo,tel_fijo,tel_mol,ope_movil,tel_fijo2,tel_mol2,ope_movil2,email,estado_civ,profe_ocupa FROM [dbo].[participante] P INNER JOIN [dbo].[ficha_capacitacion] FC ON P.codigo=FC.codpar INNER JOIN [dbo].[capacitacion] C ON FC.codcap=C.codigo WHERE CASE WHEN C.origen='OTROS' THEN C.origen+' '+origOtro ELSE C.origen END=@origen  AND C.fecha BETWEEN @ini AND @fin")
         cmd.Parameters.AddWithValue("@origen", selectedValue)
         cmd.Parameters.AddWithValue("@ini", dateini)
         cmd.Parameters.AddWithValue("@fin", datefin)
@@ -71,7 +71,7 @@ Public Class ParticipanteDAO
     End Function
 
     Public Function FiltarParticipanteOrigen(SelectedText As Object) As DataTable
-        Dim cmd As SqlCommand = CommandText("SELECT P.codigo,apellido_pat,apellido_mat,nombres,sexo,fecha_nacimiento,dni_ce,direccion,ubigeo,tel_fijo,tel_mol,ope_movil,tel_fijo2,tel_mol2,ope_movil2,email,estado_civ,profe_ocupa FROM [dbo].[participante] P INNER JOIN [dbo].[ficha_capacitacion] FC ON P.codigo=FC.codpar INNER JOIN [dbo].[capacitacion] C ON FC.codcap=C.codigo WHERE CASE WHEN origen='Otros' THEN origen+' '+origOtro ELSE origen END=@origen")
+        Dim cmd As SqlCommand = CommandText("SELECT P.codigo,apellido_pat,apellido_mat,nombres,sexo,fecha_nacimiento,dni_ce,direccion,ubigeo,tel_fijo,tel_mol,ope_movil,tel_fijo2,tel_mol2,ope_movil2,email,estado_civ,profe_ocupa FROM [dbo].[participante] P INNER JOIN [dbo].[ficha_capacitacion] FC ON P.codigo=FC.codpar INNER JOIN [dbo].[capacitacion] C ON FC.codcap=C.codigo WHERE CASE WHEN C.origen='OTROS' THEN C.origen+' '+origOtro ELSE C.origen END=@origen")
         cmd.Parameters.AddWithValue("@origen", SelectedText)
         Dim data As New DataTable
         data = GetDataTable(cmd)

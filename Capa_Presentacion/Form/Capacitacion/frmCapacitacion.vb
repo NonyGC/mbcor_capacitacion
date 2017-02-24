@@ -69,7 +69,7 @@ Public Class frmCapacitacion
             txtCantIngresado.Value = .cantIngresada
             txtTema.Text = .tema
             txtEspositor.Text = .expositor
-            txtOrigenOtro.Visible = If(.origen = "Otros", True, False)
+            txtOrigenOtro.Visible = If(.origen = "OTROS", True, False)
         End With
         btnRegistar.Text = "ACTUALIZAR"
         btnLimpiar.Enabled = False

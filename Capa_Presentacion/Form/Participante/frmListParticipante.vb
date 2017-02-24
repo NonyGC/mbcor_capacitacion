@@ -78,49 +78,57 @@ Public Class FrmListParticipante
         txtFechaini.Value = "__/__/____"
         txtFechafin.Value = "__/__/____"
         cboBuscar.Enabled = True : btnBuscar.Enabled = True
+        cboBuscar.DataSource = Nothing
     End Sub
 
     Private Sub rbtLocal_CheckedChanged(sender As Object, e As EventArgs) Handles rbtLocal.CheckedChanged
         gpbFecha.Enabled = If(rbtLocal.Checked, True, False)
         cboBuscar.Enabled = True : btnBuscar.Enabled = True
+        cboBuscar.DataSource = Nothing
     End Sub
 
     Private Sub rbtOrigen_CheckedChanged(sender As Object, e As EventArgs) Handles rbtOrigen.CheckedChanged
         gpbFecha.Enabled = If(rbtOrigen.Checked, True, False)
         cboBuscar.Enabled = True : btnBuscar.Enabled = True
+        cboBuscar.DataSource = Nothing
     End Sub
 
     Private Sub rbtBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
-        Dim cadenaBusqueda As String = cboBuscar.Text
-        Dim rbtSelected As String = If(Not IsNothing(GetGrpBxCheckedBbt(gpbTipBusqueda)), GetGrpBxCheckedBbt(gpbTipBusqueda).Text, "")
-        Dim dateini As String = If((txtFechaini.Text).Contains("_"), String.Empty, txtFechaini.Value)
-        Dim datefin As String = If((txtFechafin.Text).Contains("_"), String.Empty, txtFechafin.Value)
-        If rbtSelected IsNot String.Empty Then
-            If rbtSelected = "Apellidos y Nombres" Then
+        If cboBuscar.SelectedValue IsNot Nothing Then
+            Dim cadenaBusqueda As String = cboBuscar.Text
+            Dim rbtSelected As String = If(Not IsNothing(GetGrpBxCheckedBbt(gpbTipBusqueda)), GetGrpBxCheckedBbt(gpbTipBusqueda).Text, "")
+            Dim dateini As String = If((txtFechaini.Text).Contains("_"), String.Empty, txtFechaini.Value)
+            Dim datefin As String = If((txtFechafin.Text).Contains("_"), String.Empty, txtFechafin.Value)
+            If rbtSelected IsNot String.Empty Then
+                If rbtSelected = "Apellidos y Nombres" Then
 
-                dtgParticipante.DataSource = ParticipanteCN.FiltarParticipanteApeNom(cboBuscar.SelectedValue)
+                    dtgParticipante.DataSource = ParticipanteCN.FiltarParticipanteApeNom(cboBuscar.SelectedValue)
 
-            ElseIf rbtSelected = "Local" Then
-                If IsDate(dateini) And IsDate(datefin) Then
-                    dateini = CDate(dateini).ToString("yyyy-MM-dd")
-                    datefin = CDate(datefin).ToString("yyyy-MM-dd")
-                    dtgParticipante.DataSource = ParticipanteCN.FiltarParticipanteLocalFecha(cboBuscar.SelectedValue, dateini, datefin)
-                Else
-                    dtgParticipante.DataSource = ParticipanteCN.FiltarParticipanteLocal(cboBuscar.SelectedValue)
-                    txtFechaini.Value = "__/__/____"
-                    txtFechafin.Value = "__/__/____"
+                ElseIf rbtSelected = "Local" Then
+                    If IsDate(dateini) And IsDate(datefin) Then
+                        dateini = CDate(dateini).ToString("yyyy-MM-dd")
+                        datefin = CDate(datefin).ToString("yyyy-MM-dd")
+                        dtgParticipante.DataSource = ParticipanteCN.FiltarParticipanteLocalFecha(cboBuscar.SelectedValue, dateini, datefin)
+                    Else
+                        dtgParticipante.DataSource = ParticipanteCN.FiltarParticipanteLocal(cboBuscar.SelectedValue)
+                        txtFechaini.Value = "__/__/____"
+                        txtFechafin.Value = "__/__/____"
+                    End If
+                ElseIf rbtSelected = "Origen" Then
+
+                    If IsDate(dateini) And IsDate(datefin) Then
+                        dateini = CDate(dateini).ToString("yyyy-MM-dd")
+                        datefin = CDate(datefin).ToString("yyyy-MM-dd")
+                        dtgParticipante.DataSource = ParticipanteCN.FiltarParticipanteOrigenFecha(cboBuscar.Text, dateini, datefin)
+                    Else
+                        dtgParticipante.DataSource = ParticipanteCN.FiltarParticipanteOrigen(cboBuscar.Text)
+                        txtFechaini.Value = "__/__/____"
+                        txtFechafin.Value = "__/__/____"
+                    End If
+
                 End If
-            ElseIf rbtSelected = "Origen" Then
-
-                If IsDate(dateini) And IsDate(datefin) Then
-                    dtgParticipante.DataSource = ParticipanteCN.FiltarParticipanteOrigenFecha(cboBuscar.SelectedText, dateini, datefin)
-                Else
-                    dtgParticipante.DataSource = ParticipanteCN.FiltarParticipanteOrigen(cboBuscar.Text)
-                End If
-
             End If
         End If
-
     End Sub
 
     Public Sub cboBuscar_AutoComparer()
@@ -146,11 +154,12 @@ Public Class FrmListParticipante
     End Class
 
     Private Sub cboBuscar_Enter(sender As Object, e As EventArgs) Handles cboBuscar.Enter
+        'Dim rdb
         Dim rbtSelected As String = If(Not IsNothing(GetGrpBxCheckedBbt(gpbTipBusqueda)), GetGrpBxCheckedBbt(gpbTipBusqueda).Text, "")
         'Dim dateIni As String
         If rbtSelected IsNot String.Empty Then
             cboBuscar.DataSource = ParticipanteCN.cargarAutocompletado_buscar(rbtSelected)
-            cboBuscar.ValueMember = "codigo"
+            If GetGrpBxCheckedBbt(gpbTipBusqueda).Text <> "Origen" Then cboBuscar.ValueMember = "codigo"
             cboBuscar.DisplayMember = "nombre"
             cboBuscar.SelectedIndex = -1
         End If
