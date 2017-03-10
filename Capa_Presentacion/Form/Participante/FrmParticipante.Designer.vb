@@ -41,8 +41,11 @@ Partial Class FrmParticipante_vb
         Dim RadListDataItem17 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem18 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem19 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem20 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem21 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmParticipante_vb))
         Me.grp = New System.Windows.Forms.GroupBox()
+        Me.cboSexo = New Telerik.WinControls.UI.RadDropDownList()
         Me.txtApeMat = New Telerik.WinControls.UI.RadTextBox()
         Me.txtProfesionOcupacion = New Telerik.WinControls.UI.RadTextBox()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -64,6 +67,7 @@ Partial Class FrmParticipante_vb
         Me.cboProvincia = New Telerik.WinControls.UI.RadDropDownList()
         Me.cboDepartamento = New Telerik.WinControls.UI.RadDropDownList()
         Me.txtDNICE = New Telerik.WinControls.UI.RadTextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cboEstadoCivil = New Telerik.WinControls.UI.RadDropDownList()
         Me.txtCorreo = New Telerik.WinControls.UI.RadTextBox()
@@ -81,9 +85,6 @@ Partial Class FrmParticipante_vb
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.grpSexo = New System.Windows.Forms.GroupBox()
-        Me.F = New System.Windows.Forms.RadioButton()
-        Me.M = New System.Windows.Forms.RadioButton()
         Me.btnGuardar = New Telerik.WinControls.UI.RadButton()
         Me.btnLimpiar = New Telerik.WinControls.UI.RadButton()
         Me.lblTitulo = New System.Windows.Forms.Label()
@@ -126,6 +127,7 @@ Partial Class FrmParticipante_vb
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.grp.SuspendLayout()
+        CType(Me.cboSexo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtApeMat, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtProfesionOcupacion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboOperadorM2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -140,7 +142,6 @@ Partial Class FrmParticipante_vb
         CType(Me.txtDireccion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtNombres, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtApePat, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.grpSexo.SuspendLayout()
         CType(Me.btnGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnLimpiar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grbRubro.SuspendLayout()
@@ -162,6 +163,7 @@ Partial Class FrmParticipante_vb
         'grp
         '
         Me.grp.AccessibleDescription = ""
+        Me.grp.Controls.Add(Me.cboSexo)
         Me.grp.Controls.Add(Me.txtApeMat)
         Me.grp.Controls.Add(Me.txtProfesionOcupacion)
         Me.grp.Controls.Add(Me.Label16)
@@ -183,6 +185,7 @@ Partial Class FrmParticipante_vb
         Me.grp.Controls.Add(Me.cboProvincia)
         Me.grp.Controls.Add(Me.cboDepartamento)
         Me.grp.Controls.Add(Me.txtDNICE)
+        Me.grp.Controls.Add(Me.Label26)
         Me.grp.Controls.Add(Me.Label6)
         Me.grp.Controls.Add(Me.cboEstadoCivil)
         Me.grp.Controls.Add(Me.txtCorreo)
@@ -200,7 +203,6 @@ Partial Class FrmParticipante_vb
         Me.grp.Controls.Add(Me.Label1)
         Me.grp.Controls.Add(Me.Label25)
         Me.grp.Controls.Add(Me.Label7)
-        Me.grp.Controls.Add(Me.grpSexo)
         Me.grp.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.grp.Location = New System.Drawing.Point(22, 27)
         Me.grp.Name = "grp"
@@ -209,11 +211,25 @@ Partial Class FrmParticipante_vb
         Me.grp.TabStop = False
         Me.grp.Text = "DATOS PERSONALES"
         '
+        'cboSexo
+        '
+        Me.cboSexo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.cboSexo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        RadListDataItem1.Text = "M"
+        RadListDataItem2.Text = "F"
+        Me.cboSexo.Items.Add(RadListDataItem1)
+        Me.cboSexo.Items.Add(RadListDataItem2)
+        Me.cboSexo.Location = New System.Drawing.Point(742, 87)
+        Me.cboSexo.Name = "cboSexo"
+        Me.cboSexo.Size = New System.Drawing.Size(83, 25)
+        Me.cboSexo.TabIndex = 10
+        Me.cboSexo.ThemeName = "VisualStudio2012Light"
+        '
         'txtApeMat
         '
         Me.txtApeMat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtApeMat.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtApeMat.Location = New System.Drawing.Point(557, 27)
+        Me.txtApeMat.Location = New System.Drawing.Point(562, 23)
         Me.txtApeMat.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtApeMat.Name = "txtApeMat"
         '
@@ -226,6 +242,7 @@ Partial Class FrmParticipante_vb
         '
         'txtProfesionOcupacion
         '
+        Me.txtProfesionOcupacion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtProfesionOcupacion.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtProfesionOcupacion.Location = New System.Drawing.Point(139, 272)
         Me.txtProfesionOcupacion.MinimumSize = New System.Drawing.Size(0, 24)
@@ -348,16 +365,16 @@ Partial Class FrmParticipante_vb
         '
         Me.cboOperadorM2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.cboOperadorM2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadListDataItem1.Text = "MOVISTAR"
-        RadListDataItem2.Text = "CLARO"
-        RadListDataItem3.Text = "ENTEL"
-        RadListDataItem4.Text = "BITEL"
-        RadListDataItem5.Text = "VIRGIN"
-        Me.cboOperadorM2.Items.Add(RadListDataItem1)
-        Me.cboOperadorM2.Items.Add(RadListDataItem2)
+        RadListDataItem3.Text = "MOVISTAR"
+        RadListDataItem4.Text = "CLARO"
+        RadListDataItem5.Text = "ENTEL"
+        RadListDataItem6.Text = "BITEL"
+        RadListDataItem7.Text = "VIRGIN"
         Me.cboOperadorM2.Items.Add(RadListDataItem3)
         Me.cboOperadorM2.Items.Add(RadListDataItem4)
         Me.cboOperadorM2.Items.Add(RadListDataItem5)
+        Me.cboOperadorM2.Items.Add(RadListDataItem6)
+        Me.cboOperadorM2.Items.Add(RadListDataItem7)
         Me.cboOperadorM2.Location = New System.Drawing.Point(678, 211)
         Me.cboOperadorM2.Name = "cboOperadorM2"
         Me.cboOperadorM2.Size = New System.Drawing.Size(147, 25)
@@ -398,16 +415,16 @@ Partial Class FrmParticipante_vb
         '
         Me.cboOperadorM.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.cboOperadorM.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadListDataItem6.Text = "MOVISTAR"
-        RadListDataItem7.Text = "CLARO"
-        RadListDataItem8.Text = "ENTEL"
-        RadListDataItem9.Text = "BITEL"
-        RadListDataItem10.Text = "VIRGIN"
-        Me.cboOperadorM.Items.Add(RadListDataItem6)
-        Me.cboOperadorM.Items.Add(RadListDataItem7)
+        RadListDataItem8.Text = "MOVISTAR"
+        RadListDataItem9.Text = "CLARO"
+        RadListDataItem10.Text = "ENTEL"
+        RadListDataItem11.Text = "BITEL"
+        RadListDataItem12.Text = "VIRGIN"
         Me.cboOperadorM.Items.Add(RadListDataItem8)
         Me.cboOperadorM.Items.Add(RadListDataItem9)
         Me.cboOperadorM.Items.Add(RadListDataItem10)
+        Me.cboOperadorM.Items.Add(RadListDataItem11)
+        Me.cboOperadorM.Items.Add(RadListDataItem12)
         Me.cboOperadorM.Location = New System.Drawing.Point(678, 181)
         Me.cboOperadorM.Name = "cboOperadorM"
         Me.cboOperadorM.Size = New System.Drawing.Size(147, 25)
@@ -481,6 +498,16 @@ Partial Class FrmParticipante_vb
         Me.txtDNICE.TabIndex = 9
         Me.txtDNICE.ThemeName = "VisualStudio2012Light"
         '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(669, 92)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(35, 15)
+        Me.Label26.TabIndex = 116
+        Me.Label26.Text = "SEXO"
+        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -495,14 +522,14 @@ Partial Class FrmParticipante_vb
         '
         Me.cboEstadoCivil.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.cboEstadoCivil.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadListDataItem11.Text = "SOLTERO"
-        RadListDataItem12.Text = "CASADO"
-        RadListDataItem13.Text = "VIUDO"
-        RadListDataItem14.Text = "DIVORCIADO"
-        Me.cboEstadoCivil.Items.Add(RadListDataItem11)
-        Me.cboEstadoCivil.Items.Add(RadListDataItem12)
+        RadListDataItem13.Text = "SOLTERO(A)"
+        RadListDataItem14.Text = "CASADO(A)"
+        RadListDataItem15.Text = "VIUDO(A)"
+        RadListDataItem16.Text = "DIVORCIADO(A)"
         Me.cboEstadoCivil.Items.Add(RadListDataItem13)
         Me.cboEstadoCivil.Items.Add(RadListDataItem14)
+        Me.cboEstadoCivil.Items.Add(RadListDataItem15)
+        Me.cboEstadoCivil.Items.Add(RadListDataItem16)
         Me.cboEstadoCivil.Location = New System.Drawing.Point(311, 87)
         Me.cboEstadoCivil.Name = "cboEstadoCivil"
         Me.cboEstadoCivil.Size = New System.Drawing.Size(110, 25)
@@ -511,6 +538,7 @@ Partial Class FrmParticipante_vb
         '
         'txtCorreo
         '
+        Me.txtCorreo.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower
         Me.txtCorreo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCorreo.Location = New System.Drawing.Point(139, 243)
         Me.txtCorreo.MinimumSize = New System.Drawing.Size(0, 24)
@@ -678,41 +706,6 @@ Partial Class FrmParticipante_vb
         Me.Label7.TabIndex = 87
         Me.Label7.Text = "DIRECCIÓN"
         '
-        'grpSexo
-        '
-        Me.grpSexo.Controls.Add(Me.F)
-        Me.grpSexo.Controls.Add(Me.M)
-        Me.grpSexo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.grpSexo.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpSexo.Location = New System.Drawing.Point(678, 78)
-        Me.grpSexo.Name = "grpSexo"
-        Me.grpSexo.Size = New System.Drawing.Size(147, 39)
-        Me.grpSexo.TabIndex = 4
-        Me.grpSexo.TabStop = False
-        Me.grpSexo.Text = "Sexo"
-        '
-        'F
-        '
-        Me.F.AutoSize = True
-        Me.F.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.F.Location = New System.Drawing.Point(89, 14)
-        Me.F.Name = "F"
-        Me.F.Size = New System.Drawing.Size(30, 19)
-        Me.F.TabIndex = 6
-        Me.F.Text = "F"
-        Me.F.UseVisualStyleBackColor = True
-        '
-        'M
-        '
-        Me.M.AutoSize = True
-        Me.M.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.M.Location = New System.Drawing.Point(48, 14)
-        Me.M.Name = "M"
-        Me.M.Size = New System.Drawing.Size(35, 19)
-        Me.M.TabIndex = 5
-        Me.M.Text = "M"
-        Me.M.UseVisualStyleBackColor = True
-        '
         'btnGuardar
         '
         Me.btnGuardar.Location = New System.Drawing.Point(534, 657)
@@ -736,7 +729,7 @@ Partial Class FrmParticipante_vb
         Me.lblTitulo.Font = New System.Drawing.Font("Segoe UI", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitulo.Location = New System.Drawing.Point(-3, -4)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(893, 21)
+        Me.lblTitulo.Size = New System.Drawing.Size(899, 21)
         Me.lblTitulo.TabIndex = 82
         Me.lblTitulo.Text = "REGISTRAR PARTICIPANTE"
         Me.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -766,7 +759,7 @@ Partial Class FrmParticipante_vb
         Me.txtEspOtros.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtEspOtros.Enabled = False
         Me.txtEspOtros.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEspOtros.Location = New System.Drawing.Point(199, 63)
+        Me.txtEspOtros.Location = New System.Drawing.Point(209, 63)
         Me.txtEspOtros.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtEspOtros.Name = "txtEspOtros"
         Me.txtEspOtros.NullText = "Especificar"
@@ -785,9 +778,9 @@ Partial Class FrmParticipante_vb
         Me.CheckBox10.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox10.Location = New System.Drawing.Point(143, 21)
         Me.CheckBox10.Name = "CheckBox10"
-        Me.CheckBox10.Size = New System.Drawing.Size(128, 17)
+        Me.CheckBox10.Size = New System.Drawing.Size(145, 17)
         Me.CheckBox10.TabIndex = 39
-        Me.CheckBox10.Text = "Diseño y Decoración"
+        Me.CheckBox10.Text = "DISEÑO Y DECORACIÓN"
         Me.CheckBox10.UseVisualStyleBackColor = True
         '
         'txtEspeSPE
@@ -795,7 +788,7 @@ Partial Class FrmParticipante_vb
         Me.txtEspeSPE.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtEspeSPE.Enabled = False
         Me.txtEspeSPE.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtEspeSPE.Location = New System.Drawing.Point(568, 40)
+        Me.txtEspeSPE.Location = New System.Drawing.Point(586, 40)
         Me.txtEspeSPE.MinimumSize = New System.Drawing.Size(0, 24)
         Me.txtEspeSPE.Name = "txtEspeSPE"
         Me.txtEspeSPE.NullText = "Especificar"
@@ -803,7 +796,7 @@ Partial Class FrmParticipante_vb
         '
         '
         Me.txtEspeSPE.RootElement.MinSize = New System.Drawing.Size(0, 24)
-        Me.txtEspeSPE.Size = New System.Drawing.Size(262, 24)
+        Me.txtEspeSPE.Size = New System.Drawing.Size(244, 24)
         Me.txtEspeSPE.TabIndex = 44
         Me.txtEspeSPE.ThemeName = "VisualStudio2012Light"
         '
@@ -814,9 +807,9 @@ Partial Class FrmParticipante_vb
         Me.CheckBox7.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox7.Location = New System.Drawing.Point(400, 21)
         Me.CheckBox7.Name = "CheckBox7"
-        Me.CheckBox7.Size = New System.Drawing.Size(295, 17)
+        Me.CheckBox7.Size = New System.Drawing.Size(339, 17)
         Me.CheckBox7.TabIndex = 40
-        Me.CheckBox7.Text = "Distribución de Madera y Materiales de Construcción"
+        Me.CheckBox7.Text = "DISTRIBUCIÓN DE MADERA Y MATERIALES DE CONSTRUCCIÓN"
         Me.CheckBox7.UseVisualStyleBackColor = True
         '
         'CheckBox6
@@ -826,9 +819,9 @@ Partial Class FrmParticipante_vb
         Me.CheckBox6.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox6.Location = New System.Drawing.Point(32, 67)
         Me.CheckBox6.Name = "CheckBox6"
-        Me.CheckBox6.Size = New System.Drawing.Size(91, 17)
+        Me.CheckBox6.Size = New System.Drawing.Size(107, 17)
         Me.CheckBox6.TabIndex = 45
-        Me.CheckBox6.Text = "Construcción"
+        Me.CheckBox6.Text = "CONSTRUCCIÓN"
         Me.CheckBox6.UseVisualStyleBackColor = True
         '
         'CheckBox5
@@ -838,9 +831,9 @@ Partial Class FrmParticipante_vb
         Me.CheckBox5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox5.Location = New System.Drawing.Point(142, 67)
         Me.CheckBox5.Name = "CheckBox5"
-        Me.CheckBox5.Size = New System.Drawing.Size(47, 17)
+        Me.CheckBox5.Size = New System.Drawing.Size(59, 17)
         Me.CheckBox5.TabIndex = 46
-        Me.CheckBox5.Text = "Otro"
+        Me.CheckBox5.Text = "OTROS"
         Me.CheckBox5.UseVisualStyleBackColor = True
         '
         'CheckBox4
@@ -850,9 +843,9 @@ Partial Class FrmParticipante_vb
         Me.CheckBox4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox4.Location = New System.Drawing.Point(143, 44)
         Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(206, 17)
+        Me.CheckBox4.Size = New System.Drawing.Size(230, 17)
         Me.CheckBox4.TabIndex = 43
-        Me.CheckBox4.Text = "Carpintería, Ebanistería y Mueblería"
+        Me.CheckBox4.Text = "CARPINTERÍA, EBANISTERÍA Y MUEBLERÍA"
         Me.CheckBox4.UseVisualStyleBackColor = True
         '
         'CheckBox3
@@ -862,9 +855,9 @@ Partial Class FrmParticipante_vb
         Me.CheckBox3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox3.Location = New System.Drawing.Point(400, 44)
         Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(162, 17)
+        Me.CheckBox3.Size = New System.Drawing.Size(189, 17)
         Me.CheckBox3.TabIndex = 43
-        Me.CheckBox3.Text = "Sector Público o Educación"
+        Me.CheckBox3.Text = "SECTOR PÚBLICO O EDUCACIÓN"
         Me.CheckBox3.UseVisualStyleBackColor = True
         '
         'CheckBox2
@@ -874,9 +867,9 @@ Partial Class FrmParticipante_vb
         Me.CheckBox2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox2.Location = New System.Drawing.Point(32, 44)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(78, 17)
+        Me.CheckBox2.Size = New System.Drawing.Size(85, 17)
         Me.CheckBox2.TabIndex = 41
-        Me.CheckBox2.Text = "Estudiante"
+        Me.CheckBox2.Text = "ESTUDIANTE"
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'CheckBox1
@@ -886,9 +879,9 @@ Partial Class FrmParticipante_vb
         Me.CheckBox1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CheckBox1.Location = New System.Drawing.Point(32, 21)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(87, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(102, 17)
         Me.CheckBox1.TabIndex = 38
-        Me.CheckBox1.Text = "Arquitectura"
+        Me.CheckBox1.Text = "ARQUITECTURA"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'grp2
@@ -967,16 +960,16 @@ Partial Class FrmParticipante_vb
         '
         Me.cboOperadorempresa.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.cboOperadorempresa.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        RadListDataItem15.Text = "MOVISTAR"
-        RadListDataItem16.Text = "CLARO"
-        RadListDataItem17.Text = "ENTEL"
-        RadListDataItem18.Text = "BITEL"
-        RadListDataItem19.Text = "VIRGIN"
-        Me.cboOperadorempresa.Items.Add(RadListDataItem15)
-        Me.cboOperadorempresa.Items.Add(RadListDataItem16)
+        RadListDataItem17.Text = "MOVISTAR"
+        RadListDataItem18.Text = "CLARO"
+        RadListDataItem19.Text = "ENTEL"
+        RadListDataItem20.Text = "BITEL"
+        RadListDataItem21.Text = "VIRGIN"
         Me.cboOperadorempresa.Items.Add(RadListDataItem17)
         Me.cboOperadorempresa.Items.Add(RadListDataItem18)
         Me.cboOperadorempresa.Items.Add(RadListDataItem19)
+        Me.cboOperadorempresa.Items.Add(RadListDataItem20)
+        Me.cboOperadorempresa.Items.Add(RadListDataItem21)
         Me.cboOperadorempresa.Location = New System.Drawing.Point(669, 76)
         Me.cboOperadorempresa.Name = "cboOperadorempresa"
         Me.cboOperadorempresa.Size = New System.Drawing.Size(156, 22)
@@ -1125,10 +1118,10 @@ Partial Class FrmParticipante_vb
         Me.rbtOtros.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.rbtOtros.Location = New System.Drawing.Point(17, 38)
         Me.rbtOtros.Name = "rbtOtros"
-        Me.rbtOtros.Size = New System.Drawing.Size(53, 17)
+        Me.rbtOtros.Size = New System.Drawing.Size(60, 17)
         Me.rbtOtros.TabIndex = 30
         Me.rbtOtros.TabStop = True
-        Me.rbtOtros.Text = "Otros"
+        Me.rbtOtros.Text = "OTROS"
         Me.rbtOtros.UseVisualStyleBackColor = True
         '
         'rbtInstituto
@@ -1137,10 +1130,10 @@ Partial Class FrmParticipante_vb
         Me.rbtInstituto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.rbtInstituto.Location = New System.Drawing.Point(116, 17)
         Me.rbtInstituto.Name = "rbtInstituto"
-        Me.rbtInstituto.Size = New System.Drawing.Size(68, 17)
+        Me.rbtInstituto.Size = New System.Drawing.Size(76, 17)
         Me.rbtInstituto.TabIndex = 29
         Me.rbtInstituto.TabStop = True
-        Me.rbtInstituto.Text = "Instituto"
+        Me.rbtInstituto.Text = "INSTITUTO"
         Me.rbtInstituto.UseVisualStyleBackColor = True
         '
         'rbtUniversidad
@@ -1149,10 +1142,10 @@ Partial Class FrmParticipante_vb
         Me.rbtUniversidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.rbtUniversidad.Location = New System.Drawing.Point(17, 19)
         Me.rbtUniversidad.Name = "rbtUniversidad"
-        Me.rbtUniversidad.Size = New System.Drawing.Size(85, 17)
+        Me.rbtUniversidad.Size = New System.Drawing.Size(95, 17)
         Me.rbtUniversidad.TabIndex = 28
         Me.rbtUniversidad.TabStop = True
-        Me.rbtUniversidad.Text = "Universidad"
+        Me.rbtUniversidad.Text = "UNIVERSIDAD"
         Me.rbtUniversidad.UseVisualStyleBackColor = True
         '
         'txtNivelEst
@@ -1256,6 +1249,7 @@ Partial Class FrmParticipante_vb
         Me.ThemeName = "VisualStudio2012Light"
         Me.grp.ResumeLayout(False)
         Me.grp.PerformLayout()
+        CType(Me.cboSexo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtApeMat, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtProfesionOcupacion, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cboOperadorM2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1270,8 +1264,6 @@ Partial Class FrmParticipante_vb
         CType(Me.txtDireccion, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtNombres, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtApePat, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.grpSexo.ResumeLayout(False)
-        Me.grpSexo.PerformLayout()
         CType(Me.btnGuardar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnLimpiar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grbRubro.ResumeLayout(False)
@@ -1299,9 +1291,6 @@ Partial Class FrmParticipante_vb
     Friend WithEvents grp As System.Windows.Forms.GroupBox
     Friend WithEvents cboOperadorM As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents txtFechaN As Telerik.WinControls.UI.RadMaskedEditBox
-    Friend WithEvents grpSexo As System.Windows.Forms.GroupBox
-    Friend WithEvents F As System.Windows.Forms.RadioButton
-    Friend WithEvents M As System.Windows.Forms.RadioButton
     Friend WithEvents cboDistrito As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents cboProvincia As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents cboDepartamento As Telerik.WinControls.UI.RadDropDownList
@@ -1379,5 +1368,7 @@ Partial Class FrmParticipante_vb
     Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents Label25 As System.Windows.Forms.Label
+    Friend WithEvents cboSexo As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents Label26 As System.Windows.Forms.Label
 End Class
 

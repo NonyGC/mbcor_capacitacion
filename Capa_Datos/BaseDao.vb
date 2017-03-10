@@ -30,7 +30,7 @@ Public Class BaseDao
                 If prm.ParameterName <> "@RETURN_VALUE" Then
                     prm.Value = env(c)
                     c += 1
-                    Debug.WriteLine(prm.Value)
+                    Debug.WriteLine("")
                 End If
             Next
             Return cmd

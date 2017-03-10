@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmFichaCapacitacion
     Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmFichaCapacitacion
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
@@ -99,7 +99,7 @@ Partial Class frmFichaCapacitacion
         Me.CheckBox8 = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtEspeCharla = New Telerik.WinControls.UI.RadTextBox()
-        Me.RadButton2 = New Telerik.WinControls.UI.RadButton()
+        Me.btnParticipanteNuevo = New Telerik.WinControls.UI.RadButton()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cboParticipanteSearch = New Telerik.WinControls.UI.RadDropDownList()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -107,8 +107,9 @@ Partial Class frmFichaCapacitacion
         Me.RadioButton16 = New System.Windows.Forms.RadioButton()
         Me.RadioButton17 = New System.Windows.Forms.RadioButton()
         Me.grpTajetacredito = New System.Windows.Forms.GroupBox()
-        Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
-        Me.rbtVer = New Telerik.WinControls.UI.RadButton()
+        Me.btnCapacitacionNuevo = New Telerik.WinControls.UI.RadButton()
+        Me.btnCapacitacionVer = New Telerik.WinControls.UI.RadButton()
+        Me.lblCapacitacionfecha = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.RadTextBox17, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBox18, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -145,13 +146,13 @@ Partial Class frmFichaCapacitacion
         Me.grpRessin5.SuspendLayout()
         Me.grpCharla.SuspendLayout()
         CType(Me.txtEspeCharla, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnParticipanteNuevo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboParticipanteSearch, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.txtCodigop, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpTajetacredito.SuspendLayout()
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.rbtVer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnCapacitacionNuevo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnCapacitacionVer, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -523,7 +524,7 @@ Partial Class frmFichaCapacitacion
         '
         Me.btnRegistrar.Enabled = False
         Me.btnRegistrar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistrar.Location = New System.Drawing.Point(535, 367)
+        Me.btnRegistrar.Location = New System.Drawing.Point(535, 395)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Size = New System.Drawing.Size(164, 30)
         Me.btnRegistrar.TabIndex = 46
@@ -534,7 +535,7 @@ Partial Class frmFichaCapacitacion
         '
         Me.btnLimpiar.Enabled = False
         Me.btnLimpiar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLimpiar.Location = New System.Drawing.Point(716, 367)
+        Me.btnLimpiar.Location = New System.Drawing.Point(716, 395)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(164, 30)
         Me.btnLimpiar.TabIndex = 47
@@ -625,7 +626,7 @@ Partial Class frmFichaCapacitacion
         Me.grp5.Controls.Add(Me.grpRessin5)
         Me.grp5.Enabled = False
         Me.grp5.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grp5.Location = New System.Drawing.Point(27, 214)
+        Me.grp5.Location = New System.Drawing.Point(27, 242)
         Me.grp5.Name = "grp5"
         Me.grp5.Size = New System.Drawing.Size(854, 130)
         Me.grp5.TabIndex = 36
@@ -956,7 +957,7 @@ Partial Class frmFichaCapacitacion
         Me.grpCharla.Controls.Add(Me.txtEspeCharla)
         Me.grpCharla.Enabled = False
         Me.grpCharla.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpCharla.Location = New System.Drawing.Point(27, 155)
+        Me.grpCharla.Location = New System.Drawing.Point(27, 183)
         Me.grpCharla.Name = "grpCharla"
         Me.grpCharla.Size = New System.Drawing.Size(854, 53)
         Me.grpCharla.TabIndex = 30
@@ -1036,15 +1037,15 @@ Partial Class frmFichaCapacitacion
         Me.txtEspeCharla.TabIndex = 35
         Me.txtEspeCharla.ThemeName = "VisualStudio2012Light"
         '
-        'RadButton2
+        'btnParticipanteNuevo
         '
-        Me.RadButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton2.Location = New System.Drawing.Point(735, 88)
-        Me.RadButton2.Name = "RadButton2"
-        Me.RadButton2.Size = New System.Drawing.Size(147, 24)
-        Me.RadButton2.TabIndex = 91
-        Me.RadButton2.Text = "NUEVO"
-        Me.RadButton2.ThemeName = "VisualStudio2012Light"
+        Me.btnParticipanteNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnParticipanteNuevo.Location = New System.Drawing.Point(735, 88)
+        Me.btnParticipanteNuevo.Name = "btnParticipanteNuevo"
+        Me.btnParticipanteNuevo.Size = New System.Drawing.Size(147, 24)
+        Me.btnParticipanteNuevo.TabIndex = 91
+        Me.btnParticipanteNuevo.Text = "NUEVO"
+        Me.btnParticipanteNuevo.ThemeName = "VisualStudio2012Light"
         '
         'Label8
         '
@@ -1120,45 +1121,55 @@ Partial Class frmFichaCapacitacion
         Me.grpTajetacredito.Controls.Add(Me.RadioButton16)
         Me.grpTajetacredito.Enabled = False
         Me.grpTajetacredito.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grpTajetacredito.Location = New System.Drawing.Point(262, 353)
+        Me.grpTajetacredito.Location = New System.Drawing.Point(262, 381)
         Me.grpTajetacredito.Name = "grpTajetacredito"
         Me.grpTajetacredito.Size = New System.Drawing.Size(186, 44)
         Me.grpTajetacredito.TabIndex = 43
         Me.grpTajetacredito.TabStop = False
         Me.grpTajetacredito.Text = "POSEE TARJETA DE CREDITO"
         '
-        'RadButton1
+        'btnCapacitacionNuevo
         '
-        Me.RadButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton1.Location = New System.Drawing.Point(735, 62)
-        Me.RadButton1.Name = "RadButton1"
-        Me.RadButton1.Size = New System.Drawing.Size(73, 24)
-        Me.RadButton1.TabIndex = 99
-        Me.RadButton1.Text = "NUEVO"
-        Me.RadButton1.ThemeName = "VisualStudio2012Light"
+        Me.btnCapacitacionNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCapacitacionNuevo.Location = New System.Drawing.Point(735, 62)
+        Me.btnCapacitacionNuevo.Name = "btnCapacitacionNuevo"
+        Me.btnCapacitacionNuevo.Size = New System.Drawing.Size(73, 24)
+        Me.btnCapacitacionNuevo.TabIndex = 99
+        Me.btnCapacitacionNuevo.Text = "NUEVO"
+        Me.btnCapacitacionNuevo.ThemeName = "VisualStudio2012Light"
         '
-        'rbtVer
+        'btnCapacitacionVer
         '
-        Me.rbtVer.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.rbtVer.Location = New System.Drawing.Point(809, 62)
-        Me.rbtVer.Name = "rbtVer"
-        Me.rbtVer.Size = New System.Drawing.Size(73, 24)
-        Me.rbtVer.TabIndex = 99
-        Me.rbtVer.Text = "VER"
-        Me.rbtVer.ThemeName = "VisualStudio2012Light"
+        Me.btnCapacitacionVer.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCapacitacionVer.Location = New System.Drawing.Point(809, 62)
+        Me.btnCapacitacionVer.Name = "btnCapacitacionVer"
+        Me.btnCapacitacionVer.Size = New System.Drawing.Size(73, 24)
+        Me.btnCapacitacionVer.TabIndex = 99
+        Me.btnCapacitacionVer.Text = "VER"
+        Me.btnCapacitacionVer.ThemeName = "VisualStudio2012Light"
+        '
+        'lblCapacitacionfecha
+        '
+        Me.lblCapacitacionfecha.AutoSize = True
+        Me.lblCapacitacionfecha.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCapacitacionfecha.Location = New System.Drawing.Point(24, 154)
+        Me.lblCapacitacionfecha.Name = "lblCapacitacionfecha"
+        Me.lblCapacitacionfecha.Size = New System.Drawing.Size(0, 13)
+        Me.lblCapacitacionfecha.TabIndex = 100
         '
         'frmFichaCapacitacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(912, 419)
-        Me.Controls.Add(Me.rbtVer)
-        Me.Controls.Add(Me.RadButton1)
+        Me.ClientSize = New System.Drawing.Size(912, 435)
+        Me.Controls.Add(Me.lblCapacitacionfecha)
+        Me.Controls.Add(Me.btnCapacitacionVer)
+        Me.Controls.Add(Me.btnCapacitacionNuevo)
         Me.Controls.Add(Me.grpTajetacredito)
         Me.Controls.Add(Me.cboParticipanteSearch)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.RadButton2)
+        Me.Controls.Add(Me.btnParticipanteNuevo)
         Me.Controls.Add(Me.grp5)
         Me.Controls.Add(Me.grpCharla)
         Me.Controls.Add(Me.cboCapacitacion)
@@ -1169,14 +1180,13 @@ Partial Class frmFichaCapacitacion
         Me.Controls.Add(Me.Panel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(920, 452)
         Me.Name = "frmFichaCapacitacion"
         Me.Opacity = 0.98R
         '
         '
         '
         Me.RootElement.ApplyShapeToControl = True
-        Me.RootElement.MaxSize = New System.Drawing.Size(920, 452)
+        Me.RootElement.MaxSize = New System.Drawing.Size(0, 0)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MBCORP"
         Me.ThemeName = "VisualStudio2012Light"
@@ -1225,15 +1235,15 @@ Partial Class frmFichaCapacitacion
         Me.grpCharla.ResumeLayout(False)
         Me.grpCharla.PerformLayout()
         CType(Me.txtEspeCharla, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnParticipanteNuevo, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cboParticipanteSearch, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.txtCodigop, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpTajetacredito.ResumeLayout(False)
         Me.grpTajetacredito.PerformLayout()
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.rbtVer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnCapacitacionNuevo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnCapacitacionVer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -1293,7 +1303,7 @@ Partial Class frmFichaCapacitacion
     Friend WithEvents grpCharla As System.Windows.Forms.GroupBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtEspeCharla As Telerik.WinControls.UI.RadTextBox
-    Friend WithEvents RadButton2 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents btnParticipanteNuevo As Telerik.WinControls.UI.RadButton
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents cboParticipanteSearch As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
@@ -1319,7 +1329,8 @@ Partial Class frmFichaCapacitacion
     Friend WithEvents RadioButton16 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton17 As System.Windows.Forms.RadioButton
     Friend WithEvents grpTajetacredito As System.Windows.Forms.GroupBox
-    Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents rbtVer As Telerik.WinControls.UI.RadButton
+    Friend WithEvents btnCapacitacionNuevo As Telerik.WinControls.UI.RadButton
+    Friend WithEvents btnCapacitacionVer As Telerik.WinControls.UI.RadButton
+    Friend WithEvents lblCapacitacionfecha As System.Windows.Forms.Label
 End Class
 

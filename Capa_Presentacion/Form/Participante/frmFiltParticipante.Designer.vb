@@ -259,7 +259,7 @@ Partial Class frmFiltParticipante
         Me.RootElement.ApplyShapeToControl = True
         Me.RootElement.MaxSize = New System.Drawing.Size(999, 532)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = ""
+        Me.Text = "MBCORP"
         Me.ThemeName = "VisualStudio2012Light"
         CType(Me.dtgParticipante.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dtgParticipante, System.ComponentModel.ISupportInitialize).EndInit()

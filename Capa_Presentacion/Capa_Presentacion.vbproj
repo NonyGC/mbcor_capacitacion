@@ -170,6 +170,12 @@
     <Compile Include="Form\Capacitacion\frmListadoCapacitacion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\Participante\FrmFichaCapacitacion.Designer.vb">
+      <DependentUpon>FrmFichaCapacitacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Participante\FrmFichaCapacitacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\Participante\frmFiltParticipante.Designer.vb">
       <DependentUpon>frmFiltParticipante.vb</DependentUpon>
     </Compile>
@@ -200,10 +206,16 @@
     <Compile Include="Form\Menu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Reporte\frmReporte.Designer.vb">
-      <DependentUpon>frmReporte.vb</DependentUpon>
+    <Compile Include="Form\Reporte\frmReportePartCatFech.Designer.vb">
+      <DependentUpon>frmReportePartCatFech.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\Reporte\frmReporte.vb">
+    <Compile Include="Form\Reporte\frmReportePartCatFech.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Reporte\frmReportePartiEmaCel.Designer.vb">
+      <DependentUpon>frmReportePartiEmaCel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Reporte\frmReportePartiEmaCel.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -245,6 +257,9 @@
     <EmbeddedResource Include="Form\Capacitacion\frmListadoCapacitacion.resx">
       <DependentUpon>frmListadoCapacitacion.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\Participante\FrmFichaCapacitacion.resx">
+      <DependentUpon>FrmFichaCapacitacion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Participante\frmFiltParticipante.resx">
       <DependentUpon>frmFiltParticipante.vb</DependentUpon>
     </EmbeddedResource>
@@ -260,8 +275,11 @@
     <EmbeddedResource Include="Form\Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Reporte\frmReporte.resx">
-      <DependentUpon>frmReporte.vb</DependentUpon>
+    <EmbeddedResource Include="Form\Reporte\frmReportePartCatFech.resx">
+      <DependentUpon>frmReportePartCatFech.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Reporte\frmReportePartiEmaCel.resx">
+      <DependentUpon>frmReportePartiEmaCel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -321,6 +339,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Form\Estadistico\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\894f0362.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\894f0362_opt.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

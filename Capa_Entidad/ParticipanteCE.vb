@@ -17,7 +17,6 @@
     Private _opeMovil2 As String
     Private _correo As String
     Private _proocu As String
-
     Private _procarre As String
     Private _nivestudio As String
     Private _instEducativa As String
@@ -30,7 +29,6 @@
     Private _opeMovEmp As String
     Private _rubro As String
     Private _espRubro As String
-
     Private _origen As String
     Public Property origen As String
         Get

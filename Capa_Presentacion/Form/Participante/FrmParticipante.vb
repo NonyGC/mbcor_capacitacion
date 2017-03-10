@@ -52,6 +52,7 @@ Public Class FrmParticipante_vb
         cboDepartamento.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboProvincia.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboDistrito.DropDownListElement.AutoCompleteAppend.LimitToList = True
+        cboSexo.DropDownListElement.AutoCompleteAppend.LimitToList = True
     End Sub
     Sub cargarDat_Actualizacion()
 
@@ -60,8 +61,15 @@ Public Class FrmParticipante_vb
             txtApeMat.Text = .apeMat
             txtNombres.Text = .nombres
             txtDNICE.Text = .dnice
-            If (M.Name = .sexo) Then M.Checked = True
-            If (F.Name = .sexo) Then F.Checked = True
+            If .sexo = "M" Then
+                cboSexo.SelectedIndex = 0
+            ElseIf .sexo = "F" Then
+                cboSexo.SelectedIndex = 1
+            Else
+                cboSexo.SelectedIndex = -1
+            End If
+            'If (M.Name = .sexo) Then M.Checked = True
+            'If (F.Name = .sexo) Then F.Checked = True
             txtDireccion.Text = .direccion
             'LOAD CBO UBIGEO
             Dim dep As String = (partCE.ubigeo).Substring(0, 2)
@@ -180,7 +188,8 @@ Public Class FrmParticipante_vb
 
     Sub limpiar()
         cboDepartamento.SelectedIndex = -1
-        RadioButtonclear(grpSexo)
+        'RadioButtonclear(grpSexo)
+        cboSexo.SelectedIndex = -1
         txtCodtel1.Text = "(___)" : txtCodtelM1.Text = "(___)"
         txtCodtel2.Text = "(___)" : txtCodtelM2.Text = "(___)"
         txtTelFijo.Clear() : txtTelFijo2.Clear()
@@ -224,7 +233,8 @@ Public Class FrmParticipante_vb
             .nombres = txtNombres.Text
             .fechaNaci = fechaN
             .EstadoCiv = cboEstadoCivil.Text
-            .sexo = If(Not IsNothing(GetGrpBxCheckedBbt(grpSexo)), GetGrpBxCheckedBbt(grpSexo).Text, "")
+            '.sexo = If(Not IsNothing(GetGrpBxCheckedBbt(grpSexo)), GetGrpBxCheckedBbt(grpSexo).Text, "")
+            .sexo = cboSexo.Text
             .direccion = txtDireccion.Text
             .ubigeo = codUbi
             .telFijo = txtCodtel1.Text & txtTelFijo.Text

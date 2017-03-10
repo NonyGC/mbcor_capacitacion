@@ -5,6 +5,7 @@ Imports Capa_Entidad
 Imports Telerik.WinControls
 Imports Telerik.WinControls.UI
 Imports Telerik.WinControls.Data
+Imports System.Text
 
 Public Class frmFichaCapacitacion
     Public Sub New()
@@ -15,21 +16,16 @@ Public Class frmFichaCapacitacion
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
         RadMessageBox.SetThemeName("VisualStudio2012Light")
     End Sub
+
     Dim LocalCN As New LocalCN, FichCN As New FichaCapaCN, FichaCE As New FichaCapaCE
     Dim idDep As String, idProv As String
     Dim PartCE As New ParticipanteCE
 
-    Private Function GetGrpBxCheckedBbt(grpb As GroupBox) As RadioButton
-        Dim rButton As RadioButton = grpb.Controls.OfType(Of RadioButton).Where(Function(r) r.Checked = True).FirstOrDefault()
-        Return rButton
-    End Function
     Private Sub frmFichaCapacitacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         cboParticipanteSearch_AutoComparer()
         cboCapacitacion_filter()
-
-        'cboOperadorempresa.DropDownListElement.AutoCompleteAppend.LimitToList = True
     End Sub
+
     Public Sub cboCapacitacion_filter()
         cboCapacitacion.AutoFilter = True
         cboCapacitacion.DisplayMember = "local"
@@ -59,6 +55,7 @@ Public Class frmFichaCapacitacion
             Return x.Text.Length.CompareTo(y.Text.Length)
         End Function
     End Class
+
     Sub Limpiar()
         'txtProfeCarrera.Clear() : txtNivelEst.Clear()
         'txtNomInstitu.Clear() : txtRuc.Clear() : txtEmpresa.Clear() : txtCargo.Clear()
@@ -91,7 +88,7 @@ Public Class frmFichaCapacitacion
         grpTajetacredito.Enabled = False
     End Sub
     Dim FormProcedencias As String
-    Private Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButton2.Click
+    Private Sub RadButton2_Click(sender As Object, e As EventArgs) Handles btnParticipanteNuevo.Click
         Dim Frm As New FrmParticipante_vb()
         If Frm.ShowDialog(Me) = DialogResult.OK And Frm.Opgave() Then
             cboParticipanteSearch.DataSource = FichCN.fichaCapacitacion_ParticipanteAutocomplete()
@@ -168,11 +165,11 @@ Public Class frmFichaCapacitacion
         cboParticipanteSearch.SelectedIndex = -1
     End Sub
 
-    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles RadButton1.Click
+    Private Sub RadButton1_Click(sender As Object, e As EventArgs) Handles btnCapacitacionNuevo.Click
         frmCapacitacion.Show()
     End Sub
 
-    Private Sub rbtVer_Click(sender As Object, e As EventArgs) Handles rbtVer.Click
+    Private Sub rbtVer_Click(sender As Object, e As EventArgs) Handles btnCapacitacionVer.Click
         If cboCapacitacion.SelectedIndex <> -1 Then
             Dim codcap As String = Trim(cboCapacitacion.SelectedValue)
             Dim Frm As New frmFiltParticipante(codcap)
@@ -181,12 +178,22 @@ Public Class frmFichaCapacitacion
         End If
     End Sub
 
+    Private Sub cboCapacitacion_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCapacitacion.SelectedIndexChanged
+    End Sub
+
+    Private Sub cboParticipanteSearch_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cboParticipanteSearch.KeyPress, cboCapacitacion.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.KeyChar = Char.ToUpper(e.KeyChar)
+        End If
+    End Sub
+
     Private Sub cboCapacitacion_Enter(sender As Object, e As EventArgs) Handles cboCapacitacion.Enter
         cboCapacitacion.DataSource = FichCN.fichaCapacitacion_Capacitacion()
         cboCapacitacion.ValueMember = "codigo"
-        cboCapacitacion.SelectedIndex = -1
     End Sub
 
+#Region "Funciones"
+    'obtiene valores de los checkbox seleccionado destro de un GroupBox
     Function getCheckboxVal(grpbx As GroupBox) As String
         Dim value As String = String.Empty
         For Each element As Control In grpbx.Controls
@@ -199,6 +206,15 @@ Public Class frmFichaCapacitacion
         value = If(value Is String.Empty, value, value.Substring(0, value.Length - 1))
         Return value
     End Function
+    'obtiene valores de los RadioButton seleccionado destro de un GroupBox
+    Private Function GetGrpBxCheckedBbt(grpb As GroupBox) As RadioButton
+        Dim rButton As RadioButton = grpb.Controls.OfType(Of RadioButton).Where(Function(r) r.Checked = True).FirstOrDefault()
+        Return rButton
+    End Function
+
+
+#End Region
+
 
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
         If cboCapacitacion.SelectedIndex <> -1 Then
@@ -233,3 +249,4 @@ Public Class frmFichaCapacitacion
 
 
 End Class
+

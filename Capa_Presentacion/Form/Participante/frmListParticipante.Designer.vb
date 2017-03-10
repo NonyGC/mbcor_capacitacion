@@ -312,7 +312,6 @@ Partial Class FrmListParticipante
         Me.rbtOrigen.Name = "rbtOrigen"
         Me.rbtOrigen.Size = New System.Drawing.Size(60, 17)
         Me.rbtOrigen.TabIndex = 98
-        Me.rbtOrigen.TabStop = True
         Me.rbtOrigen.Text = "Origen"
         Me.rbtOrigen.UseVisualStyleBackColor = True
         '
@@ -324,13 +323,13 @@ Partial Class FrmListParticipante
         Me.rbtLocal.Name = "rbtLocal"
         Me.rbtLocal.Size = New System.Drawing.Size(50, 17)
         Me.rbtLocal.TabIndex = 98
-        Me.rbtLocal.TabStop = True
         Me.rbtLocal.Text = "Local"
         Me.rbtLocal.UseVisualStyleBackColor = True
         '
         'rbtApeNom
         '
         Me.rbtApeNom.AutoSize = True
+        Me.rbtApeNom.Checked = True
         Me.rbtApeNom.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.rbtApeNom.Location = New System.Drawing.Point(22, 19)
         Me.rbtApeNom.Name = "rbtApeNom"

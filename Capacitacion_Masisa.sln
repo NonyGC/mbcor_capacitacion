@@ -11,6 +11,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Capa_Negocio", "Capa_Negoci
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Capa_Presentacion", "Capa_Presentacion\Capa_Presentacion.vbproj", "{1E4C2711-C10B-40CE-B63A-2081AC8582EC}"
 EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "AI Setup Masisa", "AI Setup Masisa\AI Setup Masisa.aiproj", "{C20BD474-66F1-466A-84B4-83ECE88AE8A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,14 @@ Global
 		{1E4C2711-C10B-40CE-B63A-2081AC8582EC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1E4C2711-C10B-40CE-B63A-2081AC8582EC}.Release|x64.ActiveCfg = Release|x64
 		{1E4C2711-C10B-40CE-B63A-2081AC8582EC}.Release|x64.Build.0 = Release|x64
+		{C20BD474-66F1-466A-84B4-83ECE88AE8A0}.Debug|Any CPU.ActiveCfg = All
+		{C20BD474-66F1-466A-84B4-83ECE88AE8A0}.Debug|Any CPU.Build.0 = All
+		{C20BD474-66F1-466A-84B4-83ECE88AE8A0}.Debug|x64.ActiveCfg = All
+		{C20BD474-66F1-466A-84B4-83ECE88AE8A0}.Debug|x64.Build.0 = All
+		{C20BD474-66F1-466A-84B4-83ECE88AE8A0}.Release|Any CPU.ActiveCfg = All
+		{C20BD474-66F1-466A-84B4-83ECE88AE8A0}.Release|Any CPU.Build.0 = All
+		{C20BD474-66F1-466A-84B4-83ECE88AE8A0}.Release|x64.ActiveCfg = All
+		{C20BD474-66F1-466A-84B4-83ECE88AE8A0}.Release|x64.Build.0 = All
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
