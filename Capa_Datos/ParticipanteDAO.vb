@@ -2,8 +2,9 @@
 Imports Capa_Entidad
 Public Class ParticipanteDAO
     Inherits BaseDao
-    Public Function participante_CodAutogenerado() As String
-        Dim cmd As SqlCommand = CommandProcedure("sp_codigoautogenerado_participante")
+    Public Function participante_codauto(codini As String) As String
+        Dim cmd As SqlCommand = CommandProcedure("sp_codigoauto_parti")
+        cmd.Parameters.AddWithValue("@ini", codini)
         Dim codigo As String
         codigo = cmd.ExecuteScalar
         Return codigo
@@ -15,7 +16,6 @@ Public Class ParticipanteDAO
         data = GetDataTable(cmd)
         Return data
     End Function
-
 
     Public Function cargarAutocompletado_buscar(rbtSelected As String) As Object
         Dim cmd As New SqlCommand
@@ -31,7 +31,6 @@ Public Class ParticipanteDAO
         Return data
     End Function
 
-
     Public Function FiltarParticipanteApeNom(text As String) As DataTable
         Dim cmd As SqlCommand =
             CommandText("SELECT * FROM [dbo].[participante] where codigo=@codigo")
@@ -46,6 +45,14 @@ Public Class ParticipanteDAO
         cmd.Parameters.AddWithValue("@local", selectedValue)
         cmd.Parameters.AddWithValue("@ini", dateini)
         cmd.Parameters.AddWithValue("@fin", datefin)
+        Dim data As New DataTable
+        data = GetDataTable(cmd)
+        Return data
+    End Function
+
+    Public Function Participante_AutocompleteProfeOcu() As DataTable
+        Dim cmd As SqlCommand =
+            CommandText("Select DISTINCT [profe_ocupa] FROM [dbmass].[dbo].[participante] WHERE [profe_ocupa]<>''")
         Dim data As New DataTable
         data = GetDataTable(cmd)
         Return data
@@ -78,19 +85,12 @@ Public Class ParticipanteDAO
         Return data
     End Function
 
-
-    Public Function obtUltimoCodigoPart(codpart As String) As String
-        Dim cmd As SqlCommand = CommandProcedure("sp_codigoauto_partul")
-        cmd = Parameters(cmd, {codpart})
-        Return cmd.ExecuteScalar
-    End Function
-
     Public Function participante_insert(part As ParticipanteCE) As Boolean
         Try
             Dim i As Integer
             Dim cmd As SqlCommand = CommandProcedure("spParticipante_insert")
             With part
-                cmd = Parameters(cmd, { .codpart, .apePat, .apeMat, .nombres, .sexo, .fechaNaci, .dnice, .direccion, .ubigeo, .telFijo, .telMovil, .opeMovil, .telFijo2, .telMovil2, .opeMovil2, .correo, .EstadoCiv, .profeOcupa, .procarre, .nivestudio, .nomInstitucion, .instEducativa, .empresa, .ruc, .cargo, .telFijoEmp, .telMovEmp, .opeMovEmp, .rubro, .espRubro, "NEW DB"})
+                cmd = Parameters(cmd, { .codpart, .apePat, .apeMat, .nombres, .sexo, .fechaNaci, .dnice, .direccion, .ubigeo, .telFijo, .telMovil, .opeMovil, .telFijo2, .telMovil2, .opeMovil2, .correo, .EstadoCiv, .profeOcupa, .procarre, .nivestudio, .nomInstitucion, .instEducativa, .empresa, .ruc, .cargo, .telFijoEmp, .telMovEmp, .opeMovEmp, .rubro, .espRubroOtros, .espRubroSectorPE, "NEW DB"})
             End With
             i = cmd.ExecuteNonQuery
             Return If(i > 0, True, False)
@@ -107,7 +107,7 @@ Public Class ParticipanteDAO
             Dim i As Integer
             Dim cmd As SqlCommand = CommandProcedure("spParticipante_update")
             With part
-                cmd = Parameters(cmd, { .codpart, .apePat, .apeMat, .nombres, .sexo, .fechaNaci, .dnice, .direccion, .ubigeo, .telFijo, .telMovil, .opeMovil, .telFijo2, .telMovil2, .opeMovil2, .correo, .EstadoCiv, .profeOcupa, .procarre, .nivestudio, .nomInstitucion, .instEducativa, .empresa, .ruc, .cargo, .telFijoEmp, .telMovEmp, .opeMovEmp, .rubro, .espRubro})
+                cmd = Parameters(cmd, { .codpart, .apePat, .apeMat, .nombres, .sexo, .fechaNaci, .dnice, .direccion, .ubigeo, .telFijo, .telMovil, .opeMovil, .telFijo2, .telMovil2, .opeMovil2, .correo, .EstadoCiv, .profeOcupa, .procarre, .nivestudio, .nomInstitucion, .instEducativa, .empresa, .ruc, .cargo, .telFijoEmp, .telMovEmp, .opeMovEmp, .rubro, .espRubroOtros, .espRubroSectorPE})
             End With
             i = cmd.ExecuteNonQuery
             Return If(i > 0, True, False)
@@ -120,12 +120,6 @@ Public Class ParticipanteDAO
     End Function
 
 #Region "frm filter participante"
-    Public Function cargarCapacitacion(text As String) As DataTable
-        Dim cmd As SqlCommand = CommandText("SELECT * FROM [dbo].[participante] ")
-        Dim data As New DataTable
-        data = GetDataTable(cmd)
-        Return data
-    End Function
     Public Function CargarParticipante_tabla_codcapacitacion(cod As String) As DataTable
         Dim cmd As SqlCommand = CommandProcedure("uspGetPartiByCapacitacion")
         cmd = Parameters(cmd, {cod})
@@ -133,6 +127,5 @@ Public Class ParticipanteDAO
         data = GetDataTable(cmd)
         Return data
     End Function
-
 #End Region
 End Class

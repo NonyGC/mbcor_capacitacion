@@ -18,7 +18,6 @@ Public Class frmFiltParticipante
         Value = 0
     End Sub
 
-
     Public Sub New(codcap As String)
         Me.codcap = codcap
         InitializeComponent()

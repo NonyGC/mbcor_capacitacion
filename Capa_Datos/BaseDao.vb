@@ -30,7 +30,7 @@ Public Class BaseDao
                 If prm.ParameterName <> "@RETURN_VALUE" Then
                     prm.Value = env(c)
                     c += 1
-                    Debug.WriteLine("")
+                    Debug.WriteLine(prm.Value)
                 End If
             Next
             Return cmd
@@ -41,12 +41,12 @@ Public Class BaseDao
 
     End Function
     Protected Function CommandProcedure(name As String) As SqlCommand
-        Dim cmd As New SqlCommand(name, Conectar)
+        Dim cmd As New SqlCommand(name, conectar)
         cmd.CommandType = CommandType.StoredProcedure
         Return cmd
     End Function
     Protected Function CommandText(text As String) As SqlCommand
-        Dim cmd As New SqlCommand(text, Conectar)
+        Dim cmd As New SqlCommand(text, conectar)
         cmd.CommandType = CommandType.Text
         Return cmd
     End Function

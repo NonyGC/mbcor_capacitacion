@@ -158,10 +158,10 @@
     <Compile Include="Form\Capacitacion\frmCapacitacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Ficha\frmFichaCapacitacion.Designer.vb">
-      <DependentUpon>frmFichaCapacitacion.vb</DependentUpon>
+    <Compile Include="Form\Ficha\frmEncuesta.Designer.vb">
+      <DependentUpon>frmEncuesta.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\Ficha\frmFichaCapacitacion.vb">
+    <Compile Include="Form\Ficha\frmEncuesta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Capacitacion\frmListadoCapacitacion.Designer.vb">
@@ -170,10 +170,10 @@
     <Compile Include="Form\Capacitacion\frmListadoCapacitacion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Participante\FrmFichaCapacitacion.Designer.vb">
-      <DependentUpon>FrmFichaCapacitacion.vb</DependentUpon>
+    <Compile Include="Form\Ficha\frmFicha.Designer.vb">
+      <DependentUpon>frmFicha.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form\Participante\FrmFichaCapacitacion.vb">
+    <Compile Include="Form\Ficha\frmFicha.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Participante\frmFiltParticipante.Designer.vb">
@@ -251,14 +251,14 @@
     <EmbeddedResource Include="Form\Capacitacion\frmCapacitacion.resx">
       <DependentUpon>frmCapacitacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Ficha\frmFichaCapacitacion.resx">
-      <DependentUpon>frmFichaCapacitacion.vb</DependentUpon>
+    <EmbeddedResource Include="Form\Ficha\frmEncuesta.resx">
+      <DependentUpon>frmEncuesta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Capacitacion\frmListadoCapacitacion.resx">
       <DependentUpon>frmListadoCapacitacion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form\Participante\FrmFichaCapacitacion.resx">
-      <DependentUpon>FrmFichaCapacitacion.vb</DependentUpon>
+    <EmbeddedResource Include="Form\Ficha\frmFicha.resx">
+      <DependentUpon>frmFicha.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Participante\frmFiltParticipante.resx">
       <DependentUpon>frmFiltParticipante.vb</DependentUpon>
@@ -337,9 +337,7 @@
   <ItemGroup>
     <None Include="Resources\nexus2cee_android-m.png.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Form\Estadistico\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\894f0362.png" />
   </ItemGroup>

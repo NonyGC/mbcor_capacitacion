@@ -16,7 +16,6 @@ Public Class frmReportePartCatFech
         cboBuscar.DataSource = Nothing
     End Sub
 
-
     Private Sub cboBuscar_Enter(sender As Object, e As EventArgs) Handles cboBuscar.Enter
         Dim rbtSelected As String = If(Not IsNothing(GetGrpBxCheckedBbt(gpbTipBusqueda)), GetGrpBxCheckedBbt(gpbTipBusqueda).Text, "")
         If rbtSelected IsNot String.Empty Then
@@ -26,7 +25,6 @@ Public Class frmReportePartCatFech
             cboBuscar.SelectedIndex = -1
         End If
     End Sub
-
 
     Dim now = Date.Now
     Function stardate(fecha As Date) As Date

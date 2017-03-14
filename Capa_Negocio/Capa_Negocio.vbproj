@@ -64,7 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CapacitacionCN.vb" />
-    <Compile Include="EstadisticaCN.vb" />
+    <Compile Include="EncuestaCN.vb" />
     <Compile Include="FichaCapaCN.vb" />
     <Compile Include="LocalCN.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

@@ -24,9 +24,7 @@ Public Class FichaCapaDAO
             Dim i As Integer
             Dim cmd As SqlCommand = CommandProcedure("spfichaCapacitacion_create")
             With fch
-                cmd = Parameters(cmd, { .codcap,
-                                 .codpart, .charla, .espCharla, .dominioTem,
-                                 .dejaEntender, .fueInteresante, .extCharla, .visitaPagina, .otroTema, .targeta})
+                cmd = Parameters(cmd, { .codcap, .codpart})
             End With
             i = cmd.ExecuteNonQuery
             Return If(i > 0, True, False)
@@ -34,7 +32,7 @@ Public Class FichaCapaDAO
             MsgBox(ex.Message)
             Return False
         Finally
-        CloseDB()
+            CloseDB()
         End Try
     End Function
 
@@ -45,8 +43,5 @@ Public Class FichaCapaDAO
         tbl = GetDataTable(cmd)
         Return tbl
     End Function
-
-
-
 
 End Class

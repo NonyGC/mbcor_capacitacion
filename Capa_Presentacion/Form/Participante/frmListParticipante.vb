@@ -28,7 +28,6 @@ Public Class FrmListParticipante
 
     End Sub
 
-
     Private Sub dtgParticipantes_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dtgParticipante.CellDoubleClick
 
         With dtgParticipante.CurrentRow
@@ -61,8 +60,8 @@ Public Class FrmListParticipante
             PartCE.telMovEmp = .Cells("tel_movil_emp").Value
             PartCE.opeMovEmp = .Cells("ope_movil_emp").Value
             PartCE.rubro = .Cells("rubro").Value
-            PartCE.espRubro = .Cells("cargo").Value
-            PartCE.origen = .Cells("espec_rubro").Value
+            PartCE.espRubroOtros = .Cells("esp_rubr_otros").Value
+            PartCE.espRubroSectorPE = .Cells("esp_rubro_sector").Value
         End With
 
         Dim Frm As New FrmParticipante_vb(PartCE)

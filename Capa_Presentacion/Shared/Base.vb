@@ -68,4 +68,16 @@ Public Class Base
         Dim rButton As RadioButton = grpb.Controls.OfType(Of RadioButton).Where(Function(r) r.Checked = True).FirstOrDefault()
         Return rButton
     End Function
+    Shared Function getCheckboxVal(grpbx As GroupBox) As String
+        Dim value As String = String.Empty
+        For Each element As Control In grpbx.Controls
+            If TypeOf element Is CheckBox Then
+                If DirectCast(element, CheckBox).Checked Then
+                    value &= DirectCast(element, CheckBox).Text & "-"
+                End If
+            End If
+        Next
+        value = If(value Is String.Empty, value, value.Substring(0, value.Length - 1))
+        Return value
+    End Function
 End Class

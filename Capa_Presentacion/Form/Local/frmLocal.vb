@@ -88,7 +88,6 @@ Public Class frmLocal
         cboDistrito.DataSource = Nothing
     End Sub
 
-
     Sub Limpiar()
         txtCodigo.Text = localCN.Local_CodAutogenerado()
         txtNombre.Clear()

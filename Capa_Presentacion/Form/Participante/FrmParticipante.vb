@@ -7,9 +7,9 @@ Public Class FrmParticipante_vb
     Dim LocalCN As New LocalCN, ParticipanteCE As New ParticipanteCE
     Dim ParticipanteCN As New ParticipanteCN
     Dim datadep As DataTable
-    Dim partEst As Boolean
     Private partCE As ParticipanteCE
     Private Value As Integer
+    Dim _codigoPart As String
 
     Enum Initialize
         ini = 0
@@ -68,18 +68,21 @@ Public Class FrmParticipante_vb
             Else
                 cboSexo.SelectedIndex = -1
             End If
-            'If (M.Name = .sexo) Then M.Checked = True
-            'If (F.Name = .sexo) Then F.Checked = True
+
             txtDireccion.Text = .direccion
+
             'LOAD CBO UBIGEO
             Dim dep As String = (partCE.ubigeo).Substring(0, 2)
             If Trim(dep).Length > 0 Then cboDepartamento.SelectedValue = dep Else cboDepartamento.SelectedIndex = -1
             loadProvincia()
+
             Dim pro As String = (partCE.ubigeo).Substring(2, 2)
             If Trim(pro).Length > 0 Then cboProvincia.SelectedValue = pro Else cboProvincia.SelectedIndex = -1
             loadDistrito()
+
             Dim dis As String = (partCE.ubigeo).Substring(4, 2)
             If Trim(dis).Length > 0 Then cboDistrito.SelectedValue = dis Else cboDistrito.SelectedIndex = -1
+
             If cboDepartamento.SelectedValue <> "15" Then
                 txtTelFijo.Mask = "000-000"
                 txtTelFijo2.Mask = "000-000"
@@ -90,10 +93,10 @@ Public Class FrmParticipante_vb
             Dim telMovil2 As String = If(partCE.telMovil2.Trim = "", "", (partCE.telMovil2).Substring(5, (partCE.telMovil2).Length - 5))
             txtTelFijo.Text = telFijo
             txtTelMovil.Text = telMovil
-            cboOperadorM.SelectedText = Trim(partCE.opeMovil)
+            cboOperadorM.SelectedValue = Trim(partCE.opeMovil)
             txtTelFijo2.Text = telFijo2
             txtTelMovil2.Text = telMovil2
-            cboOperadorM2.SelectedText = Trim(partCE.opeMovil2)
+            cboOperadorM2.SelectedValue = Trim(partCE.opeMovil2)
             txtCorreo.Text = .correo
             cboEstadoCivil.SelectedValue = Trim(.EstadoCiv)
             txtProfesionOcupacion.Text = .profeOcupa
@@ -111,10 +114,9 @@ Public Class FrmParticipante_vb
             txtCargo.Text = .cargo
             Dim telFijoempresa As String = If(partCE.telFijoEmp.Trim = "", "", (partCE.telFijoEmp).Substring(5, (partCE.telFijoEmp).Length - 5))
             Dim telMovilempresa As String = If(partCE.telMovEmp.Trim = "", "", (partCE.telMovEmp).Substring(5, (partCE.telMovEmp).Length - 5))
-            cboOperadorempresa.SelectedText = Trim(partCE.opeMovEmp)
+            cboOperadorempresa.SelectedValue = Trim(partCE.opeMovEmp)
 
             Dim rubro() As String = .rubro.Split("-"c)
-
             For Each element As Control In grbRubro.Controls
                 If TypeOf element Is CheckBox Then
                     For Each rb As String In rubro
@@ -124,6 +126,8 @@ Public Class FrmParticipante_vb
                     Next
                 End If
             Next
+            txtEspOtros.Text = .espRubroOtros
+            txtEspeSPE.Text = .espRubroSectorPE
             lblTitulo.Text = "ACTUALIZAR PARTICIPANTE"
             btnGuardar.Text = "ACTUALIZAR"
             btnLimpiar.Enabled = False
@@ -169,10 +173,6 @@ Public Class FrmParticipante_vb
         End If
     End Sub
 
-    Private Sub txtTelFijo_KeyPress(sender As Object, e As KeyPressEventArgs)
-        Solo_numeros(e)
-    End Sub
-
     Private Sub cboDepartamento_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboDepartamento.SelectedValueChanged
         cboProvincia.DataSource = Nothing
         cboDistrito.DataSource = Nothing
@@ -209,31 +209,25 @@ Public Class FrmParticipante_vb
     End Function
     Dim codigo As String
 
-
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Dim codUbi As String = cboDepartamento.SelectedValue & cboProvincia.SelectedValue & cboDistrito.SelectedValue
         Dim fechaN As String
         fechaN = If(IsDate(txtFechaN.Value), txtFechaN.Value, String.Empty)
 
-        Dim espRubro As String = Trim(txtEspeSPE.Text) & "-" & Trim(txtEspOtros.Text)
-        If InStr(espRubro, "-") = 1 Or Trim(txtEspeSPE.Text).Length = espRubro.Length - 1 Then
-            espRubro = espRubro.Replace("-", String.Empty)
-        End If
-
         With ParticipanteCE
             If btnGuardar.Text = "GUARDAR" Then
-                .codpart = CodigoAuto(txtApePat.Text, txtApeMat.Text)
-                codigo = .codpart
+                Dim iniCod = CodigoAuto(txtApePat.Text, txtApeMat.Text)
+                _codigoPart = ParticipanteCN.participante_codauto(iniCod)
             Else
-                .codpart = partCE.codpart
+                _codigoPart = partCE.codpart
             End If
+            .codpart = _codigoPart
             .dnice = Trim(txtDNICE.Text)
             .apePat = txtApePat.Text
             .apeMat = txtApeMat.Text
             .nombres = txtNombres.Text
             .fechaNaci = fechaN
             .EstadoCiv = cboEstadoCivil.Text
-            '.sexo = If(Not IsNothing(GetGrpBxCheckedBbt(grpSexo)), GetGrpBxCheckedBbt(grpSexo).Text, "")
             .sexo = cboSexo.Text
             .direccion = txtDireccion.Text
             .ubigeo = codUbi
@@ -256,19 +250,21 @@ Public Class FrmParticipante_vb
             .telMovEmp = txtCodtelM.Text & txtTelMovEmp.Text
             .opeMovEmp = cboOperadorempresa.Text
             .rubro = getCheckboxVal(grbRubro)
-            .espRubro = espRubro
+            .espRubroOtros = txtEspOtros.Text
+            .espRubroSectorPE = txtEspeSPE.Text
         End With
+        Dim ExecPart As Boolean = False
         If btnGuardar.Text = "GUARDAR" Then
-            partEst = If(ParticipanteCN.participante_insert(ParticipanteCE), True, False)
-            If partEst Then
+            ExecPart = If(ParticipanteCN.participante_insert(ParticipanteCE), True, False)
+            If ExecPart Then
                 RadMessageBox.Show("SE REGISTRO CORRECTAMENTE", "", MessageBoxButtons.OK, RadMessageIcon.Info)
                 limpiar()
             Else
                 RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A REGISTRAR", "", MessageBoxButtons.OK, RadMessageIcon.Error)
             End If
         ElseIf btnGuardar.Text = "ACTUALIZAR" Then
-            partEst = If(ParticipanteCN.participante_update(ParticipanteCE), True, False)
-            If partEst Then
+            ExecPart = If(ParticipanteCN.participante_update(ParticipanteCE), True, False)
+            If ExecPart Then
                 RadMessageBox.Show("SE ACTUALIZO CORRECTAMENTE", "", MessageBoxButtons.OK, RadMessageIcon.Info)
                 limpiar()
             Else
@@ -295,16 +291,6 @@ Public Class FrmParticipante_vb
         Solo_numeros(e)
     End Sub
 
-    Public ReadOnly Property Opgave() As String
-        Get
-            Return partEst
-        End Get
-    End Property
-
-    Private Sub lblTitulo_Click(sender As Object, e As EventArgs) Handles lblTitulo.Click
-
-    End Sub
-
     Private Sub CheckBox3_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox3.CheckedChanged
         txtEspeSPE.Enabled = If(CheckBox3.Checked, True, False)
     End Sub
@@ -313,13 +299,4 @@ Public Class FrmParticipante_vb
         txtEspOtros.Enabled = If(CheckBox5.Checked, True, False)
     End Sub
 
-    Private Sub grp_Enter(sender As Object, e As EventArgs) Handles grp.Enter
-
-    End Sub
-
-    Public ReadOnly Property codeParticipante() As String
-        Get
-            Return ParticipanteCN.obtUltimoCodigoPart(codigo)
-        End Get
-    End Property
 End Class
