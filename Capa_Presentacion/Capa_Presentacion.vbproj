@@ -337,12 +337,17 @@
   <ItemGroup>
     <None Include="Resources\nexus2cee_android-m.png.ico" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\012-estilos-masisa-mueble-television-pantalla.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\894f0362.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\894f0362_opt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoslider2.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

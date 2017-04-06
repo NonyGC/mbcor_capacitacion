@@ -11,7 +11,7 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Capa_Negocio", "Capa_Negoci
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Capa_Presentacion", "Capa_Presentacion\Capa_Presentacion.vbproj", "{1E4C2711-C10B-40CE-B63A-2081AC8582EC}"
 EndProject
-Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "AI Setup Mbcorp", "AI Setup Mbcorp\AI Setup Mbcorp.aiproj", "{CA23EF86-AB42-444A-A6DC-305F2A4687D5}"
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "AI Setup Mbcorp", "AI Setup Mbcorp\AI Setup Mbcorp.aiproj", "{417FF779-2891-4993-B426-B03E0494EFC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,14 +53,14 @@ Global
 		{1E4C2711-C10B-40CE-B63A-2081AC8582EC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1E4C2711-C10B-40CE-B63A-2081AC8582EC}.Release|x64.ActiveCfg = Release|x64
 		{1E4C2711-C10B-40CE-B63A-2081AC8582EC}.Release|x64.Build.0 = Release|x64
-		{CA23EF86-AB42-444A-A6DC-305F2A4687D5}.Debug|Any CPU.ActiveCfg = All
-		{CA23EF86-AB42-444A-A6DC-305F2A4687D5}.Debug|Any CPU.Build.0 = All
-		{CA23EF86-AB42-444A-A6DC-305F2A4687D5}.Debug|x64.ActiveCfg = All
-		{CA23EF86-AB42-444A-A6DC-305F2A4687D5}.Debug|x64.Build.0 = All
-		{CA23EF86-AB42-444A-A6DC-305F2A4687D5}.Release|Any CPU.ActiveCfg = All
-		{CA23EF86-AB42-444A-A6DC-305F2A4687D5}.Release|Any CPU.Build.0 = All
-		{CA23EF86-AB42-444A-A6DC-305F2A4687D5}.Release|x64.ActiveCfg = All
-		{CA23EF86-AB42-444A-A6DC-305F2A4687D5}.Release|x64.Build.0 = All
+		{417FF779-2891-4993-B426-B03E0494EFC7}.Debug|Any CPU.ActiveCfg = All
+		{417FF779-2891-4993-B426-B03E0494EFC7}.Debug|Any CPU.Build.0 = All
+		{417FF779-2891-4993-B426-B03E0494EFC7}.Debug|x64.ActiveCfg = All
+		{417FF779-2891-4993-B426-B03E0494EFC7}.Debug|x64.Build.0 = All
+		{417FF779-2891-4993-B426-B03E0494EFC7}.Release|Any CPU.ActiveCfg = All
+		{417FF779-2891-4993-B426-B03E0494EFC7}.Release|Any CPU.Build.0 = All
+		{417FF779-2891-4993-B426-B03E0494EFC7}.Release|x64.ActiveCfg = All
+		{417FF779-2891-4993-B426-B03E0494EFC7}.Release|x64.Build.0 = All
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

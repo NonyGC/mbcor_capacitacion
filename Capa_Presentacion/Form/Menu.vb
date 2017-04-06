@@ -22,4 +22,8 @@
     Private Sub RadButton3_Click_1(sender As Object, e As EventArgs) Handles RadButton3.Click, RadButton7.Click
         frmReportePartCatFech.Show()
     End Sub
+
+    Private Sub RadButton6_Click(sender As Object, e As EventArgs) Handles RadButton6.Click
+
+    End Sub
 End Class

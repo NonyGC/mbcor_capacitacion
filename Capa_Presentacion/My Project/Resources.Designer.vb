@@ -63,6 +63,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _012_estilos_masisa_mueble_television_pantalla() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("012-estilos-masisa-mueble-television-pantalla", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property _894f0362() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("894f0362", resourceCulture)
@@ -76,6 +86,16 @@ Namespace My.Resources
         Friend ReadOnly Property _894f0362_opt() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("894f0362_opt", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property fondoslider2() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("fondoslider2", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

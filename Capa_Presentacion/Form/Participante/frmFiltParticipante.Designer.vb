@@ -60,6 +60,8 @@ Partial Class frmFiltParticipante
         Me.cboCapacitacion = New Telerik.WinControls.UI.RadDropDownList()
         Me.Label36 = New System.Windows.Forms.Label()
         Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblTotalPaticipante = New System.Windows.Forms.Label()
         CType(Me.dtgParticipante, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dtgParticipante.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboCapacitacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -280,11 +282,34 @@ Partial Class frmFiltParticipante
         Me.RadButton1.ThemeName = "VisualStudio2012Light"
         Me.RadButton1.Visible = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(756, 477)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(167, 17)
+        Me.Label1.TabIndex = 88
+        Me.Label1.Text = "TOTAL DE PARTICIPANTES :"
+        '
+        'lblTotalPaticipante
+        '
+        Me.lblTotalPaticipante.AutoSize = True
+        Me.lblTotalPaticipante.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotalPaticipante.Location = New System.Drawing.Point(939, 477)
+        Me.lblTotalPaticipante.Name = "lblTotalPaticipante"
+        Me.lblTotalPaticipante.Size = New System.Drawing.Size(22, 17)
+        Me.lblTotalPaticipante.TabIndex = 89
+        Me.lblTotalPaticipante.Text = "00"
+        Me.lblTotalPaticipante.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
         'frmFiltParticipante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(991, 499)
+        Me.ClientSize = New System.Drawing.Size(991, 508)
+        Me.Controls.Add(Me.lblTotalPaticipante)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.RadButton1)
         Me.Controls.Add(Me.Label36)
         Me.Controls.Add(Me.cboCapacitacion)
@@ -292,13 +317,13 @@ Partial Class frmFiltParticipante
         Me.Controls.Add(Me.dtgParticipante)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(999, 532)
+        Me.MaximumSize = New System.Drawing.Size(999, 542)
         Me.Name = "frmFiltParticipante"
         '
         '
         '
         Me.RootElement.ApplyShapeToControl = True
-        Me.RootElement.MaxSize = New System.Drawing.Size(999, 532)
+        Me.RootElement.MaxSize = New System.Drawing.Size(999, 542)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MBCORP"
         Me.ThemeName = "VisualStudio2012Light"
@@ -317,5 +342,7 @@ Partial Class frmFiltParticipante
     Friend WithEvents cboCapacitacion As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents Label36 As System.Windows.Forms.Label
     Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblTotalPaticipante As System.Windows.Forms.Label
 End Class
 

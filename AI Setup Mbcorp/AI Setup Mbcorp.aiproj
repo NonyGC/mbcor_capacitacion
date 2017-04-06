@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">All</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>ca23ef86-ab42-444a-a6dc-305f2a4687d5</ProjectGuid>
+    <ProjectGuid>417ff779-2891-4993-b426-b03e0494efc7</ProjectGuid>
     <OutputType>msi</OutputType>
     <ProjectHome>.</ProjectHome>
     <StartupFile>AI Setup Mbcorp.aip</StartupFile>

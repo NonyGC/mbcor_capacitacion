@@ -7,14 +7,14 @@ Public Class FichaCapaDAO
 
     Public Function fichaCapacitacion_Capacitacion() As DataTable
         Dim tbl As New DataTable
-        Dim cmd As SqlCommand = CommandText("SELECT C.codigo,L.nombre [local],fecha,COUNT(F.codcap) registrados FROM [dbo].[capacitacion] C INNER JOIN [dbo].[local] L ON C.[local]=L.codigo LEFT JOIN [dbo].[ficha_capacitacion] F ON C.codigo=F.codcap GROUP BY C.codigo,L.nombre,fecha ORDER BY L.nombre,fecha DESC")
+        Dim cmd As SqlCommand = CommandProcedure("uspCapacitacion_getRegisteredLocal")
         tbl = GetDataTable(cmd)
         Return tbl
     End Function
 
     Public Function fichaCapacitacion_ParticipanteAutocomplete() As DataTable
         Dim tbl As New DataTable
-        Dim cmd As SqlCommand = CommandText("SELECT codigo,CONCAT(apellido_pat,' ',apellido_mat,' ',nombres) participante FROM participante")
+        Dim cmd As SqlCommand = CommandProcedure("spParticipante_getSearch")
         tbl = GetDataTable(cmd)
         Return tbl
     End Function

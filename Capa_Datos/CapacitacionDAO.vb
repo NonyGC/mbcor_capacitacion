@@ -42,7 +42,7 @@ Public Class CapacitacionDAO
     End Function
 
     Public Function obtenerLocal() As DataTable
-        Dim cmd As SqlCommand = CommandText("SELECT codigo,nombre FROM local")
+        Dim cmd As SqlCommand = CommandText("SELECT codigo,nombre FROM local order by nombre")
         Dim data As New DataTable
         data = GetDataTable(cmd)
         Return data

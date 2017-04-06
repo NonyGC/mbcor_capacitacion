@@ -382,7 +382,6 @@ Partial Class FrmListParticipante
         '
         'cboBuscar
         '
-        Me.cboBuscar.Enabled = False
         Me.cboBuscar.Location = New System.Drawing.Point(365, 106)
         Me.cboBuscar.Name = "cboBuscar"
         Me.cboBuscar.Size = New System.Drawing.Size(430, 24)
@@ -391,7 +390,6 @@ Partial Class FrmListParticipante
         '
         'btnBuscar
         '
-        Me.btnBuscar.Enabled = False
         Me.btnBuscar.Location = New System.Drawing.Point(815, 106)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(148, 24)

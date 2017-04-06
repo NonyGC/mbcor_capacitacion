@@ -25,10 +25,13 @@ Public Class frmFiltParticipante
     End Sub
 
     Private Sub FrmListParticipanteCapa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim dtParticipanteCapacitacion As New DataTable
         Select Case Value
             Case Initialize.ini
             Case Initialize.ext
-                dtgParticipante.DataSource = PartCN.CargarParticipante_tabla_codcapacitacion(codcap)
+                dtParticipanteCapacitacion = PartCN.CargarParticipante_tabla_codcapacitacion(codcap)
+                dtgParticipante.DataSource = dtParticipanteCapacitacion
+                lblTotalPaticipante.Text = dtParticipanteCapacitacion.Rows.Count()
         End Select
 
     End Sub

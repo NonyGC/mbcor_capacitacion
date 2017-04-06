@@ -12,6 +12,7 @@ Public Class frmFicha
     Dim PartCE As New ParticipanteCE, FichCE As New FichaCapaCE
     Dim datadep As DataTable
     Dim _codigoPart As String
+    Dim Action As String = "GUARDAR"
     Sub New()
 
         ' Esta llamada es exigida por el diseñador.
@@ -30,7 +31,10 @@ Public Class frmFicha
     End Sub
 
     Private Sub cboDepartamento_Leave(sender As Object, e As EventArgs) Handles cboDepartamento.Leave
-        loadProvincia()
+        Dim idDepartamentonew As String = If(String.IsNullOrEmpty(cboDepartamento.SelectedValue), String.Empty, cboDepartamento.SelectedValue)
+        If idDepartamento <> idDepartamentonew Then
+            loadProvincia()
+        End If
     End Sub
 
     Private Sub cboDepartamento_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboDepartamento.SelectedValueChanged
@@ -43,20 +47,44 @@ Public Class frmFicha
         cboParticipanteSearch.ValueMember = "codigo"
         cboParticipanteSearch.DisplayMember = "participante"
         cboParticipanteSearch.SelectedIndex = -1
+        form_Clear()
     End Sub
 
     Private Sub cboParticipanteSearch_Leave(sender As Object, e As EventArgs) Handles cboParticipanteSearch.Leave
         cboParticipanteSearch_Leave()
     End Sub
 
+    Private Sub btnParticipanteNue_Click(sender As Object, e As EventArgs) Handles btnParticipanteNue.Click
+        form_Clear()
+
+        grp.Enabled = True : grp1.Enabled = True : grp2.Enabled = True : grpInstitucion.Enabled = True : grbRubro.Enabled = True
+        btnLimpiar.Enabled = True : btnGuardarP.Enabled = True
+        Dim datoPart As String() = Split(Trim(cboParticipanteSearch.Text), " ")
+        Select Case datoPart.Length
+            Case 1 : txtApePat.Text = datoPart(0)
+            Case 2 : txtApePat.Text = datoPart(0) : txtApeMat.Text = datoPart(1)
+            Case 3 To datoPart.Length
+                txtApePat.Text = datoPart(0) : txtApeMat.Text = datoPart(1) : Dim nom As String = String.Empty
+                For i = 2 To datoPart.Length - 1
+                    nom += datoPart(i) & " "
+                Next
+                txtNombres.Text = Trim(nom)
+        End Select
+        cboParticipanteSearch.Text = String.Empty
+    End Sub
+
     Private Sub cboProvincia_Leave(sender As Object, e As EventArgs) Handles cboProvincia.Leave
-        loadDistrito()
+        Dim idProvincianew As String = If(String.IsNullOrEmpty(cboProvincia.SelectedValue), String.Empty, cboProvincia.SelectedValue)
+        If idProvincia <> idProvincianew Then
+            loadDistrito()
+        End If
     End Sub
 
     Private Sub cboProvincia_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboProvincia.SelectedValueChanged
         cboDistrito.DataSource = Nothing
     End Sub
     Private Sub FrmFC_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cboParticipanteSearch.Focus()
         cboParticipanteSearch_AutoComparer()
         cboCapacitacion_filter()
         datadep = New DataTable
@@ -69,6 +97,8 @@ Public Class frmFicha
 
         txtProfesionOcupacion.AutoCompleteDataSource = partCN.Participante_AutocompleteProfeOcu()
         txtProfesionOcupacion.AutoCompleteDisplayMember = "profe_ocupa"
+
+
     End Sub
 
     Private Sub btnEncuesta_Click(sender As Object, e As EventArgs) Handles btnEncuesta.Click
@@ -78,82 +108,13 @@ Public Class frmFicha
             Frm.ShowDialog(Me)
             Frm.Dispose()
         Else
-            RadMessageBox.Show("PRIMERO DEBE SELECCIONAR CAPACITACION", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+            RadMessageBox.Show("PRIMERO DEBE SELECCIONAR CAPACITACIÓN", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
         End If
 
     End Sub
 
-    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs)
 
-        Dim codUbi As String = cboDepartamento.SelectedValue & cboProvincia.SelectedValue & cboDistrito.SelectedValue
-        Dim fechaN As String
-        fechaN = If(IsDate(txtFechaN.Value), txtFechaN.Value, String.Empty)
-
-        With PartCE
-
-            If btnGuardar.Text = "GUARDAR" Then
-                Dim iniCod = CodigoAuto(txtApePat.Text, txtApeMat.Text)
-                _codigoPart = partCN.participante_codauto(iniCod)
-            End If
-
-            .codpart = _codigoPart
-            .dnice = Trim(txtDNICE.Text)
-            .apePat = txtApePat.Text
-            .apeMat = txtApeMat.Text
-            .nombres = txtNombres.Text
-            .fechaNaci = fechaN
-            .EstadoCiv = cboEstadoCivil.Text
-            .sexo = cboSexo.Text
-            .direccion = txtDireccion.Text
-            .ubigeo = codUbi
-            .telFijo = txtCodtel1.Text & txtTelFijo.Text
-            .telMovil = txtCodtelM1.Text & txtTelMovil.Text
-            .opeMovil = cboOperadorM.Text
-            .telFijo2 = txtCodtel2.Text & txtTelFijo2.Text
-            .telMovil2 = txtCodtelM2.Text & txtTelMovil2.Text
-            .opeMovil2 = cboOperadorM2.Text
-            .correo = txtCorreo.Text
-            .profeOcupa = txtProfesionOcupacion.Text
-            .procarre = txtProfeCarrera.Text
-            .nivestudio = txtNivelEst.Text
-            .nomInstitucion = txtNomInstitu.Text
-            .instEducativa = If(Not IsNothing(GetGrpBxCheckedBbt(grpInstitucion)), GetGrpBxCheckedBbt(grpInstitucion).Text, "")
-            .ruc = txtRuc.Text
-            .empresa = txtEmpresa.Text
-            .cargo = txtCargo.Text
-            .telFijoEmp = txtCodtel.Text & txtTelFijoEmp.Text
-            .telMovEmp = txtCodtelM.Text & txtTelMovEmp.Text
-            .opeMovEmp = cboOperadorempresa.Text
-            .rubro = getCheckboxVal(grbRubro)
-            .espRubroOtros = txtEspOtros.Text
-            .espRubroSectorPE = txtEspeSPE.Text
-        End With
-        With FichCE
-            .codcap = cboCapacitacion.SelectedValue
-            .codpart = _codigoPart
-        End With
-
-        Dim ExecPart As Boolean = False
-        Dim ExecFichaCapa As Boolean = False
-        If btnGuardar.Text = "GUARDAR" Then
-            ExecPart = If(partCN.participante_insert(PartCE), True, False)
-            If ExecPart Then
-                ExecFichaCapa = If(FichCN.fichaCapacitacion_Registrar(FichCE), True, False)
-                RadMessageBox.Show("SE REGISTRO CORRECTAMENTE", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Info)
-                form_Clear()
-            Else
-                RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A INTENTAR", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Error)
-            End If
-        ElseIf btnGuardar.Text = "ACTUALIZAR" Then
-            ExecPart = If(partCN.participante_update(PartCE), True, False)
-            ExecFichaCapa = If(FichCN.fichaCapacitacion_Registrar(FichCE), True, False)
-            If ExecPart Then
-                RadMessageBox.Show("SE ACTUALIZO CORRECTAMENTE", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Info)
-                form_Clear()
-            Else
-                RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A INTENTAR", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Error)
-            End If
-        End If
     End Sub
 
     Private Sub btnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
@@ -196,7 +157,7 @@ Public Class frmFicha
 #Region "subprocesos"
     Public Sub cboCapacitacion_filter()
         cboCapacitacion.AutoFilter = True
-        cboCapacitacion.DisplayMember = "local"
+        cboCapacitacion.DisplayMember = "localfecha"
         Dim filter As New FilterDescriptor()
         filter.PropertyName = cboCapacitacion.DisplayMember
         filter.Operator = FilterOperator.Contains
@@ -205,15 +166,17 @@ Public Class frmFicha
 
     Public Sub cboParticipanteSearch_AutoComparer()
         cboParticipanteSearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend
-        cboParticipanteSearch.DropDownListElement.AutoCompleteSuggest = New CustomAutoCompleteSuggestHelper(cboParticipanteSearch.DropDownListElement)
+        'cboParticipanteSearch.DropDownListElement.AutoCompleteSuggest = New CustomAutoCompleteSuggestHelper(cboParticipanteSearch.DropDownListElement)
         cboParticipanteSearch.DropDownListElement.AutoCompleteSuggest.SuggestMode = UI.SuggestMode.Contains
     End Sub
     Sub cboParticipanteSearch_Leave()
         _codigoPart = String.Empty
-        If cboParticipanteSearch.SelectedIndex <> -1 Then btnGuardar.Text = "ACTUALIZAR" Else btnGuardar.Text = "GUARDAR"
+        If cboParticipanteSearch.SelectedIndex <> -1 Then Action = "ACTUALIZAR" Else Action = "GUARDAR"
         Dim codigo As String = cboParticipanteSearch.SelectedValue
         codigo = Trim(codigo)
         If codigo IsNot String.Empty Then
+            grp.Enabled = True : grp1.Enabled = True : grp2.Enabled = True : grpInstitucion.Enabled = True : grbRubro.Enabled = True
+            btnLimpiar.Enabled = True : btnGuardarP.Enabled = True
             Dim data As DataTable = FichCN.fichaCapacitacion_ParticipanteCargar(codigo)
             With data
 
@@ -226,11 +189,11 @@ Public Class frmFicha
                 txtDNICE.Text = .Rows(0)(6).ToString()
                 txtDireccion.Text = .Rows(0)(7).ToString()
 
+
                 'carga ubigeo
                 Dim codubigeo As String = .Rows(0)(8).ToString().Trim
                 Dim len = 2
                 Dim arr = Enumerable.Range(0, codubigeo.Length / len).Select(Function(x) codubigeo.Substring(x * len, len)).ToArray()
-                Debug.WriteLine(arr.Length)
 
                 Select Case arr.Length
                     Case 3
@@ -314,15 +277,18 @@ Public Class frmFicha
             cboProvincia.DataSource = LocalCN.ubigeo_Provincia(idDep)
             cboProvincia.ValueMember = "idProv"
             cboProvincia.DisplayMember = "Provincia"
-            If idDep <> "15" Then
-                txtTelFijo.Mask = "000-000"
-                txtTelFijo2.Mask = "000-000"
-                txtTelFijoEmp.Mask = "000-000"
-            Else
+
+            If idDep = "15" Then
                 txtTelFijo.Mask = "000-0000"
                 txtTelFijo2.Mask = "000-0000"
                 txtTelFijoEmp.Mask = "000-0000"
+            Else
+                txtTelFijo.Mask = "000-000"
+                txtTelFijo2.Mask = "000-000"
+                txtTelFijoEmp.Mask = "000-000"
+                cboProvincia.SelectedIndex = -1
             End If
+
         End If
     End Sub
     Sub ubigeoPredeterminado()
@@ -340,12 +306,113 @@ Public Class frmFicha
         cboDistrito.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboSexo.DropDownListElement.AutoCompleteAppend.LimitToList = True
     End Sub
+    Dim idDepartamento As String, idProvincia As String
+    Private Sub cboDepartamento_Enter(sender As Object, e As EventArgs) Handles cboDepartamento.Enter
+        idDepartamento = String.Empty
+        idDepartamento = If(String.IsNullOrEmpty(cboDepartamento.SelectedValue), String.Empty, cboDepartamento.SelectedValue)
+    End Sub
+
+    Private Sub cboProvincia_Enter(sender As Object, e As EventArgs) Handles cboProvincia.Enter
+        idProvincia = String.Empty
+        idProvincia = If(String.IsNullOrEmpty(cboProvincia.SelectedValue), String.Empty, cboProvincia.SelectedValue)
+    End Sub
+
+    Private Sub txtApePat_Enter(sender As Object, e As EventArgs) Handles txtApePat.Enter
+        If cboCapacitacion.SelectedIndex = -1 Then
+            RadMessageBox.Show("PRIMERO DEBE SELECCIONAR CAPACITACIÓN", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+        End If
+    End Sub
+
+    Private Sub btnGuardarP_Click(sender As Object, e As EventArgs) Handles btnGuardarP.Click
+        If cboCapacitacion.SelectedIndex <> -1 Then
+            Dim codUbi As String = cboDepartamento.SelectedValue & cboProvincia.SelectedValue & cboDistrito.SelectedValue
+            Dim fechaN As String
+            fechaN = If(IsDate(txtFechaN.Value), txtFechaN.Value, String.Empty)
+
+            With PartCE
+
+                If Action = "GUARDAR" Then
+                    Dim iniCod = CodigoAuto(txtApePat.Text, txtApeMat.Text)
+                    _codigoPart = partCN.participante_codauto(iniCod)
+                End If
+
+                .codpart = _codigoPart
+                .dnice = Trim(txtDNICE.Text)
+                .apePat = txtApePat.Text
+                .apeMat = txtApeMat.Text
+                .nombres = txtNombres.Text
+                .fechaNaci = fechaN
+                .EstadoCiv = cboEstadoCivil.Text
+                .sexo = cboSexo.Text
+                .direccion = txtDireccion.Text
+                .ubigeo = codUbi
+                .telFijo = txtCodtel1.Text & txtTelFijo.Text
+                .telMovil = txtCodtelM1.Text & txtTelMovil.Text
+                .opeMovil = cboOperadorM.Text
+                .telFijo2 = txtCodtel2.Text & txtTelFijo2.Text
+                .telMovil2 = txtCodtelM2.Text & txtTelMovil2.Text
+                .opeMovil2 = cboOperadorM2.Text
+                .correo = txtCorreo.Text
+                .profeOcupa = txtProfesionOcupacion.Text
+                .procarre = txtProfeCarrera.Text
+                .nivestudio = txtNivelEst.Text
+                .nomInstitucion = txtNomInstitu.Text
+                .instEducativa = If(Not IsNothing(GetGrpBxCheckedBbt(grpInstitucion)), GetGrpBxCheckedBbt(grpInstitucion).Text, "")
+                .ruc = txtRuc.Text
+                .empresa = txtEmpresa.Text
+                .cargo = txtCargo.Text
+                .telFijoEmp = txtCodtel.Text & txtTelFijoEmp.Text
+                .telMovEmp = txtCodtelM.Text & txtTelMovEmp.Text
+                .opeMovEmp = cboOperadorempresa.Text
+                .rubro = getCheckboxVal(grbRubro)
+                .espRubroOtros = txtEspOtros.Text
+                .espRubroSectorPE = txtEspeSPE.Text
+            End With
+            With FichCE
+                .codcap = cboCapacitacion.SelectedValue
+                .codpart = _codigoPart
+            End With
+
+            Dim ExecPart As Boolean = False
+            Dim ExecFichaCapa As Boolean = False
+            If Action = "GUARDAR" Then
+                ExecPart = If(partCN.participante_insert(PartCE), True, False)
+                If ExecPart Then
+                    Dim mssg As String = String.Format("Participante : {0} :REGISTRADO", PartCE.codpart)
+                    ExecFichaCapa = If(FichCN.fichaCapacitacion_Registrar(FichCE), True, False)
+                    If ExecFichaCapa Then mssg = mssg & vbCrLf & String.Format("Capacitación : {0} :REGISTRADO", FichCE.codcap) Else mssg = mssg & "Capacitación : ERROR, NO REGISTRADO"
+                    RadMessageBox.Show(mssg, "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Info)
+                    form_Clear()
+                Else
+                    RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A INTENTAR", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Error)
+                End If
+            ElseIf Action = "ACTUALIZAR" Then
+                ExecPart = If(partCN.participante_update(PartCE), True, False)
+                If ExecPart Then
+                    Dim mssg As String = String.Format("Participante : {0} :REGISTRADO", PartCE.codpart)
+                    ExecFichaCapa = If(FichCN.fichaCapacitacion_Registrar(FichCE), True, False)
+                    If ExecFichaCapa Then mssg = mssg & vbCrLf & String.Format("Capacitación : {0} :REGISTRADO", FichCE.codcap) Else mssg = mssg & "Capacitación : ERROR, NO REGISTRADO"
+                    RadMessageBox.Show(mssg, "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Info)
+                    form_Clear()
+                Else
+                    RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A INTENTAR", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Error)
+                End If
+            End If
+        Else
+            RadMessageBox.Show("PRIMERO DEBE SELECCIONAR CAPACITACIÓN", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
+        End If
+
+    End Sub
+
     Sub form_Clear()
+        grp.Enabled = False : grp1.Enabled = False : grp2.Enabled = False : grpInstitucion.Enabled = False : grbRubro.Enabled = False
+        btnLimpiar.Enabled = False
+        btnGuardarP.Enabled = False
         cboParticipanteSearch.SelectedIndex = -1
         ubigeoPredeterminado()
         cboSexo.SelectedIndex = -1
-        txtCodtel1.Text = "(___)" : txtCodtelM1.Text = "(___)"
-        txtCodtel2.Text = "(___)" : txtCodtelM2.Text = "(___)"
+        'txtCodtel1.Text = "(___)" : txtCodtelM1.Text = "(___)"
+        'txtCodtel2.Text = "(___)" : txtCodtelM2.Text = "(___)"
         txtTelFijo.Clear() : txtTelFijo2.Clear()
         txtTelMovil.Clear() : txtTelMovil2.Clear()
         cboOperadorM.SelectedIndex = -1 : cboOperadorM2.SelectedIndex = -1
@@ -355,7 +422,8 @@ Public Class frmFicha
         txtDNICE.Clear()
         txtCorreo.Clear()
         txtProfesionOcupacion.Clear()
-        txtFechaN.Clear()
+        txtFechaN.Mask = "00/00/0000"
+        txtFechaN.Text = "__/__/____"
 
         txtProfeCarrera.Clear()
         txtNivelEst.Clear()
@@ -365,14 +433,14 @@ Public Class frmFicha
         txtRuc.Clear()
         txtEmpresa.Clear()
         txtCargo.Clear()
-        txtCodtel.Text = "(___)" : txtCodtelM.Text = "(___)"
+        'txtCodtel.Text = "(___)" : txtCodtelM.Text = "(___)"
         txtTelFijoEmp.Clear()
         txtTelMovEmp.Clear()
         cboOperadorempresa.SelectedIndex = -1
         CheckBoxclear(grbRubro)
         txtEspOtros.Clear()
         txtEspeSPE.Clear()
-        btnGuardar.Text = "GUARDAR"
+        Action = "GUARDAR"
     End Sub
 #End Region
 
@@ -384,22 +452,23 @@ Public Class frmFicha
 #End Region
 #End Region
 #Region "Class"
-    Public Class CustomAutoCompleteSuggestHelper
-        Inherits AutoCompleteSuggestHelper
-        Public Sub New(owner As RadDropDownListElement)
-            MyBase.New(owner)
-        End Sub
-        Public Overrides Sub ApplyFilterToDropDown(filter As String)
-            MyBase.ApplyFilterToDropDown(filter)
-            DropDownList.ListElement.DataLayer.DataView.Comparer = New CustomComparer()
-        End Sub
-    End Class
+    'Public Class CustomAutoCompleteSuggestHelper
+    '    Inherits AutoCompleteSuggestHelper
+    '    Public Sub New(owner As RadDropDownListElement)
+    '        MyBase.New(owner)
+    '    End Sub
+    '    Public Overrides Sub ApplyFilterToDropDown(filter As String)
+    '        MyBase.ApplyFilterToDropDown(filter)
+    '        DropDownList.ListElement.DataLayer.DataView.Comparer = New CustomComparer()
+    '    End Sub
+    'End Class
 
-    Public Class CustomComparer
-        Implements IComparer(Of RadListDataItem)
-        Public Function [Compare](x As RadListDataItem, y As RadListDataItem) As Integer Implements IComparer(Of RadListDataItem).[Compare]
-            Return x.Text.Length.CompareTo(y.Text.Length)
-        End Function
-    End Class
+    'Public Class CustomComparer
+    '    Implements IComparer(Of RadListDataItem)
+    '    Public Function [Compare](x As RadListDataItem, y As RadListDataItem) As Integer Implements IComparer(Of RadListDataItem).[Compare]
+    '        Return x.Text.Length.CompareTo(y.Text.Length)
+    '    End Function
+    'End Class
+
 #End Region
 End Class

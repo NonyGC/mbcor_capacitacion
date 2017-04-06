@@ -47,7 +47,7 @@ Partial Class Menu
         Me.RadButton1.Name = "RadButton1"
         Me.RadButton1.Size = New System.Drawing.Size(226, 28)
         Me.RadButton1.TabIndex = 0
-        Me.RadButton1.Text = "FICHA DE REGISTRO DE CAPACITACION"
+        Me.RadButton1.Text = "FICHA REGISTRO DE CAPACITACION"
         Me.RadButton1.ThemeName = "VisualStudio2012Light"
         '
         'RadButton2
@@ -85,7 +85,6 @@ Partial Class Menu
         Me.RadButton3.TabIndex = 2
         Me.RadButton3.Text = "REPORTE PARTICIPANTES CATEGORIA FECHA"
         Me.RadButton3.ThemeName = "VisualStudio2012Light"
-        Me.RadButton3.Visible = False
         '
         'RadButton6
         '
@@ -95,7 +94,6 @@ Partial Class Menu
         Me.RadButton6.TabIndex = 2
         Me.RadButton6.Text = "REPORTE FICHA REGISTRO"
         Me.RadButton6.ThemeName = "VisualStudio2012Light"
-        Me.RadButton6.Visible = False
         '
         'RadButton7
         '
@@ -103,15 +101,14 @@ Partial Class Menu
         Me.RadButton7.Name = "RadButton7"
         Me.RadButton7.Size = New System.Drawing.Size(266, 28)
         Me.RadButton7.TabIndex = 2
-        Me.RadButton7.Text = "REPORTE PARTICIPANTES CORREO CELULAR"
+        Me.RadButton7.Text = "REPORTE PARTICIPANTES CORREO/CELULAR"
         Me.RadButton7.ThemeName = "VisualStudio2012Light"
-        Me.RadButton7.Visible = False
         '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(296, 248)
+        Me.ClientSize = New System.Drawing.Size(295, 248)
         Me.Controls.Add(Me.RadButton6)
         Me.Controls.Add(Me.RadButton7)
         Me.Controls.Add(Me.RadButton3)

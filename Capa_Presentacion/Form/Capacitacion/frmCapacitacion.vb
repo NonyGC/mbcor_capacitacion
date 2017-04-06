@@ -146,4 +146,5 @@ Public Class frmCapacitacion
         'cboLocal.DisplayMember = "nombre"
         'cboLocal.ValueMember = "codigo"
     End Sub
+
 End Class
