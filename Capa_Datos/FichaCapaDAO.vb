@@ -38,8 +38,8 @@ Public Class FichaCapaDAO
 
     Public Function fichaCapacitacion_ParticipanteCargar(v As String) As DataTable
         Dim tbl As New DataTable
-        Dim cmd As SqlCommand = CommandText("SELECT * FROM participante WHERE codigo=@cod")
-        cmd.Parameters.AddWithValue("@cod", v)
+        Dim cmd As SqlCommand = CommandProcedure("spParticipante_getDataById")
+        cmd = Parameters(cmd, {v})
         tbl = GetDataTable(cmd)
         Return tbl
     End Function
