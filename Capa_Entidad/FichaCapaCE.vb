@@ -1,7 +1,7 @@
 ﻿Public Class FichaCapaCE
+
     Private _codcap As String
     Private _codpart As String
-
     Public Property codcap As String
         Get
             Return _codcap

@@ -49,6 +49,7 @@ Partial Class frmFicha
         Dim RadListDataItem19 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem20 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem21 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem22 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmFicha))
         Me.VisualStudio2012LightTheme1 = New Telerik.WinControls.Themes.VisualStudio2012LightTheme()
         Me.rbtVer = New Telerik.WinControls.UI.RadButton()
@@ -290,6 +291,7 @@ Partial Class frmFicha
         Me.cboCapacitacion.Name = "cboCapacitacion"
         Me.cboCapacitacion.Size = New System.Drawing.Size(430, 24)
         Me.cboCapacitacion.TabIndex = 200
+        Me.cboCapacitacion.TabStop = False
         Me.cboCapacitacion.ThemeName = "VisualStudio2012Light"
         '
         'Label36
@@ -323,7 +325,7 @@ Partial Class frmFicha
         Me.grp1.Controls.Add(Me.Label24)
         Me.grp1.Enabled = False
         Me.grp1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grp1.Location = New System.Drawing.Point(19, 365)
+        Me.grp1.Location = New System.Drawing.Point(19, 574)
         Me.grp1.Name = "grp1"
         Me.grp1.Size = New System.Drawing.Size(831, 88)
         Me.grp1.TabIndex = 53
@@ -473,7 +475,7 @@ Partial Class frmFicha
         Me.grp2.Controls.Add(Me.Label19)
         Me.grp2.Enabled = False
         Me.grp2.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grp2.Location = New System.Drawing.Point(19, 455)
+        Me.grp2.Location = New System.Drawing.Point(19, 464)
         Me.grp2.Name = "grp2"
         Me.grp2.Size = New System.Drawing.Size(831, 108)
         Me.grp2.TabIndex = 54
@@ -667,7 +669,7 @@ Partial Class frmFicha
         Me.grbRubro.Controls.Add(Me.CheckBox1)
         Me.grbRubro.Enabled = False
         Me.grbRubro.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.grbRubro.Location = New System.Drawing.Point(20, 566)
+        Me.grbRubro.Location = New System.Drawing.Point(19, 364)
         Me.grbRubro.Name = "grbRubro"
         Me.grbRubro.Size = New System.Drawing.Size(830, 99)
         Me.grbRubro.TabIndex = 55
@@ -1192,10 +1194,12 @@ Partial Class frmFicha
         RadListDataItem19.Text = "CASADO(A)"
         RadListDataItem20.Text = "VIUDO(A)"
         RadListDataItem21.Text = "DIVORCIADO(A)"
+        RadListDataItem22.Text = "CONVIVIENTE"
         Me.cboEstadoCivil.Items.Add(RadListDataItem18)
         Me.cboEstadoCivil.Items.Add(RadListDataItem19)
         Me.cboEstadoCivil.Items.Add(RadListDataItem20)
         Me.cboEstadoCivil.Items.Add(RadListDataItem21)
+        Me.cboEstadoCivil.Items.Add(RadListDataItem22)
         Me.cboEstadoCivil.Location = New System.Drawing.Point(299, 78)
         Me.cboEstadoCivil.Name = "cboEstadoCivil"
         Me.cboEstadoCivil.Size = New System.Drawing.Size(115, 24)
@@ -1392,6 +1396,7 @@ Partial Class frmFicha
         '
         'btnGuardarP
         '
+        Me.btnGuardarP.Enabled = False
         Me.btnGuardarP.Location = New System.Drawing.Point(526, 671)
         Me.btnGuardarP.Name = "btnGuardarP"
         Me.btnGuardarP.Size = New System.Drawing.Size(159, 29)

@@ -1,5 +1,6 @@
 ﻿Public Class CapacitacionCE
 
+
     Private _codigo As String
     Private _organizador As String
     Private _local As String

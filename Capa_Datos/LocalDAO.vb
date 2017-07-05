@@ -16,6 +16,14 @@ Public Class LocalDAO
         dtDepartamento = GetDataTable(cmd)
         Return dtDepartamento
     End Function
+
+    Public Function getTableLocal() As DataTable
+        Dim dtLocal As New DataTable
+        Dim cmd As SqlCommand = CommandText("SELECT [codigo],[nombre],[direccion],[aforo],[ubigeo]  FROM [dbmass].[dbo].[local]")
+        dtLocal = GetDataTable(cmd)
+        Return dtLocal
+    End Function
+
     Public Function ubigeo_Provincia(idDep As String) As DataTable
         Dim dtProvincia As New DataTable
         Dim cmd As SqlCommand = CommandText("SELECT idProv,idDep,Provincia FROM ubProvincia where idDep=@idDep")

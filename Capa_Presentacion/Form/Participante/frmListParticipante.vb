@@ -95,7 +95,7 @@ Public Class FrmListParticipante
     Private Sub rbtBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         If cboBuscar.SelectedValue IsNot Nothing Then
             Dim cadenaBusqueda As String = cboBuscar.Text
-            Dim rbtSelected As String = If(Not IsNothing(GetGrpBxCheckedBbt(gpbTipBusqueda)), GetGrpBxCheckedBbt(gpbTipBusqueda).Text, "")
+            Dim rbtSelected As String = If(Not IsNothing(GetRbtChekedInGroupbx(gpbTipBusqueda)), GetRbtChekedInGroupbx(gpbTipBusqueda).Text, "")
             Dim dateini As String = If((txtFechaini.Text).Contains("_"), String.Empty, txtFechaini.Value)
             Dim datefin As String = If((txtFechafin.Text).Contains("_"), String.Empty, txtFechafin.Value)
             If rbtSelected IsNot String.Empty Then
@@ -154,11 +154,11 @@ Public Class FrmListParticipante
 
     Private Sub cboBuscar_Enter(sender As Object, e As EventArgs) Handles cboBuscar.Enter
         'Dim rdb
-        Dim rbtSelected As String = If(Not IsNothing(GetGrpBxCheckedBbt(gpbTipBusqueda)), GetGrpBxCheckedBbt(gpbTipBusqueda).Text, "")
+        Dim rbtSelected As String = If(Not IsNothing(GetRbtChekedInGroupbx(gpbTipBusqueda)), GetRbtChekedInGroupbx(gpbTipBusqueda).Text, "")
         'Dim dateIni As String
         If rbtSelected IsNot String.Empty Then
             cboBuscar.DataSource = ParticipanteCN.cargarAutocompletado_buscar(rbtSelected)
-            If GetGrpBxCheckedBbt(gpbTipBusqueda).Text <> "Origen" Then cboBuscar.ValueMember = "codigo"
+            If GetRbtChekedInGroupbx(gpbTipBusqueda).Text <> "Origen" Then cboBuscar.ValueMember = "codigo"
             cboBuscar.DisplayMember = "nombre"
             cboBuscar.SelectedIndex = -1
         End If

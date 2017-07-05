@@ -215,7 +215,6 @@ Partial Class FrmEncuesta
         Me.RadioButton6.Name = "RadioButton6"
         Me.RadioButton6.Size = New System.Drawing.Size(72, 17)
         Me.RadioButton6.TabIndex = 22
-        Me.RadioButton6.TabStop = True
         Me.RadioButton6.Text = "REGULAR"
         Me.RadioButton6.UseVisualStyleBackColor = True
         '
@@ -228,7 +227,6 @@ Partial Class FrmEncuesta
         Me.RadioButton4.Name = "RadioButton4"
         Me.RadioButton4.Size = New System.Drawing.Size(41, 17)
         Me.RadioButton4.TabIndex = 21
-        Me.RadioButton4.TabStop = True
         Me.RadioButton4.Text = "NO"
         Me.RadioButton4.UseVisualStyleBackColor = True
         '
@@ -241,7 +239,6 @@ Partial Class FrmEncuesta
         Me.RadioButton3.Name = "RadioButton3"
         Me.RadioButton3.Size = New System.Drawing.Size(33, 17)
         Me.RadioButton3.TabIndex = 20
-        Me.RadioButton3.TabStop = True
         Me.RadioButton3.Text = "SI"
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
@@ -536,6 +533,7 @@ Partial Class FrmEncuesta
         '
         'btnLimpiar
         '
+        Me.btnLimpiar.Enabled = False
         Me.btnLimpiar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLimpiar.Location = New System.Drawing.Point(732, 248)
         Me.btnLimpiar.Name = "btnLimpiar"
@@ -547,11 +545,11 @@ Partial Class FrmEncuesta
         'btnRegistrar
         '
         Me.btnRegistrar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegistrar.Location = New System.Drawing.Point(533, 248)
+        Me.btnRegistrar.Location = New System.Drawing.Point(553, 248)
         Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(139, 28)
+        Me.btnRegistrar.Size = New System.Drawing.Size(173, 28)
         Me.btnRegistrar.TabIndex = 51
-        Me.btnRegistrar.Text = "REGISTRAR"
+        Me.btnRegistrar.Text = "GUARDAR >>"
         Me.btnRegistrar.ThemeName = "VisualStudio2012Light"
         '
         'Label15

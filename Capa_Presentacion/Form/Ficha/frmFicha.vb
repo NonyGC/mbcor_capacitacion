@@ -8,8 +8,8 @@ Imports Capa_Presentacion.Base
 
 Public Class frmFicha
     Dim idDep As String, idProv As String
-    Dim LocalCN As New LocalCN, FichCN As New FichaCapaCN, partCN As New ParticipanteCN
-    Dim PartCE As New ParticipanteCE, FichCE As New FichaCapaCE
+    Dim LocalCN As New LocalCN, FichCN As New FichaCapaCN, partCN As New ParticipanteCN, EncCN As New EncuestaCN
+    Dim PartCE As New ParticipanteCE, FichCE As New FichaCapaCE, EncCE As New EncuestaCE
     Dim datadep As DataTable
     Dim _codigoPart As String
     Dim Action As String = "GUARDAR"
@@ -98,15 +98,21 @@ Public Class frmFicha
         txtProfesionOcupacion.AutoCompleteDataSource = partCN.Participante_AutocompleteProfeOcu()
         txtProfesionOcupacion.AutoCompleteDisplayMember = "profe_ocupa"
 
-
     End Sub
 
     Private Sub btnEncuesta_Click(sender As Object, e As EventArgs) Handles btnEncuesta.Click
         If cboCapacitacion.SelectedIndex <> -1 Then
             Dim codcap As String = Trim(cboCapacitacion.SelectedValue)
-            Dim Frm As New FrmEncuesta(codcap)
-            Frm.ShowDialog(Me)
-            Frm.Dispose()
+
+            If EncuestaSharedCE.codcap IsNot Nothing Then
+                Dim Frm As New FrmEncuesta()
+                Frm.ShowDialog(Me)
+                Frm.Dispose()
+            Else
+                Dim Frm As New FrmEncuesta(codcap)
+                Frm.ShowDialog(Me)
+                Frm.Dispose()
+            End If
         Else
             RadMessageBox.Show("PRIMERO DEBE SELECCIONAR CAPACITACIÓN", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Exclamation)
         End If
@@ -165,7 +171,7 @@ Public Class frmFicha
     End Sub
 
     Public Sub cboParticipanteSearch_AutoComparer()
-        cboParticipanteSearch.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+        cboParticipanteSearch.AutoCompleteMode = AutoCompleteMode.Suggest
         'cboParticipanteSearch.DropDownListElement.AutoCompleteSuggest = New CustomAutoCompleteSuggestHelper(cboParticipanteSearch.DropDownListElement)
         cboParticipanteSearch.DropDownListElement.AutoCompleteSuggest.SuggestMode = UI.SuggestMode.Contains
     End Sub
@@ -312,6 +318,12 @@ Public Class frmFicha
         idDepartamento = If(String.IsNullOrEmpty(cboDepartamento.SelectedValue), String.Empty, cboDepartamento.SelectedValue)
     End Sub
 
+    Private Sub cboDistrito_Enter(sender As Object, e As EventArgs) Handles cboDistrito.Enter
+        If cboDistrito.Items.Count = 0 Then
+            loadDistrito()
+        End If
+    End Sub
+
     Private Sub cboProvincia_Enter(sender As Object, e As EventArgs) Handles cboProvincia.Enter
         idProvincia = String.Empty
         idProvincia = If(String.IsNullOrEmpty(cboProvincia.SelectedValue), String.Empty, cboProvincia.SelectedValue)
@@ -323,7 +335,24 @@ Public Class frmFicha
         End If
     End Sub
 
+    Sub setValueEncuestaCE()
+        With EncCE
+            .codcap = EncuestaSharedCE.codcap
+            .charla = EncuestaSharedCE.charla
+            .espCharla = EncuestaSharedCE.espCharla
+            .dominioTem = EncuestaSharedCE.dominioTem
+            .dejaEntender = EncuestaSharedCE.dejaEntender
+            .fueInteresante = EncuestaSharedCE.fueInteresante
+            .extCharla = EncuestaSharedCE.extCharla
+            .visitaPagina = EncuestaSharedCE.visitaPagina
+            .otroTema = EncuestaSharedCE.otroTema
+            .targeta = EncuestaSharedCE.targeta
+        End With 'PASA LOS VALORES DEL SHARE ENCUESTA A ENTIDAD ENCUESTA
+        EncuestaSharedCE.resetEncuestaSharedCE()
+    End Sub
+
     Private Sub btnGuardarP_Click(sender As Object, e As EventArgs) Handles btnGuardarP.Click
+
         If cboCapacitacion.SelectedIndex <> -1 Then
             Dim codUbi As String = cboDepartamento.SelectedValue & cboProvincia.SelectedValue & cboDistrito.SelectedValue
             Dim fechaN As String
@@ -357,7 +386,7 @@ Public Class frmFicha
                 .procarre = txtProfeCarrera.Text
                 .nivestudio = txtNivelEst.Text
                 .nomInstitucion = txtNomInstitu.Text
-                .instEducativa = If(Not IsNothing(GetGrpBxCheckedBbt(grpInstitucion)), GetGrpBxCheckedBbt(grpInstitucion).Text, "")
+                .instEducativa = If(Not IsNothing(GetRbtChekedInGroupbx(grpInstitucion)), GetRbtChekedInGroupbx(grpInstitucion).Text, "")
                 .ruc = txtRuc.Text
                 .empresa = txtEmpresa.Text
                 .cargo = txtCargo.Text
@@ -372,20 +401,39 @@ Public Class frmFicha
                 .codcap = cboCapacitacion.SelectedValue
                 .codpart = _codigoPart
             End With
+            'VERIFICAR SI LOS DATOS DEL FRM SE HAN GUARDADO
+            If EncuestaSharedCE.codcap IsNot Nothing Then
+                setValueEncuestaCE()
+            End If
 
             Dim ExecPart As Boolean = False
             Dim ExecFichaCapa As Boolean = False
+            Dim ExecEncuesta As Boolean = False
             If Action = "GUARDAR" Then
                 ExecPart = If(partCN.participante_insert(PartCE), True, False)
+
                 If ExecPart Then
                     Dim mssg As String = String.Format("Participante : {0} :REGISTRADO", PartCE.codpart)
                     ExecFichaCapa = If(FichCN.fichaCapacitacion_Registrar(FichCE), True, False)
-                    If ExecFichaCapa Then mssg = mssg & vbCrLf & String.Format("Capacitación : {0} :REGISTRADO", FichCE.codcap) Else mssg = mssg & "Capacitación : ERROR, NO REGISTRADO"
+                    If ExecFichaCapa Then
+                        mssg += vbCrLf & String.Format("Capacitación : {0} :REGISTRADO", FichCE.codcap)
+                    Else
+                        mssg = vbCrLf & "Capacitación : ERROR, NO REGISTRADO"
+                    End If
+                    ExecEncuesta = If(EncCN.Encuesta_Registrar(EncCE), True, False)
+
+                    If ExecEncuesta Then
+                        mssg += vbCrLf & "Encuesta : REGISTRADO"
+                    Else
+                        mssg += vbCrLf & "Encuesta : ERROR, NO REGISTRADO"
+                    End If
+
                     RadMessageBox.Show(mssg, "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Info)
                     form_Clear()
                 Else
                     RadMessageBox.Show("OCURRIO UN ERROR,VUELVA A INTENTAR", "MBCORP", MessageBoxButtons.OK, RadMessageIcon.Error)
                 End If
+
             ElseIf Action = "ACTUALIZAR" Then
                 ExecPart = If(partCN.participante_update(PartCE), True, False)
                 If ExecPart Then

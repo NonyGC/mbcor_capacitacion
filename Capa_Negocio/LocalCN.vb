@@ -9,6 +9,11 @@ Public Class LocalCN
     Public Function ubigeo_Departamento() As DataTable
         Return LDAO.ubigeo_Depatamento()
     End Function
+
+    Public Function getTableLocal() As DataTable
+        Return LDAO.getTableLocal()
+    End Function
+
     Public Function ubigeo_Provincia(idDep As String) As DataTable
         Return LDAO.ubigeo_Provincia(idDep)
     End Function

@@ -128,7 +128,6 @@ Partial Class FrmListadoCapacitacion
         GridViewTextBoxColumn11.Name = "expositor"
         GridViewTextBoxColumn11.Width = 200
         Me.dgvCapacitacion.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4, GridViewTextBoxColumn5, GridViewTextBoxColumn6, GridViewTextBoxColumn7, GridViewTextBoxColumn8, GridViewTextBoxColumn9, GridViewTextBoxColumn10, GridViewTextBoxColumn11})
-        Me.dgvCapacitacion.MasterTemplate.EnablePaging = True
         Me.dgvCapacitacion.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.dgvCapacitacion.Name = "dgvCapacitacion"
         Me.dgvCapacitacion.ReadOnly = True

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">All</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>417ff779-2891-4993-b426-b03e0494efc7</ProjectGuid>
+    <ProjectGuid>2afe3ca7-aa70-446b-ad09-eafa7ec98984</ProjectGuid>
     <OutputType>msi</OutputType>
     <ProjectHome>.</ProjectHome>
     <StartupFile>AI Setup Mbcorp.aip</StartupFile>
@@ -15,10 +15,7 @@
     <Name>AI Setup Mbcorp</Name>
     <RootNamespace>AI Setup Mbcorp</RootNamespace>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'All' ">
-    <DebugSymbols>false</DebugSymbols>
-    <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
-  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'DefaultBuild' " />
   <ItemGroup>
     <Compile Include="AI Setup Mbcorp.aip">
       <SubType>Code</SubType>
@@ -35,7 +32,7 @@
       <Name>Capa_Entidad</Name>
       <Project>{1c4c8ed6-0ecb-4d86-b2b6-810ccbc754ab}</Project>
       <Private>True</Private>
-      <OutputsToImport>PrimaryOutput;References</OutputsToImport>
+      <OutputsToImport>PrimaryOutput</OutputsToImport>
     </ProjectReference>
     <ProjectReference Include="..\Capa_Negocio\Capa_Negocio.vbproj">
       <Name>Capa_Negocio</Name>

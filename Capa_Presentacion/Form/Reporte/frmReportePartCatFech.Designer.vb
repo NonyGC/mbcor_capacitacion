@@ -73,6 +73,9 @@ Partial Class frmReportePartCatFech
         Me.cboFecha = New Telerik.WinControls.UI.RadDropDownList()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.object_0f10c966_fc85_4000_8788_6b316605ca9e = New Telerik.WinControls.RootRadElement()
+        Me.object_ab56906c_c429_4833_a311_f7ea0f6ab603 = New Telerik.WinControls.RootRadElement()
+        Me.btnExport = New Telerik.WinControls.UI.RadButton()
         CType(Me.txtFechaini, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtFechafin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.gpbTipBusqueda.SuspendLayout()
@@ -82,6 +85,7 @@ Partial Class frmReportePartCatFech
         CType(Me.dtgParticipante.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboFecha, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.btnExport, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -183,9 +187,9 @@ Partial Class frmReportePartCatFech
         '
         'btnBuscar
         '
-        Me.btnBuscar.Location = New System.Drawing.Point(755, 108)
+        Me.btnBuscar.Location = New System.Drawing.Point(693, 108)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(184, 29)
+        Me.btnBuscar.Size = New System.Drawing.Size(246, 23)
         Me.btnBuscar.TabIndex = 103
         Me.btnBuscar.Text = "BUSCAR"
         Me.btnBuscar.ThemeName = "VisualStudio2012Light"
@@ -196,122 +200,153 @@ Partial Class frmReportePartCatFech
         'dtgParticipante
         '
         Me.dtgParticipante.AutoScroll = True
-        Me.dtgParticipante.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtgParticipante.Location = New System.Drawing.Point(33, 147)
+        Me.dtgParticipante.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.dtgParticipante.Cursor = System.Windows.Forms.Cursors.Default
+        Me.dtgParticipante.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        Me.dtgParticipante.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.dtgParticipante.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.dtgParticipante.Location = New System.Drawing.Point(33, 173)
         '
         '
         '
         Me.dtgParticipante.MasterTemplate.AllowAddNewRow = False
         Me.dtgParticipante.MasterTemplate.AllowDeleteRow = False
+        GridViewTextBoxColumn1.EnableExpressionEditor = False
         GridViewTextBoxColumn1.FieldName = "codigo"
         GridViewTextBoxColumn1.HeaderText = "CODIGO"
         GridViewTextBoxColumn1.Name = "codigo"
         GridViewTextBoxColumn1.Width = 100
+        GridViewTextBoxColumn2.EnableExpressionEditor = False
         GridViewTextBoxColumn2.FieldName = "apellido_pat"
         GridViewTextBoxColumn2.HeaderText = "AP. PATERNO"
         GridViewTextBoxColumn2.Name = "apellido_pat"
         GridViewTextBoxColumn2.Width = 150
+        GridViewTextBoxColumn3.EnableExpressionEditor = False
         GridViewTextBoxColumn3.FieldName = "apellido_mat"
         GridViewTextBoxColumn3.HeaderText = "AP. MATERNO"
         GridViewTextBoxColumn3.Name = "apellido_mat"
         GridViewTextBoxColumn3.Width = 150
+        GridViewTextBoxColumn4.EnableExpressionEditor = False
         GridViewTextBoxColumn4.FieldName = "nombres"
         GridViewTextBoxColumn4.HeaderText = "NOMBRES"
         GridViewTextBoxColumn4.Name = "nombres"
         GridViewTextBoxColumn4.Width = 150
+        GridViewTextBoxColumn5.EnableExpressionEditor = False
         GridViewTextBoxColumn5.FieldName = "sexo"
         GridViewTextBoxColumn5.HeaderText = "SEXO"
         GridViewTextBoxColumn5.Name = "sexo"
+        GridViewTextBoxColumn6.EnableExpressionEditor = False
         GridViewTextBoxColumn6.FieldName = "fecha_nacimiento"
         GridViewTextBoxColumn6.HeaderText = "F. NACIMIENTO"
         GridViewTextBoxColumn6.Name = "fecha_nacimiento"
         GridViewTextBoxColumn6.Width = 80
+        GridViewTextBoxColumn7.EnableExpressionEditor = False
         GridViewTextBoxColumn7.FieldName = "dni_ce"
         GridViewTextBoxColumn7.HeaderText = "DNI/CE"
         GridViewTextBoxColumn7.Name = "dni_ce"
         GridViewTextBoxColumn7.Width = 80
+        GridViewTextBoxColumn8.EnableExpressionEditor = False
         GridViewTextBoxColumn8.FieldName = "direccion"
         GridViewTextBoxColumn8.HeaderText = "DIRECCIÓN"
-        GridViewTextBoxColumn8.IsVisible = False
         GridViewTextBoxColumn8.Name = "direccion"
+        GridViewTextBoxColumn9.EnableExpressionEditor = False
         GridViewTextBoxColumn9.FieldName = "ubigeo"
         GridViewTextBoxColumn9.HeaderText = "UBIGEO"
-        GridViewTextBoxColumn9.IsVisible = False
         GridViewTextBoxColumn9.Name = "ubigeo"
+        GridViewTextBoxColumn10.EnableExpressionEditor = False
         GridViewTextBoxColumn10.FieldName = "tel_fijo"
         GridViewTextBoxColumn10.HeaderText = "FIJO"
         GridViewTextBoxColumn10.Name = "tel_fijo"
         GridViewTextBoxColumn10.Width = 100
+        GridViewTextBoxColumn11.EnableExpressionEditor = False
         GridViewTextBoxColumn11.FieldName = "tel_mol"
         GridViewTextBoxColumn11.HeaderText = "MOVIL"
         GridViewTextBoxColumn11.Name = "tel_mol"
         GridViewTextBoxColumn11.Width = 100
+        GridViewTextBoxColumn12.EnableExpressionEditor = False
         GridViewTextBoxColumn12.FieldName = "ope_movil"
         GridViewTextBoxColumn12.HeaderText = "OPE. MOVIL"
         GridViewTextBoxColumn12.Name = "ope_movil"
         GridViewTextBoxColumn12.Width = 80
+        GridViewTextBoxColumn13.EnableExpressionEditor = False
         GridViewTextBoxColumn13.FieldName = "tel_fijo2"
         GridViewTextBoxColumn13.HeaderText = "FIJO2"
         GridViewTextBoxColumn13.Name = "tel_fijo2"
+        GridViewTextBoxColumn14.EnableExpressionEditor = False
         GridViewTextBoxColumn14.FieldName = "tel_mol2"
         GridViewTextBoxColumn14.HeaderText = "MOVIL2"
         GridViewTextBoxColumn14.Name = "tel_mol2"
+        GridViewTextBoxColumn15.EnableExpressionEditor = False
         GridViewTextBoxColumn15.FieldName = "ope_movil2"
         GridViewTextBoxColumn15.HeaderText = "OPERADOR2"
         GridViewTextBoxColumn15.Name = "ope_movil2"
+        GridViewTextBoxColumn16.EnableExpressionEditor = False
         GridViewTextBoxColumn16.FieldName = "email"
         GridViewTextBoxColumn16.HeaderText = "EMAIL"
         GridViewTextBoxColumn16.Name = "email"
         GridViewTextBoxColumn16.Width = 300
+        GridViewTextBoxColumn17.EnableExpressionEditor = False
         GridViewTextBoxColumn17.FieldName = "estado_civ"
         GridViewTextBoxColumn17.HeaderText = "ESTADO CIVIL"
-        GridViewTextBoxColumn17.IsVisible = False
         GridViewTextBoxColumn17.Name = "estado_civ"
+        GridViewTextBoxColumn18.EnableExpressionEditor = False
         GridViewTextBoxColumn18.FieldName = "profe_ocupa"
         GridViewTextBoxColumn18.HeaderText = "PROFE/OFICIO"
         GridViewTextBoxColumn18.Name = "profe_ocupa"
         GridViewTextBoxColumn18.Width = 150
+        GridViewTextBoxColumn19.EnableExpressionEditor = False
         GridViewTextBoxColumn19.FieldName = "profesion_carrera"
         GridViewTextBoxColumn19.HeaderText = "PROFESION CARRERA"
         GridViewTextBoxColumn19.Name = "profesion_carrera"
         GridViewTextBoxColumn19.Width = 150
+        GridViewTextBoxColumn20.EnableExpressionEditor = False
         GridViewTextBoxColumn20.FieldName = "nivel"
         GridViewTextBoxColumn20.HeaderText = "NIVEL"
         GridViewTextBoxColumn20.Name = "nivel"
+        GridViewTextBoxColumn21.EnableExpressionEditor = False
         GridViewTextBoxColumn21.FieldName = "institucion"
         GridViewTextBoxColumn21.HeaderText = "INSTITUCIÓN"
         GridViewTextBoxColumn21.Name = "institucion"
         GridViewTextBoxColumn21.Width = 150
+        GridViewTextBoxColumn22.EnableExpressionEditor = False
         GridViewTextBoxColumn22.FieldName = "tip_institucion"
         GridViewTextBoxColumn22.HeaderText = "TIPO INSTITU"
         GridViewTextBoxColumn22.Name = "tip_institucion"
         GridViewTextBoxColumn22.Width = 100
+        GridViewTextBoxColumn23.EnableExpressionEditor = False
         GridViewTextBoxColumn23.FieldName = "ruc"
         GridViewTextBoxColumn23.HeaderText = "RUC"
         GridViewTextBoxColumn23.Name = "ruc"
+        GridViewTextBoxColumn24.EnableExpressionEditor = False
         GridViewTextBoxColumn24.FieldName = "empresa"
         GridViewTextBoxColumn24.HeaderText = "EMPRESA"
         GridViewTextBoxColumn24.Name = "empresa"
         GridViewTextBoxColumn24.Width = 100
+        GridViewTextBoxColumn25.EnableExpressionEditor = False
         GridViewTextBoxColumn25.FieldName = "cargo"
         GridViewTextBoxColumn25.HeaderText = "CARGO"
         GridViewTextBoxColumn25.Name = "cargo"
+        GridViewTextBoxColumn26.EnableExpressionEditor = False
         GridViewTextBoxColumn26.FieldName = "tel_fijo_emp"
         GridViewTextBoxColumn26.HeaderText = "FIJO EMP"
         GridViewTextBoxColumn26.Name = "tel_fijo_emp"
         GridViewTextBoxColumn26.Width = 80
+        GridViewTextBoxColumn27.EnableExpressionEditor = False
         GridViewTextBoxColumn27.FieldName = "tel_movil_emp"
         GridViewTextBoxColumn27.HeaderText = "MOVIL EMP"
         GridViewTextBoxColumn27.Name = "tel_movil_emp"
         GridViewTextBoxColumn27.Width = 80
+        GridViewTextBoxColumn28.EnableExpressionEditor = False
         GridViewTextBoxColumn28.FieldName = "ope_movil_emp"
         GridViewTextBoxColumn28.HeaderText = "OPERADOR MOVIL"
         GridViewTextBoxColumn28.Name = "ope_movil_emp"
         GridViewTextBoxColumn28.Width = 100
+        GridViewTextBoxColumn29.EnableExpressionEditor = False
         GridViewTextBoxColumn29.FieldName = "rubro"
         GridViewTextBoxColumn29.HeaderText = "RUBRO"
         GridViewTextBoxColumn29.Name = "rubro"
         GridViewTextBoxColumn29.Width = 200
+        GridViewTextBoxColumn30.EnableExpressionEditor = False
         GridViewTextBoxColumn30.FieldName = "espec_rubro"
         GridViewTextBoxColumn30.HeaderText = "ESPECI. RUBRO"
         GridViewTextBoxColumn30.Name = "espec_rubro"
@@ -322,6 +357,7 @@ Partial Class frmReportePartCatFech
         Me.dtgParticipante.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.dtgParticipante.Name = "dtgParticipante"
         Me.dtgParticipante.ReadOnly = True
+        Me.dtgParticipante.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.dtgParticipante.Size = New System.Drawing.Size(906, 474)
         Me.dtgParticipante.TabIndex = 102
         Me.dtgParticipante.ThemeName = "VisualStudio2012Light"
@@ -379,11 +415,34 @@ Partial Class frmReportePartCatFech
         Me.Label1.TabIndex = 105
         Me.Label1.Text = "a"
         '
+        'object_0f10c966_fc85_4000_8788_6b316605ca9e
+        '
+        Me.object_0f10c966_fc85_4000_8788_6b316605ca9e.Name = "object_0f10c966_fc85_4000_8788_6b316605ca9e"
+        Me.object_0f10c966_fc85_4000_8788_6b316605ca9e.StretchHorizontally = True
+        Me.object_0f10c966_fc85_4000_8788_6b316605ca9e.StretchVertically = True
+        '
+        'object_ab56906c_c429_4833_a311_f7ea0f6ab603
+        '
+        Me.object_ab56906c_c429_4833_a311_f7ea0f6ab603.Name = "object_ab56906c_c429_4833_a311_f7ea0f6ab603"
+        Me.object_ab56906c_c429_4833_a311_f7ea0f6ab603.Opacity = 1.0R
+        Me.object_ab56906c_c429_4833_a311_f7ea0f6ab603.StretchHorizontally = True
+        Me.object_ab56906c_c429_4833_a311_f7ea0f6ab603.StretchVertically = True
+        '
+        'btnExport
+        '
+        Me.btnExport.Location = New System.Drawing.Point(797, 143)
+        Me.btnExport.Name = "btnExport"
+        Me.btnExport.Size = New System.Drawing.Size(142, 24)
+        Me.btnExport.TabIndex = 116
+        Me.btnExport.Text = "EXPORTAR EXCEL"
+        Me.btnExport.ThemeName = "VisualStudio2012Light"
+        '
         'frmReportePartCatFech
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(972, 651)
+        Me.ClientSize = New System.Drawing.Size(972, 671)
+        Me.Controls.Add(Me.btnExport)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.lblTitulo)
         Me.Controls.Add(Me.gpbTipBusqueda)
@@ -409,6 +468,7 @@ Partial Class frmReportePartCatFech
         CType(Me.cboFecha, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.btnExport, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -426,5 +486,8 @@ Partial Class frmReportePartCatFech
     Friend WithEvents cboFecha As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents object_0f10c966_fc85_4000_8788_6b316605ca9e As Telerik.WinControls.RootRadElement
+    Friend WithEvents object_ab56906c_c429_4833_a311_f7ea0f6ab603 As Telerik.WinControls.RootRadElement
+    Friend WithEvents btnExport As Telerik.WinControls.UI.RadButton
 End Class
 

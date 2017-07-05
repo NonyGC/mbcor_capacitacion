@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="CapacitacionCE.vb" />
     <Compile Include="EncuestaCE.vb" />
+    <Compile Include="EncuestaSharedCE.vb" />
     <Compile Include="FichaCapaCE.vb" />
     <Compile Include="LocalCE.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

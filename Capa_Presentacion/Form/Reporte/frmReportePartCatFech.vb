@@ -2,6 +2,9 @@
 Imports Capa_Negocio
 Imports Capa_Presentacion.Base
 
+Imports Telerik.WinControls.Export
+Imports Telerik.WinControls.UI.Export
+
 Public Class frmReportePartCatFech
     Dim rptCN As New ReporteCN
     Dim LocalCN As New LocalCN
@@ -17,11 +20,11 @@ Public Class frmReportePartCatFech
     End Sub
 
     Private Sub cboBuscar_Enter(sender As Object, e As EventArgs) Handles cboBuscar.Enter
-        Dim rbtSelected As String = If(Not IsNothing(GetGrpBxCheckedBbt(gpbTipBusqueda)), GetGrpBxCheckedBbt(gpbTipBusqueda).Text, "")
+        Dim rbtSelected As String = If(Not IsNothing(GetRbtChekedInGroupbx(gpbTipBusqueda)), GetRbtChekedInGroupbx(gpbTipBusqueda).Text, "")
         If rbtSelected IsNot String.Empty Then
             cboBuscar.DataSource = rptCN.cargarAutocompletado_buscar(rbtSelected)
             cboBuscar.DisplayMember = "nombre"
-            If GetGrpBxCheckedBbt(gpbTipBusqueda).Text <> "ORIGEN" Then cboBuscar.ValueMember = "codigo"
+            If GetRbtChekedInGroupbx(gpbTipBusqueda).Text <> "ORIGEN" Then cboBuscar.ValueMember = "codigo"
             cboBuscar.SelectedIndex = -1
         End If
     End Sub
@@ -84,7 +87,7 @@ Public Class frmReportePartCatFech
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         If cboBuscar.SelectedValue IsNot Nothing Then
             Dim cadenaBusqueda As String = cboBuscar.Text
-            Dim rbtSelected As String = If(Not IsNothing(GetGrpBxCheckedBbt(gpbTipBusqueda)), GetGrpBxCheckedBbt(gpbTipBusqueda).Text, "")
+            Dim rbtSelected As String = If(Not IsNothing(GetRbtChekedInGroupbx(gpbTipBusqueda)), GetRbtChekedInGroupbx(gpbTipBusqueda).Text, "")
             Dim dateini As String = If((txtFechaini.Text).Contains("_"), String.Empty, txtFechaini.Value)
             Dim datefin As String = If((txtFechafin.Text).Contains("_"), String.Empty, txtFechafin.Value)
             If rbtSelected IsNot String.Empty Then
@@ -115,5 +118,27 @@ Public Class frmReportePartCatFech
             End If
 
         End If
+    End Sub
+
+    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
+        Dim dialog As New SaveFileDialog()
+        dialog.FileName = ""
+        dialog.Filter = "xlsx files (*.xlsx)|*.xlsx|All files (*.*)|*.*"
+        If dialog.ShowDialog() = DialogResult.OK Then
+            ExportData(dialog.FileName)
+        End If
+    End Sub
+
+    Private Sub ExportData(fileName As String)
+        Dim renderer As New SpreadExportRenderer()
+        Dim spreadExporter As New GridViewSpreadExport(dtgParticipante)
+        spreadExporter.FreezeHeaderRow = True
+        spreadExporter.FreezePinnedColumns = True
+        spreadExporter.FreezePinnedRows = True
+        spreadExporter.ExportVisualSettings = True
+        spreadExporter.SheetMaxRows = ExcelMaxRows._1048576
+        spreadExporter.ExportFormat = SpreadExportFormat.Xlsx
+        spreadExporter.FileExportMode = FileExportMode.CreateOrOverrideFile
+        spreadExporter.RunExport(fileName, renderer)
     End Sub
 End Class

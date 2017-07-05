@@ -126,6 +126,7 @@ Public Class FrmParticipante_vb
                     Next
                 End If
             Next
+
             txtEspOtros.Text = .espRubroOtros
             txtEspeSPE.Text = .espRubroSectorPE
             lblTitulo.Text = "ACTUALIZAR PARTICIPANTE"
@@ -210,6 +211,7 @@ Public Class FrmParticipante_vb
     Dim codigo As String
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+
         Dim codUbi As String = cboDepartamento.SelectedValue & cboProvincia.SelectedValue & cboDistrito.SelectedValue
         Dim fechaN As String
         fechaN = If(IsDate(txtFechaN.Value), txtFechaN.Value, String.Empty)
@@ -242,7 +244,7 @@ Public Class FrmParticipante_vb
             .procarre = txtProfeCarrera.Text
             .nivestudio = txtNivelEst.Text
             .nomInstitucion = txtNomInstitu.Text
-            .instEducativa = If(Not IsNothing(GetGrpBxCheckedBbt(grpInstitucion)), GetGrpBxCheckedBbt(grpInstitucion).Text, "")
+            .instEducativa = If(Not IsNothing(GetRbtChekedInGroupbx(grpInstitucion)), GetRbtChekedInGroupbx(grpInstitucion).Text, "")
             .ruc = txtRuc.Text
             .empresa = txtEmpresa.Text
             .cargo = txtCargo.Text
@@ -293,6 +295,10 @@ Public Class FrmParticipante_vb
 
     Private Sub CheckBox3_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox3.CheckedChanged
         txtEspeSPE.Enabled = If(CheckBox3.Checked, True, False)
+    End Sub
+
+    Private Sub lblTitulo_Click(sender As Object, e As EventArgs) Handles lblTitulo.Click
+
     End Sub
 
     Private Sub CheckBox5_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox5.CheckedChanged

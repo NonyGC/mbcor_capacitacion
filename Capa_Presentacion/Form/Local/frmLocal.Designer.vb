@@ -162,6 +162,7 @@ Partial Class frmLocal
         '
         'btnRegistrar
         '
+        Me.btnRegistrar.DialogResult = System.Windows.Forms.DialogResult.OK
         Me.btnRegistrar.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnRegistrar.Location = New System.Drawing.Point(340, 174)
         Me.btnRegistrar.Name = "btnRegistrar"

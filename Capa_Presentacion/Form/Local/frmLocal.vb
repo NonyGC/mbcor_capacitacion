@@ -7,18 +7,57 @@ Public Class frmLocal
     Dim localCN As New LocalCN
     Dim LocalCE As New LocalCE
     Dim idDep As String, idProv As String
-    Private Sub frmLocal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private localEN As LocalCE
+
+    Private capEN As CapacitacionCE
+    Private value As Integer
+    Enum Initialize
+        ini = 0
+        upd = 1
+    End Enum
+
+    Public Sub New(localEN As LocalCE)
+        Me.localEN = localEN
+        InitializeComponent()
+        value = 1
+    End Sub
+
+    Public Sub New()
+        InitializeComponent()
         RadMessageBox.SetThemeName("VisualStudio2012Light")
-        txtCodigo.Text = localCN.Local_CodAutogenerado()
+        value = 0
+    End Sub
+
+    Private Sub frmLocal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         cboDepartamento.DataSource = localCN.ubigeo_Departamento()
         cboDepartamento.DisplayMember = "Departamento"
         cboDepartamento.ValueMember = "idDep"
-        ubigeoPredeterminado()
+        Select Case value
+            Case Initialize.ini
+                txtCodigo.Text = localCN.Local_CodAutogenerado()
+                ubigeoPredeterminado()
+            Case Initialize.upd
+                setDataUpdateForm()
+                loadUbigeoUpdate()
+        End Select
+        LimitToListAutoComplete()
+    End Sub
 
+    Sub LimitToListAutoComplete()
         cboDepartamento.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboProvincia.DropDownListElement.AutoCompleteAppend.LimitToList = True
         cboDistrito.DropDownListElement.AutoCompleteAppend.LimitToList = True
     End Sub
+    Sub setDataUpdateForm()
+        With localEN
+            txtCodigo.Text = .codigo
+            txtNombre.Text = .nombre
+            txtDireccion.Text = .direccion
+            txtAforo.Value = .aforo
+        End With
+    End Sub
+
 
     Private Sub cboProvincia_Leave(sender As Object, e As EventArgs) Handles cboProvincia.Leave
         cargarUbigeoDistrito()
@@ -28,6 +67,23 @@ Public Class frmLocal
         cargarUbigeoProvincia()
         cargarUbigeoDistrito()
         cboDistrito.SelectedIndex = -1
+    End Sub
+    Sub loadUbigeoUpdate()
+        Dim codubigeo As String = localEN.codUbigeo
+        Dim len = 2
+        Dim arr = Enumerable.Range(0, codubigeo.Length / len).Select(Function(x) codubigeo.Substring(x * len, len)).ToArray()
+
+        Select Case arr.Length
+            Case 3
+                cboDepartamento.SelectedValue = arr(0) : cargarUbigeoProvincia()
+                cboProvincia.SelectedValue = arr(1) : cargarUbigeoDistrito()
+                cboDistrito.SelectedValue = arr(2)
+            Case 2
+                cboDepartamento.SelectedValue = arr(0) : cargarUbigeoProvincia()
+                cboProvincia.SelectedValue = arr(1) : cargarUbigeoDistrito()
+            Case 1
+                cboDepartamento.SelectedValue = arr(0) : cargarUbigeoProvincia()
+        End Select
     End Sub
     Sub cargarUbigeoProvincia()
         Dim idDep As String = Trim(cboDepartamento.SelectedValue)
